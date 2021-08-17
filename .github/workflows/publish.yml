@@ -1,0 +1,45 @@
+# When a push is made to any branch named pages/<project>/<version>, update
+# the gh-pages branch with a copy of the newly pushed content.
+
+name: Publish
+
+on:
+  push:
+    branches:
+      - 'pages/**'
+
+jobs:
+  update-html:
+    name: Update docs for project/version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # All refs and history
+          path: apidoc
+      - run: |
+          pages_ref=${{ github.ref }}  # refs/heads/pages/proj/ver
+          pages_branch=${pages_ref#refs/heads/}  # pages/proj/ver
+          pages_path=${pages_branch#pages/}  # proj/ver
+
+          cd apidoc
+
+          git archive -o ../pages.tar $pages_branch
+
+          if ! git checkout gh-pages --; then
+              git checkout --orphan gh-pages
+              git rm -rf .
+          else
+              git rm -rf --ignore-unmatch $pages_path
+          fi
+
+          mkdir -p $pages_path
+          tar xf ../pages.tar -C $pages_path
+          rm -rf $pages_path/.github
+          git add $pages_path
+
+          git config user.name 'github-actions'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          git commit -m "Autoupdate $pages_path"
+          git push -u origin gh-pages
