@@ -33,8 +33,9 @@ The branch should be checked out using the `prepare_pages_branch.sh` script,
 which takes care of creating the branch if it does not exist and updating the
 necessary workflow definitions for the branch.
 
-It will probably be necessary to set up a GitHub encrypted secret containing
-the secret key for a deploy key with write access to this repo.
+After adding the html files (`git add`), the script `publish_pages_as_bot.sh`
+should be run to commit and push. (This script should not be used for manual
+changes, which should be committed and pushed the normal way.)
 
 API docs for release versions can be manually pushed. If the project is in its
 own dedicated repo and git tags are used for versioning, then publication of
@@ -45,6 +46,63 @@ branch, where `<version>` is the tag name with the `v` prefix removed.
 
 The branch `pages/<project>/stable` should be made to point to the latest
 release branch's head. This is not automated yet.
+
+### Setting up write access to the apidoc repo
+
+Create an SSH key (use an empty passphrase):
+```sh
+ssh-keygen -t ed25519 -C deploy-to-apidoc-from-myproject -f mykey
+```
+
+In the `apidoc` repository settings, create a **Deploy Key** and paste in the
+public key (contents of `mykey.pub`). Check Allow Write Access. Name like
+`deploy-from-myproject` so that it is easy to keep track.
+
+In the project's repository settings, create a **Repository Secret** and paste
+in the private key (contents of `mykey`). Name it `SSH_KEY_DEPLOY_TO_APIDOC`.
+
+Delete the key pair from your local computer. (Create a new key if/when needed
+for another project.)
+
+### Minimal GitHub Actions workflow example for a project
+
+```yml
+name: Publish docs
+
+on: [push, pull_request]
+
+jobs:
+  build-and-push-docs:
+    name: Build and publish docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: myproject  # Clone in subdirectory
+
+      - name: Build docs
+        run: |
+          cd myproject
+          generate_docs --outdir=htmldocs  # Replace this with actual doc gen
+          tar cf ../docs.tar -C htmldocs .
+
+      - uses: actions/checkout@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          repository: micro-manager/apidoc
+          ssh-key: ${{ secrets.SSH_KEY_DEPLOY_TO_APIDOC }}
+          fetch-depth: 0  # All refs and history
+          path: apidoc
+
+      - name: Publish docs
+        if: github.ref == 'refs/heads/main'  # Only publish main branch docs
+        run: |
+          cd apidoc
+          ./prepare_pages_branch.sh myproject/latest
+          tar xf ../docs.tar
+          git add .
+          ./publish_pages_as_bot.sh myproject/latest
+```
 
 ## Maintainer notes
 
