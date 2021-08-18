@@ -25,3 +25,7 @@ git rm -rf .
 
 # Readd workflows, possibly updating
 git checkout main -- .github/workflows
+
+# Check out the publish script
+git checkout main -- publish_pages_as_bot.sh
+git reset publish_pages_as_bot.sh
