@@ -87,7 +87,7 @@ jobs:
           tar cf ../docs.tar -C htmldocs .
 
       - uses: actions/checkout@v2
-        if: github.ref == 'refs/heads/main'
+        if: github.repository == 'micro-manager/myproject' && github.ref == 'refs/heads/main'
         with:
           repository: micro-manager/apidoc
           ssh-key: ${{ secrets.SSH_KEY_DEPLOY_TO_APIDOC }}
@@ -95,7 +95,7 @@ jobs:
           path: apidoc
 
       - name: Publish docs
-        if: github.ref == 'refs/heads/main'  # Only publish main branch docs
+        if: github.repository == 'micro-manager/myproject' && github.ref == 'refs/heads/main'
         run: |
           cd apidoc
           ./prepare_pages_branch.sh myproject/latest
@@ -103,6 +103,14 @@ jobs:
           git add .
           ./publish_pages_as_bot.sh myproject/latest
 ```
+
+The `if:` keys on the last to steps limit publishing to the main branch of
+the official repo.
+
+Use of `tar` is optional (the html docs could also be copied or moved), but
+the `tar` command is less error-prone. You could also upload the tar archive
+as an artifact so that it can be downloaded and inspected even when on a
+branch or fork.
 
 ## Maintainer notes
 
