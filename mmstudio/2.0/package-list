@@ -1,0 +1,11 @@
+org.micromanager
+org.micromanager.acquisition
+org.micromanager.alerts
+org.micromanager.data
+org.micromanager.display
+org.micromanager.display.inspector
+org.micromanager.display.overlay
+org.micromanager.events
+org.micromanager.profile
+org.micromanager.propertymap
+org.micromanager.quickaccess
