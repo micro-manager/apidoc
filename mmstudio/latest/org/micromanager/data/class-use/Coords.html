@@ -165,16 +165,16 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getMaxIndices--">getMaxIndices</a></span>()</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">Use <a href="../../../../org/micromanager/data/DataProvider.html#getNextIndex-java.lang.String-"><code>DataProvider.getNextIndex(String axis)</code></a> instead</span></div>
-</div>
+<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getMaxIndices--">getMaxIndices</a></span>()</code>
+<div class="block">Return a Coords that provides the maximum index along all available axes.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getMaxIndices--">getMaxIndices</a></span>()</code>
-<div class="block">Return a Coords that provides the maximum index along all available axes.</div>
+<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getMaxIndices--">getMaxIndices</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">Use <a href="../../../../org/micromanager/data/DataProvider.html#getNextIndex-java.lang.String-"><code>DataProvider.getNextIndex(String axis)</code></a> instead</span></div>
+</div>
 </td>
 </tr>
 </tbody>
@@ -188,14 +188,14 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>java.lang.Iterable&lt;<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getUnorderedImageCoords--">getUnorderedImageCoords</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>java.lang.Iterable&lt;<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getUnorderedImageCoords--">getUnorderedImageCoords</a></span>()</code>
 <div class="block">Return an Iterable that provides access to all image coordinates in the
  Storage, in arbitrary order.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.lang.Iterable&lt;<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getUnorderedImageCoords--">getUnorderedImageCoords</a></span>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -271,14 +271,14 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getImage-org.micromanager.data.Coords-">getImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
-<div class="block">Returns the image at the given position.</div>
+<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImage-org.micromanager.data.Coords-">getImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
+<div class="block">Retrieve the Image located at the specified coordinates.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImage-org.micromanager.data.Coords-">getImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
-<div class="block">Retrieve the Image located at the specified coordinates.</div>
+<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getImage-org.micromanager.data.Coords-">getImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
+<div class="block">Returns the image at the given position.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -290,21 +290,28 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getImagesIgnoringAxes-org.micromanager.data.Coords-java.lang.String...-">getImagesIgnoringAxes</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords,
-                     java.lang.String...&nbsp;ignoreTheseAxes)</code>
-<div class="block">Returns a list of image in the DataProvider's collection that have
- identical coords after removing the given axes from both source and target.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImagesIgnoringAxes-org.micromanager.data.Coords-java.lang.String...-">getImagesIgnoringAxes</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords,
                      java.lang.String...&nbsp;ignoreTheseAxes)</code>
 <div class="block">Retrieve a list of images with Coords identical to the given Coords instance,
  except for the axes listed in the exception list.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getImagesIgnoringAxes-org.micromanager.data.Coords-java.lang.String...-">getImagesIgnoringAxes</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords,
+                     java.lang.String...&nbsp;ignoreTheseAxes)</code>
+<div class="block">Returns a list of image in the DataProvider's collection that have
+ identical coords after removing the given axes from both source and target.</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImagesMatching-org.micromanager.data.Coords-">getImagesMatching</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
+<div class="block">Retrieve a list of all images whose Coords match the given incomplete
+ Coords instance.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getImagesMatching-org.micromanager.data.Coords-">getImagesMatching</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -312,22 +319,15 @@
 </div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImagesMatching-org.micromanager.data.Coords-">getImagesMatching</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
-<div class="block">Retrieve a list of all images whose Coords match the given incomplete
- Coords instance.</div>
-</td>
-</tr>
 <tr class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#hasImage-org.micromanager.data.Coords-">hasImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#hasImage-org.micromanager.data.Coords-">hasImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
 <div class="block">Returns whether or not an image exists at the specified coordinates.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#hasImage-org.micromanager.data.Coords-">hasImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></code></td>
