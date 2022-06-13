@@ -393,7 +393,7 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The DisplaySettings as of the last time the user clicked the
-         "Set as default" button in the Settings tab of a DisplayWindow.</dd>
+     "Set as default" button in the Settings tab of a DisplayWindow.</dd>
 </dl>
 </li>
 </ul>
@@ -473,13 +473,13 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>contrastMin</code> - The highest pixel intensity corresponding to black.</dd>
 <dd><code>contrastMax</code> - The lowest pixel intensity corresponding to full
-        intensity.</dd>
+                    intensity.</dd>
 <dd><code>gamma</code> - The gamma curve parameter.</dd>
 <dd><code>isVisible</code> - Whether or not this channel is visible in the display
-        when the display is showing multiple channels simultaneously.</dd>
+                    when the display is showing multiple channels simultaneously.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a DisplaySettings.ContrastSettings object, whose properties are
-         all length-1 arrays with the provided values.</dd>
+     all length-1 arrays with the provided values.</dd>
 </dl>
 </li>
 </ul>
@@ -499,14 +499,14 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
  of the method is to be used for multi-component (e.g. RGB) images.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>contrastMins</code> - Array with the highest pixel intensity corresponding 
-        to black, for each component.</dd>
+<dd><code>contrastMins</code> - Array with the highest pixel intensity corresponding
+                      to black, for each component.</dd>
 <dd><code>contrastMaxes</code> - Array with the lowest pixel intensity corresponding to full
-        intensity, for each component.</dd>
+                      intensity, for each component.</dd>
 <dd><code>gammas</code> - Array with the gamma curve parameters. NOTE: for now this parameter is
-        not used to control display of multi-component images.</dd>
+                      not used to control display of multi-component images.</dd>
 <dd><code>isVisible</code> - Whether or not this channel is visible in the display
-        when the display is showing multiple channels simultaneously.</dd>
+                      when the display is showing multiple channels simultaneously.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a DisplaySettings.ContrastSettings object.</dd>
 </dl>
@@ -559,7 +559,7 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>dataProvider</code> - The DataProvider whose data should be displayed.</dd>
 <dd><code>factory</code> - A ControlsFactory used to create custom controls for
-        the DisplayWindow. May be null.</dd>
+                     the DisplayWindow. May be null.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The created DisplayWindow.</dd>
 </dl>
@@ -577,7 +577,7 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>display</code> - The DataViewer the inspector should show information on,
-        or null to show information on the topmost window.</dd>
+                or null to show information on the topmost window.</dd>
 </dl>
 </li>
 </ul>
@@ -672,13 +672,13 @@ boolean&nbsp;createFirstInspector()</pre>
  Specifically, this method does the following things:
  - Add the DataProvider to the list returned by getDataProviders().
  - Find all currently-existing DisplayWindows for this DataProvider and
-   associate them (thus, getDisplays() for this DataProvider will return the
-   displays)
+ associate them (thus, getDisplays() for this DataProvider will return the
+ displays)
  - When the last DisplayWindow for the DataProvider is closed:
  -- If the DataProvider has not been saved, prompt the user to save (and if
-    they cancel, closing the DisplayWindow is halted)
+ they cancel, closing the DisplayWindow is halted)
  -- The DataProvider is frozen, which may have side-effects like finalizing
-    writing of image data to disk
+ writing of image data to disk
  -- The DataProvider is removed from the list returned by getDatastores().
  By default, new DataProvider created by the createNewDatastore() method
  are not managed, which means you are responsible for ensuring that they
@@ -755,7 +755,7 @@ java.util.List&lt;<a href="../../../org/micromanager/display/DisplayWindow.html"
 <dd><code>store</code> - Datastore of interest to the caller</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A list of all DisplayWindows Micro-Manager knows are associated
-         with the specified Datastore, or null.</dd>
+     with the specified Datastore, or null.</dd>
 </dl>
 </li>
 </ul>
@@ -773,7 +773,7 @@ java.util.List&lt;<a href="../../../org/micromanager/display/DisplayWindow.html"
 <dd><code>dataProvider</code> - DataProvider of interest to the caller</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A list of all DisplayWindows Micro-Manager knows are associated
-         with the specified Datastore, or null.</dd>
+     with the specified Datastore, or null.</dd>
 </dl>
 </li>
 </ul>
@@ -865,7 +865,7 @@ java.util.List&lt;<a href="../../../org/micromanager/display/DisplayWindow.html"
 <dd><code>display</code> - The DisplayWindow over which to show the prompt.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if saving was successful or the user explicitly declined
-         to save; false if the user cancelled or if saving failed.</dd>
+     to save; false if the user cancelled or if saving failed.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - Can be thrown when file IO causes an exception.</dd>
 </dl>
@@ -900,7 +900,7 @@ java.util.List&lt;<a href="../../../org/micromanager/display/DisplayWindow.html"
 <dd><code>provider</code> - DataProvider for which displays should be closed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>True if all windows were closed; false otherwise (e.g. because
-         the user canceled saving).</dd>
+     the user canceled saving).</dd>
 </dl>
 </li>
 </ul>
@@ -928,15 +928,15 @@ java.util.List&lt;<a href="../../../org/micromanager/display/DisplayWindow.html"
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>shouldPromptToSave</code> - If true, then any open windows for Datastores
-        that have not been saved will show a prompt to save, and if the
-        user chooses not to save a file, then the process of closing
-        windows will be halted. If false, then all windows will be closed
-        regardless of whether or not the data they show has been saved,
-        with no prompting of the user whatsoever. Note that the
-        corresponding File menu option to close all open windows does
-        prompt the user to ensure they are absolutely certain they want to
-        close all open windows without prompts to save; this API call does
-        not have that prompt.</dd>
+                           that have not been saved will show a prompt to save, and if the
+                           user chooses not to save a file, then the process of closing
+                           windows will be halted. If false, then all windows will be closed
+                           regardless of whether or not the data they show has been saved,
+                           with no prompting of the user whatsoever. Note that the
+                           corresponding File menu option to close all open windows does
+                           prompt the user to ensure they are absolutely certain they want to
+                           close all open windows without prompts to save; this API call does
+                           not have that prompt.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if all windows are closed; false if any window did not close.</dd>
 </dl>

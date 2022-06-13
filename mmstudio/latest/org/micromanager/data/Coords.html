@@ -201,7 +201,7 @@ var activeTableTab = "activeTableTab";
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Coords.html#TIME">TIME</a></span></code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
 <div class="block"><span class="deprecationComment">Use discouraged because it reads like a physical time rather
-             than the time point index that it is.</span></div>
+     than the time point index that it is.</span></div>
 </div>
 </td>
 </tr>
@@ -311,7 +311,7 @@ var activeTableTab = "activeTableTab";
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Coords.html#getTime--">getTime</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
 <div class="block"><span class="deprecationComment">Due to looking like the physical time rather than an index.
-             Use <a href="../../../org/micromanager/data/Coords.html#getTimePoint--"><code>getTmePoint</code></a></span></div>
+     Use <a href="../../../org/micromanager/data/Coords.html#getTimePoint--"><code>getTmePoint</code></a></span></div>
 </div>
 </td>
 </tr>
@@ -417,7 +417,7 @@ var activeTableTab = "activeTableTab";
 <pre>@Deprecated
 static final&nbsp;java.lang.String TIME</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use discouraged because it reads like a physical time rather
-             than the time point index that it is.</span></div>
+     than the time point index that it is.</span></div>
 <div class="block">Same as <code>TIME_POINT</code> or <code>T</code>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -547,7 +547,7 @@ static final&nbsp;java.lang.String TIME</pre>
 <dd><code>axis</code> - coordinate axis such as <code>Coords.CHANNEL</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>index along <code>axis</code>, or <code>0</code> if <code>axis</code> does not
-         exist</dd>
+     exist</dd>
 </dl>
 </li>
 </ul>
@@ -564,7 +564,7 @@ static final&nbsp;java.lang.String TIME</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>channel index, or <code>0</code> if this <code>Coords</code> doesn't
-         contain a channel index.</dd>
+     contain a channel index.</dd>
 </dl>
 </li>
 </ul>
@@ -579,7 +579,7 @@ static final&nbsp;java.lang.String TIME</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>channel index, or <code>0</code> if this <code>Coords</code> doesn't
-         contain a channel index.</dd>
+     contain a channel index.</dd>
 </dl>
 </li>
 </ul>
@@ -596,7 +596,7 @@ static final&nbsp;java.lang.String TIME</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>time point index, or <code>0</code> if this <code>Coords</code> doesn't
-         contain a time point index.</dd>
+     contain a time point index.</dd>
 </dl>
 </li>
 </ul>
@@ -609,7 +609,7 @@ static final&nbsp;java.lang.String TIME</pre>
 <pre>@Deprecated
 int&nbsp;getTime()</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Due to looking like the physical time rather than an index.
-             Use <a href="../../../org/micromanager/data/Coords.html#getTimePoint--"><code>getTmePoint</code></a></span></div>
+     Use <a href="../../../org/micromanager/data/Coords.html#getTimePoint--"><code>getTmePoint</code></a></span></div>
 <div class="block">Same as <a href="../../../org/micromanager/data/Coords.html#getTimePoint--"><code>getTimePoint</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -628,7 +628,7 @@ int&nbsp;getTime()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>time point index, or <code>0</code> if this <code>Coords</code> doesn't
-         contain a time point index.</dd>
+     contain a time point index.</dd>
 </dl>
 </li>
 </ul>
@@ -640,12 +640,12 @@ int&nbsp;getTime()</pre>
 <h4>getZSlice</h4>
 <pre>int&nbsp;getZSlice()</pre>
 <div class="block">Get the Z slice index.
- 
+
  <p>Equivalent to <code>getIndex(Coords.Z_SLICE)</code>.</p></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Z slice index, or <code>0</code> if this <code>Coords</code> doesn't
-         contain a Z slice index.</dd>
+     contain a Z slice index.</dd>
 </dl>
 </li>
 </ul>
@@ -660,7 +660,7 @@ int&nbsp;getTime()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Z slice index, or <code>0</code> if this <code>Coords</code> doesn't
-         contain a Z slice index.</dd>
+     contain a Z slice index.</dd>
 </dl>
 </li>
 </ul>
@@ -677,7 +677,7 @@ int&nbsp;getTime()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>stage position index, or <code>0</code> if this <code>Coords</code>
-         doesn't contain a stage position index.</dd>
+     doesn't contain a stage position index.</dd>
 </dl>
 </li>
 </ul>
@@ -692,7 +692,7 @@ int&nbsp;getTime()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>stage position index, or <code>0</code> if this <code>Coords</code>
-         doesn't contain a stage position index.</dd>
+     doesn't contain a stage position index.</dd>
 </dl>
 </li>
 </ul>
@@ -878,7 +878,7 @@ boolean&nbsp;matches(<a href="../../../org/micromanager/data/Coords.html" title=
 <dd><code>axes</code> - Names of axes to be represented in the output</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Copy of this Coords, but only with the subset of axes provided in
-          the axes param</dd>
+     the axes param</dd>
 </dl>
 </li>
 </ul>

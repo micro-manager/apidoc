@@ -292,29 +292,29 @@ extends java.lang.Object</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>histogram</code> - An array of integers indicating how many pixels had
-        intensities falling into the "bin" at the given index. The first
-        bin always starts from an intensity of 0; the last bin ends with
-        an intensity depending on the bitDepth parameter.</dd>
+                            intensities falling into the "bin" at the given index. The first
+                            bin always starts from an intensity of 0; the last bin ends with
+                            an intensity depending on the bitDepth parameter.</dd>
 <dd><code>numSamples</code> - The number of pixels used to generate the histogram;
-        should be equal to the sum of all values in the histogram.</dd>
+                            should be equal to the sum of all values in the histogram.</dd>
 <dd><code>minVal</code> - The lowest intensity found when generating the histogram.</dd>
 <dd><code>maxVal</code> - The brightest intensity found when generating the
-        histogram.</dd>
+                            histogram.</dd>
 <dd><code>minIgnoringOutliers</code> - The lowest intensity when a fraction of the
-        lowest samples are ignored. See the extremaPercentage parameter
-        of DisplayManager.calculateHistogram().</dd>
+                            lowest samples are ignored. See the extremaPercentage parameter
+                            of DisplayManager.calculateHistogram().</dd>
 <dd><code>maxIgnoringOutliers</code> - The highest intensity when a fraction of the
-        lowest samples are ignored. See the extremaPercentage parameter
-        of DisplayManager.calculateHistogram().</dd>
+                            lowest samples are ignored. See the extremaPercentage parameter
+                            of DisplayManager.calculateHistogram().</dd>
 <dd><code>mean</code> - The average intensity of all samples.</dd>
 <dd><code>stdDev</code> - The standard deviation of all samples, or -1 if this value
-        was not calculated.</dd>
+                            was not calculated.</dd>
 <dd><code>bitDepth</code> - The dynamic range of the histogram. The histogram will
-        cover values from 0 to (2^bitDepth - 1), inclusive.</dd>
+                            cover values from 0 to (2^bitDepth - 1), inclusive.</dd>
 <dd><code>binSize</code> - How many distinct intensities are combined into a single
-        bin in the histogram. For example, if the bit depth is 10 and
-        there are 2^8 bins, then there are (2^10 / 2^8 = 4) intensities
-        per bin.</dd>
+                            bin in the histogram. For example, if the bit depth is 10 and
+                            there are 2^8 bins, then there are (2^10 / 2^8 = 4) intensities
+                            per bin.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.ArrayIndexOutOfBoundsException</code> - if histogram is shorter than correct size</dd>
 <dd><code>java.lang.NullPointerException</code> - if histogram is null</dd>
@@ -402,7 +402,7 @@ extends java.lang.Object</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>lowest intensity value in the dataset ignoring given fraction of
-         outliers</dd>
+     outliers</dd>
 </dl>
 </li>
 </ul>
@@ -420,7 +420,7 @@ extends java.lang.Object</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>highest intensity value in the dataset ignoring given fraction of
-         outliers</dd>
+     outliers</dd>
 </dl>
 </li>
 </ul>
@@ -464,7 +464,7 @@ extends java.lang.Object</pre>
 <h4>getBitDepth</h4>
 <pre>public&nbsp;int&nbsp;getBitDepth()</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<div class="block">Retrieve the bit depth of the dataset. The highest pixel intensity in the 
+<div class="block">Retrieve the bit depth of the dataset. The highest pixel intensity in the
  dataset can not be higher than 2^bitDepth.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -486,7 +486,7 @@ extends java.lang.Object</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Range of pixel intensities that fit into a single bin in the
-         histogram.</dd>
+     histogram.</dd>
 </dl>
 </li>
 </ul>

@@ -614,7 +614,7 @@ implements <a href="../../../org/micromanager/display/DataViewer.html" title="in
 <pre>public final&nbsp;<a href="../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;getDisplayPosition()</pre>
 <div class="block">Implements <code>getDisplayPosition</code>.
 
- Get the coordinates for the currently displayed images.
+ <p>Get the coordinates for the currently displayed images.
 
  <p>This method can be called from any thread. The return value will be
  consistent with the most recent call to <a href="../../../org/micromanager/display/DataViewer.html#setDisplayPosition-org.micromanager.data.Coords-"><code>DataViewer.setDisplayPosition(Coords)</code></a> or
@@ -638,7 +638,7 @@ implements <a href="../../../org/micromanager/display/DataViewer.html" title="in
                                                   boolean&nbsp;forceRedisplay)</pre>
 <div class="block">Implements <code>compareAndSetDisplayPosition</code>.
 
- Set the display position only if the current position is the expected one.
+ <p>Set the display position only if the current position is the expected one.
 
  <p>
  This method will allow you to set the display position based on the
@@ -664,8 +664,8 @@ implements <a href="../../../org/micromanager/display/DataViewer.html" title="in
                          position matches this one</dd>
 <dd><code>newPosition</code> - the new display position</dd>
 <dd><code>forceRedisplay</code> - if true, assume the image(s) at the position may
-                       have changed even if the position does not differ
-                       from the current one</dd>
+                         have changed even if the position does not differ
+                         from the current one</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>whether the new position was applied</dd>
 </dl>
@@ -764,7 +764,7 @@ public final&nbsp;<a href="../../../org/micromanager/data/Datastore.html" title=
 <dd><code><a href="../../../org/micromanager/display/DataViewer.html#getDatastore--">getDatastore</a></code>&nbsp;in interface&nbsp;<code><a href="../../../org/micromanager/display/DataViewer.html" title="interface in org.micromanager.display">DataViewer</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the datastore backing this viewer, or <code>null</code> if this viewer
-          is backed by a data provider that is not a datastore</dd>
+     is backed by a data provider that is not a datastore</dd>
 </dl>
 </li>
 </ul>

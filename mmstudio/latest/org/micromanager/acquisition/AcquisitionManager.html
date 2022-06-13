@@ -382,9 +382,9 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>settings</code> - SequenceSettings to use for the acquisition, or null
-        to use the settings in the MDA dialog.</dd>
+                    to use the settings in the MDA dialog.</dd>
 <dd><code>shouldBlock</code> - if true, the method will block until the acquisition
-        is completed.</dd>
+                    is completed.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The Datastore containing the images from the acquisition.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -633,7 +633,7 @@ var activeTableTab = "activeTableTab";
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - Image whose metadata should be populated.</dd>
 <dd><code>includeHardwareState</code> - if true, then the scopeData field will be
-        populated in the result Metadata.</dd>
+                             populated in the result Metadata.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A pre-populated Metadata.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -657,11 +657,11 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - Result of calling getSource() on an AcquisitionStartedEvent
-        or AcquisitionEndedEvent.</dd>
+               or AcquisitionEndedEvent.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if acquisition was started by Micro-Manager, false if it
-         was started elsewhere (e.g. by a plugin or other third-party
-         code).</dd>
+     was started elsewhere (e.g. by a plugin or other third-party
+     code).</dd>
 </dl>
 </li>
 </ul>

@@ -933,7 +933,7 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
 <div class="block"><span class="deprecationComment">When used correctly, SequenceSettings are immutable.
-             If you really need a copy, use copyBuilder().build();</span></div>
+     If you really need a copy, use copyBuilder().build();</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coords.html#copy--">copy()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></dt>
@@ -1201,7 +1201,7 @@
 </dd>
 <dt><a href="org/micromanager/data/DataProviderHasNewSummaryMetadataEvent.html" title="interface in org.micromanager.data"><span class="typeNameLink">DataProviderHasNewSummaryMetadataEvent</span></a> - Interface in <a href="org/micromanager/data/package-summary.html">org.micromanager.data</a></dt>
 <dd>
-<div class="block">This class signifies that new summary metadata has been set for a 
+<div class="block">This class signifies that new summary metadata has been set for a
  DataProvider.</div>
 </dd>
 <dt><a href="org/micromanager/data/Datastore.html" title="interface in org.micromanager.data"><span class="typeNameLink">Datastore</span></a> - Interface in <a href="org/micromanager/data/package-summary.html">org.micromanager.data</a></dt>
@@ -1758,8 +1758,6 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Retrieve the bit depth of the dataset.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getBoolean-java.lang.String-boolean-">getBoolean(String, boolean)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getBoolean-java.lang.String-">getBoolean(String)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -1768,6 +1766,8 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getBoolean-java.lang.String-boolean-">getBoolean(String, boolean)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/propertymap/MutablePropertyMapView.html#getBoolean-java.lang.String-boolean-">getBoolean(String, boolean)</a></span> - Method in interface org.micromanager.propertymap.<a href="org/micromanager/propertymap/MutablePropertyMapView.html" title="interface in org.micromanager.propertymap">MutablePropertyMapView</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/UserProfile.html#getBoolean-java.lang.Class-java.lang.String-java.lang.Boolean-">getBoolean(Class&lt;?&gt;, String, Boolean)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/UserProfile.html" title="interface in org.micromanager">UserProfile</a></dt>
@@ -2221,8 +2221,6 @@
 <div class="block"><span class="deprecationComment">- use displaySettingsBuilder() instead</span></div>
 </div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getDouble-java.lang.String-double-">getDouble(String, double)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getDouble-java.lang.String-">getDouble(String)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -2231,6 +2229,8 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getDouble-java.lang.String-double-">getDouble(String, double)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/propertymap/MutablePropertyMapView.html#getDouble-java.lang.String-double-">getDouble(String, double)</a></span> - Method in interface org.micromanager.propertymap.<a href="org/micromanager/propertymap/MutablePropertyMapView.html" title="interface in org.micromanager.propertymap">MutablePropertyMapView</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/UserProfile.html#getDouble-java.lang.Class-java.lang.String-java.lang.Double-">getDouble(Class&lt;?&gt;, String, Double)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/UserProfile.html" title="interface in org.micromanager">UserProfile</a></dt>
@@ -2403,9 +2403,9 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
 <div class="block"><span class="deprecationComment">Directly accessing the <code>ImagePlus</code> of an MMStudio
-             display window will generally result in very fragile code. Consider
-             accessing image data through <a href="org/micromanager/display/DataViewer.html#getDataProvider--"><code>DataViewer.getDataProvider()</code></a>. For drawing
-             overlay graphics, see <a href="org/micromanager/display/DisplayWindow.html#addOverlay-org.micromanager.display.overlay.Overlay-"><code>DisplayWindow.addOverlay(org.micromanager.display.overlay.Overlay)</code></a>.</span></div>
+     display window will generally result in very fragile code. Consider
+     accessing image data through <a href="org/micromanager/display/DataViewer.html#getDataProvider--"><code>DataViewer.getDataProvider()</code></a>. For drawing
+     overlay graphics, see <a href="org/micromanager/display/DisplayWindow.html#addOverlay-org.micromanager.display.overlay.Overlay-"><code>DisplayWindow.addOverlay(org.micromanager.display.overlay.Overlay)</code></a>.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayDidShowImageEvent.html#getImages--">getImages()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayDidShowImageEvent.html" title="interface in org.micromanager.display">DisplayDidShowImageEvent</a></dt>
@@ -2576,8 +2576,6 @@
 <div class="block">Provides access to Micro-Manager's logging functions, like logError(),
  showMessage(), etc.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getLong-java.lang.String-long-">getLong(String, long)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getLong-java.lang.String-">getLong(String)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
@@ -2586,6 +2584,8 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getLong-java.lang.String-long-">getLong(String, long)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/propertymap/MutablePropertyMapView.html#getLong-java.lang.String-long-">getLong(String, long)</a></span> - Method in interface org.micromanager.propertymap.<a href="org/micromanager/propertymap/MutablePropertyMapView.html" title="interface in org.micromanager.propertymap">MutablePropertyMapView</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/UserProfile.html#getLong-java.lang.Class-java.lang.String-java.lang.Long-">getLong(Class&lt;?&gt;, String, Long)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/UserProfile.html" title="interface in org.micromanager">UserProfile</a></dt>
@@ -2759,7 +2759,7 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.html#getNumberOfChannels--">getNumberOfChannels()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a></dt>
 <dd>
 <div class="block">Returns the number of channels in these DisplaySettings
- Note that this number may be different from the number of the channels 
+ Note that this number may be different from the number of the channels
  in the image being shown.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelDisplaySettings.Builder.html#getNumberOfComponents--">getNumberOfComponents()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></dt>
@@ -2960,12 +2960,12 @@
 <dd>
 <div class="block">Provides access to the PropertyManagerAPI.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getPropertyMap-java.lang.String-org.micromanager.PropertyMap-">getPropertyMap(String, PropertyMap)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getPropertyMap-java.lang.String-">getPropertyMap(String)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getPropertyMap-java.lang.String-org.micromanager.PropertyMap-">getPropertyMap(String, PropertyMap)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/propertymap/MutablePropertyMapView.html#getPropertyMap-java.lang.String-org.micromanager.PropertyMap-">getPropertyMap(String, PropertyMap)</a></span> - Method in interface org.micromanager.propertymap.<a href="org/micromanager/propertymap/MutablePropertyMapView.html" title="interface in org.micromanager.propertymap">MutablePropertyMapView</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/DataManager.html#getPropertyMapBuilder--">getPropertyMapBuilder()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/DataManager.html" title="interface in org.micromanager.data">DataManager</a></dt>
@@ -3217,12 +3217,12 @@
 <div class="block">Return the Datastore into which images were placed during the
  acquisition.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getString-java.lang.String-java.lang.String-">getString(String, String)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getString-java.lang.String-">getString(String)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getString-java.lang.String-java.lang.String-">getString(String, String)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/propertymap/MutablePropertyMapView.html#getString-java.lang.String-java.lang.String-">getString(String, String)</a></span> - Method in interface org.micromanager.propertymap.<a href="org/micromanager/propertymap/MutablePropertyMapView.html" title="interface in org.micromanager.propertymap">MutablePropertyMapView</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/UserProfile.html#getString-java.lang.Class-java.lang.String-java.lang.String-">getString(Class&lt;?&gt;, String, String)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/UserProfile.html" title="interface in org.micromanager">UserProfile</a></dt>
@@ -3318,7 +3318,7 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
 <div class="block"><span class="deprecationComment">Due to looking like the physical time rather than an index.
-             Use <a href="org/micromanager/data/Coords.html#getTimePoint--"><code>getTmePoint</code></a></span></div>
+     Use <a href="org/micromanager/data/Coords.html#getTimePoint--"><code>getTmePoint</code></a></span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coords.html#getTimePoint--">getTimePoint()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></dt>
@@ -3623,9 +3623,9 @@
 <dt><a href="org/micromanager/data/ImagesDifferInSizeException.html" title="class in org.micromanager.data"><span class="typeNameLink">ImagesDifferInSizeException</span></a> - Exception in <a href="org/micromanager/data/package-summary.html">org.micromanager.data</a></dt>
 <dd>
 <div class="block">An unchecked exception thrown when an image is put into a datastore that
-  already has an image of a different size and that does not support images
-  differing in size (currently non of the MM Datastores support images
-  differing in size.</div>
+ already has an image of a different size and that does not support images
+ differing in size (currently non of the MM Datastores support images
+ differing in size.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/ImagesDifferInSizeException.html#ImagesDifferInSizeException--">ImagesDifferInSizeException()</a></span> - Constructor for exception org.micromanager.data.<a href="org/micromanager/data/ImagesDifferInSizeException.html" title="class in org.micromanager.data">ImagesDifferInSizeException</a></dt>
 <dd>&nbsp;</dd>
@@ -4144,8 +4144,8 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
 <div class="block"><span class="deprecationComment">Use <a href="org/micromanager/StagePosition.html#set1DPosition-java.lang.String-double-"><code>StagePosition.set1DPosition(java.lang.String, double)</code></a> or <a href="org/micromanager/StagePosition.html#set2DPosition-java.lang.String-double-double-"><code>StagePosition.set2DPosition(java.lang.String, double, double)</code></a> to set;
-             use <a href="org/micromanager/StagePosition.html#getNumberOfStageAxes--"><code>StagePosition.getNumberOfStageAxes()</code></a>, <a href="org/micromanager/StagePosition.html#is1DStagePosition--"><code>StagePosition.is1DStagePosition()</code></a>, or
-             <a href="org/micromanager/StagePosition.html#is2DStagePosition--"><code>StagePosition.is2DStagePosition()</code></a> to access.</span></div>
+     use <a href="org/micromanager/StagePosition.html#getNumberOfStageAxes--"><code>StagePosition.getNumberOfStageAxes()</code></a>, <a href="org/micromanager/StagePosition.html#is1DStagePosition--"><code>StagePosition.is1DStagePosition()</code></a>, or
+     <a href="org/micromanager/StagePosition.html#is2DStagePosition--"><code>StagePosition.is2DStagePosition()</code></a> to access.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/SequenceSettings.Builder.html#numFrames-int-">numFrames(int)</a></span> - Method in class org.micromanager.acquisition.<a href="org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></dt>
@@ -4184,7 +4184,7 @@
 </dd>
 <dt><a href="org/micromanager/package-summary.html">org.micromanager</a> - package org.micromanager</dt>
 <dd>
-<div class="block">MMStudio application and Java API</div>
+<div class="block">MMStudio application and Java API.</div>
 </dd>
 <dt><a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a> - package org.micromanager.acquisition</dt>
 <dd>
@@ -5183,7 +5183,7 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
 <div class="block"><span class="deprecationComment">- Use core.setPixelSizeAffine(config, DoubleVector transform)
-                instead</span></div>
+     instead</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/Application.html#setChannelExposureTime-java.lang.String-java.lang.String-double-">setChannelExposureTime(String, String, double)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/Application.html" title="interface in org.micromanager">Application</a></dt>
@@ -5649,7 +5649,7 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
 <div class="block"><span class="deprecationComment">Use <a href="org/micromanager/StagePosition.html#set1DPosition-java.lang.String-double-"><code>StagePosition.set1DPosition(java.lang.String, double)</code></a> or <a href="org/micromanager/StagePosition.html#set2DPosition-java.lang.String-double-double-"><code>StagePosition.set2DPosition(java.lang.String, double, double)</code></a> to set;
-             use <a href="org/micromanager/StagePosition.html#getStageDeviceLabel--"><code>StagePosition.getStageDeviceLabel()</code></a> to access.</span></div>
+     use <a href="org/micromanager/StagePosition.html#getStageDeviceLabel--"><code>StagePosition.getStageDeviceLabel()</code></a> to access.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coords.Builder.html#stagePosition-int-">stagePosition(int)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Coords.Builder.html" title="interface in org.micromanager.data">Coords.Builder</a></dt>
@@ -5754,7 +5754,7 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
 <div class="block"><span class="deprecationComment">Use discouraged because it reads like a physical time rather
-             than the time point index that it is.</span></div>
+     than the time point index that it is.</span></div>
 </div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coords.html#TIME_POINT">TIME_POINT</a></span> - Static variable in interface org.micromanager.data.<a href="org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></dt>

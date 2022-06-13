@@ -291,11 +291,11 @@ extends <a href="../../../org/micromanager/data/DataProvider.html" title="interf
 <dd><code>java.io.IOException</code> - if an IO error occurs</dd>
 <dd><code><a href="../../../org/micromanager/data/DatastoreFrozenException.html" title="class in org.micromanager.data">DatastoreFrozenException</a></code> - if the freeze() method has been called.</dd>
 <dd><code><a href="../../../org/micromanager/data/DatastoreRewriteException.html" title="class in org.micromanager.data">DatastoreRewriteException</a></code> - if an Image with the same coordinates
-         already exists in the Datastore.</dd>
+                                   already exists in the Datastore.</dd>
 <dd><code>java.lang.IllegalArgumentException</code> - if the image's axes do not match the
-         axes of images previously added to the Datastore. All images
-         in a Datastore are required to have the same set of axes in
-         their Coords objects.</dd>
+                                   axes of images previously added to the Datastore. All images
+                                   in a Datastore are required to have the same set of axes in
+                                   their Coords objects.</dd>
 </dl>
 </li>
 </ul>
@@ -317,7 +317,7 @@ extends <a href="../../../org/micromanager/data/DataProvider.html" title="interf
 <dd><code>java.io.IOException</code> - if an IO error occurs</dd>
 <dd><code><a href="../../../org/micromanager/data/DatastoreFrozenException.html" title="class in org.micromanager.data">DatastoreFrozenException</a></code> - if the freeze() method has been called.</dd>
 <dd><code><a href="../../../org/micromanager/data/DatastoreRewriteException.html" title="class in org.micromanager.data">DatastoreRewriteException</a></code> - if the Datastore already has
-         SummaryMetadata or already has images.</dd>
+                                   SummaryMetadata or already has images.</dd>
 </dl>
 </li>
 </ul>
@@ -423,7 +423,7 @@ boolean&nbsp;save(java.awt.Component&nbsp;parent)
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - Window  on top of which to display the dialog prompt;
-        may be null.</dd>
+               may be null.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if data was saved; false if user canceled</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -445,9 +445,9 @@ boolean&nbsp;save(java.awt.Component&nbsp;parent)
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - Window  on top of which to display a dialog prompting
-        the user for a location to save.  After displaying</dd>
+                 the user for a location to save.  After displaying</dd>
 <dd><code>blocking</code> - if true will return after saving, otherwise will return quickly
-       and continue saving on another thread</dd>
+                 and continue saving on another thread</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Path chosen by user to save the data, null if dialog was canceled</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -491,7 +491,7 @@ boolean&nbsp;save(java.awt.Component&nbsp;parent)
 <dd><code>mode</code> - File format to save to</dd>
 <dd><code>path</code> - File path used to save the data</dd>
 <dd><code>blocking</code> - when true, will block while saving data, otherwise will return
-                   immediately</dd>
+                 immediately</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - if an IO error occurs</dd>
 </dl>

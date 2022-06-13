@@ -142,7 +142,7 @@ var activeTableTab = "activeTableTab";
                   java.lang.String&nbsp;config)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
 <div class="block"><span class="deprecationComment">- Use core.setPixelSizeAffine(config, DoubleVector transform)
-                instead</span></div>
+     instead</span></div>
 </div>
 </td>
 </tr>
@@ -191,10 +191,10 @@ var activeTableTab = "activeTableTab";
 <dd><code>version</code> - - minimum version needen to run this code</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if the run-time Micro-Manager version is less than the
-          one specified</dd>
+     one specified</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.NumberFormatException</code> - if the version number is not in the format
-          expected.</dd>
+                               expected.</dd>
 </dl>
 </li>
 </ul>
@@ -228,7 +228,7 @@ java.awt.geom.AffineTransform&nbsp;getCameraTransform(java.lang.String&nbsp;conf
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>config</code> - The configuration (per core.getCurrentPixelSizeConfig())
-        to find the affine transform for.</dd>
+               to find the affine transform for.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The transform describing how the camera maps to the stage.</dd>
 </dl>
@@ -244,14 +244,14 @@ java.awt.geom.AffineTransform&nbsp;getCameraTransform(java.lang.String&nbsp;conf
 void&nbsp;setCameraTransform(java.awt.geom.AffineTransform&nbsp;transform,
                                     java.lang.String&nbsp;config)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">- Use core.setPixelSizeAffine(config, DoubleVector transform)
-                instead</span></div>
+     instead</span></div>
 <div class="block">Set a new affine transform for describing how the camera image maps to
  the stage coordinates. The value will be stored in the user's profile.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>transform</code> - The new transform to use.</dd>
 <dd><code>config</code> - The configuration (per core.getCurrentPixelSizeConfig())
-        to set the affine transform for.</dd>
+                  to set the affine transform for.</dd>
 </dl>
 </li>
 </ul>

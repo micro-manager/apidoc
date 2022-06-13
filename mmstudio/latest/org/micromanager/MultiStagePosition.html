@@ -113,14 +113,14 @@ extends java.lang.Object</pre>
 <div class="block">Definition of a position in space in terms of available stages/drives.
 
  <p>The current implementation uses the concept of "DefaultXYStage", and
- "DefaultZStage".  This is problematic.  The concept of "default" stages 
- originates in the Micro-Manager core, that always has only 1 stage that is 
+ "DefaultZStage".  This is problematic.  The concept of "default" stages
+ originates in the Micro-Manager core, that always has only 1 stage that is
  the "active" one.  However, MultiStagePosition devices can record the position
- of multiple stages, sometimes even lacking those of the "default" stages, 
+ of multiple stages, sometimes even lacking those of the "default" stages,
  so it can not rely on the Micro-manager "Default" stages being in the list.</p>
 
  <p>It would be nice to be able to rely on the getX, getY, and getZ functions,
- but these will return bogus values if the system's default stages are not 
+ but these will return bogus values if the system's default stages are not
  included.  To avoid surprises, you may need to parse the MultiStagePosition
  yourself.</p></div>
 </li>
@@ -756,7 +756,7 @@ extends java.lang.Object</pre>
 <dd><code>alt</code> - The MultiStagePosition to compare against.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if every field of this MultiStagePosition matches every
-         field of the provided MultiStagePosition, false otherwise.</dd>
+     field of the provided MultiStagePosition, false otherwise.</dd>
 </dl>
 </li>
 </ul>

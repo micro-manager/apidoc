@@ -226,11 +226,11 @@ var activeTableTab = "activeTableTab";
 <dd><code>source</code> - Source SummaryMetadata to be input into the Pipeline.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../../org/micromanager/data/DatastoreFrozenException.html" title="class in org.micromanager.data">DatastoreFrozenException</a></code> - if the Datastore
-         is frozen at the time this method is called.</dd>
+                            is frozen at the time this method is called.</dd>
 <dd><code><a href="../../../org/micromanager/data/DatastoreRewriteException.html" title="class in org.micromanager.data">DatastoreRewriteException</a></code> - if the Datastore has already had
-         SummaryMetadata set for it at the time this method is called.</dd>
+                            SummaryMetadata set for it at the time this method is called.</dd>
 <dd><code><a href="../../../org/micromanager/data/PipelineErrorException.html" title="class in org.micromanager.data">PipelineErrorException</a></code> - if processing of images has already
-         started at the time this method is called.</dd>
+                            started at the time this method is called.</dd>
 <dd><code>java.io.IOException</code></dd>
 </dl>
 </li>
@@ -272,16 +272,16 @@ var activeTableTab = "activeTableTab";
 <dd><code>image</code> - Image to be processed by the Pipeline.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../../org/micromanager/data/DatastoreFrozenException.html" title="class in org.micromanager.data">DatastoreFrozenException</a></code> - if the Datastore
-         is frozen at the time this method is called, or if this pipeline
-         has no Processors in it and the Datastore is frozen. If the
-         Datastore is frozen at some point after this method is called,
-         then the exception will not be thrown.</dd>
+                          is frozen at the time this method is called, or if this pipeline
+                          has no Processors in it and the Datastore is frozen. If the
+                          Datastore is frozen at some point after this method is called,
+                          then the exception will not be thrown.</dd>
 <dd><code><a href="../../../org/micromanager/data/DatastoreRewriteException.html" title="class in org.micromanager.data">DatastoreRewriteException</a></code> - if this pipeline has no Processors in it and
-         the inserted Image has coordinates that match an Image that is
-         already in the Datastore.</dd>
+                          the inserted Image has coordinates that match an Image that is
+                          already in the Datastore.</dd>
 <dd><code><a href="../../../org/micromanager/data/PipelineErrorException.html" title="class in org.micromanager.data">PipelineErrorException</a></code> - if the pipeline is
-         in an error state; see the getExceptions() and clearExceptions()
-         methods.</dd>
+                          in an error state; see the getExceptions() and clearExceptions()
+                          methods.</dd>
 <dd><code>java.io.IOException</code></dd>
 </dl>
 </li>
@@ -369,7 +369,7 @@ default&nbsp;boolean&nbsp;getIsSynchronous()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>list containing any exceptions that have occurred during
-         processing of images</dd>
+     processing of images</dd>
 </dl>
 </li>
 </ul>
