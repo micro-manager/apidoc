@@ -251,7 +251,7 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>quality</code> - An integer quality ranging from 1 through 100. The default
-        value is 90.</dd>
+                value is 90.</dd>
 </dl>
 </li>
 </ul>
@@ -297,7 +297,7 @@ var activeTableTab = "activeTableTab";
 <dd><code>axis</code> - Axis name, like Coords.CHANNEL, Coords.Z, etc.</dd>
 <dd><code>start</code> - Axis index to start exporting from, inclusive.</dd>
 <dd><code>stop</code> - Axis index to stop exporting from, exclusive (i.e. one more
-        than the index of the last image you want to export).</dd>
+              than the index of the last image you want to export).</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>This instance, allowing calls to be chained together.</dd>
 </dl>
@@ -333,9 +333,9 @@ var activeTableTab = "activeTableTab";
  errors":
  - Setting a save path when using the OUTPUT_IMAGEJ format
  - Loops over axes that are not used by any images in the display's
-   datastore
+ datastore
  - Loops that have invalid start/end boundary conditions (starting or
-   ending index is greater than largest index in the datastore).
+ ending index is greater than largest index in the datastore).
  In the latter two cases, image coordinates that do not refer to a valid
  image will be ignored (for example, trying to access a Z coordinate of 1
  in a dataset that is two-dimensional). It is therefore possible that this
@@ -344,11 +344,11 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - if the export process would attempt to write to a
-         file that already exists</dd>
+                                  file that already exists</dd>
 <dd><code>java.lang.IllegalArgumentException</code> - if no output format has been set, or
-         OUTPUT_PNG or OUTPUT_JPG formats are used but no save information
-         has been set, or if no loops have been configured, or if no
-         display has been set.</dd>
+                                  OUTPUT_PNG or OUTPUT_JPG formats are used but no save
+                                  information has been set, or if no loops have been
+                                  configured, or if no display has been set.</dd>
 </dl>
 </li>
 </ul>

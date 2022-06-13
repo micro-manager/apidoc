@@ -178,9 +178,9 @@ extends <a href="../../../org/micromanager/display/DataViewer.html" title="inter
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayWindow.html#getImagePlus--">getImagePlus</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
 <div class="block"><span class="deprecationComment">Directly accessing the <code>ImagePlus</code> of an MMStudio
-             display window will generally result in very fragile code. Consider
-             accessing image data through <a href="../../../org/micromanager/display/DataViewer.html#getDataProvider--"><code>DataViewer.getDataProvider()</code></a>. For drawing
-             overlay graphics, see <a href="../../../org/micromanager/display/DisplayWindow.html#addOverlay-org.micromanager.display.overlay.Overlay-"><code>addOverlay(org.micromanager.display.overlay.Overlay)</code></a>.</span></div>
+     display window will generally result in very fragile code. Consider
+     accessing image data through <a href="../../../org/micromanager/display/DataViewer.html#getDataProvider--"><code>DataViewer.getDataProvider()</code></a>. For drawing
+     overlay graphics, see <a href="../../../org/micromanager/display/DisplayWindow.html#addOverlay-org.micromanager.display.overlay.Overlay-"><code>addOverlay(org.micromanager.display.overlay.Overlay)</code></a>.</span></div>
 </div>
 </td>
 </tr>
@@ -426,7 +426,7 @@ void&nbsp;setMagnification(double&nbsp;ratio)</pre>
  intensity scaling range for all displayed channels. If continuous
  autostretching was enabled, it is disabled.</p>
 
-<p> Calls are ignored if the display has closed.</p>
+ <p> Calls are ignored if the display has closed.</p>
 
  <p>This method can be called from any thread. However, you should call it
  from the Swing/AWT event dispatch thread if you want to correctly
@@ -505,9 +505,9 @@ void&nbsp;setMagnification(double&nbsp;ratio)</pre>
 <pre>@Deprecated
 ij.ImagePlus&nbsp;getImagePlus()</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Directly accessing the <code>ImagePlus</code> of an MMStudio
-             display window will generally result in very fragile code. Consider
-             accessing image data through <a href="../../../org/micromanager/display/DataViewer.html#getDataProvider--"><code>DataViewer.getDataProvider()</code></a>. For drawing
-             overlay graphics, see <a href="../../../org/micromanager/display/DisplayWindow.html#addOverlay-org.micromanager.display.overlay.Overlay-"><code>addOverlay(org.micromanager.display.overlay.Overlay)</code></a>.</span></div>
+     display window will generally result in very fragile code. Consider
+     accessing image data through <a href="../../../org/micromanager/display/DataViewer.html#getDataProvider--"><code>DataViewer.getDataProvider()</code></a>. For drawing
+     overlay graphics, see <a href="../../../org/micromanager/display/DisplayWindow.html#addOverlay-org.micromanager.display.overlay.Overlay-"><code>addOverlay(org.micromanager.display.overlay.Overlay)</code></a>.</span></div>
 <div class="block">Return the ImageJ <code>ImagePlus</code> object used by the display window.
 
  <p>Note that the <code>ImagePlus</code> may be replaced with a new one during the
@@ -520,8 +520,8 @@ ij.ImagePlus&nbsp;getImagePlus()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the <code>ImagePlus</code> used by the window, which may be a
-         <code>CompositeImage</code>, or <code>null</code> if none has been created or if
-         the display has closed.</dd>
+     <code>CompositeImage</code>, or <code>null</code> if none has been created or if
+     the display has closed.</dd>
 </dl>
 </li>
 </ul>
@@ -541,7 +541,7 @@ ij.ImagePlus&nbsp;getImagePlus()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if the display is closed, or was already closed; false
-         if it remains open</dd>
+     if it remains open</dd>
 </dl>
 </li>
 </ul>
@@ -560,10 +560,10 @@ ij.ImagePlus&nbsp;getImagePlus()</pre>
  <p>Calls are ignored if the display has already closed.</p>
 
  <p>This method can be called from any thread. However, you should call it
- from the Swing/AWT event dispatch thread if you want to correctly
- synchronize with other user interface changes. In particular, the display
- may not have closed yet at the moment this method returns if called on
- another thread.</p></div>
+     from the Swing/AWT event dispatch thread if you want to correctly
+     synchronize with other user interface changes. In particular, the display
+     may not have closed yet at the moment this method returns if called on
+     another thread.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>close</code>&nbsp;in interface&nbsp;<code>java.lang.AutoCloseable</code></dd>
@@ -608,7 +608,7 @@ ij.ImagePlus&nbsp;getImagePlus()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>whether full screen mode is enabled (<code>false</code> if the
-         display has closed</dd>
+     display has closed</dd>
 </dl>
 </li>
 </ul>
@@ -701,7 +701,7 @@ java.awt.Window&nbsp;getAsWindow()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the <code>java.awt.Window</code> used by this image display, or
-         <code>null</code> if the display has been closed</dd>
+     <code>null</code> if the display has been closed</dd>
 </dl>
 </li>
 </ul>

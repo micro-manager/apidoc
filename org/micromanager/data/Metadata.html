@@ -101,8 +101,8 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">Metadata</span></pre>
-<div class="block">This interface defines the metadata for Images. Note that Metadatas are 
- immutable; if you need to modify one, create a new one using a 
+<div class="block">This interface defines the metadata for Images. Note that Metadatas are
+ immutable; if you need to modify one, create a new one using a
  MetadataBuilder.
  All fields of the Metadata that are not explicitly initialized will default
  to null.
@@ -356,7 +356,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>copyBuilderPreservingUUID</h4>
 <pre><a href="../../../org/micromanager/data/Metadata.Builder.html" title="interface in org.micromanager.data">Metadata.Builder</a>&nbsp;copyBuilderPreservingUUID()</pre>
-<div class="block">Return a builder with the same content, preserving the image UUID. 
+<div class="block">Return a builder with the same content, preserving the image UUID.
  The UUID is a unique identifier for the image. Micro-Manager uses this
  field to determine if two images are truly different, so if you copy this
  Metadata instance to apply to a new image, use another builder.</div>
@@ -444,7 +444,7 @@ java.lang.Double&nbsp;getElapsedTimeMs()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Milliseconds since the start of the acquisition up to the moment
-         this image was received by Micro-Manager</dd>
+     this image was received by Micro-Manager</dd>
 </dl>
 </li>
 </ul>
@@ -456,16 +456,16 @@ java.lang.Double&nbsp;getElapsedTimeMs()</pre>
 <h4>getElapsedTimeMs</h4>
 <pre>double&nbsp;getElapsedTimeMs(double&nbsp;defaultValue)</pre>
 <div class="block">Time in milliseconds since the start of the given data acquisition
- at which the image was received by Micro-Manager.  This is a proxy 
+ at which the image was received by Micro-Manager.  This is a proxy
  for the time at which the exposure happened, but there is considerable
  jitter so it should not be assumed to be accurate to more than ~20 ms.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>defaultValue</code> - - value returned of the image metadata did not contain
-                       information about the elapsed time</dd>
+                     information about the elapsed time</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Milliseconds since the start of the acquisition up to the moment
-         this image was received by Micro-Manager</dd>
+     this image was received by Micro-Manager</dd>
 </dl>
 </li>
 </ul>
@@ -523,7 +523,7 @@ java.lang.Double&nbsp;getElapsedTimeMs()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Affine transform describing geometric relation between stage
-         movement (in microns) and camera (in pixels)</dd>
+     movement (in microns) and camera (in pixels)</dd>
 </dl>
 </li>
 </ul>
