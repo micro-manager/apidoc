@@ -186,13 +186,13 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="org/micromanager/acquisition/ChannelSpec.html#channelGroup">org.micromanager.acquisition.ChannelSpec.channelGroup</a>
-<div class="block"><span class="deprecationComment">Use Builder and getters instead</span></div>
+<td class="colOne"><a href="org/micromanager/acquisition/SequenceSettings.html#channelGroup">org.micromanager.acquisition.SequenceSettings.channelGroup</a>
+<div class="block"><span class="deprecationComment">use Builder and channelGroup() instead</span></div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="org/micromanager/acquisition/SequenceSettings.html#channelGroup">org.micromanager.acquisition.SequenceSettings.channelGroup</a>
-<div class="block"><span class="deprecationComment">use Builder and channelGroup() instead</span></div>
+<td class="colOne"><a href="org/micromanager/acquisition/ChannelSpec.html#channelGroup">org.micromanager.acquisition.ChannelSpec.channelGroup</a>
+<div class="block"><span class="deprecationComment">Use Builder and getters instead</span></div>
 </td>
 </tr>
 <tr class="altColor">
@@ -407,20 +407,6 @@
 <td class="colOne"><a href="org/micromanager/PropertyMap.html#copy--">org.micromanager.PropertyMap.copy()</a></td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="org/micromanager/display/DisplaySettings.html#copy--">org.micromanager.display.DisplaySettings.copy()</a></td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><a href="org/micromanager/acquisition/SequenceSettings.html#copy--">org.micromanager.acquisition.SequenceSettings.copy()</a>
-<div class="block"><span class="deprecationComment">When used correctly, SequenceSettings are immutable.
-     If you really need a copy, use copyBuilder().build();</span></div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colOne"><a href="org/micromanager/data/SummaryMetadata.html#copy--">org.micromanager.data.SummaryMetadata.copy()</a>
-<div class="block"><span class="deprecationComment">- Use SummaryMetadata.Builder.copyBuilder instead</span></div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colOne"><a href="org/micromanager/data/Metadata.html#copy--">org.micromanager.data.Metadata.copy()</a>
 <div class="block"><span class="deprecationComment">Use the appropriate of the following:
      <a href="org/micromanager/data/Metadata.html#copyBuilderPreservingUUID--"><code>Metadata.copyBuilderPreservingUUID()</code></a>, <a href="org/micromanager/data/Metadata.html#copyBuilderWithNewUUID--"><code>Metadata.copyBuilderWithNewUUID()</code></a>,
@@ -428,9 +414,23 @@
      <code>copyBuilderPreservingUUID</code>.</span></div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colOne"><a href="org/micromanager/data/SummaryMetadata.html#copy--">org.micromanager.data.SummaryMetadata.copy()</a>
+<div class="block"><span class="deprecationComment">- Use SummaryMetadata.Builder.copyBuilder instead</span></div>
+</td>
+</tr>
 <tr class="altColor">
 <td class="colOne"><a href="org/micromanager/data/Coords.html#copy--">org.micromanager.data.Coords.copy()</a>
 <div class="block"><span class="deprecationComment">Use <a href="org/micromanager/data/Coords.html#copyBuilder--"><code>copyBuilder</code></a> instead</span></div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><a href="org/micromanager/display/DisplaySettings.html#copy--">org.micromanager.display.DisplaySettings.copy()</a></td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="org/micromanager/acquisition/SequenceSettings.html#copy--">org.micromanager.acquisition.SequenceSettings.copy()</a>
+<div class="block"><span class="deprecationComment">When used correctly, SequenceSettings are immutable.
+     If you really need a copy, use copyBuilder().build();</span></div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -722,13 +722,13 @@
 <td class="colOne"><a href="org/micromanager/PropertyMap.html#getPropertyMap-java.lang.String-">org.micromanager.PropertyMap.getPropertyMap(String)</a></td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="org/micromanager/display/DisplayManager.html#getPropertyMapBuilder--">org.micromanager.display.DisplayManager.getPropertyMapBuilder()</a>
-<div class="block"><span class="deprecationComment">Use <a href="org/micromanager/PropertyMaps.html#builder--"><code>PropertyMaps.builder()</code></a> instead</span></div>
+<td class="colOne"><a href="org/micromanager/data/DataManager.html#getPropertyMapBuilder--">org.micromanager.data.DataManager.getPropertyMapBuilder()</a>
+<div class="block"><span class="deprecationComment">Use PropertyMaps.builder() instead</span></div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="org/micromanager/data/DataManager.html#getPropertyMapBuilder--">org.micromanager.data.DataManager.getPropertyMapBuilder()</a>
-<div class="block"><span class="deprecationComment">Use PropertyMaps.builder() instead</span></div>
+<td class="colOne"><a href="org/micromanager/display/DisplayManager.html#getPropertyMapBuilder--">org.micromanager.display.DisplayManager.getPropertyMapBuilder()</a>
+<div class="block"><span class="deprecationComment">Use <a href="org/micromanager/PropertyMaps.html#builder--"><code>PropertyMaps.builder()</code></a> instead</span></div>
 </td>
 </tr>
 <tr class="altColor">
