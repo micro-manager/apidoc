@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":38,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":38,"i21":6,"i22":6,"i23":38,"i24":6,"i25":38,"i26":38,"i27":6,"i28":6,"i29":6,"i30":6,"i31":6,"i32":6,"i33":38,"i34":6,"i35":6,"i36":6,"i37":6,"i38":6,"i39":6,"i40":6,"i41":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":38,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":38,"i23":6,"i24":6,"i25":38,"i26":6,"i27":38,"i28":38,"i29":6,"i30":6,"i31":6,"i32":6,"i33":6,"i34":6,"i35":38,"i36":6,"i37":6,"i38":6,"i39":6,"i40":6,"i41":6,"i42":6,"i43":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -220,6 +220,18 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i12" class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#createNDTIFFDatastore-org.micromanager.data.Datastore-java.lang.String-">createNDTIFFDatastore</a></span>(<a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;storeToCopy,
+                     java.lang.String&nbsp;directory)</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#createNDTIFFDatastore-java.lang.String-">createNDTIFFDatastore</a></span>(java.lang.String&nbsp;directory)</code>
+<div class="block">Generate a new, "blank" Datastore with  NDTIFF-based Storage and
+ return it.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Pipeline.html" title="interface in org.micromanager.data">Pipeline</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#createPipeline-java.util.List-org.micromanager.data.Datastore-boolean-">createPipeline</a></span>(java.util.List&lt;<a href="../../../org/micromanager/data/ProcessorFactory.html" title="interface in org.micromanager.data">ProcessorFactory</a>&gt;&nbsp;factories,
               <a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;store,
@@ -227,47 +239,47 @@ var activeTableTab = "activeTableTab";
 <div class="block">Create a new Pipeline using the provided list of ProcessorFactories.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#createRAMDatastore--">createRAMDatastore</a></span>()</code>
 <div class="block">Generate a new, "blank" Datastore with RAM-based Storage and return it.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#createRAMDatastore-org.micromanager.data.Datastore-">createRAMDatastore</a></span>(<a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;storeToCopy)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/RewritableDatastore.html" title="interface in org.micromanager.data">RewritableDatastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#createRewritableRAMDatastore--">createRewritableRAMDatastore</a></span>()</code>
 <div class="block">Generate a new, "blank" RewritableDatastore with RAM-based Storage and
  return it.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/RewritableDatastore.html" title="interface in org.micromanager.data">RewritableDatastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#createRewritableRAMDatastore-org.micromanager.data.Datastore-">createRewritableRAMDatastore</a></span>(<a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;storeToCopy)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#createSinglePlaneTIFFSeriesDatastore-org.micromanager.data.Datastore-java.lang.String-">createSinglePlaneTIFFSeriesDatastore</a></span>(<a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;storeToCopy,
                                     java.lang.String&nbsp;directory)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#createSinglePlaneTIFFSeriesDatastore-java.lang.String-">createSinglePlaneTIFFSeriesDatastore</a></span>(java.lang.String&nbsp;directory)</code>
 <div class="block">Generate a new, "blank" Datastore whose Storage is a series of
  single-plane TIFF files.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/data/ProcessorConfigurator.html" title="interface in org.micromanager.data">ProcessorConfigurator</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#getApplicationPipelineConfigurators-boolean-">getApplicationPipelineConfigurators</a></span>(boolean&nbsp;includeDisabled)</code>
 <div class="block">Return a list of the ProcessorConfigurators currently being used by the
  application pipeline interface.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Coords.Builder.html" title="interface in org.micromanager.data">Coords.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#getCoordsBuilder--">getCoordsBuilder</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -275,20 +287,20 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/ImageJConverter.html" title="interface in org.micromanager.data">ImageJConverter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#getImageJConverter--">getImageJConverter</a></span>()</code>
 <div class="block">Provide access to the ImageJConverter() object.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/data/ProcessorConfigurator.html" title="interface in org.micromanager.data">ProcessorConfigurator</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#getLivePipelineConfigurators-boolean-">getLivePipelineConfigurators</a></span>(boolean&nbsp;includeDisabled)</code>
 <div class="block">Return a list of the ProcessorConfigurators currently being used by the
  live pipeline interface.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.Builder.html" title="interface in org.micromanager.data">Metadata.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#getMetadataBuilder--">getMetadataBuilder</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -296,13 +308,13 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.SaveMode.html" title="enum in org.micromanager.data">Datastore.SaveMode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#getPreferredSaveMode--">getPreferredSaveMode</a></span>()</code>
 <div class="block">Return the save mode that the user prefers to use.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.Builder.html" title="interface in org.micromanager">PropertyMap.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#getPropertyMapBuilder--">getPropertyMapBuilder</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -310,7 +322,7 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#getSummaryMetadataBuilder--">getSummaryMetadataBuilder</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -318,33 +330,33 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#getUniqueSaveDirectory-java.lang.String-">getUniqueSaveDirectory</a></span>(java.lang.String&nbsp;path)</code>
 <div class="block">Given a path string, create a unique string with that name.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/ImageJConverter.html" title="interface in org.micromanager.data">ImageJConverter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#ij--">ij</a></span>()</code>
 <div class="block">Provide access to the ImageJConverter() object.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#isApplicationPipelineStepEnabled-int-">isApplicationPipelineStepEnabled</a></span>(int&nbsp;index)</code>
 <div class="block">Checks whether or not the plugin at position `index` in the list is enabled
  for the application pipeline.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#isLivePipelineStepEnabled-int-">isLivePipelineStepEnabled</a></span>(int&nbsp;index)</code>
 <div class="block">Checks whether or not the plugin at position `index` in the list is enabled
  for the live pipeline.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#loadData-java.awt.Component-java.lang.String-boolean-">loadData</a></span>(java.awt.Component&nbsp;parent,
         java.lang.String&nbsp;directory,
@@ -353,7 +365,7 @@ var activeTableTab = "activeTableTab";
  Datastore for that data.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#loadData-java.lang.String-boolean-">loadData</a></span>(java.lang.String&nbsp;directory,
         boolean&nbsp;isVirtual)</code>
@@ -361,7 +373,7 @@ var activeTableTab = "activeTableTab";
  Datastore for that data.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#loadPropertyMap-java.lang.String-">loadPropertyMap</a></span>(java.lang.String&nbsp;path)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -369,14 +381,14 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.Builder.html" title="interface in org.micromanager.data">Metadata.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#metadataBuilder--">metadataBuilder</a></span>()</code>
 <div class="block">Generate a "blank" MetadataBuilder for use in constructing new
  Metadata instances.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#notifyPipelineChanged--">notifyPipelineChanged</a></span>()</code>
 <div class="block">Notify the application that the state of one of the processors in the
@@ -384,7 +396,7 @@ var activeTableTab = "activeTableTab";
  pipeline should grab a new copy of it.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#promptForDataToLoad-java.awt.Window-boolean-">promptForDataToLoad</a></span>(java.awt.Window&nbsp;parent,
                    boolean&nbsp;isVirtual)</code>
@@ -392,14 +404,14 @@ var activeTableTab = "activeTableTab";
  invoke loadData() on that selection.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#setApplicationPipeline-java.util.List-">setApplicationPipeline</a></span>(java.util.List&lt;<a href="../../../org/micromanager/data/ProcessorPlugin.html" title="interface in org.micromanager.data">ProcessorPlugin</a>&gt;&nbsp;plugins)</code>
 <div class="block">Set the current application pipeline to be the provided list of
  ProcessorPlugins.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i40" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#setApplicationPipelineStepEnabled-int-boolean-">setApplicationPipelineStepEnabled</a></span>(int&nbsp;index,
                                  boolean&nbsp;enabled)</code>
@@ -407,7 +419,7 @@ var activeTableTab = "activeTableTab";
  for the application pipeline.</div>
 </td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#setLivePipelineStepEnabled-int-boolean-">setLivePipelineStepEnabled</a></span>(int&nbsp;index,
                           boolean&nbsp;enabled)</code>
@@ -415,14 +427,14 @@ var activeTableTab = "activeTableTab";
  for the live pipeline.</div>
 </td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i42" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#summaryMetadataBuilder--">summaryMetadataBuilder</a></span>()</code>
 <div class="block">Generate a "blank" SummaryMetadataBuilder for use in constructing new
  SummaryMetadata instances.</div>
 </td>
 </tr>
-<tr id="i41" class="rowColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#wrapImage-java.lang.Object-int-int-int-int-org.micromanager.data.Coords-org.micromanager.data.Metadata-">wrapImage</a></span>(java.lang.Object&nbsp;pixels,
          int&nbsp;width,
@@ -566,6 +578,49 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>createRewritableRAMDatastore</h4>
 <pre><a href="../../../org/micromanager/data/RewritableDatastore.html" title="interface in org.micromanager.data">RewritableDatastore</a>&nbsp;createRewritableRAMDatastore(<a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;storeToCopy)</pre>
+</li>
+</ul>
+<a name="createNDTIFFDatastore-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createNDTIFFDatastore</h4>
+<pre><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;createNDTIFFDatastore(java.lang.String&nbsp;directory)
+                         throws java.io.IOException</pre>
+<div class="block">Generate a new, "blank" Datastore with  NDTIFF-based Storage and
+ return it. This format stores multiple 2D image planes in the same file,
+ up to 4GB per file. This Datastore will not be managed by Micro-Manager
+ by default (see the org.micromanager.api.display.DisplayManager.manage()
+ method for more information). Be certain to call the freeze() method of
+ the Datastore when you have finished adding data to it, as the Storage
+ must finalize the dataset before it is properly saved to disk.
+
+ <p>More information on the NDTiff format can be found at: https://github.com/micro-manager/NDTiffStorage</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>directory</code> - Location on disk to store the file(s).</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>an empty Datastore backed by disk in the form of one or more
+     TIFF files each containing multiple image planes.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - if any errors occur while opening files for writing.</dd>
+</dl>
+</li>
+</ul>
+<a name="createNDTIFFDatastore-org.micromanager.data.Datastore-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createNDTIFFDatastore</h4>
+<pre><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;createNDTIFFDatastore(<a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;storeToCopy,
+                                java.lang.String&nbsp;directory)
+                         throws java.io.IOException</pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd>
+</dl>
 </li>
 </ul>
 <a name="createMultipageTIFFDatastore-java.lang.String-boolean-boolean-">
