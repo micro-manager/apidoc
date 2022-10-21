@@ -79,7 +79,7 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">class </span>ATask : <span class="keyword">public</span> <a class="code" href="class_task.html">Task</a></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">explicit</span> ATask(boost::shared_ptr&lt;Semaphore&gt; semDone, <span class="keywordtype">size_t</span> taskIndex, <span class="keywordtype">size_t</span> totalTaskCount);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">explicit</span> ATask(std::shared_ptr&lt;Semaphore&gt; semDone, <span class="keywordtype">size_t</span> taskIndex, <span class="keywordtype">size_t</span> totalTaskCount);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> SetUp(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> bytes, <span class="keywordtype">size_t</span> usedTaskCount);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
@@ -92,7 +92,7 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_task_set___copy_memory.html">TaskSet_CopyMemory</a>(boost::shared_ptr&lt;ThreadPool&gt; pool);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_task_set___copy_memory.html">TaskSet_CopyMemory</a>(std::shared_ptr&lt;ThreadPool&gt; pool);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> SetUp(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> bytes);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
@@ -103,7 +103,7 @@ $(function() {
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> MemCopy(<span class="keywordtype">void</span>* dst, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> bytes);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_task_html"><div class="ttname"><a href="class_task.html">Task</a></div><div class="ttdef"><b>Definition:</b> Task.h:32</div></div>
+<div class="ttc" id="aclass_task_html"><div class="ttname"><a href="class_task.html">Task</a></div><div class="ttdef"><b>Definition:</b> Task.h:31</div></div>
 <div class="ttc" id="aclass_task_set___copy_memory_html"><div class="ttname"><a href="class_task_set___copy_memory.html">TaskSet_CopyMemory</a></div><div class="ttdef"><b>Definition:</b> TaskSet_CopyMemory.h:28</div></div>
 <div class="ttc" id="aclass_task_set_html"><div class="ttname"><a href="class_task_set.html">TaskSet</a></div><div class="ttdef"><b>Definition:</b> TaskSet.h:35</div></div>
 <!-- start footer part -->

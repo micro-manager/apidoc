@@ -53,22 +53,22 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeca23bdf6d90e7e6b4a0d82a44a7e7ff"><td class="memItemLeft" align="right" valign="top"><a id="aeca23bdf6d90e7e6b4a0d82a44a7e7ff"></a>
-boost::shared_ptr&lt; DeviceInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#aeca23bdf6d90e7e6b4a0d82a44a7e7ff">LoadDevice</a> (boost::shared_ptr&lt; LoadedDeviceAdapter &gt; module, const std::string &amp;deviceName, const std::string &amp;label, <a class="el" href="class_c_m_m_core.html">CMMCore</a> *core, mm::logging::Logger deviceLogger, mm::logging::Logger coreLogger)</td></tr>
-<tr class="memdesc:aeca23bdf6d90e7e6b4a0d82a44a7e7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the specified device and assign a device label. <br /></td></tr>
-<tr class="separator:aeca23bdf6d90e7e6b4a0d82a44a7e7ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fe1dd3a0fd1256ab579d88218d007de"><td class="memItemLeft" align="right" valign="top"><a id="a9fe1dd3a0fd1256ab579d88218d007de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#a9fe1dd3a0fd1256ab579d88218d007de">UnloadDevice</a> (boost::shared_ptr&lt; DeviceInstance &gt; device)</td></tr>
-<tr class="memdesc:a9fe1dd3a0fd1256ab579d88218d007de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a device. <br /></td></tr>
-<tr class="separator:a9fe1dd3a0fd1256ab579d88218d007de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9ce3b178b22a0425e751bda40a1a29"><td class="memItemLeft" align="right" valign="top"><a id="aba9ce3b178b22a0425e751bda40a1a29"></a>
+std::shared_ptr&lt; DeviceInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#aba9ce3b178b22a0425e751bda40a1a29">LoadDevice</a> (std::shared_ptr&lt; LoadedDeviceAdapter &gt; module, const std::string &amp;deviceName, const std::string &amp;label, <a class="el" href="class_c_m_m_core.html">CMMCore</a> *core, mm::logging::Logger deviceLogger, mm::logging::Logger coreLogger)</td></tr>
+<tr class="memdesc:aba9ce3b178b22a0425e751bda40a1a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the specified device and assign a device label. <br /></td></tr>
+<tr class="separator:aba9ce3b178b22a0425e751bda40a1a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741619a0d26b479589f56a5098442c71"><td class="memItemLeft" align="right" valign="top"><a id="a741619a0d26b479589f56a5098442c71"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#a741619a0d26b479589f56a5098442c71">UnloadDevice</a> (std::shared_ptr&lt; DeviceInstance &gt; device)</td></tr>
+<tr class="memdesc:a741619a0d26b479589f56a5098442c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a device. <br /></td></tr>
+<tr class="separator:a741619a0d26b479589f56a5098442c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf173b9cce6631ade6ae2a98d6b6f6f1"><td class="memItemLeft" align="right" valign="top"><a id="aaf173b9cce6631ade6ae2a98d6b6f6f1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#aaf173b9cce6631ade6ae2a98d6b6f6f1">UnloadAllDevices</a> ()</td></tr>
 <tr class="memdesc:aaf173b9cce6631ade6ae2a98d6b6f6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload all devices. <br /></td></tr>
 <tr class="separator:aaf173b9cce6631ade6ae2a98d6b6f6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a148489a554c286e989edf3231fb781eb"><td class="memItemLeft" align="right" valign="top"><a id="a148489a554c286e989edf3231fb781eb"></a>
-boost::shared_ptr&lt; DeviceInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#a148489a554c286e989edf3231fb781eb">GetDevice</a> (const MM::Device *rawPtr) const</td></tr>
-<tr class="memdesc:a148489a554c286e989edf3231fb781eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a device from a raw pointer to its MMDevice object. <br /></td></tr>
-<tr class="separator:a148489a554c286e989edf3231fb781eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f67aa0947a5b70522e7c7ec7802188"><td class="memItemLeft" align="right" valign="top"><a id="a20f67aa0947a5b70522e7c7ec7802188"></a>
+std::shared_ptr&lt; DeviceInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#a20f67aa0947a5b70522e7c7ec7802188">GetDevice</a> (const MM::Device *rawPtr) const</td></tr>
+<tr class="memdesc:a20f67aa0947a5b70522e7c7ec7802188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a device from a raw pointer to its MMDevice object. <br /></td></tr>
+<tr class="separator:a20f67aa0947a5b70522e7c7ec7802188"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae454f89b32948d9e0758e9e210c39d06"><td class="memItemLeft" align="right" valign="top"><a id="ae454f89b32948d9e0758e9e210c39d06"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#ae454f89b32948d9e0758e9e210c39d06">GetDeviceList</a> (MM::DeviceType t=MM::AnyType) const</td></tr>
 <tr class="memdesc:ae454f89b32948d9e0758e9e210c39d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the labels of all loaded devices of a given type. <br /></td></tr>
@@ -77,43 +77,43 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#a4aa01e5057250ed9803ad395bd03b6a3">GetLoadedPeripherals</a> (const char *hubLabel) const</td></tr>
 <tr class="memdesc:a4aa01e5057250ed9803ad395bd03b6a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the labels of all loaded peripherals of a hub device. <br /></td></tr>
 <tr class="separator:a4aa01e5057250ed9803ad395bd03b6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca6a1d0492925a185927f06ae95a53e6"><td class="memItemLeft" align="right" valign="top">boost::shared_ptr&lt; HubInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#aca6a1d0492925a185927f06ae95a53e6">GetParentDevice</a> (boost::shared_ptr&lt; DeviceInstance &gt; device) const</td></tr>
-<tr class="memdesc:aca6a1d0492925a185927f06ae95a53e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent hub device of a peripheral.  <a href="classmm_1_1_device_manager.html#aca6a1d0492925a185927f06ae95a53e6">More...</a><br /></td></tr>
-<tr class="separator:aca6a1d0492925a185927f06ae95a53e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc25b105d4f97ce488f405cf9370f247"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; HubInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#adc25b105d4f97ce488f405cf9370f247">GetParentDevice</a> (std::shared_ptr&lt; DeviceInstance &gt; device) const</td></tr>
+<tr class="memdesc:adc25b105d4f97ce488f405cf9370f247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent hub device of a peripheral.  <a href="classmm_1_1_device_manager.html#adc25b105d4f97ce488f405cf9370f247">More...</a><br /></td></tr>
+<tr class="separator:adc25b105d4f97ce488f405cf9370f247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:ae1067fb0cff0029d85f3b65e04533141"><td class="memItemLeft" align="right" valign="top"><a id="ae1067fb0cff0029d85f3b65e04533141"></a>
-boost::shared_ptr&lt; DeviceInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#ae1067fb0cff0029d85f3b65e04533141">GetDevice</a> (const std::string &amp;label) const</td></tr>
-<tr class="memdesc:ae1067fb0cff0029d85f3b65e04533141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a device by label. <br /></td></tr>
-<tr class="separator:ae1067fb0cff0029d85f3b65e04533141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a692ba89662e603ce2738afbca9494aaf"><td class="memItemLeft" align="right" valign="top"><a id="a692ba89662e603ce2738afbca9494aaf"></a>
-boost::shared_ptr&lt; DeviceInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetDevice</b> (const char *label) const</td></tr>
-<tr class="separator:a692ba89662e603ce2738afbca9494aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827f197c4c5a90bfa14ca3872697d207"><td class="memItemLeft" align="right" valign="top"><a id="a827f197c4c5a90bfa14ca3872697d207"></a>
+std::shared_ptr&lt; DeviceInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#a827f197c4c5a90bfa14ca3872697d207">GetDevice</a> (const std::string &amp;label) const</td></tr>
+<tr class="memdesc:a827f197c4c5a90bfa14ca3872697d207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a device by label. <br /></td></tr>
+<tr class="separator:a827f197c4c5a90bfa14ca3872697d207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3da0502376dad99442359041c16cc7e"><td class="memItemLeft" align="right" valign="top"><a id="ab3da0502376dad99442359041c16cc7e"></a>
+std::shared_ptr&lt; DeviceInstance &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetDevice</b> (const char *label) const</td></tr>
+<tr class="separator:ab3da0502376dad99442359041c16cc7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:af53acfbe755fd66b0ba3ca06a12d02bd"><td class="memTemplParams" colspan="2"><a id="af53acfbe755fd66b0ba3ca06a12d02bd"></a>
+<tr class="memitem:acdbd8cd392324d8ca1e5e32bae5c6402"><td class="memTemplParams" colspan="2"><a id="acdbd8cd392324d8ca1e5e32bae5c6402"></a>
 template&lt;class TDeviceInstance &gt; </td></tr>
-<tr class="memitem:af53acfbe755fd66b0ba3ca06a12d02bd"><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; TDeviceInstance &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#af53acfbe755fd66b0ba3ca06a12d02bd">GetDeviceOfType</a> (boost::shared_ptr&lt; DeviceInstance &gt; device) const</td></tr>
-<tr class="memdesc:af53acfbe755fd66b0ba3ca06a12d02bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a device by label, requiring a specific type. <br /></td></tr>
-<tr class="separator:af53acfbe755fd66b0ba3ca06a12d02bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb0c21a84dc1e38153daae6f08c2ef17"><td class="memTemplParams" colspan="2"><a id="acb0c21a84dc1e38153daae6f08c2ef17"></a>
+<tr class="memitem:acdbd8cd392324d8ca1e5e32bae5c6402"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; TDeviceInstance &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmm_1_1_device_manager.html#acdbd8cd392324d8ca1e5e32bae5c6402">GetDeviceOfType</a> (std::shared_ptr&lt; DeviceInstance &gt; device) const</td></tr>
+<tr class="memdesc:acdbd8cd392324d8ca1e5e32bae5c6402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a device by label, requiring a specific type. <br /></td></tr>
+<tr class="separator:acdbd8cd392324d8ca1e5e32bae5c6402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3fea686f18b94eb12874a4fe8628381"><td class="memTemplParams" colspan="2"><a id="af3fea686f18b94eb12874a4fe8628381"></a>
 template&lt;class TDeviceInstance &gt; </td></tr>
-<tr class="memitem:acb0c21a84dc1e38153daae6f08c2ef17"><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; TDeviceInstance &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GetDeviceOfType</b> (const std::string &amp;label) const</td></tr>
-<tr class="separator:acb0c21a84dc1e38153daae6f08c2ef17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad97dc0e025fe1d7f97c7e9166c2c4cb4"><td class="memTemplParams" colspan="2"><a id="ad97dc0e025fe1d7f97c7e9166c2c4cb4"></a>
+<tr class="memitem:af3fea686f18b94eb12874a4fe8628381"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; TDeviceInstance &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GetDeviceOfType</b> (const std::string &amp;label) const</td></tr>
+<tr class="separator:af3fea686f18b94eb12874a4fe8628381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab89cb83309b9df29cecf95ab15f0b5"><td class="memTemplParams" colspan="2"><a id="aaab89cb83309b9df29cecf95ab15f0b5"></a>
 template&lt;class TDeviceInstance &gt; </td></tr>
-<tr class="memitem:ad97dc0e025fe1d7f97c7e9166c2c4cb4"><td class="memTemplItemLeft" align="right" valign="top">boost::shared_ptr&lt; TDeviceInstance &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GetDeviceOfType</b> (const char *label) const</td></tr>
-<tr class="separator:ad97dc0e025fe1d7f97c7e9166c2c4cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab89cb83309b9df29cecf95ab15f0b5"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; TDeviceInstance &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>GetDeviceOfType</b> (const char *label) const</td></tr>
+<tr class="separator:aaab89cb83309b9df29cecf95ab15f0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aca6a1d0492925a185927f06ae95a53e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca6a1d0492925a185927f06ae95a53e6">&#9670;&nbsp;</a></span>GetParentDevice()</h2>
+<a id="adc25b105d4f97ce488f405cf9370f247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc25b105d4f97ce488f405cf9370f247">&#9670;&nbsp;</a></span>GetParentDevice()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boost::shared_ptr&lt; HubInstance &gt; mm::DeviceManager::GetParentDevice </td>
+          <td class="memname">std::shared_ptr&lt; HubInstance &gt; mm::DeviceManager::GetParentDevice </td>
           <td>(</td>
-          <td class="paramtype">boost::shared_ptr&lt; DeviceInstance &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; DeviceInstance &gt;&#160;</td>
           <td class="paramname"><em>device</em></td><td>)</td>
           <td> const</td>
         </tr>
