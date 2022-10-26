@@ -1301,9 +1301,9 @@ $(function() {
 <div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;         stop_ = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;         suspend_=<span class="keyword">false</span>;</div>
 <div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;         activate();</div>
-<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;         actualDuration_ = 0;</div>
+<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;         actualDuration_ = <a class="code" href="class_m_m_1_1_m_m_time.html">MM::MMTime</a>{};</div>
 <div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160;         startTime_= camera_-&gt;<a class="code" href="class_c_device_base.html#a84ba48481219cd147c794e91a51a9db3">GetCurrentMMTime</a>();</div>
-<div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;         lastFrameTime_ = 0;</div>
+<div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;         lastFrameTime_ = <a class="code" href="class_m_m_1_1_m_m_time.html">MM::MMTime</a>{};</div>
 <div class="line"><a name="l01644"></a><span class="lineno"> 1644</span>&#160;      }</div>
 <div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;      <span class="keywordtype">bool</span> IsStopped(){</div>
 <div class="line"><a name="l01646"></a><span class="lineno"> 1646</span>&#160;         <a class="code" href="class_m_m_thread_guard.html">MMThreadGuard</a> g(this-&gt;stopLock_);</div>
