@@ -46,7 +46,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_m_m_1_1_m_m_time-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">MM::MMTime Class Reference</div>  </div>
@@ -63,9 +62,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acb9450751bb6c8d1ba9cc31c639fcb7b"><td class="memItemLeft" align="right" valign="top"><a id="acb9450751bb6c8d1ba9cc31c639fcb7b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MMTime</b> (long sec, long uSec)</td></tr>
 <tr class="separator:acb9450751bb6c8d1ba9cc31c639fcb7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d2dd786c36cffcfa22415b934425d7a"><td class="memItemLeft" align="right" valign="top"><a id="a9d2dd786c36cffcfa22415b934425d7a"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>serialize</b> ()</td></tr>
-<tr class="separator:a9d2dd786c36cffcfa22415b934425d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c68b40f563e02210098cff868235034"><td class="memItemLeft" align="right" valign="top"><a id="a1c68b40f563e02210098cff868235034"></a>
 <a class="el" href="class_m_m_1_1_m_m_time.html">MMTime</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="class_m_m_1_1_m_m_time.html">MMTime</a> &amp;other) const</td></tr>
 <tr class="separator:a1c68b40f563e02210098cff868235034"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -87,6 +83,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>getMsec</b> () cons
 <tr class="memitem:aeb70e61c764b01555ca99cb4c6eb2e54"><td class="memItemLeft" align="right" valign="top"><a id="aeb70e61c764b01555ca99cb4c6eb2e54"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>getUsec</b> () const</td></tr>
 <tr class="separator:aeb70e61c764b01555ca99cb4c6eb2e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6561822645c6ced027b552be3bab393b"><td class="memItemLeft" align="right" valign="top"><a id="a6561822645c6ced027b552be3bab393b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () const</td></tr>
+<tr class="separator:a6561822645c6ced027b552be3bab393b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -99,15 +98,6 @@ static <a class="el" href="class_m_m_1_1_m_m_time.html">MMTime</a>&#160;</td><td
 <tr class="memitem:ac1d50ee0d12cf187604a148ff4681c42"><td class="memItemLeft" align="right" valign="top"><a id="ac1d50ee0d12cf187604a148ff4681c42"></a>
 static <a class="el" href="class_m_m_1_1_m_m_time.html">MMTime</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fromSeconds</b> (long secs)</td></tr>
 <tr class="separator:ac1d50ee0d12cf187604a148ff4681c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a2f2660c0682f343c0e3a2113873f962d"><td class="memItemLeft" align="right" valign="top"><a id="a2f2660c0682f343c0e3a2113873f962d"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>sec_</b></td></tr>
-<tr class="separator:a2f2660c0682f343c0e3a2113873f962d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcfbcc3658aad0706f92b2de96918208"><td class="memItemLeft" align="right" valign="top"><a id="adcfbcc3658aad0706f92b2de96918208"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>uSec_</b></td></tr>
-<tr class="separator:adcfbcc3658aad0706f92b2de96918208"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility class used both MMCore and devices to maintain time intervals in the uniform, platform independent way. </p>
