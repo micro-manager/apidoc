@@ -145,13 +145,13 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;         <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a>() : sec_(0), uSec_(0) {}</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;         <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a>(<span class="keywordtype">double</span> uSecTotal)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;         <span class="keyword">explicit</span> <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a>(<span class="keywordtype">double</span> uSecTotal)</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;         {</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            sec_ = (long) (uSecTotal / 1.0e6);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            uSec_ = (long) (uSecTotal - sec_ * 1.0e6);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;         }</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;         <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a>(<span class="keywordtype">long</span> sec, <span class="keywordtype">long</span> uSec) : sec_(sec), uSec_(uSec)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;         <span class="keyword">explicit</span> <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a>(<span class="keywordtype">long</span> sec, <span class="keywordtype">long</span> uSec) : sec_(sec), uSec_(uSec)</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;         {</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            Normalize();</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;         }</div>
@@ -259,12 +259,12 @@ $(function() {
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;   {</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;   <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="comment">// arguments:  MMTime start time, millisecond interval time</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <a class="code" href="class_m_m_1_1_timeout_ms.html">TimeoutMs</a>(<span class="keyword">const</span> <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a> startTime, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> intervalMs) :</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="class_m_m_1_1_timeout_ms.html">TimeoutMs</a>(<span class="keyword">const</span> <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a> startTime, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> intervalMs) :</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;         startTime_(startTime),</div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;         interval_(0, 1000*intervalMs)</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      {</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      }</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <a class="code" href="class_m_m_1_1_timeout_ms.html">TimeoutMs</a>(<span class="keyword">const</span> <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a> startTime, <span class="keyword">const</span> <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a> interval) :</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="class_m_m_1_1_timeout_ms.html">TimeoutMs</a>(<span class="keyword">const</span> <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a> startTime, <span class="keyword">const</span> <a class="code" href="class_m_m_1_1_m_m_time.html">MMTime</a> interval) :</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;         startTime_(startTime),</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;         interval_(interval)</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      {</div>
