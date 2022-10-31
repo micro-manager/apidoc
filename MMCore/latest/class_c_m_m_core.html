@@ -719,12 +719,15 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getInstalledDe
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getLoadedPeripheralDevices</b> (const char *hubLabel)  throw (CMMError)</td></tr>
 <tr class="separator:aafcd917cd7bbd34d8d2ab3076a2a357f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Miscellaneous.</div></td></tr>
-<tr class="memitem:a1e28912248f2d505448d52d57584fd90"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a1e28912248f2d505448d52d57584fd90">getUserId</a> () const</td></tr>
-<tr class="separator:a1e28912248f2d505448d52d57584fd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76767f56c70eb19e178f0eb88d77c1d8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a76767f56c70eb19e178f0eb88d77c1d8">getHostName</a> () const</td></tr>
-<tr class="separator:a76767f56c70eb19e178f0eb88d77c1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a6e96884cd2b389503a3490561eb668"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a6a6e96884cd2b389503a3490561eb668">getMACAddresses</a> (void)</td></tr>
-<tr class="separator:a6a6e96884cd2b389503a3490561eb668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaddff384265cd4ba2c1bea20c4a693b9"><td class="memItemLeft" align="right" valign="top"><a id="aaddff384265cd4ba2c1bea20c4a693b9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MMCORE_DEPRECATED</b> (std::string getUserId() const)</td></tr>
+<tr class="separator:aaddff384265cd4ba2c1bea20c4a693b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe50ab7334c895413188d762866e8d2d"><td class="memItemLeft" align="right" valign="top"><a id="afe50ab7334c895413188d762866e8d2d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MMCORE_DEPRECATED</b> (std::string getHostName() const)</td></tr>
+<tr class="separator:afe50ab7334c895413188d762866e8d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4117c3715b342b0de8921e2cc1ac887f"><td class="memItemLeft" align="right" valign="top"><a id="a4117c3715b342b0de8921e2cc1ac887f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MMCORE_DEPRECATED</b> (std::vector&lt; std::string &gt; getMACAddresses(void))</td></tr>
+<tr class="separator:a4117c3715b342b0de8921e2cc1ac887f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -2732,24 +2735,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 
 </div>
 </div>
-<a id="a76767f56c70eb19e178f0eb88d77c1d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76767f56c70eb19e178f0eb88d77c1d8">&#9670;&nbsp;</a></span>getHostName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string CMMCore::getHostName </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>return current computer name. </p>
-
-</div>
-</div>
 <a id="a929f6a83d3b17a0af801a43bbf0ef860"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a929f6a83d3b17a0af801a43bbf0ef860">&#9670;&nbsp;</a></span>getImage() <span class="overload">[1/2]</span></h2>
 
@@ -3059,25 +3044,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <dl class="section return"><dt>Returns</dt><dd>array of labels </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#a0f1306269c2a51546287289627d2059c">getMagnificationFactor()</a>.</p>
-
-</div>
-</div>
-<a id="a6a6e96884cd2b389503a3490561eb668"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a6e96884cd2b389503a3490561eb668">&#9670;&nbsp;</a></span>getMACAddresses()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; std::string &gt; CMMCore::getMACAddresses </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Retrieve vector of MAC addresses for the Ethernet cards in the current computer formatted xx-xx-xx-xx-xx-xx </p>
 
 </div>
 </div>
@@ -4416,24 +4382,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Returns the entire system state, i.e. the collection of all property values from all devices. This method will return cached values instead of querying each device </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_configuration.html">Configuration</a> object containing a collection of device-property-value triplets </dd></dl>
-
-</div>
-</div>
-<a id="a1e28912248f2d505448d52d57584fd90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e28912248f2d505448d52d57584fd90">&#9670;&nbsp;</a></span>getUserId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string CMMCore::getUserId </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Displays current user name. </p>
 
 </div>
 </div>
