@@ -20,7 +20,7 @@ Release:
 [mmstudio stable](https://micro-manager.org/apidoc/mmstudio/stable/).
 (Some of these have the same content.)
 
-The docs are published at `micro-manager.org/apidoc/<module>/<version>/`.
+The docs are published at `micro-manager.org/apidoc/<project>/<version>/`.
 When linking from Markdown in the main micro-manager.org website, use the form
 `/apidoc/mmstudio/latest/...` without the `https://micro-manager.org` part.
 
