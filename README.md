@@ -3,6 +3,30 @@
 This repository collects auto-generated API documentation (Javadoc, Doxygen)
 for Micro-Manager projects and publishes them on GitHub Pages.
 
+## Published docs
+
+Latest:
+[MMCore latest](https://micro-manager.org/apidoc/MMCore/latest/),
+[MMDevice latest](https://micro-manager.org/apidoc/MMDevice/latest/),
+[mmcorej latest](https://micro-manager.org/apidoc/mmcorej/latest/),
+[mmstudio latest](https://micro-manager.org/apidoc/mmstudio/latest/).
+
+Release:
+[mmstudio 1.4](https://micro-manager.org/apidoc/mmstudio/1.4/),
+[mmstudio 1.4.23](https://micro-manager.org/apidoc/mmstudio/1.4.23/),
+[mmstudio 2](https://micro-manager.org/apidoc/mmstudio/2/),
+[mmstudio 2.0](https://micro-manager.org/apidoc/mmstudio/2.0/),
+[mmstudio 2.0.0](https://micro-manager.org/apidoc/mmstudio/2.0.0/),
+[mmstudio stable](https://micro-manager.org/apidoc/mmstudio/stable/).
+(Some of these have the same content.)
+
+The docs are published at `micro-manager.org/apidoc/<module>/<version>/`.
+When linking from Markdown in the main micro-manager.org website, use the form
+`/apidoc/mmstudio/latest/...` without the `https://micro-manager.org` part.
+
+Currently the above list is maintained manually. Publishing of per-version docs
+has not yet been automated.
+
 ## Branches of this repo
 
 - `main` -- this branch, containing GitHub Actions workflow(s) and maintainer
