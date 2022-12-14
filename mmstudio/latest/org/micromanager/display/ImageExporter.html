@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -191,6 +191,13 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setUseLabel-boolean-">setUseLabel</a></span>(boolean&nbsp;label)</code>
+<div class="block">Whether to use labels indicating position, channel, time point and z position
+ (where) appropriate or to sequentially number output files.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#waitForExport--">waitForExport</a></span>()</code>
 <div class="block">Block until a prior call to export() returns.</div>
 </td>
@@ -236,6 +243,22 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>format</code> - The format to output in.</dd>
+</dl>
+</li>
+</ul>
+<a name="setUseLabel-boolean-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setUseLabel</h4>
+<pre>void&nbsp;setUseLabel(boolean&nbsp;label)</pre>
+<div class="block">Whether to use labels indicating position, channel, time point and z position
+ (where) appropriate or to sequentially number output files.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>label</code> - When true, filename will include position, channel, time point and z
+              position labels (where appropriate).</dd>
 </dl>
 </li>
 </ul>
