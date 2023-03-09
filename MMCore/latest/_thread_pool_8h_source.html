@@ -81,7 +81,7 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span><a class="code" href="class_task.html">Task</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_thread_pool.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_thread_pool.html">ThreadPool</a><span class="comment">/* final*/</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_thread_pool.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_thread_pool.html">ThreadPool</a> final</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_thread_pool.html">ThreadPool</a>();</div>
@@ -96,13 +96,12 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> ThreadFunc();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// TODO: Should use unique_ptr</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::vector&lt;std::shared_ptr&lt;std::thread&gt; &gt; threads_;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> abortFlag_;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::mutex mx_;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::condition_variable cv_;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::deque&lt;Task*&gt; queue_;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::vector&lt;std::unique_ptr&lt;std::thread&gt;&gt; threads_{};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> abortFlag_{ <span class="keyword">false</span> };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::mutex mx_{};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::condition_variable cv_{};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    std::deque&lt;Task*&gt; queue_{};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
 <div class="ttc" id="aclass_task_html"><div class="ttname"><a href="class_task.html">Task</a></div><div class="ttdef"><b>Definition:</b> Task.h:32</div></div>
 <div class="ttc" id="aclass_thread_pool_html"><div class="ttname"><a href="class_thread_pool.html">ThreadPool</a></div><div class="ttdef"><b>Definition:</b> ThreadPool.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->

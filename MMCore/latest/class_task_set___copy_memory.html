@@ -65,12 +65,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a543bac2ede978f11b60a9b2ec57dfd33"><td class="memItemLeft" align="right" valign="top"><a id="a543bac2ede978f11b60a9b2ec57dfd33"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetUp</b> (void *dst, const void *src, size_t bytes)</td></tr>
 <tr class="separator:a543bac2ede978f11b60a9b2ec57dfd33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0204718ac0324af1f1373cacd6f049d"><td class="memItemLeft" align="right" valign="top"><a id="ab0204718ac0324af1f1373cacd6f049d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Execute</b> ()</td></tr>
-<tr class="separator:ab0204718ac0324af1f1373cacd6f049d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab161cd5b60ef0e8b0106ad327d10c5a4"><td class="memItemLeft" align="right" valign="top"><a id="ab161cd5b60ef0e8b0106ad327d10c5a4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Wait</b> ()</td></tr>
-<tr class="separator:ab161cd5b60ef0e8b0106ad327d10c5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41d9d42c56850113964727a5679c3b66"><td class="memItemLeft" align="right" valign="top"><a id="a41d9d42c56850113964727a5679c3b66"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Execute</b> () override</td></tr>
+<tr class="separator:a41d9d42c56850113964727a5679c3b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2248ee020b78da076b49a15aeef8f819"><td class="memItemLeft" align="right" valign="top"><a id="a2248ee020b78da076b49a15aeef8f819"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Wait</b> () override</td></tr>
+<tr class="separator:a2248ee020b78da076b49a15aeef8f819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefca2849a6f3f168de3d9bc8c660c8b7"><td class="memItemLeft" align="right" valign="top"><a id="aefca2849a6f3f168de3d9bc8c660c8b7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>MemCopy</b> (void *dst, const void *src, size_t bytes)</td></tr>
 <tr class="separator:aefca2849a6f3f168de3d9bc8c660c8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -78,12 +78,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>MemCopy</b> (void *ds
 <tr class="memitem:a82e60370383b3374143068e61cd32bd7 inherit pub_methods_class_task_set"><td class="memItemLeft" align="right" valign="top"><a id="a82e60370383b3374143068e61cd32bd7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TaskSet</b> (std::shared_ptr&lt; <a class="el" href="class_thread_pool.html">ThreadPool</a> &gt; pool)</td></tr>
 <tr class="separator:a82e60370383b3374143068e61cd32bd7 inherit pub_methods_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ddb76d94211f3e189a261ba97ae7dd3 inherit pub_methods_class_task_set"><td class="memItemLeft" align="right" valign="top"><a id="a8ddb76d94211f3e189a261ba97ae7dd3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>TaskSet</b> (const <a class="el" href="class_task_set.html">TaskSet</a> &amp;)</td></tr>
-<tr class="separator:a8ddb76d94211f3e189a261ba97ae7dd3 inherit pub_methods_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeef8629dcd71aff51d4b84d7ac329cc3 inherit pub_methods_class_task_set"><td class="memItemLeft" align="right" valign="top"><a id="aeef8629dcd71aff51d4b84d7ac329cc3"></a>
-<a class="el" href="class_task_set.html">TaskSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_task_set.html">TaskSet</a> &amp;)</td></tr>
-<tr class="separator:aeef8629dcd71aff51d4b84d7ac329cc3 inherit pub_methods_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0098d9eebaed348e4bc3f04be87c8bb2 inherit pub_methods_class_task_set"><td class="memItemLeft" align="right" valign="top"><a id="a0098d9eebaed348e4bc3f04be87c8bb2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TaskSet</b> (const <a class="el" href="class_task_set.html">TaskSet</a> &amp;)=delete</td></tr>
+<tr class="separator:a0098d9eebaed348e4bc3f04be87c8bb2 inherit pub_methods_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab859147413f041ca0ca0fed3d907aefd inherit pub_methods_class_task_set"><td class="memItemLeft" align="right" valign="top"><a id="ab859147413f041ca0ca0fed3d907aefd"></a>
+<a class="el" href="class_task_set.html">TaskSet</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_task_set.html">TaskSet</a> &amp;)=delete</td></tr>
+<tr class="separator:ab859147413f041ca0ca0fed3d907aefd inherit pub_methods_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5fde138b68ab24fcd45e7d4b74c501f inherit pub_methods_class_task_set"><td class="memItemLeft" align="right" valign="top"><a id="ad5fde138b68ab24fcd45e7d4b74c501f"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetUsedTaskCount</b> () const</td></tr>
 <tr class="separator:ad5fde138b68ab24fcd45e7d4b74c501f inherit pub_methods_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -91,10 +91,10 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetUsedTaskCount</b
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_task_set"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_task_set')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_task_set.html">TaskSet</a></td></tr>
-<tr class="memitem:a47f8aaf1f2694c2e6dd207931d6b8291 inherit pro_methods_class_task_set"><td class="memTemplParams" colspan="2"><a id="a47f8aaf1f2694c2e6dd207931d6b8291"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a47f8aaf1f2694c2e6dd207931d6b8291 inherit pro_methods_class_task_set"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CreateTasks</b> ()</td></tr>
-<tr class="separator:a47f8aaf1f2694c2e6dd207931d6b8291 inherit pro_methods_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6848d9ba7f9b237a0959e25ca6fbed3 inherit pro_methods_class_task_set"><td class="memTemplParams" colspan="2"><a id="ab6848d9ba7f9b237a0959e25ca6fbed3"></a>
+template&lt;class T , typename std::enable_if&lt; std::is_base_of&lt; Task, T &gt;::value, int &gt;::type  = 0&gt; </td></tr>
+<tr class="memitem:ab6848d9ba7f9b237a0959e25ca6fbed3 inherit pro_methods_class_task_set"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>CreateTasks</b> ()</td></tr>
+<tr class="separator:ab6848d9ba7f9b237a0959e25ca6fbed3 inherit pro_methods_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_task_set"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_task_set')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_task_set.html">TaskSet</a></td></tr>
 <tr class="memitem:a71987fe204c5dc3349c708fa68bd8c73 inherit pro_attribs_class_task_set"><td class="memItemLeft" align="right" valign="top"><a id="a71987fe204c5dc3349c708fa68bd8c73"></a>
 const std::shared_ptr&lt; <a class="el" href="class_thread_pool.html">ThreadPool</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pool_</b></td></tr>
@@ -103,10 +103,10 @@ const std::shared_ptr&lt; <a class="el" href="class_thread_pool.html">ThreadPool
 const std::shared_ptr&lt; <a class="el" href="class_semaphore.html">Semaphore</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>semaphore_</b></td></tr>
 <tr class="separator:a73866eab1a045a4f39ec73f239d5e794 inherit pro_attribs_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f494766f3304cfdb09f8cab2e2388c5 inherit pro_attribs_class_task_set"><td class="memItemLeft" align="right" valign="top"><a id="a3f494766f3304cfdb09f8cab2e2388c5"></a>
-std::vector&lt; <a class="el" href="class_task.html">Task</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tasks_</b></td></tr>
+std::vector&lt; <a class="el" href="class_task.html">Task</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>tasks_</b> {}</td></tr>
 <tr class="separator:a3f494766f3304cfdb09f8cab2e2388c5 inherit pro_attribs_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65000019d9425ccd1fbd9d649d9382df inherit pro_attribs_class_task_set"><td class="memItemLeft" align="right" valign="top"><a id="a65000019d9425ccd1fbd9d649d9382df"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>usedTaskCount_</b></td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>usedTaskCount_</b> { 0 }</td></tr>
 <tr class="separator:a65000019d9425ccd1fbd9d649d9382df inherit pro_attribs_class_task_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
