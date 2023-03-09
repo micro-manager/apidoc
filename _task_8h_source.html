@@ -82,8 +82,8 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_task.html">Task</a>(std::shared_ptr&lt;Semaphore&gt; semaphore, <span class="keywordtype">size_t</span> taskIndex, <span class="keywordtype">size_t</span> totalTaskCount);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_task.html">Task</a>();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_task.html">Task</a>(<span class="keyword">const</span> <a class="code" href="class_task.html">Task</a>&amp;)<span class="comment">/* = delete*/</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_task.html">Task</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_task.html">Task</a>&amp;)<span class="comment">/* = delete*/</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_task.html">Task</a>(<span class="keyword">const</span> <a class="code" href="class_task.html">Task</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_task.html">Task</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_task.html">Task</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Execute() = 0;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> Done();</div>
