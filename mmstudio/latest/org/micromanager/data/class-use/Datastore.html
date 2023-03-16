@@ -268,21 +268,8 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Pipeline.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Pipeline.html#getDatastore--">getDatastore</a></span>()</code>
-<div class="block">Get the output Datastore for this Pipeline.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DatastoreClosingEvent.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DatastoreClosingEvent.html#getDatastore--">getDatastore</a></span>()</code>
 <div class="block">Returns the Datastore that is closing.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImageDeletedEvent.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/ImageDeletedEvent.html#getDatastore--">getDatastore</a></span>()</code>
-<div class="block">Provides the Datastore this image was added to; potentially useful for
- code that listens to events from multiple Datastores.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -294,8 +281,21 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImageDeletedEvent.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/ImageDeletedEvent.html#getDatastore--">getDatastore</a></span>()</code>
+<div class="block">Provides the Datastore this image was added to; potentially useful for
+ code that listens to events from multiple Datastores.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Annotation.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Annotation.html#getDatastore--">getDatastore</a></span>()</code>
 <div class="block">Return the datastore to which this annotation is associated.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Pipeline.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Pipeline.html#getDatastore--">getDatastore</a></span>()</code>
+<div class="block">Get the output Datastore for this Pipeline.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -397,17 +397,17 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractDataViewer.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/AbstractDataViewer.html#getDatastore--">getDatastore</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">DataViewer.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/DataViewer.html#getDatastore--">getDatastore</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">user code should call <code>getDataProvider</code></span></div>
+<div class="block"><span class="deprecationComment">use <a href="../../../../org/micromanager/display/DataViewer.html#getDataProvider--"><code>DataViewer.getDataProvider()</code></a> instead</span></div>
 </div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DataViewer.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/DataViewer.html#getDatastore--">getDatastore</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">AbstractDataViewer.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/AbstractDataViewer.html#getDatastore--">getDatastore</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">use <a href="../../../../org/micromanager/display/DataViewer.html#getDataProvider--"><code>DataViewer.getDataProvider()</code></a> instead</span></div>
+<div class="block"><span class="deprecationComment">user code should call <code>getDataProvider</code></span></div>
 </div>
 </td>
 </tr>
