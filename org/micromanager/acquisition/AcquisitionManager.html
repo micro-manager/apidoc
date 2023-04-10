@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -124,6 +124,12 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#abortAcquisition--">abortAcquisition</a></span>()</code>
+<div class="block">Abort any ongoing acquisition as soon as possible, without user dialog.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#attachRunnable-int-int-int-int-java.lang.Runnable-">attachRunnable</a></span>(int&nbsp;frame,
               int&nbsp;position,
               int&nbsp;channel,
@@ -132,19 +138,19 @@ var activeTableTab = "activeTableTab";
 <div class="block">Attach a runnable to the acquisition engine.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/ChannelSpec.Builder.html" title="class in org.micromanager.acquisition">ChannelSpec.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#channelSpecBuilder--">channelSpecBuilder</a></span>()</code>
 <div class="block">Provides and empty ChannelSpec Builder.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#clearRunnables--">clearRunnables</a></span>()</code>
 <div class="block">Remove runnables from the acquisition engine.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.html" title="interface in org.micromanager.data">Metadata</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#generateMetadata-org.micromanager.data.Image-boolean-">generateMetadata</a></span>(<a href="../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image,
                 boolean&nbsp;includeHardwareState)</code>
@@ -152,27 +158,28 @@ var activeTableTab = "activeTableTab";
  current state of the program and the provided Image.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/SummaryMetadata.html" title="interface in org.micromanager.data">SummaryMetadata</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#generateSummaryMetadata--">generateSummaryMetadata</a></span>()</code>
 <div class="block">Generate a new SummaryMetadata that contains pre-populated fields based
  on the current state of the program.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#getAcquisitionSettings--">getAcquisitionSettings</a></span>()</code>
 <div class="block">Return current acquisition settings as shown in the Multi-D Acquisition
  dialog.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#haltAcquisition--">haltAcquisition</a></span>()</code>
-<div class="block">Halt any ongoing acquisition as soon as possible.</div>
+<div class="block">Halt any ongoing acquisition as soon as possible, prompting users with a
+ dialog for confirmation.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#isAcquisitionRunning--">isAcquisitionRunning</a></span>()</code>
 <div class="block">Returns true when an acquisition is currently running (note: this
@@ -180,7 +187,7 @@ var activeTableTab = "activeTableTab";
  Album" is currently running.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#isOurAcquisition-java.lang.Object-">isOurAcquisition</a></span>(java.lang.Object&nbsp;source)</code>
 <div class="block">Test the provided Object, and return true if it corresponds to the
@@ -188,39 +195,39 @@ var activeTableTab = "activeTableTab";
  publishing AcquisitionStartedEvent and AcquisitionEndedEvent.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#isPaused--">isPaused</a></span>()</code>
 <div class="block">Returns true if the acquisition is currently paused.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#loadAcquisition-java.lang.String-">loadAcquisition</a></span>(java.lang.String&nbsp;path)</code>
 <div class="block">Load a file containing a SequenceSettings object, and apply the settings
  found in it to the Multi-D Acquisition (MDA) dialog.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#loadSequenceSettings-java.lang.String-">loadSequenceSettings</a></span>(java.lang.String&nbsp;path)</code>
 <div class="block">Load a SequenceSettings file and return the SequenceSettings object.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#runAcquisition--">runAcquisition</a></span>()</code>
 <div class="block">Executes Acquisition with settings as in the MDA dialog.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#runAcquisition-java.lang.String-java.lang.String-">runAcquisition</a></span>(java.lang.String&nbsp;name,
               java.lang.String&nbsp;root)</code>
 <div class="block">Executes Acquisition with current settings but allows for changing the data path.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#runAcquisitionNonblocking--">runAcquisitionNonblocking</a></span>()</code>
 <div class="block">As runAcquisition, but will return as soon as the acquisition is set up
@@ -228,39 +235,39 @@ var activeTableTab = "activeTableTab";
  acquisition before it finishes.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#runAcquisitionWithSettings-org.micromanager.acquisition.SequenceSettings-boolean-">runAcquisitionWithSettings</a></span>(<a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a>&nbsp;settings,
                           boolean&nbsp;shouldBlock)</code>
 <div class="block">Execute an acquisition using the provided SequenceSettings.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#saveSequenceSettings-org.micromanager.acquisition.SequenceSettings-java.lang.String-">saveSequenceSettings</a></span>(<a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a>&nbsp;settings,
                     java.lang.String&nbsp;path)</code>
 <div class="block">Save the provided SequenceSettings object to disk at the specified path.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#sequenceSettingsBuilder--">sequenceSettingsBuilder</a></span>()</code>
 <div class="block">Provides an empty Sequence Settings Builder.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#setAcquisitionSettings-org.micromanager.acquisition.SequenceSettings-">setAcquisitionSettings</a></span>(<a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a>&nbsp;settings)</code>
 <div class="block">Apply new acquisition settings.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#setPause-boolean-">setPause</a></span>(boolean&nbsp;state)</code>
 <div class="block">Pause/Unpause a running acquisition.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionManager.html#snap--">snap</a></span>()</code>
 <div class="block">Snap images using the current camera(s) and return them.</div>
@@ -400,7 +407,18 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>haltAcquisition</h4>
 <pre>void&nbsp;haltAcquisition()</pre>
-<div class="block">Halt any ongoing acquisition as soon as possible.</div>
+<div class="block">Halt any ongoing acquisition as soon as possible, prompting users with a
+ dialog for confirmation.</div>
+</li>
+</ul>
+<a name="abortAcquisition--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>abortAcquisition</h4>
+<pre>void&nbsp;abortAcquisition()</pre>
+<div class="block">Abort any ongoing acquisition as soon as possible, without user dialog.</div>
 </li>
 </ul>
 <a name="loadAcquisition-java.lang.String-">
