@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":38,"i1":6,"i2":38,"i3":6,"i4":6,"i5":38,"i6":6,"i7":38,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":38,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6};
+var methods = {"i0":38,"i1":6,"i2":38,"i3":6,"i4":6,"i5":38,"i6":6,"i7":38,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":38,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -286,12 +286,19 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i20" class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getSequenceSettings--">getSequenceSettings</a></span>()</code>
+<div class="block">Settings that define the Multi-Dimensional Acquisition specified by the user
+ to acquire this data set.</div>
+</td>
+</tr>
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/MultiStagePosition.html" title="class in org.micromanager">MultiStagePosition</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getStagePositionList--">getStagePositionList</a></span>()</code>
 <div class="block">The stage positions that were to be visited in the acquisition.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/MultiStagePosition.html" title="class in org.micromanager">MultiStagePosition</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getStagePositions--">getStagePositions</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -299,31 +306,31 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getStartDate--">getStartDate</a></span>()</code>
 <div class="block">The date and time at which the acquisition started.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getUserData--">getUserData</a></span>()</code>
 <div class="block">Any general-purpose user meta data.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getUserName--">getUserName</a></span>()</code>
 <div class="block">The signed-in user of the machine that collected this data.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>java.lang.Double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getWaitInterval--">getWaitInterval</a></span>()</code>
 <div class="block">Amount of time to wait between timepoints.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>java.lang.Double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getZStepUm--">getZStepUm</a></span>()</code>
 <div class="block">Distance between slices in a volume of data, in microns.</div>
@@ -727,7 +734,7 @@ java.lang.String[]&nbsp;getAxisOrder()</pre>
 <a name="getUserData--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getUserData</h4>
 <pre><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;getUserData()</pre>
@@ -735,6 +742,21 @@ java.lang.String[]&nbsp;getAxisOrder()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Any general-purpose user meta data</dd>
+</dl>
+</li>
+</ul>
+<a name="getSequenceSettings--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getSequenceSettings</h4>
+<pre><a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a>&nbsp;getSequenceSettings()</pre>
+<div class="block">Settings that define the Multi-Dimensional Acquisition specified by the user
+ to acquire this data set.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The settings that define this MDA.</dd>
 </dl>
 </li>
 </ul>
