@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":38,"i1":6,"i2":38,"i3":6,"i4":6,"i5":38,"i6":6,"i7":38,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":38,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6};
+var methods = {"i0":38,"i1":6,"i2":38,"i3":6,"i4":6,"i5":38,"i6":6,"i7":38,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":38,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -229,76 +229,88 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i11" class="rowColor">
+<td class="colFirst"><code>java.lang.Integer</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getImageHeight--">getImageHeight</a></span>()</code>
+<div class="block">ImageHeight in pixels.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>java.lang.Integer</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getImageWidth--">getImageWidth</a></span>()</code>
+<div class="block">ImageWidth in pixels.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getIntendedDimensions--">getIntendedDimensions</a></span>()</code>
 <div class="block">The expected number of images along each axis that were to be collected.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getKeepShutterOpenChannels--">getKeepShutterOpenChannels</a></span>()</code>
 <div class="block">For acquisitions with more than one channel, whether or not the shutter
  was left open in between each channel.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getKeepShutterOpenSlices--">getKeepShutterOpenSlices</a></span>()</code>
 <div class="block">For acquisitions with more than one Z slice, whether or not the shutter
  was left open in between each slice.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getMetadataVersion--">getMetadataVersion</a></span>()</code>
 <div class="block">The version of the metadata when the data was collected.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getMicroManagerVersion--">getMicroManagerVersion</a></span>()</code>
 <div class="block">The version of Micro-Manager used to collect the data.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getOrderedAxes--">getOrderedAxes</a></span>()</code>
 <div class="block">The order in which axes changed when adding images to the dataset.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getPrefix--">getPrefix</a></span>()</code>
 <div class="block">The user-supplied portion of the filename, plus any additional numerical
  identifier needed to ensure uniqueness.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getProfileName--">getProfileName</a></span>()</code>
 <div class="block">The name of the Micro-Manager profile used to collect this data.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getSafeChannelName-int-">getSafeChannelName</a></span>(int&nbsp;index)</code>
 <div class="block">Retrieve the name of the specified channel.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getSequenceSettings--">getSequenceSettings</a></span>()</code>
 <div class="block">Settings that define the Multi-Dimensional Acquisition specified by the user
  to acquire this data set.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/MultiStagePosition.html" title="class in org.micromanager">MultiStagePosition</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getStagePositionList--">getStagePositionList</a></span>()</code>
 <div class="block">The stage positions that were to be visited in the acquisition.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/MultiStagePosition.html" title="class in org.micromanager">MultiStagePosition</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getStagePositions--">getStagePositions</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -306,31 +318,31 @@ var activeTableTab = "activeTableTab";
 </div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getStartDate--">getStartDate</a></span>()</code>
 <div class="block">The date and time at which the acquisition started.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getUserData--">getUserData</a></span>()</code>
 <div class="block">Any general-purpose user meta data.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getUserName--">getUserName</a></span>()</code>
 <div class="block">The signed-in user of the machine that collected this data.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>java.lang.Double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getWaitInterval--">getWaitInterval</a></span>()</code>
 <div class="block">Amount of time to wait between timepoints.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>java.lang.Double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getZStepUm--">getZStepUm</a></span>()</code>
 <div class="block">Distance between slices in a volume of data, in microns.</div>
@@ -748,7 +760,7 @@ java.lang.String[]&nbsp;getAxisOrder()</pre>
 <a name="getSequenceSettings--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getSequenceSettings</h4>
 <pre><a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a>&nbsp;getSequenceSettings()</pre>
@@ -757,6 +769,34 @@ java.lang.String[]&nbsp;getAxisOrder()</pre>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The settings that define this MDA.</dd>
+</dl>
+</li>
+</ul>
+<a name="getImageWidth--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getImageWidth</h4>
+<pre>java.lang.Integer&nbsp;getImageWidth()</pre>
+<div class="block">ImageWidth in pixels.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>ImageWidth in pixels.  Null if Image Width is not known.</dd>
+</dl>
+</li>
+</ul>
+<a name="getImageHeight--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getImageHeight</h4>
+<pre>java.lang.Integer&nbsp;getImageHeight()</pre>
+<div class="block">ImageHeight in pixels.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>ImageHeight in pixels. Null if Image Height is not know.</dd>
 </dl>
 </li>
 </ul>
