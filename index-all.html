@@ -126,6 +126,11 @@
  can be described by a <a href="org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition"><code>SequenceSettings</code></a>, it provides access to those
  <a href="org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition"><code>SequenceSettings</code></a>.</div>
 </dd>
+<dt><a href="org/micromanager/acquisition/AcquisitionSettingsChangedEvent.html" title="interface in org.micromanager.acquisition"><span class="typeNameLink">AcquisitionSettingsChangedEvent</span></a> - Interface in <a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></dt>
+<dd>
+<div class="block">The default implementation of this event posts on the Studio event bus,
+ so subscribe to this event using <a href="org/micromanager/events/EventManager.html" title="interface in org.micromanager.events"><code>EventManager</code></a>.</div>
+</dd>
 <dt><a href="org/micromanager/acquisition/AcquisitionStartedEvent.html" title="interface in org.micromanager.acquisition"><span class="typeNameLink">AcquisitionStartedEvent</span></a> - Interface in <a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></dt>
 <dd>
 <div class="block">This class signals that an acquisition is starting, and provides access to
@@ -2768,6 +2773,10 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/events/PixelSizeChangedEvent.html#getNewPixelSizeUm--">getNewPixelSizeUm()</a></span> - Method in interface org.micromanager.events.<a href="org/micromanager/events/PixelSizeChangedEvent.html" title="interface in org.micromanager.events">PixelSizeChangedEvent</a></dt>
 <dd>
 <div class="block">New pixels size in microns.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/AcquisitionSettingsChangedEvent.html#getNewSettings--">getNewSettings()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/AcquisitionSettingsChangedEvent.html" title="interface in org.micromanager.acquisition">AcquisitionSettingsChangedEvent</a></dt>
+<dd>
+<div class="block">Return the freshly changed SequenceSettings.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/DataProvider.html#getNextIndex-java.lang.String-">getNextIndex(String)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/DataProvider.html" title="interface in org.micromanager.data">DataProvider</a></dt>
 <dd>
