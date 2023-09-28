@@ -280,38 +280,38 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getAnyImage--">getAnyImage</a></span>()</code>
-<div class="block">Return any Image, or null if there are no images.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getAnyImage--">getAnyImage</a></span>()</code>
 <div class="block">Retrieve any image from this DataProvider.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ImageDeletedEvent.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/ImageDeletedEvent.html#getImage--">getImage</a></span>()</code>
-<div class="block">Provides the Image that was deleted.</div>
+<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getAnyImage--">getAnyImage</a></span>()</code>
+<div class="block">Return any Image, or null if there are no images.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DataProviderHasNewImageEvent.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProviderHasNewImageEvent.html#getImage--">getImage</a></span>()</code>
 <div class="block">Provides the newly-added image.</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ImageDeletedEvent.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/ImageDeletedEvent.html#getImage--">getImage</a></span>()</code>
+<div class="block">Provides the Image that was deleted.</div>
+</td>
+</tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImage-org.micromanager.data.Coords-">getImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
-<div class="block">Retrieve the Image located at the specified coordinates.</div>
+<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getImage-org.micromanager.data.Coords-">getImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
+<div class="block">Returns the image at the given position.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getImage-org.micromanager.data.Coords-">getImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
-<div class="block">Returns the image at the given position.</div>
+<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImage-org.micromanager.data.Coords-">getImage</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
+<div class="block">Retrieve the Image located at the specified coordinates.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -350,33 +350,33 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImagesIgnoringAxes-org.micromanager.data.Coords-java.lang.String...-">getImagesIgnoringAxes</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords,
-                     java.lang.String...&nbsp;ignoreTheseAxes)</code>
-<div class="block">Retrieve a list of images with Coords identical to the given Coords instance,
- except for the axes listed in the exception list.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getImagesIgnoringAxes-org.micromanager.data.Coords-java.lang.String...-">getImagesIgnoringAxes</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords,
                      java.lang.String...&nbsp;ignoreTheseAxes)</code>
 <div class="block">Returns a list of image in the DataProvider's collection that have
  identical coords after removing the given axes from both source and target.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImagesMatching-org.micromanager.data.Coords-">getImagesMatching</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
-<div class="block">Retrieve a list of all images whose Coords match the given incomplete
- Coords instance.</div>
+<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImagesIgnoringAxes-org.micromanager.data.Coords-java.lang.String...-">getImagesIgnoringAxes</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords,
+                     java.lang.String...&nbsp;ignoreTheseAxes)</code>
+<div class="block">Retrieve a list of images with Coords identical to the given Coords instance,
+ except for the axes listed in the exception list.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">DataProvider.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/DataProvider.html#getImagesMatching-org.micromanager.data.Coords-">getImagesMatching</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
 <div class="block"><span class="deprecationComment">- instead use getImagesIgnoringAxes</span></div>
 </div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#getImagesMatching-org.micromanager.data.Coords-">getImagesMatching</a></span>(<a href="../../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords)</code>
+<div class="block">Retrieve a list of all images whose Coords match the given incomplete
+ Coords instance.</div>
 </td>
 </tr>
 </tbody>
@@ -424,15 +424,15 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#putImage-org.micromanager.data.Image-">putImage</a></span>(<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)</code>
-<div class="block">Insert an Image into the Storage, so that it may be returned by later
- getImage() calls.</div>
+<td class="colLast"><span class="typeNameLabel">Datastore.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Datastore.html#putImage-org.micromanager.data.Image-">putImage</a></span>(<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)</code>
+<div class="block">Insert an image into the Datastore.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Datastore.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Datastore.html#putImage-org.micromanager.data.Image-">putImage</a></span>(<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)</code>
-<div class="block">Insert an image into the Datastore.</div>
+<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#putImage-org.micromanager.data.Image-">putImage</a></span>(<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)</code>
+<div class="block">Insert an Image into the Storage, so that it may be returned by later
+ getImage() calls.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -514,7 +514,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/Overlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
+<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/AbstractOverlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
             java.awt.Rectangle&nbsp;screenRect,
             <a href="../../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a>&nbsp;displaySettings,
             java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images,
@@ -525,7 +525,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/AbstractOverlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
+<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/Overlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
             java.awt.Rectangle&nbsp;screenRect,
             <a href="../../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a>&nbsp;displaySettings,
             java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images,
@@ -545,7 +545,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/Overlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
+<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/AbstractOverlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
             java.awt.Rectangle&nbsp;screenRect,
             <a href="../../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a>&nbsp;displaySettings,
             java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images,
@@ -556,7 +556,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/AbstractOverlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
+<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/Overlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
             java.awt.Rectangle&nbsp;screenRect,
             <a href="../../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a>&nbsp;displaySettings,
             java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images,
