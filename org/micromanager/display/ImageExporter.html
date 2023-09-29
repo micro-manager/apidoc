@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -102,8 +102,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public interface <span class="typeNameLabel">ImageExporter</span></pre>
 <div class="block">ImageExporters are used to generate linear sequences of images-as-rendered
- by a DisplayWindow. Thus they include the current image scaling, any
- overlays, et cetera.</div>
+ by a DisplayWindow. They include the current image scaling, any
+ overlays, etc.</div>
 </li>
 </ul>
 </div>
@@ -171,17 +171,24 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setImageJName-java.lang.String-">setImageJName</a></span>(java.lang.String&nbsp;imageJName)</code>
+<div class="block">Sets the name to be used for the ImageJ Stack Window (if this was
+ used as the output format).</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setOutputFormat-org.micromanager.display.ImageExporter.OutputFormat-">setOutputFormat</a></span>(<a href="../../../org/micromanager/display/ImageExporter.OutputFormat.html" title="enum in org.micromanager.display">ImageExporter.OutputFormat</a>&nbsp;format)</code>
 <div class="block">Set the output format to use.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setOutputQuality-int-">setOutputQuality</a></span>(int&nbsp;quality)</code>
 <div class="block">Set the image quality.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setSaveInfo-java.lang.String-java.lang.String-">setSaveInfo</a></span>(java.lang.String&nbsp;path,
            java.lang.String&nbsp;prefix)</code>
@@ -189,14 +196,14 @@ var activeTableTab = "activeTableTab";
  saving images.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setUseLabel-boolean-">setUseLabel</a></span>(boolean&nbsp;label)</code>
 <div class="block">Whether to use labels indicating position, channel, time point and z position
  (where) appropriate or to sequentially number output files.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#waitForExport--">waitForExport</a></span>()</code>
 <div class="block">Block until a prior call to export() returns.</div>
@@ -297,6 +304,22 @@ var activeTableTab = "activeTableTab";
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.IllegalArgumentException</code> - if the directory does not exist.</dd>
 <dd><code>java.io.IOException</code></dd>
+</dl>
+</li>
+</ul>
+<a name="setImageJName-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setImageJName</h4>
+<pre>void&nbsp;setImageJName(java.lang.String&nbsp;imageJName)</pre>
+<div class="block">Sets the name to be used for the ImageJ Stack Window (if this was
+ used as the output format). Only used when output format is set
+ to OUTPUT_IMAGEJ</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>imageJName</code> - Name to be used in ImageJ</dd>
 </dl>
 </li>
 </ul>
