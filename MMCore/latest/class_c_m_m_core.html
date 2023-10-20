@@ -71,6 +71,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad4591c3d5d74b9f0e8846a315ea75fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6afdbcf29501a14de151b77cb7654b28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a6afdbcf29501a14de151b77cb7654b28">initializeDevice</a> (const char *label)  throw (CMMError)</td></tr>
 <tr class="separator:a6afdbcf29501a14de151b77cb7654b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dee57a3eee37625e82bf20f90dadaf5"><td class="memItemLeft" align="right" valign="top">DeviceInitializationState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a4dee57a3eee37625e82bf20f90dadaf5">getDeviceInitializationState</a> (const char *label) const  throw (CMMError)</td></tr>
+<tr class="separator:a4dee57a3eee37625e82bf20f90dadaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5076625829c61070193743ed625c4631"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a5076625829c61070193743ed625c4631">reset</a> ()  throw (CMMError)</td></tr>
 <tr class="separator:a5076625829c61070193743ed625c4631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a652fc5737e29004f467baaacfea01e40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a652fc5737e29004f467baaacfea01e40">unloadLibrary</a> (const char *moduleName)  throw (CMMError)</td></tr>
@@ -2305,6 +2307,37 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Returns description text for a given device label. "Description" is determined by the library and is immutable. </p>
+
+</div>
+</div>
+<a id="a4dee57a3eee37625e82bf20f90dadaf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dee57a3eee37625e82bf20f90dadaf5">&#9670;&nbsp;</a></span>getDeviceInitializationState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DeviceInitializationState CMMCore::getDeviceInitializationState </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Queries the initialization state of the given device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
