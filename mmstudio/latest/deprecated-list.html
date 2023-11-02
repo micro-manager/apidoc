@@ -407,15 +407,22 @@
 <td class="colOne"><a href="org/micromanager/PropertyMap.html#copy--">org.micromanager.PropertyMap.copy()</a></td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="org/micromanager/display/DisplaySettings.html#copy--">org.micromanager.display.DisplaySettings.copy()</a></td>
-</tr>
-<tr class="rowColor">
 <td class="colOne"><a href="org/micromanager/acquisition/SequenceSettings.html#copy--">org.micromanager.acquisition.SequenceSettings.copy()</a>
 <div class="block"><span class="deprecationComment">When used correctly, SequenceSettings are immutable.
      If you really need a copy, use copyBuilder().build();</span></div>
 </td>
 </tr>
+<tr class="rowColor">
+<td class="colOne"><a href="org/micromanager/data/Coords.html#copy--">org.micromanager.data.Coords.copy()</a>
+<div class="block"><span class="deprecationComment">Use <a href="org/micromanager/data/Coords.html#copyBuilder--"><code>copyBuilder</code></a> instead</span></div>
+</td>
+</tr>
 <tr class="altColor">
+<td class="colOne"><a href="org/micromanager/data/SummaryMetadata.html#copy--">org.micromanager.data.SummaryMetadata.copy()</a>
+<div class="block"><span class="deprecationComment">- Use SummaryMetadata.Builder.copyBuilder instead</span></div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="org/micromanager/data/Metadata.html#copy--">org.micromanager.data.Metadata.copy()</a>
 <div class="block"><span class="deprecationComment">Use the appropriate of the following:
      <a href="org/micromanager/data/Metadata.html#copyBuilderPreservingUUID--"><code>Metadata.copyBuilderPreservingUUID()</code></a>, <a href="org/micromanager/data/Metadata.html#copyBuilderWithNewUUID--"><code>Metadata.copyBuilderWithNewUUID()</code></a>,
@@ -423,15 +430,8 @@
      <code>copyBuilderPreservingUUID</code>.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colOne"><a href="org/micromanager/data/SummaryMetadata.html#copy--">org.micromanager.data.SummaryMetadata.copy()</a>
-<div class="block"><span class="deprecationComment">- Use SummaryMetadata.Builder.copyBuilder instead</span></div>
-</td>
-</tr>
 <tr class="altColor">
-<td class="colOne"><a href="org/micromanager/data/Coords.html#copy--">org.micromanager.data.Coords.copy()</a>
-<div class="block"><span class="deprecationComment">Use <a href="org/micromanager/data/Coords.html#copyBuilder--"><code>copyBuilder</code></a> instead</span></div>
-</td>
+<td class="colOne"><a href="org/micromanager/display/DisplaySettings.html#copy--">org.micromanager.display.DisplaySettings.copy()</a></td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><a href="org/micromanager/data/DataManager.html#createCoords-java.lang.String-">org.micromanager.data.DataManager.createCoords(String)</a>
@@ -538,13 +538,13 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="org/micromanager/display/DataViewer.html#getDatastore--">org.micromanager.display.DataViewer.getDatastore()</a>
-<div class="block"><span class="deprecationComment">use <a href="org/micromanager/display/DataViewer.html#getDataProvider--"><code>DataViewer.getDataProvider()</code></a> instead</span></div>
+<td class="colOne"><a href="org/micromanager/display/AbstractDataViewer.html#getDatastore--">org.micromanager.display.AbstractDataViewer.getDatastore()</a>
+<div class="block"><span class="deprecationComment">user code should call <code>getDataProvider</code></span></div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="org/micromanager/display/AbstractDataViewer.html#getDatastore--">org.micromanager.display.AbstractDataViewer.getDatastore()</a>
-<div class="block"><span class="deprecationComment">user code should call <code>getDataProvider</code></span></div>
+<td class="colOne"><a href="org/micromanager/display/DataViewer.html#getDatastore--">org.micromanager.display.DataViewer.getDatastore()</a>
+<div class="block"><span class="deprecationComment">use <a href="org/micromanager/display/DataViewer.html#getDataProvider--"><code>DataViewer.getDataProvider()</code></a> instead</span></div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -722,13 +722,13 @@
 <td class="colOne"><a href="org/micromanager/PropertyMap.html#getPropertyMap-java.lang.String-">org.micromanager.PropertyMap.getPropertyMap(String)</a></td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="org/micromanager/display/DisplayManager.html#getPropertyMapBuilder--">org.micromanager.display.DisplayManager.getPropertyMapBuilder()</a>
-<div class="block"><span class="deprecationComment">Use <a href="org/micromanager/PropertyMaps.html#builder--"><code>PropertyMaps.builder()</code></a> instead</span></div>
+<td class="colOne"><a href="org/micromanager/data/DataManager.html#getPropertyMapBuilder--">org.micromanager.data.DataManager.getPropertyMapBuilder()</a>
+<div class="block"><span class="deprecationComment">Use PropertyMaps.builder() instead</span></div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="org/micromanager/data/DataManager.html#getPropertyMapBuilder--">org.micromanager.data.DataManager.getPropertyMapBuilder()</a>
-<div class="block"><span class="deprecationComment">Use PropertyMaps.builder() instead</span></div>
+<td class="colOne"><a href="org/micromanager/display/DisplayManager.html#getPropertyMapBuilder--">org.micromanager.display.DisplayManager.getPropertyMapBuilder()</a>
+<div class="block"><span class="deprecationComment">Use <a href="org/micromanager/PropertyMaps.html#builder--"><code>PropertyMaps.builder()</code></a> instead</span></div>
 </td>
 </tr>
 <tr class="altColor">
@@ -916,13 +916,13 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="org/micromanager/display/DataViewer.html#setDisplayedImageTo-org.micromanager.data.Coords-">org.micromanager.display.DataViewer.setDisplayedImageTo(Coords)</a>
-<div class="block"><span class="deprecationComment">use <a href="org/micromanager/display/DataViewer.html#setDisplayPosition-org.micromanager.data.Coords-"><code>DataViewer.setDisplayPosition(Coords)</code></a> instead</span></div>
+<td class="colOne"><a href="org/micromanager/display/AbstractDataViewer.html#setDisplayedImageTo-org.micromanager.data.Coords-">org.micromanager.display.AbstractDataViewer.setDisplayedImageTo(Coords)</a>
+<div class="block"><span class="deprecationComment">user code should call <code>setDisplayPosition</code></span></div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="org/micromanager/display/AbstractDataViewer.html#setDisplayedImageTo-org.micromanager.data.Coords-">org.micromanager.display.AbstractDataViewer.setDisplayedImageTo(Coords)</a>
-<div class="block"><span class="deprecationComment">user code should call <code>setDisplayPosition</code></span></div>
+<td class="colOne"><a href="org/micromanager/display/DataViewer.html#setDisplayedImageTo-org.micromanager.data.Coords-">org.micromanager.display.DataViewer.setDisplayedImageTo(Coords)</a>
+<div class="block"><span class="deprecationComment">use <a href="org/micromanager/display/DataViewer.html#setDisplayPosition-org.micromanager.data.Coords-"><code>DataViewer.setDisplayPosition(Coords)</code></a> instead</span></div>
 </td>
 </tr>
 <tr class="altColor">
