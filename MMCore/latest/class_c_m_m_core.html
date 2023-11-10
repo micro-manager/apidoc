@@ -692,6 +692,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aae0705a77586c0fa241e9b0c0a396201"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#aae0705a77586c0fa241e9b0c0a396201">noop</a> ()</td></tr>
 <tr class="memdesc:aae0705a77586c0fa241e9b0c0a396201"><td class="mdescLeft">&#160;</td><td class="mdescRight">A static method that does nothing.  <a href="class_c_m_m_core.html#aae0705a77586c0fa241e9b0c0a396201">More...</a><br /></td></tr>
 <tr class="separator:aae0705a77586c0fa241e9b0c0a396201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Core feature control.</div></td></tr>
+<tr class="memitem:a3974926d3d467fcd816f927126bc8a96"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a3974926d3d467fcd816f927126bc8a96">enableFeature</a> (const char *name, bool enable)  throw (CMMError)</td></tr>
+<tr class="separator:a3974926d3d467fcd816f927126bc8a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d94ba7b69b2e0dc5de96b3501c09874"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a3d94ba7b69b2e0dc5de96b3501c09874">isFeatureEnabled</a> (const char *name)  throw (CMMError)</td></tr>
+<tr class="separator:a3d94ba7b69b2e0dc5de96b3501c09874"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -1441,6 +1446,72 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <p>Enable or disable logging of debug messages. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">enable</td><td>if set to true, debug messages will be recorded in the log file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3974926d3d467fcd816f927126bc8a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3974926d3d467fcd816f927126bc8a96">&#9670;&nbsp;</a></span>enableFeature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::enableFeature </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Enable or disable the given Core feature.</p>
+<p>Core features control whether experimental functionality (which is subject to breaking changes) is exposed, or whether stricter API usage is enforced.</p>
+<p>Currently switchable features:</p><ul>
+<li>"StrictInitializationChecks" (default: disabled) When enabled, an exception is thrown when an operation requiring an initialized device is attempted on a device that is not successfully initialized. When disabled, no exception is thrown and a warning is logged (and the operation may potentially cause incorrect behavior or a crash).</li>
+</ul>
+<p>Permanently enabled features:</p><ul>
+<li>None so far.</li>
+</ul>
+<p>Permanently disabled features:</p><ul>
+<li>None so far.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the feature name. </td></tr>
+    <tr><td class="paramname">enable</td><td>whether to enable or disable the feature.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_c_m_m_error.html" title="Core error class. Exceptions thrown by the Core public API are of this type.">CMMError</a></td><td>if the feature name is null or unknown, or attempting to disable a permanently enabled feature, or attempting to enable a permanently disabled feature. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5036,6 +5107,53 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if exposure can be sequenced </dd></dl>
+
+</div>
+</div>
+<a id="a3d94ba7b69b2e0dc5de96b3501c09874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d94ba7b69b2e0dc5de96b3501c09874">&#9670;&nbsp;</a></span>isFeatureEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMMCore::isFeatureEnabled </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Return whether the given Core feature is currently enabled.</p>
+<p>See <a class="el" href="class_c_m_m_core.html#a3974926d3d467fcd816f927126bc8a96">enableFeature()</a> for the available features.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the feature name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>whether the feature is enabled.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_c_m_m_error.html" title="Core error class. Exceptions thrown by the Core public API are of this type.">CMMError</a></td><td>if the feature name is null or unknown. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
