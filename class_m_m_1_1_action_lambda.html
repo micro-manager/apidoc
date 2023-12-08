@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MMDevice: MM::ActionFunctor Class Reference</title>
+<title>MMDevice: MM::ActionLambda Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,39 +39,42 @@ $(function() {
 <div id="main-nav"></div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>MM</b></li><li class="navelem"><a class="el" href="class_m_m_1_1_action_functor.html">ActionFunctor</a></li>  </ul>
+<li class="navelem"><b>MM</b></li><li class="navelem"><a class="el" href="class_m_m_1_1_action_lambda.html">ActionLambda</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="class_m_m_1_1_action_functor-members.html">List of all members</a>  </div>
+<a href="class_m_m_1_1_action_lambda-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">MM::ActionFunctor Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">MM::ActionLambda Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_property_8h_source.html">Property.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for MM::ActionFunctor:</div>
+Inheritance diagram for MM::ActionLambda:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_m_m_1_1_action_functor.png" usemap="#MM::ActionFunctor_map" alt=""/>
-  <map id="MM::ActionFunctor_map" name="MM::ActionFunctor_map">
-<area href="class_m_m_1_1_action.html" alt="MM::Action&lt; T &gt;" shape="rect" coords="0,56,121,80"/>
-<area href="class_m_m_1_1_action_ex.html" alt="MM::ActionEx&lt; T &gt;" shape="rect" coords="131,56,252,80"/>
-<area href="class_m_m_1_1_action_lambda.html" alt="MM::ActionLambda" shape="rect" coords="262,56,383,80"/>
+  <img src="class_m_m_1_1_action_lambda.png" usemap="#MM::ActionLambda_map" alt=""/>
+  <map id="MM::ActionLambda_map" name="MM::ActionLambda_map">
+<area href="class_m_m_1_1_action_functor.html" alt="MM::ActionFunctor" shape="rect" coords="0,0,120,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab2fff2f4810a8b985c2d202e95c4b885"><td class="memItemLeft" align="right" valign="top"><a id="ab2fff2f4810a8b985c2d202e95c4b885"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Execute</b> (<a class="el" href="class_m_m_1_1_property_base.html">PropertyBase</a> *pProp, ActionType eAct)=0</td></tr>
-<tr class="separator:ab2fff2f4810a8b985c2d202e95c4b885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4c41d55996dc25feab885a00818aca1"><td class="memTemplParams" colspan="2"><a id="ad4c41d55996dc25feab885a00818aca1"></a>
+template&lt;typename F &gt; </td></tr>
+<tr class="memitem:ad4c41d55996dc25feab885a00818aca1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ActionLambda</b> (F func)</td></tr>
+<tr class="separator:ad4c41d55996dc25feab885a00818aca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4208a079f344adb973aed8d80b6296ee"><td class="memItemLeft" align="right" valign="top"><a id="a4208a079f344adb973aed8d80b6296ee"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Execute</b> (<a class="el" href="class_m_m_1_1_property_base.html">PropertyBase</a> *pProp, ActionType eAct) final</td></tr>
+<tr class="separator:a4208a079f344adb973aed8d80b6296ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract interface to invoke specific action in the device. </p>
+<div class="textblock"><p><a class="el" href="class_m_m_1_1_action.html">Action</a> implementation using std::function to wrap arbitrary callables.</p>
+<p>(It is named "lambda" after its intended use, but can wrap any C++ callable.) </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_property_8h_source.html">Property.h</a></li>
 </ul>
