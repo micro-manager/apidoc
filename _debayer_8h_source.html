@@ -69,55 +69,55 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//                CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//                INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES.</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#if !defined(_DEBAYER_)</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define _DEBAYER_</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;ImgBuffer.h&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;ImgBuffer.h&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_debayer.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_debayer.html">Debayer</a></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   <a class="code" href="class_debayer.html">Debayer</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   ~<a class="code" href="class_debayer.html">Debayer</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   <span class="keywordtype">int</span> Process(<a class="code" href="class_img_buffer.html">ImgBuffer</a>&amp; out, <span class="keyword">const</span> <a class="code" href="class_img_buffer.html">ImgBuffer</a>&amp; in, <span class="keywordtype">int</span> bitDepth);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   <span class="keywordtype">int</span> Process(<a class="code" href="class_img_buffer.html">ImgBuffer</a>&amp; out, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* in, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   <span class="keywordtype">int</span> Process(<a class="code" href="class_img_buffer.html">ImgBuffer</a>&amp; out, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* in, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;   <span class="keyword">const</span> std::vector&lt;std::string&gt; GetOrders()<span class="keyword"> const </span>{<span class="keywordflow">return</span> orders;}</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="keyword">const</span> std::vector&lt;std::string&gt; GetAlgorithms()<span class="keyword"> const </span>{<span class="keywordflow">return</span> algorithms;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keywordtype">void</span> SetOrderIndex(<span class="keywordtype">int</span> idx) {orderIndex = idx;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   <span class="keywordtype">void</span> SetAlgorithmIndex(<span class="keywordtype">int</span> idx) {algoIndex = idx;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <span class="keywordtype">int</span> ProcessT(<a class="code" href="class_img_buffer.html">ImgBuffer</a>&amp; out, <span class="keyword">const</span> T* in, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <span class="keywordtype">void</span> ReplicateDecode(<span class="keyword">const</span> T* input, <span class="keywordtype">int</span>* out, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth, <span class="keywordtype">int</span> rowOrder);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keywordtype">void</span> SmoothDecode(<span class="keyword">const</span> T* input, <span class="keywordtype">int</span>* output, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth, <span class="keywordtype">int</span> rowOrder);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keywordtype">int</span> Convert(<span class="keyword">const</span> T* input, <span class="keywordtype">int</span>* output, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth, <span class="keywordtype">int</span> rowOrder, <span class="keywordtype">int</span> algorithm);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> GetPixel(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* v, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keywordtype">void</span> SetPixel(std::vector&lt;unsigned short&gt;&amp; v, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> val, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> GetPixel(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* v, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   std::vector&lt;unsigned short&gt; r; <span class="comment">// red scratch buffer</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   std::vector&lt;unsigned short&gt; g; <span class="comment">// green scratch buffer</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   std::vector&lt;unsigned short&gt; b; <span class="comment">// blue scratch buffer</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   std::vector&lt;std::string&gt; orders;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   std::vector&lt;std::string&gt; algorithms;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <span class="keywordtype">int</span> orderIndex;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keywordtype">int</span> algoIndex;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// !defined(_DEBAYER_)</span></div>
-<div class="ttc" id="aclass_debayer_html"><div class="ttname"><a href="class_debayer.html">Debayer</a></div><div class="ttdef"><b>Definition:</b> Debayer.h:36</div></div>
-<div class="ttc" id="aclass_img_buffer_html"><div class="ttname"><a href="class_img_buffer.html">ImgBuffer</a></div><div class="ttdef"><b>Definition:</b> ImgBuffer.h:40</div></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_debayer.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_debayer.html">Debayer</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   <a class="code" href="class_debayer.html">Debayer</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   ~<a class="code" href="class_debayer.html">Debayer</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   <span class="keywordtype">int</span> Process(<a class="code" href="class_img_buffer.html">ImgBuffer</a>&amp; out, <span class="keyword">const</span> <a class="code" href="class_img_buffer.html">ImgBuffer</a>&amp; in, <span class="keywordtype">int</span> bitDepth);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;   <span class="keywordtype">int</span> Process(<a class="code" href="class_img_buffer.html">ImgBuffer</a>&amp; out, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* in, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;   <span class="keywordtype">int</span> Process(<a class="code" href="class_img_buffer.html">ImgBuffer</a>&amp; out, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* in, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="keyword">const</span> std::vector&lt;std::string&gt; GetOrders()<span class="keyword"> const </span>{<span class="keywordflow">return</span> orders;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   <span class="keyword">const</span> std::vector&lt;std::string&gt; GetAlgorithms()<span class="keyword"> const </span>{<span class="keywordflow">return</span> algorithms;}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   <span class="keywordtype">void</span> SetOrderIndex(<span class="keywordtype">int</span> idx) {orderIndex = idx;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   <span class="keywordtype">void</span> SetAlgorithmIndex(<span class="keywordtype">int</span> idx) {algoIndex = idx;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   <span class="keywordtype">int</span> ProcessT(<a class="code" href="class_img_buffer.html">ImgBuffer</a>&amp; out, <span class="keyword">const</span> T* in, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keywordtype">void</span> ReplicateDecode(<span class="keyword">const</span> T* input, <span class="keywordtype">int</span>* out, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth, <span class="keywordtype">int</span> rowOrder);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keywordtype">void</span> SmoothDecode(<span class="keyword">const</span> T* input, <span class="keywordtype">int</span>* output, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth, <span class="keywordtype">int</span> rowOrder);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keywordtype">int</span> Convert(<span class="keyword">const</span> T* input, <span class="keywordtype">int</span>* output, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> bitDepth, <span class="keywordtype">int</span> rowOrder, <span class="keywordtype">int</span> algorithm);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> GetPixel(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* v, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   <span class="keywordtype">void</span> SetPixel(std::vector&lt;unsigned short&gt;&amp; v, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> val, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> GetPixel(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* v, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   std::vector&lt;unsigned short&gt; r; <span class="comment">// red scratch buffer</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   std::vector&lt;unsigned short&gt; g; <span class="comment">// green scratch buffer</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   std::vector&lt;unsigned short&gt; b; <span class="comment">// blue scratch buffer</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   std::vector&lt;std::string&gt; orders;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   std::vector&lt;std::string&gt; algorithms;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keywordtype">int</span> orderIndex;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   <span class="keywordtype">int</span> algoIndex;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="ttc" id="aclass_debayer_html"><div class="ttname"><a href="class_debayer.html">Debayer</a></div><div class="ttdef"><b>Definition:</b> Debayer.h:37</div></div>
+<div class="ttc" id="aclass_img_buffer_html"><div class="ttname"><a href="class_img_buffer.html">ImgBuffer</a></div><div class="ttdef"><b>Definition:</b> ImgBuffer.h:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -65,61 +65,56 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//                CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//                INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES.</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// CVS:           $Id$</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifndef _DEVICEUTILS_H_</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define _DEVICEUTILS_H_</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;../MMDevice/MMDeviceConstants.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;windows.h&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) || defined(_MSC_EXTENSIONS)</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">  #define DELTA_EPOCH_IN_MICROSECS  11644473600000000Ui64</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">  #define DELTA_EPOCH_IN_MICROSECS  11644473600000000ULL</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// Definition of struct timezone and gettimeofday can be disabled in case</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// interfacing with some other system that also tries to define conflicting</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// symbols (e.g. Python &lt;= 3.6).</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#if defined(_WIN32) &amp;&amp; !defined(MMDEVICE_NO_GETTIMEOFDAY)</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">struct </span>timezone </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">int</span>  tz_minuteswest; <span class="comment">/* minutes W of Greenwich */</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">int</span>  tz_dsttime;     <span class="comment">/* type of dst correction */</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">int</span> gettimeofday(<span class="keyword">struct</span> timeval *tv__, <span class="keyword">struct</span> timezone *tz__);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;MMDeviceConstants.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) || defined(_MSC_EXTENSIONS)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">  #define DELTA_EPOCH_IN_MICROSECS  11644473600000000Ui64</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">  #define DELTA_EPOCH_IN_MICROSECS  11644473600000000ULL</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// Definition of struct timezone and gettimeofday can be disabled in case</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// interfacing with some other system that also tries to define conflicting</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// symbols (e.g. Python &lt;= 3.6).</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#if defined(_WIN32) &amp;&amp; !defined(MMDEVICE_NO_GETTIMEOFDAY)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">struct </span>timezone </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">int</span>  tz_minuteswest; <span class="comment">/* minutes W of Greenwich */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">int</span>  tz_dsttime;     <span class="comment">/* type of dst correction */</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">int</span> gettimeofday(<span class="keyword">struct</span> timeval *tv__, <span class="keyword">struct</span> timezone *tz__);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_c_device_utils.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_device_utils.html">CDeviceUtils</a></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_c_device_utils.html#a780e528469161e446c3948c5187f12d4">CopyLimitedString</a>(<span class="keywordtype">char</span>* pszTarget, <span class="keyword">const</span> <span class="keywordtype">char</span>* pszSource);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <a class="code" href="class_c_device_utils.html#a91fef6e0ae8debc7b00446ad2d6235f6">GetMaxStringLength</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_c_device_utils.html#a047a54b5ea69ba1a64293fda9207ee4a">ConvertToString</a>(<span class="keywordtype">long</span> lnVal);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_c_device_utils.html#a047a54b5ea69ba1a64293fda9207ee4a">ConvertToString</a>(<span class="keywordtype">double</span> dVal);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_c_device_utils.html#a047a54b5ea69ba1a64293fda9207ee4a">ConvertToString</a>(<span class="keywordtype">int</span> val);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_c_device_utils.html#a047a54b5ea69ba1a64293fda9207ee4a">ConvertToString</a>(<span class="keywordtype">bool</span> val);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_c_device_utils.html#a0bc9332a6fec10256d6c55f715f69559">Tokenize</a>(<span class="keyword">const</span> std::string&amp; str, std::vector&lt;std::string&gt;&amp; tokens, <span class="keyword">const</span> std::string&amp; delimiters = <span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_c_device_utils.html#aa23b0dad36633675d4951ee6eb93ab0e">SleepMs</a>(<span class="keywordtype">long</span> ms);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_c_device_utils.html#aa5e81820a8326bf36bfdf85bf99f853e">NapMicros</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> microsecs);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   <span class="keyword">static</span> std::string HexRep(std::vector&lt;unsigned char&gt;  );</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">bool</span> CheckEnvironment(std::string environment);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">char</span> m_pszBuffer[MM::MaxStrLength];</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//_DEVICEUTILS_H_</span></div>
-<div class="ttc" id="aclass_c_device_utils_html"><div class="ttname"><a href="class_c_device_utils.html">CDeviceUtils</a></div><div class="ttdef"><b>Definition:</b> DeviceUtils.h:56</div></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_c_device_utils.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_device_utils.html">CDeviceUtils</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_c_device_utils.html#a780e528469161e446c3948c5187f12d4">CopyLimitedString</a>(<span class="keywordtype">char</span>* pszTarget, <span class="keyword">const</span> <span class="keywordtype">char</span>* pszSource);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <a class="code" href="class_c_device_utils.html#a91fef6e0ae8debc7b00446ad2d6235f6">GetMaxStringLength</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_c_device_utils.html#a047a54b5ea69ba1a64293fda9207ee4a">ConvertToString</a>(<span class="keywordtype">long</span> lnVal);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_c_device_utils.html#a047a54b5ea69ba1a64293fda9207ee4a">ConvertToString</a>(<span class="keywordtype">double</span> dVal);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_c_device_utils.html#a047a54b5ea69ba1a64293fda9207ee4a">ConvertToString</a>(<span class="keywordtype">int</span> val);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_c_device_utils.html#a047a54b5ea69ba1a64293fda9207ee4a">ConvertToString</a>(<span class="keywordtype">bool</span> val);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_c_device_utils.html#a0bc9332a6fec10256d6c55f715f69559">Tokenize</a>(<span class="keyword">const</span> std::string&amp; str, std::vector&lt;std::string&gt;&amp; tokens, <span class="keyword">const</span> std::string&amp; delimiters = <span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_c_device_utils.html#aa23b0dad36633675d4951ee6eb93ab0e">SleepMs</a>(<span class="keywordtype">long</span> ms);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_c_device_utils.html#aa5e81820a8326bf36bfdf85bf99f853e">NapMicros</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> microsecs);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <span class="keyword">static</span> std::string HexRep(std::vector&lt;unsigned char&gt;  );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">bool</span> CheckEnvironment(std::string environment);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   <span class="keyword">static</span> <span class="keywordtype">char</span> m_pszBuffer[MM::MaxStrLength];</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="ttc" id="aclass_c_device_utils_html"><div class="ttname"><a href="class_c_device_utils.html">CDeviceUtils</a></div><div class="ttdef"><b>Definition:</b> DeviceUtils.h:53</div></div>
 <div class="ttc" id="aclass_c_device_utils_html_a047a54b5ea69ba1a64293fda9207ee4a"><div class="ttname"><a href="class_c_device_utils.html#a047a54b5ea69ba1a64293fda9207ee4a">CDeviceUtils::ConvertToString</a></div><div class="ttdeci">static const char * ConvertToString(long lnVal)</div><div class="ttdef"><b>Definition:</b> DeviceUtils.cpp:65</div></div>
 <div class="ttc" id="aclass_c_device_utils_html_a0bc9332a6fec10256d6c55f715f69559"><div class="ttname"><a href="class_c_device_utils.html#a0bc9332a6fec10256d6c55f715f69559">CDeviceUtils::Tokenize</a></div><div class="ttdeci">static void Tokenize(const std::string &amp;str, std::vector&lt; std::string &gt; &amp;tokens, const std::string &amp;delimiters=&quot;,&quot;)</div><div class="ttdef"><b>Definition:</b> DeviceUtils.cpp:131</div></div>
 <div class="ttc" id="aclass_c_device_utils_html_a780e528469161e446c3948c5187f12d4"><div class="ttname"><a href="class_c_device_utils.html#a780e528469161e446c3948c5187f12d4">CDeviceUtils::CopyLimitedString</a></div><div class="ttdeci">static bool CopyLimitedString(char *pszTarget, const char *pszSource)</div><div class="ttdef"><b>Definition:</b> DeviceUtils.cpp:39</div></div>
