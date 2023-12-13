@@ -70,9 +70,9 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifdef WIN32</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// disable exception scpecification warnings in MSVC</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#pragma warning( disable : 4290 )</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#pragma warning(push)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#pragma warning(disable: 4290) </span><span class="comment">// &#39;C++ exception specification ignored&#39;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;MMDeviceConstants.h&quot;</span></div>
@@ -504,7 +504,7 @@ $(function() {
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;         <span class="keywordflow">if</span> (it-&gt;second-&gt;ToArrayTag())</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            <span class="keywordtype">id</span> = <span class="stringliteral">&quot;a&quot;</span>;</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;         std::string ser = it-&gt;second-&gt;Serialize();</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;         os &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; ser &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;         os &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; ser &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;      }</div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160; </div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;      <span class="keywordflow">return</span> os.str();</div>
@@ -524,6 +524,10 @@ $(function() {
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;   <span class="keyword">typedef</span> std::map&lt;std::string, MetadataTag*&gt;::iterator TagIter;</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;   <span class="keyword">typedef</span> std::map&lt;std::string, MetadataTag*&gt;::const_iterator TagConstIter;</div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;};</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;<span class="preprocessor">#ifdef _MSC_VER</span></div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="preprocessor">#pragma warning(pop)</span></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_metadata_array_tag_html"><div class="ttname"><a href="class_metadata_array_tag.html">MetadataArrayTag</a></div><div class="ttdef"><b>Definition:</b> ImageMetadata.h:203</div></div>
 <div class="ttc" id="aclass_metadata_array_tag_html_acac8dca9fa9a23ae39cf78736be75b0a"><div class="ttname"><a href="class_metadata_array_tag.html#acac8dca9fa9a23ae39cf78736be75b0a">MetadataArrayTag::ToArrayTag</a></div><div class="ttdeci">virtual const MetadataArrayTag * ToArrayTag() const</div><div class="ttdef"><b>Definition:</b> ImageMetadata.h:210</div></div>
 <div class="ttc" id="aclass_metadata_error_html"><div class="ttname"><a href="class_metadata_error.html">MetadataError</a></div><div class="ttdef"><b>Definition:</b> ImageMetadata.h:45</div></div>
