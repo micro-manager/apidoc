@@ -669,10 +669,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setGalvoSpotInterval<
 <tr class="memitem:abbd454bddcb7a9b0a5a2f0aa6f447a42"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#abbd454bddcb7a9b0a5a2f0aa6f447a42">getGalvoChannel</a> (const char *galvoLabel)  throw (CMMError)</td></tr>
 <tr class="separator:abbd454bddcb7a9b0a5a2f0aa6f447a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Device discovery.</div></td></tr>
-<tr class="memitem:a3e16c833fea1243c7f8b18cdd9e6af9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a3e16c833fea1243c7f8b18cdd9e6af9d">supportsDeviceDetection</a> (char *deviceLabel)</td></tr>
-<tr class="separator:a3e16c833fea1243c7f8b18cdd9e6af9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a412bd96572ae76191ba96a709cb0704e"><td class="memItemLeft" align="right" valign="top">MM::DeviceDetectionStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a412bd96572ae76191ba96a709cb0704e">detectDevice</a> (char *deviceLabel)</td></tr>
-<tr class="separator:a412bd96572ae76191ba96a709cb0704e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addaed5b7847e9fe364503bc57e6c878f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#addaed5b7847e9fe364503bc57e6c878f">supportsDeviceDetection</a> (const char *deviceLabel)</td></tr>
+<tr class="separator:addaed5b7847e9fe364503bc57e6c878f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1a6a010b53b940db885987ffb11468"><td class="memItemLeft" align="right" valign="top">MM::DeviceDetectionStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#acd1a6a010b53b940db885987ffb11468">detectDevice</a> (const char *deviceLabel)</td></tr>
+<tr class="separator:acd1a6a010b53b940db885987ffb11468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Hub and peripheral devices.</div></td></tr>
 <tr class="memitem:a46c55f508c2990e1d93055fe37abcbcc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a46c55f508c2990e1d93055fe37abcbcc">getParentLabel</a> (const char *peripheralLabel)  throw (CMMError)</td></tr>
 <tr class="separator:a46c55f508c2990e1d93055fe37abcbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1285,8 +1285,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 
 </div>
 </div>
-<a id="a412bd96572ae76191ba96a709cb0704e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a412bd96572ae76191ba96a709cb0704e">&#9670;&nbsp;</a></span>detectDevice()</h2>
+<a id="acd1a6a010b53b940db885987ffb11468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd1a6a010b53b940db885987ffb11468">&#9670;&nbsp;</a></span>detectDevice()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1294,7 +1294,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
         <tr>
           <td class="memname">MM::DeviceDetectionStatus CMMCore::detectDevice </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>label</em></td><td>)</td>
           <td></td>
         </tr>
@@ -3589,7 +3589,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#a412bd96572ae76191ba96a709cb0704e">detectDevice()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#acd1a6a010b53b940db885987ffb11468">detectDevice()</a>.</p>
 
 </div>
 </div>
@@ -7779,7 +7779,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#a412bd96572ae76191ba96a709cb0704e">detectDevice()</a>, and <a class="el" href="class_c_m_m_core.html#a25c6515b281c194e3daf5b723e8fde30">setSystemState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#acd1a6a010b53b940db885987ffb11468">detectDevice()</a>, and <a class="el" href="class_c_m_m_core.html#a25c6515b281c194e3daf5b723e8fde30">setSystemState()</a>.</p>
 
 </div>
 </div>
@@ -9598,8 +9598,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 
 </div>
 </div>
-<a id="a3e16c833fea1243c7f8b18cdd9e6af9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e16c833fea1243c7f8b18cdd9e6af9d">&#9670;&nbsp;</a></span>supportsDeviceDetection()</h2>
+<a id="addaed5b7847e9fe364503bc57e6c878f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addaed5b7847e9fe364503bc57e6c878f">&#9670;&nbsp;</a></span>supportsDeviceDetection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9607,13 +9607,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
         <tr>
           <td class="memname">bool CMMCore::supportsDeviceDetection </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>label</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return whether or not the device supports automatic device detection (i.e. whether or not <a class="el" href="class_c_m_m_core.html#a412bd96572ae76191ba96a709cb0704e">detectDevice()</a> may be safely called).</p>
+<p>Return whether or not the device supports automatic device detection (i.e. whether or not <a class="el" href="class_c_m_m_core.html#acd1a6a010b53b940db885987ffb11468">detectDevice()</a> may be safely called).</p>
 <p>For legacy reasons, an exception is not thrown if there is an error. Instead, false is returned if label is not a valid device. </p>
 
 </div>
