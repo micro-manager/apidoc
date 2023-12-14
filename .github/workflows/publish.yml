@@ -8,6 +8,12 @@ on:
     branches:
       - 'pages/**'
 
+concurrency:
+  # Prevent overlapping runs of this workflow, which would cause a race on the
+  # gh-pages branch.
+  group: publish-to-gh-pages
+  cancel-in-progress: false
+
 jobs:
   update-html:
     name: Update docs for project/version
