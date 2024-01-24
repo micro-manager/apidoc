@@ -424,15 +424,15 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Datastore.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Datastore.html#putImage-org.micromanager.data.Image-">putImage</a></span>(<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)</code>
-<div class="block">Insert an image into the Datastore.</div>
+<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#putImage-org.micromanager.data.Image-">putImage</a></span>(<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)</code>
+<div class="block">Insert an Image into the Storage, so that it may be returned by later
+ getImage() calls.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Storage.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Storage.html#putImage-org.micromanager.data.Image-">putImage</a></span>(<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)</code>
-<div class="block">Insert an Image into the Storage, so that it may be returned by later
- getImage() calls.</div>
+<td class="colLast"><span class="typeNameLabel">Datastore.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/data/Datastore.html#putImage-org.micromanager.data.Image-">putImage</a></span>(<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)</code>
+<div class="block">Insert an image into the Datastore.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -514,7 +514,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/Overlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
+<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/AbstractOverlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
             java.awt.Rectangle&nbsp;screenRect,
             <a href="../../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a>&nbsp;displaySettings,
             java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images,
@@ -525,7 +525,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/AbstractOverlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
+<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/Overlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
             java.awt.Rectangle&nbsp;screenRect,
             <a href="../../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a>&nbsp;displaySettings,
             java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images,
@@ -545,7 +545,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/Overlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
+<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/AbstractOverlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
             java.awt.Rectangle&nbsp;screenRect,
             <a href="../../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a>&nbsp;displaySettings,
             java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images,
@@ -556,7 +556,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/AbstractOverlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
+<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../../org/micromanager/display/overlay/Overlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay</a></span>(java.awt.Graphics2D&nbsp;graphicsContext,
             java.awt.Rectangle&nbsp;screenRect,
             <a href="../../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a>&nbsp;displaySettings,
             java.util.List&lt;<a href="../../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images,
