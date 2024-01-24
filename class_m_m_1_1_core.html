@@ -137,60 +137,60 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeIma
 <tr class="separator:a06329e4277fcfe295002386b74376b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74a3a3335793b54fa5b1f8f78c10f39a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a74a3a3335793b54fa5b1f8f78c10f39a">InsertMultiChannel</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const unsigned char *buf, unsigned numChannels, unsigned width, unsigned height, unsigned byteDepth, <a class="el" href="class_metadata.html">Metadata</a> *md=0)=0</td></tr>
 <tr class="separator:a74a3a3335793b54fa5b1f8f78c10f39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8347f837cfd59aab6d0c31be9e6df648"><td class="memItemLeft" align="right" valign="top"><a id="a8347f837cfd59aab6d0c31be9e6df648"></a>
-virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetImage</b> ()=0</td></tr>
-<tr class="separator:a8347f837cfd59aab6d0c31be9e6df648"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca766474e7755cb851648a790368142f"><td class="memItemLeft" align="right" valign="top"><a id="aca766474e7755cb851648a790368142f"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetImageDimensions</b> (int &amp;width, int &amp;height, int &amp;depth)=0</td></tr>
-<tr class="separator:aca766474e7755cb851648a790368142f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5f4a6f9909372e3f2d53903c22b7723"><td class="memItemLeft" align="right" valign="top"><a id="ae5f4a6f9909372e3f2d53903c22b7723"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetFocusPosition</b> (double &amp;pos)=0</td></tr>
-<tr class="separator:ae5f4a6f9909372e3f2d53903c22b7723"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa184e592d3c7b754a73ea4c8a1f7cef6"><td class="memItemLeft" align="right" valign="top"><a id="aa184e592d3c7b754a73ea4c8a1f7cef6"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>SetFocusPosition</b> (double pos)=0</td></tr>
-<tr class="separator:aa184e592d3c7b754a73ea4c8a1f7cef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2f63429cd923b8baff82425d6366167"><td class="memItemLeft" align="right" valign="top"><a id="af2f63429cd923b8baff82425d6366167"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>MoveFocus</b> (double velocity)=0</td></tr>
-<tr class="separator:af2f63429cd923b8baff82425d6366167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ed1f31206d7a5a2d800bb0e11f94bf4"><td class="memItemLeft" align="right" valign="top"><a id="a2ed1f31206d7a5a2d800bb0e11f94bf4"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>SetXYPosition</b> (double x, double y)=0</td></tr>
-<tr class="separator:a2ed1f31206d7a5a2d800bb0e11f94bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab89f228b48e06e3bd16ee61fedb6e22b"><td class="memItemLeft" align="right" valign="top"><a id="ab89f228b48e06e3bd16ee61fedb6e22b"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetXYPosition</b> (double &amp;x, double &amp;y)=0</td></tr>
-<tr class="separator:ab89f228b48e06e3bd16ee61fedb6e22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fc7f1aa75b1b463375d198754263ac4"><td class="memItemLeft" align="right" valign="top"><a id="a7fc7f1aa75b1b463375d198754263ac4"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>MoveXYStage</b> (double vX, double vY)=0</td></tr>
-<tr class="separator:a7fc7f1aa75b1b463375d198754263ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15b2725466db11d0d9dd3c5c23e52833"><td class="memItemLeft" align="right" valign="top"><a id="a15b2725466db11d0d9dd3c5c23e52833"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>SetExposure</b> (double expMs)=0</td></tr>
-<tr class="separator:a15b2725466db11d0d9dd3c5c23e52833"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b21dd9048bdad56351fc8b6475d3cc7"><td class="memItemLeft" align="right" valign="top"><a id="a0b21dd9048bdad56351fc8b6475d3cc7"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetExposure</b> (double &amp;expMs)=0</td></tr>
-<tr class="separator:a0b21dd9048bdad56351fc8b6475d3cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7da8b117c40daa596d6c4e77d5068cbc"><td class="memItemLeft" align="right" valign="top"><a id="a7da8b117c40daa596d6c4e77d5068cbc"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>SetConfig</b> (const char *group, const char *name)=0</td></tr>
-<tr class="separator:a7da8b117c40daa596d6c4e77d5068cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bc4028c8f81a8b97ccdd285cf77eaf3"><td class="memItemLeft" align="right" valign="top"><a id="a4bc4028c8f81a8b97ccdd285cf77eaf3"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentConfig</b> (const char *group, int bufLen, char *name)=0</td></tr>
-<tr class="separator:a4bc4028c8f81a8b97ccdd285cf77eaf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13805dcd019389dac1812ac7e925de04"><td class="memItemLeft" align="right" valign="top"><a id="a13805dcd019389dac1812ac7e925de04"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetChannelConfig</b> (char *channelConfigName, const unsigned int channelConfigIterator)=0</td></tr>
-<tr class="separator:a13805dcd019389dac1812ac7e925de04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac587033b87f1c6f795e072ab3ed16c92"><td class="memItemLeft" align="right" valign="top"><a id="ac587033b87f1c6f795e072ab3ed16c92"></a>
-virtual <a class="el" href="class_m_m_1_1_image_processor.html">MM::ImageProcessor</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetImageProcessor</b> (const <a class="el" href="class_m_m_1_1_device.html">MM::Device</a> *caller)=0</td></tr>
-<tr class="separator:ac587033b87f1c6f795e072ab3ed16c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab55cd26620a7f4c1026b7e5f2c03bab"><td class="memItemLeft" align="right" valign="top"><a id="aab55cd26620a7f4c1026b7e5f2c03bab"></a>
-virtual <a class="el" href="class_m_m_1_1_auto_focus.html">MM::AutoFocus</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetAutoFocus</b> (const <a class="el" href="class_m_m_1_1_device.html">MM::Device</a> *caller)=0</td></tr>
-<tr class="separator:aab55cd26620a7f4c1026b7e5f2c03bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b037ae60968671f7a93365fa2e55c4"><td class="memItemLeft" align="right" valign="top"><a id="a80b037ae60968671f7a93365fa2e55c4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual const char *GetImage())=0</td></tr>
+<tr class="separator:a80b037ae60968671f7a93365fa2e55c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f41f4d7f819dff663364983f278755"><td class="memItemLeft" align="right" valign="top"><a id="a45f41f4d7f819dff663364983f278755"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int GetImageDimensions(int &amp;width, int &amp;height, int &amp;depth))=0</td></tr>
+<tr class="separator:a45f41f4d7f819dff663364983f278755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32e63725c4e345adfd931175c8fd76b"><td class="memItemLeft" align="right" valign="top"><a id="ad32e63725c4e345adfd931175c8fd76b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int GetFocusPosition(double &amp;pos))=0</td></tr>
+<tr class="separator:ad32e63725c4e345adfd931175c8fd76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad38b6a488d324ca660d3f0c80e54871"><td class="memItemLeft" align="right" valign="top"><a id="aad38b6a488d324ca660d3f0c80e54871"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int SetFocusPosition(double pos))=0</td></tr>
+<tr class="separator:aad38b6a488d324ca660d3f0c80e54871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc1edc53efa00a58e60e515d312bd8a5"><td class="memItemLeft" align="right" valign="top"><a id="adc1edc53efa00a58e60e515d312bd8a5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int MoveFocus(double velocity))=0</td></tr>
+<tr class="separator:adc1edc53efa00a58e60e515d312bd8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f42296ccd5d32915279e4f5d3cc9d39"><td class="memItemLeft" align="right" valign="top"><a id="a6f42296ccd5d32915279e4f5d3cc9d39"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int SetXYPosition(double x, double y))=0</td></tr>
+<tr class="separator:a6f42296ccd5d32915279e4f5d3cc9d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f225ad51e5109f88302d767d172b31b"><td class="memItemLeft" align="right" valign="top"><a id="a3f225ad51e5109f88302d767d172b31b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int GetXYPosition(double &amp;x, double &amp;y))=0</td></tr>
+<tr class="separator:a3f225ad51e5109f88302d767d172b31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af32eecdd42d5129505fc0a27ef17c442"><td class="memItemLeft" align="right" valign="top"><a id="af32eecdd42d5129505fc0a27ef17c442"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int MoveXYStage(double vX, double vY))=0</td></tr>
+<tr class="separator:af32eecdd42d5129505fc0a27ef17c442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05cb59894daabdbe77924452d00a9691"><td class="memItemLeft" align="right" valign="top"><a id="a05cb59894daabdbe77924452d00a9691"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int SetExposure(double expMs))=0</td></tr>
+<tr class="separator:a05cb59894daabdbe77924452d00a9691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd7c14d279e27c925fb34e9f5a9e47f"><td class="memItemLeft" align="right" valign="top"><a id="afdd7c14d279e27c925fb34e9f5a9e47f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int GetExposure(double &amp;expMs))=0</td></tr>
+<tr class="separator:afdd7c14d279e27c925fb34e9f5a9e47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7621c5b710d32e1e9fba598d4885793e"><td class="memItemLeft" align="right" valign="top"><a id="a7621c5b710d32e1e9fba598d4885793e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int SetConfig(const char *group, const char *name))=0</td></tr>
+<tr class="separator:a7621c5b710d32e1e9fba598d4885793e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3978386ac8c61ccaa7562279117e3b16"><td class="memItemLeft" align="right" valign="top"><a id="a3978386ac8c61ccaa7562279117e3b16"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int GetCurrentConfig(const char *group, int bufLen, char *name))=0</td></tr>
+<tr class="separator:a3978386ac8c61ccaa7562279117e3b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a104ead61b333001e91473b55b2077ee4"><td class="memItemLeft" align="right" valign="top"><a id="a104ead61b333001e91473b55b2077ee4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int GetChannelConfig(char *channelConfigName, const unsigned int channelConfigIterator))=0</td></tr>
+<tr class="separator:a104ead61b333001e91473b55b2077ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7c591e0f0da6b40463e31c1d08ad1f"><td class="memItemLeft" align="right" valign="top"><a id="aff7c591e0f0da6b40463e31c1d08ad1f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual <a class="el" href="class_m_m_1_1_image_processor.html">MM::ImageProcessor</a> *GetImageProcessor(const <a class="el" href="class_m_m_1_1_device.html">MM::Device</a> *caller))=0</td></tr>
+<tr class="separator:aff7c591e0f0da6b40463e31c1d08ad1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0c3059779dc01c0cbcdae24e055301"><td class="memItemLeft" align="right" valign="top"><a id="aec0c3059779dc01c0cbcdae24e055301"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual <a class="el" href="class_m_m_1_1_auto_focus.html">MM::AutoFocus</a> *GetAutoFocus(const <a class="el" href="class_m_m_1_1_device.html">MM::Device</a> *caller))=0</td></tr>
+<tr class="separator:aec0c3059779dc01c0cbcdae24e055301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70f2d99df70125f9768263aa1bc6c3ef"><td class="memItemLeft" align="right" valign="top"><a id="a70f2d99df70125f9768263aa1bc6c3ef"></a>
 virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetParentHub</b> (const <a class="el" href="class_m_m_1_1_device.html">MM::Device</a> *caller) const =0</td></tr>
 <tr class="separator:a70f2d99df70125f9768263aa1bc6c3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af51f9926a4f3e8e1b2ca0503104ce6fd"><td class="memItemLeft" align="right" valign="top"><a id="af51f9926a4f3e8e1b2ca0503104ce6fd"></a>
-virtual <a class="el" href="class_m_m_1_1_state.html">MM::State</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetStateDevice</b> (const <a class="el" href="class_m_m_1_1_device.html">MM::Device</a> *caller, const char *deviceName)=0</td></tr>
-<tr class="separator:af51f9926a4f3e8e1b2ca0503104ce6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9862b7afcce8a07f68e9e26225a1858"><td class="memItemLeft" align="right" valign="top"><a id="ad9862b7afcce8a07f68e9e26225a1858"></a>
-virtual <a class="el" href="class_m_m_1_1_signal_i_o.html">MM::SignalIO</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSignalIODevice</b> (const <a class="el" href="class_m_m_1_1_device.html">MM::Device</a> *caller, const char *deviceName)=0</td></tr>
-<tr class="separator:ad9862b7afcce8a07f68e9e26225a1858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb180b69753fedc739ea95708df1fee"><td class="memItemLeft" align="right" valign="top"><a id="a6fb180b69753fedc739ea95708df1fee"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual <a class="el" href="class_m_m_1_1_state.html">MM::State</a> *GetStateDevice(const <a class="el" href="class_m_m_1_1_device.html">MM::Device</a> *caller, const char *deviceName))=0</td></tr>
+<tr class="separator:a6fb180b69753fedc739ea95708df1fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a213221d80c4efe0c124160741f2eeb1b"><td class="memItemLeft" align="right" valign="top"><a id="a213221d80c4efe0c124160741f2eeb1b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual <a class="el" href="class_m_m_1_1_signal_i_o.html">MM::SignalIO</a> *GetSignalIODevice(const <a class="el" href="class_m_m_1_1_device.html">MM::Device</a> *caller, const char *deviceName))=0</td></tr>
+<tr class="separator:a213221d80c4efe0c124160741f2eeb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86adf63c0946ade3b893e991fe74eecc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a86adf63c0946ade3b893e991fe74eecc">MM_DEPRECATED</a> (virtual void NextPostedError(int &amp;, char *, int, int &amp;))=0</td></tr>
 <tr class="separator:a86adf63c0946ade3b893e991fe74eecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840da44dad98e3a24f6c72aae634a186"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a840da44dad98e3a24f6c72aae634a186">MM_DEPRECATED</a> (virtual void PostError(const int, const char *))=0</td></tr>
