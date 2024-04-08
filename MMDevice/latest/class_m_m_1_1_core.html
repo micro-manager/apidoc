@@ -55,11 +55,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a79ffdca756b680f79648d5937f1a5930"><td class="memItemLeft" align="right" valign="top"><a id="a79ffdca756b680f79648d5937f1a5930"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>LogMessage</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const char *msg, bool debugOnly) const =0</td></tr>
+<tr class="memitem:a79ffdca756b680f79648d5937f1a5930"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a79ffdca756b680f79648d5937f1a5930">LogMessage</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const char *msg, bool debugOnly) const =0</td></tr>
 <tr class="separator:a79ffdca756b680f79648d5937f1a5930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f02f17982fbd5e329908d3a19f4e2fe"><td class="memItemLeft" align="right" valign="top"><a id="a2f02f17982fbd5e329908d3a19f4e2fe"></a>
-virtual <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDevice</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const char *label)=0</td></tr>
+<tr class="memitem:a2f02f17982fbd5e329908d3a19f4e2fe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a2f02f17982fbd5e329908d3a19f4e2fe">GetDevice</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const char *label)=0</td></tr>
 <tr class="separator:a2f02f17982fbd5e329908d3a19f4e2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af711c5dac56388a80828b857732a7d2d"><td class="memItemLeft" align="right" valign="top"><a id="af711c5dac56388a80828b857732a7d2d"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetDeviceProperty</b> (const char *deviceName, const char *propName, char *value)=0</td></tr>
@@ -201,6 +199,45 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Callback API to the core control module. Devices use this abstract interface to use <a class="el" href="class_m_m_1_1_core.html">Core</a> services </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2f02f17982fbd5e329908d3a19f4e2fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f02f17982fbd5e329908d3a19f4e2fe">&#9670;&nbsp;</a></span>GetDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_m_m_1_1_device.html">Device</a>* MM::Core::GetDevice </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>label</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Callback that allows this device adapter to get a pointer to another device. Be aware of potential threading issues. Provide a valid label for the device and receive a pointer to the desired device. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_c_device_base.html#a3e89e834bda462d07b4c360c630dee5f">CDeviceBase&lt; T, U &gt;::GetDevice()</a>.</p>
+
+</div>
+</div>
 <a id="a43dde78c5f40c332ebf597f12cbdfc61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a43dde78c5f40c332ebf597f12cbdfc61">&#9670;&nbsp;</a></span>GetLoadedDeviceOfType()</h2>
 
@@ -393,6 +430,51 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 </table>
 </div><div class="memdoc">
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use the other forms instead. </dd></dl>
+
+</div>
+</div>
+<a id="a79ffdca756b680f79648d5937f1a5930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ffdca756b680f79648d5937f1a5930">&#9670;&nbsp;</a></span>LogMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int MM::Core::LogMessage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>debugOnly</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Logs a message (msg) in the Corelog output, labeled with the device name (derived from caller). If debugOnly flag is true, the output will only be logged if the general system has been set to output debug logging. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_c_device_base.html#a528a4cf2210cbcf17cffa03b266befb5">CDeviceBase&lt; T, U &gt;::LogMessage()</a>, <a class="el" href="class_c_device_base.html#a14d22b110b7ba62021562d18f3ff8211">CDeviceBase&lt; T, U &gt;::LogMessageCode()</a>, and <a class="el" href="class_c_device_base.html#ad3b25994e787750b18405a14bb9436d4">CDeviceBase&lt; T, U &gt;::LogTimeDiff()</a>.</p>
 
 </div>
 </div>
