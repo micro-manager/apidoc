@@ -1495,6 +1495,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <p>Core features control whether experimental functionality (which is subject to breaking changes) is exposed, or whether stricter API usage is enforced.</p>
 <p>Currently switchable features:</p><ul>
 <li>"StrictInitializationChecks" (default: disabled) When enabled, an exception is thrown when an operation requiring an initialized device is attempted on a device that is not successfully initialized. When disabled, no exception is thrown and a warning is logged (and the operation may potentially cause incorrect behavior or a crash).</li>
+<li>"ParallelDeviceInitialization" (default: enabled) When enabled, serial ports are initialized in serial order, and all other devices are in parallel, using multiple threads, one per device module. Early testing shows this to be reliable, but switch this off when issues are encountered during device initialization.</li>
 </ul>
 <p>Permanently enabled features:</p><ul>
 <li>None so far.</li>
@@ -4883,9 +4884,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Calls Initialize() method for each loaded device. This method also initialized allowed values for core properties, based on the collection of loaded devices. </p>
+<p>Calls Initialize() method for each loaded device. Parallel implemnetation should be faster </p>
 
-<p class="reference">References <a class="el" href="class_c_m_m_error.html#a5d3ebdd1b74df436a3889dc4f1704d67">CMMError::getMsg()</a>, and <a class="el" href="class_c_m_m_core.html#a0174a3042e40b940a767ebf007939867">updateCoreProperties()</a>.</p>
+<p class="reference">References <a class="el" href="class_c_m_m_core.html#a3d94ba7b69b2e0dc5de96b3501c09874">isFeatureEnabled()</a>.</p>
 
 </div>
 </div>
@@ -5154,6 +5155,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
   </table>
   </dd>
 </dl>
+
+<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#ad4591c3d5d74b9f0e8846a315ea75fbb">initializeAllDevices()</a>.</p>
 
 </div>
 </div>
@@ -9751,8 +9754,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Updates CoreProperties (currently all Core properties are devices types) with the loaded hardware. After this call, each of the Core-Device properties will be populated with the currently loaded devices of that type </p>
-
-<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#ad4591c3d5d74b9f0e8846a315ea75fbb">initializeAllDevices()</a>.</p>
 
 </div>
 </div>
