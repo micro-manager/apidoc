@@ -691,6 +691,51 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setGalvoSpotInterval<
 <tr class="separator:a0f9ce52e1399b5a8df27b5fe7e91b391"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbd454bddcb7a9b0a5a2f0aa6f447a42" id="r_abbd454bddcb7a9b0a5a2f0aa6f447a42"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#abbd454bddcb7a9b0a5a2f0aa6f447a42">getGalvoChannel</a> (const char *galvoLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
 <tr class="separator:abbd454bddcb7a9b0a5a2f0aa6f447a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">PressurePump control</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Control of pressure pumps </p>
+</div></td></tr>
+<tr class="memitem:ae23edf288744d587015c9eaa83135fd1" id="r_ae23edf288744d587015c9eaa83135fd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#ae23edf288744d587015c9eaa83135fd1">pressurePumpStop</a> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:ae23edf288744d587015c9eaa83135fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797c159e8168758c149181d8300159d1" id="r_a797c159e8168758c149181d8300159d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a797c159e8168758c149181d8300159d1">pressurePumpCalibrate</a> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a797c159e8168758c149181d8300159d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a202aa43647df7edef43f996ffa8bfc29" id="r_a202aa43647df7edef43f996ffa8bfc29"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a202aa43647df7edef43f996ffa8bfc29">pressurePumpRequiresCalibration</a> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a202aa43647df7edef43f996ffa8bfc29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21cf4874ff332e2fc7f1545abc95498e" id="r_a21cf4874ff332e2fc7f1545abc95498e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a21cf4874ff332e2fc7f1545abc95498e">setPumpPressureKPa</a> (const char *pumplabel, double pressure)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a21cf4874ff332e2fc7f1545abc95498e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad668d5b1eec7eed815d6c95cce706517" id="r_ad668d5b1eec7eed815d6c95cce706517"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#ad668d5b1eec7eed815d6c95cce706517">getPumpPressureKPa</a> (const char *pumplabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:ad668d5b1eec7eed815d6c95cce706517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">VolumetricPump control</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Control of volumetric pumps </p>
+</div></td></tr>
+<tr class="memitem:acc8a184ac5f228945c2f6022180f767f" id="r_acc8a184ac5f228945c2f6022180f767f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#acc8a184ac5f228945c2f6022180f767f">volumetricPumpStop</a> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:acc8a184ac5f228945c2f6022180f767f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13b77d1f18459e6811688053301ad690" id="r_a13b77d1f18459e6811688053301ad690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a13b77d1f18459e6811688053301ad690">volumetricPumpHome</a> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a13b77d1f18459e6811688053301ad690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90fbeafefc865ed5069a1bf5d3de3e79" id="r_a90fbeafefc865ed5069a1bf5d3de3e79"><td class="memItemLeft" align="right" valign="top"><a id="a90fbeafefc865ed5069a1bf5d3de3e79" name="a90fbeafefc865ed5069a1bf5d3de3e79"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>volumetricPumpRequiresHoming</b> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a90fbeafefc865ed5069a1bf5d3de3e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc0fb4e699b2af495cd2944b375c58d" id="r_abdc0fb4e699b2af495cd2944b375c58d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#abdc0fb4e699b2af495cd2944b375c58d">invertPumpDirection</a> (const char *pumpLabel, bool invert)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:abdc0fb4e699b2af495cd2944b375c58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b5ef6f9cac4c3015b534054750e786" id="r_a81b5ef6f9cac4c3015b534054750e786"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a81b5ef6f9cac4c3015b534054750e786">isPumpDirectionInverted</a> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a81b5ef6f9cac4c3015b534054750e786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25bb5606bc44aaec8bd2d2d07007096a" id="r_a25bb5606bc44aaec8bd2d2d07007096a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a25bb5606bc44aaec8bd2d2d07007096a">setPumpVolume</a> (const char *pumpLabel, double volume)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a25bb5606bc44aaec8bd2d2d07007096a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c064fde47dac2dc53a05d1ee78c1bc" id="r_a17c064fde47dac2dc53a05d1ee78c1bc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a17c064fde47dac2dc53a05d1ee78c1bc">getPumpVolume</a> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a17c064fde47dac2dc53a05d1ee78c1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae46bb53bc9e8083663d4ee8bef5cdd66" id="r_ae46bb53bc9e8083663d4ee8bef5cdd66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#ae46bb53bc9e8083663d4ee8bef5cdd66">setPumpMaxVolume</a> (const char *pumpLabel, double volume)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:ae46bb53bc9e8083663d4ee8bef5cdd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29cda20440bbf2d2c1c8c6182577953e" id="r_a29cda20440bbf2d2c1c8c6182577953e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a29cda20440bbf2d2c1c8c6182577953e">getPumpMaxVolume</a> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a29cda20440bbf2d2c1c8c6182577953e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c14870dacae2bed380f0c6d1b71300" id="r_a41c14870dacae2bed380f0c6d1b71300"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a41c14870dacae2bed380f0c6d1b71300">setPumpFlowrate</a> (const char *pumpLabel, double volume)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a41c14870dacae2bed380f0c6d1b71300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ea3d0d8aa20e175e951d009f38381d" id="r_ae5ea3d0d8aa20e175e951d009f38381d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#ae5ea3d0d8aa20e175e951d009f38381d">getPumpFlowrate</a> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:ae5ea3d0d8aa20e175e951d009f38381d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff635e1c2ef2a91b7c389795e6e2b695" id="r_aff635e1c2ef2a91b7c389795e6e2b695"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#aff635e1c2ef2a91b7c389795e6e2b695">pumpStart</a> (const char *pumpLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:aff635e1c2ef2a91b7c389795e6e2b695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f8dfb0a2d4f303c9b31bab0ecb99728" id="r_a2f8dfb0a2d4f303c9b31bab0ecb99728"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a2f8dfb0a2d4f303c9b31bab0ecb99728">pumpDispenseDurationSeconds</a> (const char *pumpLabel, double seconds)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a2f8dfb0a2d4f303c9b31bab0ecb99728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ca73b96a6ede4efba2bfa3dae5ba82" id="r_ab6ca73b96a6ede4efba2bfa3dae5ba82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#ab6ca73b96a6ede4efba2bfa3dae5ba82">pumpDispenseVolumeUl</a> (const char *pumpLabel, double microLiter)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:ab6ca73b96a6ede4efba2bfa3dae5ba82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Device discovery.</div></td></tr>
 <tr class="memitem:addaed5b7847e9fe364503bc57e6c878f" id="r_addaed5b7847e9fe364503bc57e6c878f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#addaed5b7847e9fe364503bc57e6c878f">supportsDeviceDetection</a> (const char *deviceLabel)</td></tr>
 <tr class="separator:addaed5b7847e9fe364503bc57e6c878f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4077,6 +4122,106 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 
 </div>
 </div>
+<a id="ae5ea3d0d8aa20e175e951d009f38381d" name="ae5ea3d0d8aa20e175e951d009f38381d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ea3d0d8aa20e175e951d009f38381d">&#9670;&#160;</a></span>getPumpFlowrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CMMCore::getPumpFlowrate </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the flowrate of the pump in uL per second </p>
+
+</div>
+</div>
+<a id="a29cda20440bbf2d2c1c8c6182577953e" name="a29cda20440bbf2d2c1c8c6182577953e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29cda20440bbf2d2c1c8c6182577953e">&#9670;&#160;</a></span>getPumpMaxVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CMMCore::getPumpMaxVolume </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the max volume of the pump in uL </p>
+
+</div>
+</div>
+<a id="ad668d5b1eec7eed815d6c95cce706517" name="ad668d5b1eec7eed815d6c95cce706517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad668d5b1eec7eed815d6c95cce706517">&#9670;&#160;</a></span>getPumpPressureKPa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CMMCore::getPumpPressureKPa </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the pressure of the pump in kPa </p>
+
+</div>
+</div>
+<a id="a17c064fde47dac2dc53a05d1ee78c1bc" name="a17c064fde47dac2dc53a05d1ee78c1bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c064fde47dac2dc53a05d1ee78c1bc">&#9670;&#160;</a></span>getPumpVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CMMCore::getPumpVolume </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the fluid volume in the pump in uL </p>
+
+</div>
+</div>
 <a id="ae3d4b60db043c65b54b9101fc3cd864d" name="ae3d4b60db043c65b54b9101fc3cd864d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3d4b60db043c65b54b9101fc3cd864d">&#9670;&#160;</a></span>getRemainingImageCount()</h2>
 
@@ -5251,6 +5396,41 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 
 </div>
 </div>
+<a id="abdc0fb4e699b2af495cd2944b375c58d" name="abdc0fb4e699b2af495cd2944b375c58d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc0fb4e699b2af495cd2944b375c58d">&#9670;&#160;</a></span>invertPumpDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::invertPumpDirection </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>invert</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets whether the pump direction needs to be inverted </p>
+
+</div>
+</div>
 <a id="a19dc8725aee7050ec1f5364e5b022c7e" name="a19dc8725aee7050ec1f5364e5b022c7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19dc8725aee7050ec1f5364e5b022c7e">&#9670;&#160;</a></span>isBufferOverflowed()</h2>
 
@@ -5682,6 +5862,31 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a81b5ef6f9cac4c3015b534054750e786" name="a81b5ef6f9cac4c3015b534054750e786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b5ef6f9cac4c3015b534054750e786">&#9670;&#160;</a></span>isPumpDirectionInverted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMMCore::isPumpDirectionInverted </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets whether the pump direction needs to be inverted </p>
 
 </div>
 </div>
@@ -6413,6 +6618,176 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Prepare the camera for the sequence acquisition to save the time in the StartSequenceAcqusition() call which is supposed to come next. </p>
+
+</div>
+</div>
+<a id="a797c159e8168758c149181d8300159d1" name="a797c159e8168758c149181d8300159d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a797c159e8168758c149181d8300159d1">&#9670;&#160;</a></span>pressurePumpCalibrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::pressurePumpCalibrate </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calibrates the pump </p>
+
+</div>
+</div>
+<a id="a202aa43647df7edef43f996ffa8bfc29" name="a202aa43647df7edef43f996ffa8bfc29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a202aa43647df7edef43f996ffa8bfc29">&#9670;&#160;</a></span>pressurePumpRequiresCalibration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMMCore::pressurePumpRequiresCalibration </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns boolean whether the pump is operational before calibration </p>
+
+</div>
+</div>
+<a id="ae23edf288744d587015c9eaa83135fd1" name="ae23edf288744d587015c9eaa83135fd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae23edf288744d587015c9eaa83135fd1">&#9670;&#160;</a></span>pressurePumpStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::pressurePumpStop </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stops the pressure pump </p>
+
+</div>
+</div>
+<a id="a2f8dfb0a2d4f303c9b31bab0ecb99728" name="a2f8dfb0a2d4f303c9b31bab0ecb99728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f8dfb0a2d4f303c9b31bab0ecb99728">&#9670;&#160;</a></span>pumpDispenseDurationSeconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::pumpDispenseDurationSeconds </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>seconds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dispenses for the provided duration (in seconds) at the set flowrate </p>
+
+</div>
+</div>
+<a id="ab6ca73b96a6ede4efba2bfa3dae5ba82" name="ab6ca73b96a6ede4efba2bfa3dae5ba82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ca73b96a6ede4efba2bfa3dae5ba82">&#9670;&#160;</a></span>pumpDispenseVolumeUl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::pumpDispenseVolumeUl </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>microLiter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dispenses the provided volume (in uL) at the set flowrate </p>
+
+</div>
+</div>
+<a id="aff635e1c2ef2a91b7c389795e6e2b695" name="aff635e1c2ef2a91b7c389795e6e2b695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff635e1c2ef2a91b7c389795e6e2b695">&#9670;&#160;</a></span>pumpStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::pumpStart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Start dispensing at the set flowrate until syringe is empty, or manually stopped (whichever occurs first). </p>
 
 </div>
 </div>
@@ -8368,6 +8743,146 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 
 </div>
 </div>
+<a id="a41c14870dacae2bed380f0c6d1b71300" name="a41c14870dacae2bed380f0c6d1b71300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41c14870dacae2bed380f0c6d1b71300">&#9670;&#160;</a></span>setPumpFlowrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::setPumpFlowrate </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>UlperSec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the flowrate of the pump in uL per second </p>
+
+</div>
+</div>
+<a id="ae46bb53bc9e8083663d4ee8bef5cdd66" name="ae46bb53bc9e8083663d4ee8bef5cdd66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46bb53bc9e8083663d4ee8bef5cdd66">&#9670;&#160;</a></span>setPumpMaxVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::setPumpMaxVolume </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>volUl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the max volume of the pump in uL </p>
+
+</div>
+</div>
+<a id="a21cf4874ff332e2fc7f1545abc95498e" name="a21cf4874ff332e2fc7f1545abc95498e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21cf4874ff332e2fc7f1545abc95498e">&#9670;&#160;</a></span>setPumpPressureKPa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::setPumpPressureKPa </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pressurekPa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the pressure of the pump in kPa </p>
+
+</div>
+</div>
+<a id="a25bb5606bc44aaec8bd2d2d07007096a" name="a25bb5606bc44aaec8bd2d2d07007096a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25bb5606bc44aaec8bd2d2d07007096a">&#9670;&#160;</a></span>setPumpVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::setPumpVolume </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>volUl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the volume of fluid in the pump in uL. Note it does not withdraw upto this amount. It is merely to inform MM of the volume in a prefilled pump. </p>
+
+</div>
+</div>
 <a id="ac8deb7c007dd8653e95741b5b9f02f0a" name="ac8deb7c007dd8653e95741b5b9f02f0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac8deb7c007dd8653e95741b5b9f02f0a">&#9670;&#160;</a></span>setRelativePosition() <span class="overload">[1/2]</span></h2>
 
@@ -10243,6 +10758,56 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the device uses a delay </dd></dl>
+
+</div>
+</div>
+<a id="a13b77d1f18459e6811688053301ad690" name="a13b77d1f18459e6811688053301ad690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b77d1f18459e6811688053301ad690">&#9670;&#160;</a></span>volumetricPumpHome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::volumetricPumpHome </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Homes the pump </p>
+
+</div>
+</div>
+<a id="acc8a184ac5f228945c2f6022180f767f" name="acc8a184ac5f228945c2f6022180f767f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc8a184ac5f228945c2f6022180f767f">&#9670;&#160;</a></span>volumetricPumpStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::volumetricPumpStop </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Stops the volumetric pump </p>
 
 </div>
 </div>
