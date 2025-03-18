@@ -74,10 +74,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7cbee7fa44154cf1a7688723491a4de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0111d3f2b9e8762eb15ea0e98b43ab28" id="r_a0111d3f2b9e8762eb15ea0e98b43ab28"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#a0111d3f2b9e8762eb15ea0e98b43ab28">RequiresCalibration</a> ()=0</td></tr>
 <tr class="separator:a0111d3f2b9e8762eb15ea0e98b43ab28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f1825c88fdcaee0e76ea11409f13d33" id="r_a3f1825c88fdcaee0e76ea11409f13d33"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#a3f1825c88fdcaee0e76ea11409f13d33">SetPressure</a> (double pressure)=0</td></tr>
-<tr class="separator:a3f1825c88fdcaee0e76ea11409f13d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac302d77db2cce0514b9fdc1dba1dcb4e" id="r_ac302d77db2cce0514b9fdc1dba1dcb4e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#ac302d77db2cce0514b9fdc1dba1dcb4e">GetPressure</a> (double &amp;pressure)=0</td></tr>
-<tr class="separator:ac302d77db2cce0514b9fdc1dba1dcb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f371df3f383c589b04a1400ae4e2d50" id="r_a2f371df3f383c589b04a1400ae4e2d50"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#a2f371df3f383c589b04a1400ae4e2d50">SetPressureKPa</a> (double pressureKPa)=0</td></tr>
+<tr class="separator:a2f371df3f383c589b04a1400ae4e2d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61789f6614ce705e8f3a7efc24eb62d0" id="r_a61789f6614ce705e8f3a7efc24eb62d0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#a61789f6614ce705e8f3a7efc24eb62d0">GetPressureKPa</a> (double &amp;pressureKPa)=0</td></tr>
+<tr class="separator:a61789f6614ce705e8f3a7efc24eb62d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_m_m_1_1_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_m_m_1_1_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_m_m_1_1_device.html">MM::Device</a></td></tr>
 <tr class="memitem:acb91caf15c6b4359241af03cc4ff228e inherit pub_methods_class_m_m_1_1_device" id="r_acb91caf15c6b4359241af03cc4ff228e"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#acb91caf15c6b4359241af03cc4ff228e">GetNumberOfProperties</a> () const =0</td></tr>
 <tr class="separator:acb91caf15c6b4359241af03cc4ff228e inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,8 +208,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 
 </div>
 </div>
-<a id="ac302d77db2cce0514b9fdc1dba1dcb4e" name="ac302d77db2cce0514b9fdc1dba1dcb4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac302d77db2cce0514b9fdc1dba1dcb4e">&#9670;&#160;</a></span>GetPressure()</h2>
+<a id="a61789f6614ce705e8f3a7efc24eb62d0" name="a61789f6614ce705e8f3a7efc24eb62d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61789f6614ce705e8f3a7efc24eb62d0">&#9670;&#160;</a></span>GetPressureKPa()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,10 +218,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int MM::PressurePump::GetPressure </td>
+          <td class="memname">virtual int MM::PressurePump::GetPressureKPa </td>
           <td>(</td>
           <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>pressure</em></td><td>)</td>
+          <td class="paramname"><em>pressureKPa</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -290,8 +290,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 
 </div>
 </div>
-<a id="a3f1825c88fdcaee0e76ea11409f13d33" name="a3f1825c88fdcaee0e76ea11409f13d33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f1825c88fdcaee0e76ea11409f13d33">&#9670;&#160;</a></span>SetPressure()</h2>
+<a id="a2f371df3f383c589b04a1400ae4e2d50" name="a2f371df3f383c589b04a1400ae4e2d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f371df3f383c589b04a1400ae4e2d50">&#9670;&#160;</a></span>SetPressureKPa()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -300,10 +300,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int MM::PressurePump::SetPressure </td>
+          <td class="memname">virtual int MM::PressurePump::SetPressureKPa </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>pressure</em></td><td>)</td>
+          <td class="paramname"><em>pressureKPa</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
