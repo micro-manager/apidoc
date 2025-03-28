@@ -203,8 +203,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Calibrates the pressure controller. If no internal calibration is supported, just return DEVICE_OK.</p>
-<p>Optional function of MMPump API (only required for pressure controllers) </p>
+<p>Calibrates the pressure controller. If no internal calibration is supported, just return DEVICE_UNSUPPORTED_COMMAND.</p>
+<p>Optional function of <a class="el" href="class_m_m_1_1_pressure_pump.html">PressurePump</a> API. </p>
 
 </div>
 </div>
@@ -232,7 +232,7 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 </table>
 </div><div class="memdoc">
 <p>Gets the pressure of the pressure controller. The returned value has to be in kPa. The implementation, therefore, should convert the value provided by the pressure controller to kPa.</p>
-<p>Optional function of MMPump API (only required for pressure controllers) </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html">PressurePump</a> API. </p>
 
 </div>
 </div>
@@ -286,7 +286,7 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 </table>
 </div><div class="memdoc">
 <p>Returns whether the pressure controller is functional before calibration, or it needs to undergo internal calibration before any commands can be executed.</p>
-<p>Required by MMPump API. </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html">PressurePump</a> API. </p>
 
 </div>
 </div>
@@ -314,7 +314,7 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 </table>
 </div><div class="memdoc">
 <p>Sets the pressure of the pressure controller. The provided value will be in kPa. The implementation should convert the unit from kPa to the desired unit by the device.</p>
-<p>Optional function of MMPump API (only required for pressure controllers) </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html">PressurePump</a> API. </p>
 
 </div>
 </div>
@@ -341,7 +341,7 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 </table>
 </div><div class="memdoc">
 <p>Stops the pump. The implementation should halt any dispensing/withdrawal, and make the pump available again (make Busy() return false).</p>
-<p>Required by MMPump API </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html">PressurePump</a> API. </p>
 
 </div>
 </div>
