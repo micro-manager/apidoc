@@ -6299,7 +6299,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 </div><div class="memdoc">
 <p>Loads the system configuration from the text file conforming to the MM specific format. The configuration contains a list of commands to build the desired system state: devices, labels, properties, and configurations.</p>
 <p>Format specification: Each line consists of a number of string fields separated by "," (comma) characters. Lines beginning with "#" are ignored (can be used for comments). Each line in the file will be parsed by the system and as a result a corresponding command will be immediately executed. The first field in the line always specifies the command from the following set of values: Device - executes <a class="el" href="class_c_m_m_core.html#a29cbeccb79944cb936d648fff3a1428b">loadDevice()</a> Label - executes <a class="el" href="class_c_m_m_core.html#a6563826103d86b1e0f000ff34561c8f6">defineStateLabel()</a> command Property - executes setPropertyCommand() <a class="el" href="class_configuration.html">Configuration</a> - ignored for backward compatibility</p>
-<p>The remaining fields in the line will be used for corresponding command parameters. The number of parameters depends on the actual command used. </p>
+<p>The remaining fields in the line will be used for corresponding command parameters. The number of parameters depends on the actual command used.</p>
+<p>This function is not thread-safe. </p>
 
 <p class="reference">References <a class="el" href="class_c_m_m_error.html#ad967a1e46abea6c73b5bfbf237dc140c">CMMError::getFullMsg()</a>.</p>
 
@@ -10617,9 +10618,10 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Unloads all devices from the core and resets all configuration data. </p>
+<p>Unloads all devices from the core and resets all configuration data.</p>
+<p>This function is not thread safe. </p>
 
-<p class="reference">References <a class="el" href="class_config_group_base.html#acfdce2ba9ab21b5c4ffcee6a94602603">ConfigGroupBase&lt; T &gt;::Delete()</a>, <a class="el" href="class_config_group_base.html#ae88adaf54c8fa8d6c7b75c11f57d423d">ConfigGroupBase&lt; T &gt;::GetAvailable()</a>, and <a class="el" href="class_c_m_m_error.html#a5d3ebdd1b74df436a3889dc4f1704d67">CMMError::getMsg()</a>.</p>
+<p class="reference">References <a class="el" href="class_config_group_base.html#acfdce2ba9ab21b5c4ffcee6a94602603">ConfigGroupBase&lt; T &gt;::Delete()</a>, <a class="el" href="class_config_group_base.html#ae88adaf54c8fa8d6c7b75c11f57d423d">ConfigGroupBase&lt; T &gt;::GetAvailable()</a>, <a class="el" href="class_c_m_m_error.html#a5d3ebdd1b74df436a3889dc4f1704d67">CMMError::getMsg()</a>, and <a class="el" href="class_m_m_event_callback.html#a78073c9ac17c97806d11830554614810">MMEventCallback::onSystemConfigurationLoaded()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#a5076625829c61070193743ed625c4631">reset()</a>.</p>
 

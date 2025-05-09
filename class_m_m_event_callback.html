@@ -60,8 +60,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onChannelGrou
 <tr class="memitem:aa3f6c30f88e97911abfbdbb576e43848" id="r_aa3f6c30f88e97911abfbdbb576e43848"><td class="memItemLeft" align="right" valign="top"><a id="aa3f6c30f88e97911abfbdbb576e43848" name="aa3f6c30f88e97911abfbdbb576e43848"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onConfigGroupChanged</b> (const char *groupName, const char *newConfigName)</td></tr>
 <tr class="separator:aa3f6c30f88e97911abfbdbb576e43848"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78073c9ac17c97806d11830554614810" id="r_a78073c9ac17c97806d11830554614810"><td class="memItemLeft" align="right" valign="top"><a id="a78073c9ac17c97806d11830554614810" name="a78073c9ac17c97806d11830554614810"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onSystemConfigurationLoaded</b> ()</td></tr>
+<tr class="memitem:a78073c9ac17c97806d11830554614810" id="r_a78073c9ac17c97806d11830554614810"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_event_callback.html#a78073c9ac17c97806d11830554614810">onSystemConfigurationLoaded</a> ()</td></tr>
+<tr class="memdesc:a78073c9ac17c97806d11830554614810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the system configuration has changed.  <br /></td></tr>
 <tr class="separator:a78073c9ac17c97806d11830554614810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae73ec76b87c1e10e435f127a479b50e2" id="r_ae73ec76b87c1e10e435f127a479b50e2"><td class="memItemLeft" align="right" valign="top"><a id="ae73ec76b87c1e10e435f127a479b50e2" name="ae73ec76b87c1e10e435f127a479b50e2"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onPixelSizeChanged</b> (double newPixelSizeUm)</td></tr>
@@ -82,6 +82,37 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onExposureCha
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>onSLMExposureChanged</b> (const char *name, double newExposure)</td></tr>
 <tr class="separator:ad49e32927b2aa3298b20f25f500b2159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a78073c9ac17c97806d11830554614810" name="a78073c9ac17c97806d11830554614810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78073c9ac17c97806d11830554614810">&#9670;&#160;</a></span>onSystemConfigurationLoaded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void MMEventCallback::onSystemConfigurationLoaded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when the system configuration has changed. </p>
+<p>"Changed" includes when a configuration was unloaded, for example because loading a new config file failed. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#ac4c54d86c1faf1a89893d908e72dd98b">CMMCore::unloadAllDevices()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_m_m_event_callback_8h_source.html">MMEventCallback.h</a></li>
 </ul>
