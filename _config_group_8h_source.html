@@ -253,247 +253,220 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00218" data-start="{" data-end="}">
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#af6a6577f4843573d0d7f4bef3801dce0">  218</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#af6a6577f4843573d0d7f4bef3801dce0">isDefined</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName)</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>   {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(groupName);</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      <span class="keywordflow">if</span> (it == groups_.end())</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>   }</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      <span class="keywordflow">return</span> groups_.find(groupName) != groups_.end();</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>   }</div>
 </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="foldopen" id="foldopen00230" data-start="{" data-end="}">
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#a4ecf8993af9cc532a1222b2fec8fe3ad">  230</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#a4ecf8993af9cc532a1222b2fec8fe3ad">RenameConfig</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName, <span class="keyword">const</span> <span class="keywordtype">char</span>* oldConfigName, <span class="keyword">const</span> <span class="keywordtype">char</span>* newConfigName)</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>   {</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>      <span class="keywordflow">if</span> (0 != strcmp(oldConfigName, newConfigName))</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      {</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>         <span class="comment">// tolerate empty group names</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>         <span class="keywordflow">if</span> (strlen(groupName) == 0)</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>         std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(groupName);</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>         <span class="keywordflow">if</span> (it == groups_.end())</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// group not found</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>         <span class="keywordflow">if</span> (it-&gt;second.Rename(oldConfigName, newConfigName))</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>         {</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            <span class="comment">// NOTE: changed to not remove empty groups, N.A. 1.31.2006</span></div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="comment">// check if the config group is empty, and if so remove it</span></div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            <span class="comment">//if (it-&gt;second.IsEmpty())</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="comment">//groups_.erase(it-&gt;first);</span></div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>         }</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>         <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// config not found within a group</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      }</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>   }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="foldopen" id="foldopen00226" data-start="{" data-end="}">
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#a4ecf8993af9cc532a1222b2fec8fe3ad">  226</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#a4ecf8993af9cc532a1222b2fec8fe3ad">RenameConfig</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName, <span class="keyword">const</span> <span class="keywordtype">char</span>* oldConfigName, <span class="keyword">const</span> <span class="keywordtype">char</span>* newConfigName)</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>   {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      <span class="keywordflow">if</span> (0 != strcmp(oldConfigName, newConfigName))</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>      {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>         <span class="comment">// tolerate empty group names</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>         <span class="keywordflow">if</span> (strlen(groupName) == 0)</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>         std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(groupName);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>         <span class="keywordflow">if</span> (it == groups_.end())</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// group not found</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>         <span class="keywordflow">return</span> it-&gt;second.Rename(oldConfigName, newConfigName);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>   }</div>
 </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
-<div class="foldopen" id="foldopen00259" data-start="{" data-end="}">
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#aacb2d2697f0382b7a1450ad0f70b3156">  259</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#aacb2d2697f0382b7a1450ad0f70b3156">Delete</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName, <span class="keyword">const</span> <span class="keywordtype">char</span>* configName, <span class="keyword">const</span> <span class="keywordtype">char</span>* deviceLabel, <span class="keyword">const</span> <span class="keywordtype">char</span>* propName)</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>   {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>      <span class="comment">// tolerate empty group names</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      <span class="keywordflow">if</span> (strlen(groupName) == 0)</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(groupName);</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>      <span class="keywordflow">if</span> (it == groups_.end())</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// group not found</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <span class="keywordflow">if</span> (it-&gt;second.Delete(configName, deviceLabel, propName))</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      {</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      }</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// config not found within a group</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>   }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="foldopen" id="foldopen00246" data-start="{" data-end="}">
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#aacb2d2697f0382b7a1450ad0f70b3156">  246</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#aacb2d2697f0382b7a1450ad0f70b3156">Delete</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName, <span class="keyword">const</span> <span class="keywordtype">char</span>* configName, <span class="keyword">const</span> <span class="keywordtype">char</span>* deviceLabel, <span class="keyword">const</span> <span class="keywordtype">char</span>* propName)</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>   {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="comment">// tolerate empty group names</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <span class="keywordflow">if</span> (strlen(groupName) == 0)</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(groupName);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <span class="keywordflow">if</span> (it == groups_.end())</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// group not found</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <span class="keywordflow">return</span> it-&gt;second.Delete(configName, deviceLabel, propName);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>   }</div>
 </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
-<div class="foldopen" id="foldopen00280" data-start="{" data-end="}">
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#a1275ebf187edca3ccf265012ce14a07d">  280</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#a1275ebf187edca3ccf265012ce14a07d">Delete</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName, <span class="keyword">const</span> <span class="keywordtype">char</span>* configName)</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>   {</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      <span class="comment">// tolerate empty group names</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      <span class="keywordflow">if</span> (strlen(groupName) == 0)</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>      std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(groupName);</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      <span class="keywordflow">if</span> (it == groups_.end())</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// group not found</span></div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keywordflow">if</span> (it-&gt;second.Delete(configName))</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      {</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>         <span class="comment">// NOTE: changed to not remove empty groups, N.A. 1.31.2006</span></div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>         <span class="comment">// check if the config group is empty, and if so remove it</span></div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>         <span class="comment">//if (it-&gt;second.IsEmpty())</span></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            <span class="comment">//groups_.erase(it-&gt;first);</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>      }</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// config not found within a group</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>   }</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="foldopen" id="foldopen00262" data-start="{" data-end="}">
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#a1275ebf187edca3ccf265012ce14a07d">  262</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#a1275ebf187edca3ccf265012ce14a07d">Delete</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName, <span class="keyword">const</span> <span class="keywordtype">char</span>* configName)</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>   {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      <span class="comment">// tolerate empty group names</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      <span class="keywordflow">if</span> (strlen(groupName) == 0)</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(groupName);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      <span class="keywordflow">if</span> (it == groups_.end())</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// group not found</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      <span class="keywordflow">return</span> it-&gt;second.Delete(configName);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>   }</div>
 </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
-<div class="foldopen" id="foldopen00304" data-start="{" data-end="}">
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#a8198dc64d5c26a14dc40022979bc3462">  304</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#a8198dc64d5c26a14dc40022979bc3462">Delete</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName)</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>   {</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      <span class="comment">// tolerate empty group names</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      <span class="keywordflow">if</span> (strlen(groupName) == 0)</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>      std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(groupName);</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>      <span class="keywordflow">if</span> (it != groups_.end())</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>      {</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>         groups_.erase(it-&gt;first);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="foldopen" id="foldopen00277" data-start="{" data-end="}">
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#a8198dc64d5c26a14dc40022979bc3462">  277</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#a8198dc64d5c26a14dc40022979bc3462">Delete</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName)</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>   {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      <span class="comment">// tolerate empty group names</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      <span class="keywordflow">if</span> (strlen(groupName) == 0)</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>      std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(groupName);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>      <span class="keywordflow">if</span> (it != groups_.end())</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>      {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>         groups_.erase(it-&gt;first);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">//not found</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>   }</div>
+</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="foldopen" id="foldopen00295" data-start="{" data-end="}">
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#ada88a3425a95cb3c4a4e5283ad156ecb">  295</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#ada88a3425a95cb3c4a4e5283ad156ecb">RenameGroup</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* oldGroupName, <span class="keyword">const</span> <span class="keywordtype">char</span>* newGroupName)</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>   {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      <span class="keywordflow">if</span> (0 != strcmp(oldGroupName, newGroupName))</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      {</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>         <span class="comment">// tolerate empty group names</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>         <span class="keywordflow">if</span> (strlen(oldGroupName) == 0 || strlen(newGroupName)==0)</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>         std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(oldGroupName);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>         <span class="keywordflow">if</span> (it != groups_.end())</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>         {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            groups_[newGroupName] = it-&gt;second;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            groups_.erase(it-&gt;first);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>         }</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">//not found</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>      }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      {</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>      }</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">//not found</span></div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>   }</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>   }</div>
 </div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
-<div class="foldopen" id="foldopen00322" data-start="{" data-end="}">
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#ada88a3425a95cb3c4a4e5283ad156ecb">  322</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_config_group_collection.html#ada88a3425a95cb3c4a4e5283ad156ecb">RenameGroup</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* oldGroupName, <span class="keyword">const</span> <span class="keywordtype">char</span>* newGroupName)</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>   {</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      <span class="keywordflow">if</span> (0 != strcmp(oldGroupName, newGroupName))</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>      {</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>         <span class="comment">// tolerate empty group names</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>         <span class="keywordflow">if</span> (strlen(oldGroupName) == 0 || strlen(newGroupName)==0)</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>         std::map&lt;std::string, ConfigGroup&gt;::iterator it = groups_.find(oldGroupName);</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>         <span class="keywordflow">if</span> (it != groups_.end())</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>         {</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            groups_[newGroupName] = it-&gt;second;</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            groups_.erase(it-&gt;first);</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>         }</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">//not found</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      }</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      {</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>      }</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>   }</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="foldopen" id="foldopen00321" data-start="{" data-end="}">
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#ab4e178f9f21ba1c56bd7698a5bf3bbcd">  321</a></span>   std::vector&lt;std::string&gt; <a class="code hl_function" href="class_config_group_collection.html#ab4e178f9f21ba1c56bd7698a5bf3bbcd">GetAvailableGroups</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="keyword">   </span>{</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>      std::vector&lt;std::string&gt; groupList;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      groupList.clear();</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>      std::map&lt;std::string, ConfigGroup&gt;::const_iterator it = groups_.begin();</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      <span class="keywordflow">while</span>(it != groups_.end())</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>         groupList.push_back(it++-&gt;first);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>      <span class="keywordflow">return</span> groupList;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>   }</div>
 </div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="foldopen" id="foldopen00348" data-start="{" data-end="}">
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#ab4e178f9f21ba1c56bd7698a5bf3bbcd">  348</a></span>   std::vector&lt;std::string&gt; <a class="code hl_function" href="class_config_group_collection.html#ab4e178f9f21ba1c56bd7698a5bf3bbcd">GetAvailableGroups</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>      std::vector&lt;std::string&gt; groupList;</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>      groupList.clear();</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>      std::map&lt;std::string, ConfigGroup&gt;::const_iterator it = groups_.begin();</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>      <span class="keywordflow">while</span>(it != groups_.end())</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>         groupList.push_back(it++-&gt;first);</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>      <span class="keywordflow">return</span> groupList;</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>   }</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
+<div class="foldopen" id="foldopen00335" data-start="{" data-end="}">
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#a2150807d3e090d1362c7d5c240fd8984">  335</a></span>   std::vector&lt;std::string&gt; <a class="code hl_function" href="class_config_group_collection.html#a2150807d3e090d1362c7d5c240fd8984">GetAvailableConfigs</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="keyword">   </span>{</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      std::vector&lt;std::string&gt; confList;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>      confList.clear();</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>      std::map&lt;std::string, ConfigGroup&gt;::const_iterator it = groups_.find(groupName);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>      <span class="keywordflow">if</span> (it != groups_.end())</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>         confList = it-&gt;second.GetAvailable();</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>      <span class="keywordflow">return</span> confList;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>   }</div>
 </div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
-<div class="foldopen" id="foldopen00362" data-start="{" data-end="}">
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="class_config_group_collection.html#a2150807d3e090d1362c7d5c240fd8984">  362</a></span>   std::vector&lt;std::string&gt; <a class="code hl_function" href="class_config_group_collection.html#a2150807d3e090d1362c7d5c240fd8984">GetAvailableConfigs</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* groupName)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="keyword">   </span>{</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>      std::vector&lt;std::string&gt; confList;</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>      confList.clear();</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>      std::map&lt;std::string, ConfigGroup&gt;::const_iterator it = groups_.find(groupName);</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>      <span class="keywordflow">if</span> (it != groups_.end())</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>      {</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>         confList = it-&gt;second.GetAvailable();</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      }</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>      <span class="keywordflow">return</span> confList;</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>   }</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>   <span class="keywordtype">void</span> Clear()</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>   {</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      groups_.clear();</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>   }</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>   std::map&lt;std::string, ConfigGroup&gt; groups_;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>};</div>
 </div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>   <span class="keywordtype">void</span> Clear()</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>   {</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>      groups_.clear();</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>   }</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span> </div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>   std::map&lt;std::string, ConfigGroup&gt; groups_;</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>};</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="foldopen" id="foldopen00361" data-start="{" data-end="};">
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno"><a class="line" href="class_pixel_size_configuration.html">  361</a></span><span class="keyword">class </span><a class="code hl_class" href="class_pixel_size_configuration.html">PixelSizeConfiguration</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_configuration.html">Configuration</a></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>{</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>   <a class="code hl_class" href="class_pixel_size_configuration.html">PixelSizeConfiguration</a>() : pixelSizeUm_(0.0),</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>      dxdz_(0.0),</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>      dydz_(0.0),</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>      optimalZ_(0.0)</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>   {</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>      affineMatrix_.push_back(1.0);</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>      affineMatrix_.push_back(0.0);</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>      affineMatrix_.push_back(0.0);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>      affineMatrix_.push_back(0.0);</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>      affineMatrix_.push_back(1.0);</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>      affineMatrix_.push_back(0.0);</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>   }</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>   <a class="code hl_class" href="class_pixel_size_configuration.html">~PixelSizeConfiguration</a>() {}</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>   <span class="keywordtype">void</span> setPixelSizeUm(<span class="keywordtype">double</span> pixSize) {pixelSizeUm_ = pixSize;}</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>   <span class="keywordtype">double</span> getPixelSizeUm()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pixelSizeUm_;}</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>   <span class="keywordtype">void</span> setPixelConfigAffineMatrix(std::vector&lt;double&gt; &amp;affineMatrix) <span class="keywordflow">throw</span> (<a class="code hl_class" href="class_c_m_m_error.html">CMMError</a>)</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>   { </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>      <span class="keywordflow">if</span> (affineMatrix.size() != 6) </div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>      {</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>         <span class="keywordflow">throw</span> <a class="code hl_class" href="class_c_m_m_error.html">CMMError</a>(<span class="stringliteral">&quot;PixelConfig affineMatrix must have 6 elements&quot;</span>);</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>      }</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i &lt; affineMatrix.size(); i++) </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>      {</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>         affineMatrix_.at(i) = affineMatrix.at(i);</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      }</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>   }</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>   std::vector&lt;double&gt; getPixelConfigAffineMatrix() {<span class="keywordflow">return</span> affineMatrix_;}</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>   <span class="keywordtype">void</span> setdxdz(<span class="keywordtype">double</span> dxdz) { dxdz_ = dxdz; }</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>   <span class="keywordtype">double</span> getdxdz()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> dxdz_; }</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>   <span class="keywordtype">void</span> setdydz(<span class="keywordtype">double</span> dydz) { dydz_ = dydz; }</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>   <span class="keywordtype">double</span> getdydz()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> dydz_; }</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>   <span class="keywordtype">void</span> setOptimalZUm(<span class="keywordtype">double</span> optimalZ) { optimalZ_ = optimalZ; }</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>   <span class="keywordtype">double</span> getOptimalZUm()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> optimalZ_; }</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>   <span class="keywordtype">double</span> pixelSizeUm_;</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>   std::vector&lt;double&gt; affineMatrix_;</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>   <span class="keywordtype">double</span> dxdz_;</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>   <span class="keywordtype">double</span> dydz_;</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>   <span class="keywordtype">double</span> optimalZ_;</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>};</div>
 </div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
-<div class="foldopen" id="foldopen00388" data-start="{" data-end="};">
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno"><a class="line" href="class_pixel_size_configuration.html">  388</a></span><span class="keyword">class </span><a class="code hl_class" href="class_pixel_size_configuration.html">PixelSizeConfiguration</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_configuration.html">Configuration</a></div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>{</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>   <a class="code hl_class" href="class_pixel_size_configuration.html">PixelSizeConfiguration</a>() : pixelSizeUm_(0.0),</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>      dxdz_(0.0),</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>      dydz_(0.0),</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>      optimalZ_(0.0)</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>   {</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>      affineMatrix_.push_back(1.0);</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>      affineMatrix_.push_back(0.0);</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>      affineMatrix_.push_back(0.0);</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>      affineMatrix_.push_back(0.0);</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>      affineMatrix_.push_back(1.0);</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>      affineMatrix_.push_back(0.0);</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>   }</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>   <a class="code hl_class" href="class_pixel_size_configuration.html">~PixelSizeConfiguration</a>() {}</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>   <span class="keywordtype">void</span> setPixelSizeUm(<span class="keywordtype">double</span> pixSize) {pixelSizeUm_ = pixSize;}</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>   <span class="keywordtype">double</span> getPixelSizeUm()<span class="keyword"> const </span>{<span class="keywordflow">return</span> pixelSizeUm_;}</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>   <span class="keywordtype">void</span> setPixelConfigAffineMatrix(std::vector&lt;double&gt; &amp;affineMatrix) <span class="keywordflow">throw</span> (<a class="code hl_class" href="class_c_m_m_error.html">CMMError</a>)</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>   { </div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>      <span class="keywordflow">if</span> (affineMatrix.size() != 6) </div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>      {</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>         <span class="keywordflow">throw</span> <a class="code hl_class" href="class_c_m_m_error.html">CMMError</a>(<span class="stringliteral">&quot;PixelConfig affineMatrix must have 6 elements&quot;</span>);</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>      }</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>      <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i &lt; affineMatrix.size(); i++) </div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>      {</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>         affineMatrix_.at(i) = affineMatrix.at(i);</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>      }</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>   }</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>   std::vector&lt;double&gt; getPixelConfigAffineMatrix() {<span class="keywordflow">return</span> affineMatrix_;}</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>   <span class="keywordtype">void</span> setdxdz(<span class="keywordtype">double</span> dxdz) { dxdz_ = dxdz; }</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>   <span class="keywordtype">double</span> getdxdz()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> dxdz_; }</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>   <span class="keywordtype">void</span> setdydz(<span class="keywordtype">double</span> dydz) { dydz_ = dydz; }</div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>   <span class="keywordtype">double</span> getdydz()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> dydz_; }</div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>   <span class="keywordtype">void</span> setOptimalZUm(<span class="keywordtype">double</span> optimalZ) { optimalZ_ = optimalZ; }</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>   <span class="keywordtype">double</span> getOptimalZUm()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> optimalZ_; }</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span> </div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span> </div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>   <span class="keywordtype">double</span> pixelSizeUm_;</div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>   std::vector&lt;double&gt; affineMatrix_;</div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>   <span class="keywordtype">double</span> dxdz_;</div>
-<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>   <span class="keywordtype">double</span> dydz_;</div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>   <span class="keywordtype">double</span> optimalZ_;</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>};</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
+<div class="foldopen" id="foldopen00411" data-start="{" data-end="};">
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno"><a class="line" href="class_pixel_size_config_group.html">  411</a></span><span class="keyword">class </span><a class="code hl_class" href="class_pixel_size_config_group.html">PixelSizeConfigGroup</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_config_group_base.html">ConfigGroupBase</a>&lt;PixelSizeConfiguration&gt;</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>{</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00417" data-start="{" data-end="}">
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno"><a class="line" href="class_pixel_size_config_group.html#a7b9705460578bfc2c913484514908671">  417</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_pixel_size_config_group.html#a7b9705460578bfc2c913484514908671">DefinePixelSize</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* resolutionID, <span class="keyword">const</span> <span class="keywordtype">char</span>* deviceLabel, <span class="keyword">const</span> <span class="keywordtype">char</span>* propName, <span class="keyword">const</span> <span class="keywordtype">char</span>* value, <span class="keywordtype">double</span> pixSizeUm)</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>   {</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>      <a class="code hl_struct" href="struct_property_setting.html">PropertySetting</a> setting(deviceLabel, propName, value);</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>      configs_[resolutionID].addSetting(setting);</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>      <span class="keywordflow">if</span> (configs_[resolutionID].getPixelSizeUm() == 0.0)</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>      {</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>         <span class="comment">// this is the first setting, so it is OK to set pixel size</span></div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>         configs_[resolutionID].setPixelSizeUm(pixSizeUm);</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>      }</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>      {</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>         <span class="comment">// pixel size already set and we won&#39;t allow the change</span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>         <span class="comment">// - this signifies a conflict in the configuration</span></div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>      }</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>   }</div>
 </div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span> </div>
-<div class="foldopen" id="foldopen00438" data-start="{" data-end="};">
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno"><a class="line" href="class_pixel_size_config_group.html">  438</a></span><span class="keyword">class </span><a class="code hl_class" href="class_pixel_size_config_group.html">PixelSizeConfigGroup</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_config_group_base.html">ConfigGroupBase</a>&lt;PixelSizeConfiguration&gt;</div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>{</div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00444" data-start="{" data-end="}">
-<div class="line"><a id="l00444" name="l00444"></a><span class="lineno"><a class="line" href="class_pixel_size_config_group.html#a7b9705460578bfc2c913484514908671">  444</a></span>   <span class="keywordtype">bool</span> <a class="code hl_function" href="class_pixel_size_config_group.html#a7b9705460578bfc2c913484514908671">DefinePixelSize</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* resolutionID, <span class="keyword">const</span> <span class="keywordtype">char</span>* deviceLabel, <span class="keyword">const</span> <span class="keywordtype">char</span>* propName, <span class="keyword">const</span> <span class="keywordtype">char</span>* value, <span class="keywordtype">double</span> pixSizeUm)</div>
-<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>   {</div>
-<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>      <a class="code hl_struct" href="struct_property_setting.html">PropertySetting</a> setting(deviceLabel, propName, value);</div>
-<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>      configs_[resolutionID].addSetting(setting);</div>
-<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>      <span class="keywordflow">if</span> (configs_[resolutionID].getPixelSizeUm() == 0.0)</div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>      {</div>
-<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>         <span class="comment">// this is the first setting, so it is OK to set pixel size</span></div>
-<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>         configs_[resolutionID].setPixelSizeUm(pixSizeUm);</div>
-<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>         <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>      }</div>
-<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>      {</div>
-<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>         <span class="comment">// pixel size already set and we won&#39;t allow the change</span></div>
-<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>         <span class="comment">// - this signifies a conflict in the configuration</span></div>
-<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>         <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>      }</div>
-<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>   }</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>};</div>
 </div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>};</div>
-</div>
-<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span> </div>
-<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span><span class="preprocessor">#if defined(__GNUC__) &amp;&amp; !defined(__clang__)</span></div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
-<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span> </div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span><span class="preprocessor">#ifdef _MSC_VER</span></div>
-<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span><span class="preprocessor">#pragma warning(pop)</span></div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span> </div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span><span class="preprocessor">#if defined(__GNUC__) &amp;&amp; !defined(__clang__)</span></div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span><span class="preprocessor">#pragma GCC diagnostic pop</span></div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span> </div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span><span class="preprocessor">#ifdef _MSC_VER</span></div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span><span class="preprocessor">#pragma warning(pop)</span></div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_c_m_m_error_html"><div class="ttname"><a href="class_c_m_m_error.html">CMMError</a></div><div class="ttdoc">Core error class. Exceptions thrown by the Core public API are of this type.</div><div class="ttdef"><b>Definition</b> Error.h:58</div></div>
 <div class="ttc" id="aclass_config_group_base_html"><div class="ttname"><a href="class_config_group_base.html">ConfigGroupBase</a></div><div class="ttdef"><b>Definition</b> ConfigGroup.h:45</div></div>
 <div class="ttc" id="aclass_config_group_base_html_a036bbe7a26a5779f631e1b63490c8d75"><div class="ttname"><a href="class_config_group_base.html#a036bbe7a26a5779f631e1b63490c8d75">ConfigGroupBase::Find</a></div><div class="ttdeci">T * Find(const char *configName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:69</div></div>
@@ -504,23 +477,23 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclass_config_group_base_html_acfdce2ba9ab21b5c4ffcee6a94602603"><div class="ttname"><a href="class_config_group_base.html#acfdce2ba9ab21b5c4ffcee6a94602603">ConfigGroupBase::Delete</a></div><div class="ttdeci">bool Delete(const char *configName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:99</div></div>
 <div class="ttc" id="aclass_config_group_base_html_ae88adaf54c8fa8d6c7b75c11f57d423d"><div class="ttname"><a href="class_config_group_base.html#ae88adaf54c8fa8d6c7b75c11f57d423d">ConfigGroupBase::GetAvailable</a></div><div class="ttdeci">std::vector&lt; std::string &gt; GetAvailable() const</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:134</div></div>
 <div class="ttc" id="aclass_config_group_collection_html"><div class="ttname"><a href="class_config_group_collection.html">ConfigGroupCollection</a></div><div class="ttdef"><b>Definition</b> ConfigGroup.h:167</div></div>
-<div class="ttc" id="aclass_config_group_collection_html_a1275ebf187edca3ccf265012ce14a07d"><div class="ttname"><a href="class_config_group_collection.html#a1275ebf187edca3ccf265012ce14a07d">ConfigGroupCollection::Delete</a></div><div class="ttdeci">bool Delete(const char *groupName, const char *configName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:280</div></div>
-<div class="ttc" id="aclass_config_group_collection_html_a2150807d3e090d1362c7d5c240fd8984"><div class="ttname"><a href="class_config_group_collection.html#a2150807d3e090d1362c7d5c240fd8984">ConfigGroupCollection::GetAvailableConfigs</a></div><div class="ttdeci">std::vector&lt; std::string &gt; GetAvailableConfigs(const char *groupName) const</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:362</div></div>
-<div class="ttc" id="aclass_config_group_collection_html_a4ecf8993af9cc532a1222b2fec8fe3ad"><div class="ttname"><a href="class_config_group_collection.html#a4ecf8993af9cc532a1222b2fec8fe3ad">ConfigGroupCollection::RenameConfig</a></div><div class="ttdeci">bool RenameConfig(const char *groupName, const char *oldConfigName, const char *newConfigName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:230</div></div>
+<div class="ttc" id="aclass_config_group_collection_html_a1275ebf187edca3ccf265012ce14a07d"><div class="ttname"><a href="class_config_group_collection.html#a1275ebf187edca3ccf265012ce14a07d">ConfigGroupCollection::Delete</a></div><div class="ttdeci">bool Delete(const char *groupName, const char *configName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:262</div></div>
+<div class="ttc" id="aclass_config_group_collection_html_a2150807d3e090d1362c7d5c240fd8984"><div class="ttname"><a href="class_config_group_collection.html#a2150807d3e090d1362c7d5c240fd8984">ConfigGroupCollection::GetAvailableConfigs</a></div><div class="ttdeci">std::vector&lt; std::string &gt; GetAvailableConfigs(const char *groupName) const</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:335</div></div>
+<div class="ttc" id="aclass_config_group_collection_html_a4ecf8993af9cc532a1222b2fec8fe3ad"><div class="ttname"><a href="class_config_group_collection.html#a4ecf8993af9cc532a1222b2fec8fe3ad">ConfigGroupCollection::RenameConfig</a></div><div class="ttdeci">bool RenameConfig(const char *groupName, const char *oldConfigName, const char *newConfigName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:226</div></div>
 <div class="ttc" id="aclass_config_group_collection_html_a578f84ea0496595dd9f26e22e137ac04"><div class="ttname"><a href="class_config_group_collection.html#a578f84ea0496595dd9f26e22e137ac04">ConfigGroupCollection::Define</a></div><div class="ttdeci">bool Define(const char *groupName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:191</div></div>
-<div class="ttc" id="aclass_config_group_collection_html_a8198dc64d5c26a14dc40022979bc3462"><div class="ttname"><a href="class_config_group_collection.html#a8198dc64d5c26a14dc40022979bc3462">ConfigGroupCollection::Delete</a></div><div class="ttdeci">bool Delete(const char *groupName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:304</div></div>
+<div class="ttc" id="aclass_config_group_collection_html_a8198dc64d5c26a14dc40022979bc3462"><div class="ttname"><a href="class_config_group_collection.html#a8198dc64d5c26a14dc40022979bc3462">ConfigGroupCollection::Delete</a></div><div class="ttdeci">bool Delete(const char *groupName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:277</div></div>
 <div class="ttc" id="aclass_config_group_collection_html_a87e91dc9312d2cd09c2ea1b6a7cacbc4"><div class="ttname"><a href="class_config_group_collection.html#a87e91dc9312d2cd09c2ea1b6a7cacbc4">ConfigGroupCollection::Define</a></div><div class="ttdeci">void Define(const char *groupName, const char *configName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:175</div></div>
-<div class="ttc" id="aclass_config_group_collection_html_aacb2d2697f0382b7a1450ad0f70b3156"><div class="ttname"><a href="class_config_group_collection.html#aacb2d2697f0382b7a1450ad0f70b3156">ConfigGroupCollection::Delete</a></div><div class="ttdeci">bool Delete(const char *groupName, const char *configName, const char *deviceLabel, const char *propName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:259</div></div>
-<div class="ttc" id="aclass_config_group_collection_html_ab4e178f9f21ba1c56bd7698a5bf3bbcd"><div class="ttname"><a href="class_config_group_collection.html#ab4e178f9f21ba1c56bd7698a5bf3bbcd">ConfigGroupCollection::GetAvailableGroups</a></div><div class="ttdeci">std::vector&lt; std::string &gt; GetAvailableGroups() const</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:348</div></div>
+<div class="ttc" id="aclass_config_group_collection_html_aacb2d2697f0382b7a1450ad0f70b3156"><div class="ttname"><a href="class_config_group_collection.html#aacb2d2697f0382b7a1450ad0f70b3156">ConfigGroupCollection::Delete</a></div><div class="ttdeci">bool Delete(const char *groupName, const char *configName, const char *deviceLabel, const char *propName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:246</div></div>
+<div class="ttc" id="aclass_config_group_collection_html_ab4e178f9f21ba1c56bd7698a5bf3bbcd"><div class="ttname"><a href="class_config_group_collection.html#ab4e178f9f21ba1c56bd7698a5bf3bbcd">ConfigGroupCollection::GetAvailableGroups</a></div><div class="ttdeci">std::vector&lt; std::string &gt; GetAvailableGroups() const</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:321</div></div>
 <div class="ttc" id="aclass_config_group_collection_html_acfe7a7a214ff227a5ce39ec5f6ff5679"><div class="ttname"><a href="class_config_group_collection.html#acfe7a7a214ff227a5ce39ec5f6ff5679">ConfigGroupCollection::Find</a></div><div class="ttdeci">Configuration * Find(const char *groupName, const char *configName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:206</div></div>
-<div class="ttc" id="aclass_config_group_collection_html_ada88a3425a95cb3c4a4e5283ad156ecb"><div class="ttname"><a href="class_config_group_collection.html#ada88a3425a95cb3c4a4e5283ad156ecb">ConfigGroupCollection::RenameGroup</a></div><div class="ttdeci">bool RenameGroup(const char *oldGroupName, const char *newGroupName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:322</div></div>
+<div class="ttc" id="aclass_config_group_collection_html_ada88a3425a95cb3c4a4e5283ad156ecb"><div class="ttname"><a href="class_config_group_collection.html#ada88a3425a95cb3c4a4e5283ad156ecb">ConfigGroupCollection::RenameGroup</a></div><div class="ttdeci">bool RenameGroup(const char *oldGroupName, const char *newGroupName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:295</div></div>
 <div class="ttc" id="aclass_config_group_collection_html_af6a6577f4843573d0d7f4bef3801dce0"><div class="ttname"><a href="class_config_group_collection.html#af6a6577f4843573d0d7f4bef3801dce0">ConfigGroupCollection::isDefined</a></div><div class="ttdeci">bool isDefined(const char *groupName)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:218</div></div>
 <div class="ttc" id="aclass_config_group_collection_html_aff76c935c249c51d06d973741137865a"><div class="ttname"><a href="class_config_group_collection.html#aff76c935c249c51d06d973741137865a">ConfigGroupCollection::Define</a></div><div class="ttdeci">void Define(const char *groupName, const char *configName, const char *deviceLabel, const char *propName, const char *value)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:183</div></div>
 <div class="ttc" id="aclass_config_group_html"><div class="ttname"><a href="class_config_group.html">ConfigGroup</a></div><div class="ttdef"><b>Definition</b> ConfigGroup.h:161</div></div>
 <div class="ttc" id="aclass_configuration_html"><div class="ttname"><a href="class_configuration.html">Configuration</a></div><div class="ttdef"><b>Definition</b> Configuration.h:98</div></div>
-<div class="ttc" id="aclass_pixel_size_config_group_html"><div class="ttname"><a href="class_pixel_size_config_group.html">PixelSizeConfigGroup</a></div><div class="ttdef"><b>Definition</b> ConfigGroup.h:439</div></div>
-<div class="ttc" id="aclass_pixel_size_config_group_html_a7b9705460578bfc2c913484514908671"><div class="ttname"><a href="class_pixel_size_config_group.html#a7b9705460578bfc2c913484514908671">PixelSizeConfigGroup::DefinePixelSize</a></div><div class="ttdeci">bool DefinePixelSize(const char *resolutionID, const char *deviceLabel, const char *propName, const char *value, double pixSizeUm)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:444</div></div>
-<div class="ttc" id="aclass_pixel_size_configuration_html"><div class="ttname"><a href="class_pixel_size_configuration.html">PixelSizeConfiguration</a></div><div class="ttdef"><b>Definition</b> ConfigGroup.h:389</div></div>
+<div class="ttc" id="aclass_pixel_size_config_group_html"><div class="ttname"><a href="class_pixel_size_config_group.html">PixelSizeConfigGroup</a></div><div class="ttdef"><b>Definition</b> ConfigGroup.h:412</div></div>
+<div class="ttc" id="aclass_pixel_size_config_group_html_a7b9705460578bfc2c913484514908671"><div class="ttname"><a href="class_pixel_size_config_group.html#a7b9705460578bfc2c913484514908671">PixelSizeConfigGroup::DefinePixelSize</a></div><div class="ttdeci">bool DefinePixelSize(const char *resolutionID, const char *deviceLabel, const char *propName, const char *value, double pixSizeUm)</div><div class="ttdef"><b>Definition</b> ConfigGroup.h:417</div></div>
+<div class="ttc" id="aclass_pixel_size_configuration_html"><div class="ttname"><a href="class_pixel_size_configuration.html">PixelSizeConfiguration</a></div><div class="ttdef"><b>Definition</b> ConfigGroup.h:362</div></div>
 <div class="ttc" id="astruct_property_setting_html"><div class="ttname"><a href="struct_property_setting.html">PropertySetting</a></div><div class="ttdef"><b>Definition</b> Configuration.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
