@@ -754,6 +754,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getInstalledDe
 <tr class="memitem:aafcd917cd7bbd34d8d2ab3076a2a357f" id="r_aafcd917cd7bbd34d8d2ab3076a2a357f"><td class="memItemLeft" align="right" valign="top"><a id="aafcd917cd7bbd34d8d2ab3076a2a357f" name="aafcd917cd7bbd34d8d2ab3076a2a357f"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getLoadedPeripheralDevices</b> (const char *hubLabel)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
 <tr class="separator:aafcd917cd7bbd34d8d2ab3076a2a357f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Testing</div></td></tr>
+<tr class="memitem:a70bda10276cbe294408b1c61736dac4c" id="r_a70bda10276cbe294408b1c61736dac4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a70bda10276cbe294408b1c61736dac4c">loadMockDeviceAdapter</a> (const char *name, <a class="el" href="struct_mock_device_adapter.html">MockDeviceAdapter</a> *implementation)  throw (<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="memdesc:a70bda10276cbe294408b1c61736dac4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testing only: load a mock device adapter.  <br /></td></tr>
+<tr class="separator:a70bda10276cbe294408b1c61736dac4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -6144,6 +6148,45 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Load a set of galvo polygons to the device </p>
+
+</div>
+</div>
+<a id="a70bda10276cbe294408b1c61736dac4c" name="a70bda10276cbe294408b1c61736dac4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70bda10276cbe294408b1c61736dac4c">&#9670;&#160;</a></span>loadMockDeviceAdapter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::loadMockDeviceAdapter </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_mock_device_adapter.html">MockDeviceAdapter</a> *&#160;</td>
+          <td class="paramname"><em>implementation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td align="right">throw </td><td>(</td><td colspan="2"><a class="el" href="class_c_m_m_error.html">CMMError</a></td>
+        </tr>
+        <tr>
+          <td align="right"></td><td>)</td><td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Testing only: load a mock device adapter. </p>
+<p>This function is designed for unit testing of MMCore itself, and its interface is subject to change. It is also not designed for language bindings (Java, Python) in mind (at least for now).</p>
+<p>Do not use this in production code.</p>
+<p>The caller is responsible for keeping <code>implementation</code> valid until this Core is destroyed (or until unloadLibrary(name) is called, but that is not recommended.) </p>
 
 </div>
 </div>
