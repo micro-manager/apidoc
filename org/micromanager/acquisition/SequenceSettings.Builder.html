@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -199,93 +199,99 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#keepShutterOpenChannels-boolean-">keepShutterOpenChannels</a></span>(boolean&nbsp;k)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#isTestAcquisition-boolean-">isTestAcquisition</a></span>(boolean&nbsp;isTest)</code>
+<div class="block">Sets whether this is a test acquisition.</div>
+</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#keepShutterOpenSlices-boolean-">keepShutterOpenSlices</a></span>(boolean&nbsp;k)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#keepShutterOpenChannels-boolean-">keepShutterOpenChannels</a></span>(boolean&nbsp;k)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#numFrames-int-">numFrames</a></span>(int&nbsp;nFrames)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#keepShutterOpenSlices-boolean-">keepShutterOpenSlices</a></span>(boolean&nbsp;k)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#prefix-java.lang.String-">prefix</a></span>(java.lang.String&nbsp;p)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#numFrames-int-">numFrames</a></span>(int&nbsp;nFrames)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#relativeZSlice-boolean-">relativeZSlice</a></span>(boolean&nbsp;r)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#prefix-java.lang.String-">prefix</a></span>(java.lang.String&nbsp;p)</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#root-java.lang.String-">root</a></span>(java.lang.String&nbsp;r)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#relativeZSlice-boolean-">relativeZSlice</a></span>(boolean&nbsp;r)</code>&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#save-boolean-">save</a></span>(boolean&nbsp;s)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#root-java.lang.String-">root</a></span>(java.lang.String&nbsp;r)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#saveMode-org.micromanager.data.Datastore.SaveMode-">saveMode</a></span>(<a href="../../../org/micromanager/data/Datastore.SaveMode.html" title="enum in org.micromanager.data">Datastore.SaveMode</a>&nbsp;s)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#save-boolean-">save</a></span>(boolean&nbsp;s)</code>&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#shouldDisplayImages-boolean-">shouldDisplayImages</a></span>(boolean&nbsp;s)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#saveMode-org.micromanager.data.Datastore.SaveMode-">saveMode</a></span>(<a href="../../../org/micromanager/data/Datastore.SaveMode.html" title="enum in org.micromanager.data">Datastore.SaveMode</a>&nbsp;s)</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#skipAutofocusCount-int-">skipAutofocusCount</a></span>(int&nbsp;s)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#shouldDisplayImages-boolean-">shouldDisplayImages</a></span>(boolean&nbsp;s)</code>&nbsp;</td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#slices-java.util.ArrayList-">slices</a></span>(java.util.ArrayList&lt;java.lang.Double&gt;&nbsp;s)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#skipAutofocusCount-int-">skipAutofocusCount</a></span>(int&nbsp;s)</code>&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#slicesFirst-boolean-">slicesFirst</a></span>(boolean&nbsp;s)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#slices-java.util.ArrayList-">slices</a></span>(java.util.ArrayList&lt;java.lang.Double&gt;&nbsp;s)</code>&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#sliceZBottomUm-double-">sliceZBottomUm</a></span>(double&nbsp;s)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#slicesFirst-boolean-">slicesFirst</a></span>(boolean&nbsp;s)</code>&nbsp;</td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#sliceZStepUm-double-">sliceZStepUm</a></span>(double&nbsp;s)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#sliceZBottomUm-double-">sliceZBottomUm</a></span>(double&nbsp;s)</code>&nbsp;</td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#sliceZTopUm-double-">sliceZTopUm</a></span>(double&nbsp;s)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#sliceZStepUm-double-">sliceZStepUm</a></span>(double&nbsp;s)</code>&nbsp;</td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#timeFirst-boolean-">timeFirst</a></span>(boolean&nbsp;t)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#sliceZTopUm-double-">sliceZTopUm</a></span>(double&nbsp;s)</code>&nbsp;</td>
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#useAutofocus-boolean-">useAutofocus</a></span>(boolean&nbsp;u)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#timeFirst-boolean-">timeFirst</a></span>(boolean&nbsp;t)</code>&nbsp;</td>
 </tr>
 <tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#useChannels-boolean-">useChannels</a></span>(boolean&nbsp;u)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#useAutofocus-boolean-">useAutofocus</a></span>(boolean&nbsp;u)</code>&nbsp;</td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#useCustomIntervals-boolean-">useCustomIntervals</a></span>(boolean&nbsp;use)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#useChannels-boolean-">useChannels</a></span>(boolean&nbsp;u)</code>&nbsp;</td>
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#useFrames-boolean-">useFrames</a></span>(boolean&nbsp;u)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#useCustomIntervals-boolean-">useCustomIntervals</a></span>(boolean&nbsp;use)</code>&nbsp;</td>
 </tr>
 <tr id="i29" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#usePositionList-boolean-">usePositionList</a></span>(boolean&nbsp;u)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#useFrames-boolean-">useFrames</a></span>(boolean&nbsp;u)</code>&nbsp;</td>
 </tr>
 <tr id="i30" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#useSlices-boolean-">useSlices</a></span>(boolean&nbsp;u)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#usePositionList-boolean-">usePositionList</a></span>(boolean&nbsp;u)</code>&nbsp;</td>
 </tr>
 <tr id="i31" class="rowColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#useSlices-boolean-">useSlices</a></span>(boolean&nbsp;u)</code>&nbsp;</td>
+</tr>
+<tr id="i32" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html#zReference-double-">zReference</a></span>(double&nbsp;z)</code>&nbsp;</td>
 </tr>
@@ -630,6 +636,23 @@ extends java.lang.Object</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>a</code> - integer representing acquisition order.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Builder instance for convenience.</dd>
+</dl>
+</li>
+</ul>
+<a name="isTestAcquisition-boolean-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isTestAcquisition</h4>
+<pre>public&nbsp;<a href="../../../org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a>&nbsp;isTestAcquisition(boolean&nbsp;isTest)</pre>
+<div class="block">Sets whether this is a test acquisition.
+ Test acquisitions are not saved to disk and are used for testing purposes.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>isTest</code> - true if this is a test acquisition, false otherwise</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Builder instance for convenience.</dd>
 </dl>
