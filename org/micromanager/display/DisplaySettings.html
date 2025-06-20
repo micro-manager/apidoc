@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":38,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":38,"i11":38,"i12":6,"i13":6,"i14":6,"i15":6,"i16":38,"i17":38,"i18":38,"i19":38,"i20":38,"i21":38,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6};
+var methods = {"i0":38,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":38,"i11":38,"i12":6,"i13":6,"i14":6,"i15":6,"i16":38,"i17":38,"i18":38,"i19":38,"i20":38,"i21":38,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -174,9 +174,23 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#ALBUM_DISPLAY">ALBUM_DISPLAY</a></span></code>
+<div class="block">Keys used by Studio for Window positioning.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#FILENAME">FILENAME</a></span></code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#MDA_DISPLAY">MDA_DISPLAY</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#PREVIEW_DISPLAY">PREVIEW_DISPLAY</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -327,41 +341,45 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i22" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#getWindowPositionKey--">getWindowPositionKey</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#getZoomRatio--">getZoomRatio</a></span>()</code>
 <div class="block">Zoom level expressed as a ratio (i.e.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#isAutoscaleIgnoringZeros--">isAutoscaleIgnoringZeros</a></span>()</code>
 <div class="block">When autoscaling, take zero values into account or not?
  This can be useful for images that contain artificial zero values.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#isAutostretchEnabled--">isAutostretchEnabled</a></span>()</code>
 <div class="block">Whether to continuously apply autoscale.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#isChannelVisible-int-">isChannelVisible</a></span>(int&nbsp;channel)</code>&nbsp;</td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#isHistogramLogarithmic--">isHistogramLogarithmic</a></span>()</code>
 <div class="block">Whether the y-axis of the histogram uses a logarithmic or linear scale.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#isROIAutoscaleEnabled--">isROIAutoscaleEnabled</a></span>()</code>
 <div class="block">Whether to only look at the ROI when autoscaling.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.html#isUniformChannelScalingEnabled--">isUniformChannelScalingEnabled</a></span>()</code>
 <div class="block">Whether to use the same intensity scaling for every channel.</div>
@@ -382,6 +400,46 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a name="ALBUM_DISPLAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ALBUM_DISPLAY</h4>
+<pre>static final&nbsp;java.lang.String ALBUM_DISPLAY</pre>
+<div class="block">Keys used by Studio for Window positioning.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.micromanager.display.DisplaySettings.ALBUM_DISPLAY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PREVIEW_DISPLAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PREVIEW_DISPLAY</h4>
+<pre>static final&nbsp;java.lang.String PREVIEW_DISPLAY</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.micromanager.display.DisplaySettings.PREVIEW_DISPLAY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="MDA_DISPLAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MDA_DISPLAY</h4>
+<pre>static final&nbsp;java.lang.String MDA_DISPLAY</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#org.micromanager.display.DisplaySettings.MDA_DISPLAY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
 <a name="FILENAME">
 <!--   -->
 </a>
@@ -617,6 +675,15 @@ static final&nbsp;java.lang.String FILENAME</pre>
 <li class="blockList">
 <h4>isChannelVisible</h4>
 <pre>boolean&nbsp;isChannelVisible(int&nbsp;channel)</pre>
+</li>
+</ul>
+<a name="getWindowPositionKey--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getWindowPositionKey</h4>
+<pre>java.lang.String&nbsp;getWindowPositionKey()</pre>
 </li>
 </ul>
 <a name="copyBuilder--">
