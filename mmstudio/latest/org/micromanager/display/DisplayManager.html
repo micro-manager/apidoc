@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":38,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":38,"i15":38,"i16":38,"i17":6,"i18":38,"i19":38,"i20":50,"i21":6,"i22":38,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":38,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":38,"i16":38,"i17":38,"i18":6,"i19":38,"i20":38,"i21":50,"i22":6,"i23":38,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":6,"i31":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -170,49 +170,57 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 </td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display">DisplayWindow</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#createDisplay-org.micromanager.data.DataProvider-org.micromanager.display.DisplayWindowControlsFactory-org.micromanager.display.DisplaySettings-">createDisplay</a></span>(<a href="../../../org/micromanager/data/DataProvider.html" title="interface in org.micromanager.data">DataProvider</a>&nbsp;provider,
+             <a href="../../../org/micromanager/display/DisplayWindowControlsFactory.html" title="interface in org.micromanager.display">DisplayWindowControlsFactory</a>&nbsp;factory,
+             <a href="../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a>&nbsp;displaySettings)</code>
+<div class="block">Create a new DisplayWindow for the specified DataProvider and return it.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ImageExporter.html" title="interface in org.micromanager.display">ImageExporter</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#createExporter--">createExporter</a></span>()</code>
 <div class="block">Provide an ImagceExporter for generating image sequences.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#createFirstInspector--">createFirstInspector</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#createInspectorForDataViewer-org.micromanager.display.DataViewer-">createInspectorForDataViewer</a></span>(<a href="../../../org/micromanager/display/DataViewer.html" title="interface in org.micromanager.display">DataViewer</a>&nbsp;display)</code>
 <div class="block">Create a new Inspector window that shows information for the specified
  DataViewer, or for the topmost window if the DataViewer is null.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#displaySettingsBuilder--">displaySettingsBuilder</a></span>()</code>
 <div class="block">Generate a "blank" DisplaySettings.Builder with all null values.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DataViewer.html" title="interface in org.micromanager.display">DataViewer</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getActiveDataViewer--">getActiveDataViewer</a></span>()</code>
 <div class="block">Returns the currently active data viewer.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/display/DataViewer.html" title="interface in org.micromanager.display">DataViewer</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getAllDataViewers--">getAllDataViewers</a></span>()</code>
 <div class="block">Return all DataViewers that Micro-Manager knows about.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display">DisplayWindow</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getAllImageWindows--">getAllImageWindows</a></span>()</code>
 <div class="block">Return all active DisplayWindows.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DisplaySettings.ContrastSettings.html" title="interface in org.micromanager.display">DisplaySettings.ContrastSettings</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getContrastSettings-java.lang.Integer:A-java.lang.Integer:A-java.lang.Double:A-java.lang.Boolean-">getContrastSettings</a></span>(java.lang.Integer[]&nbsp;contrastMins,
                    java.lang.Integer[]&nbsp;contrastMaxes,
@@ -221,7 +229,7 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;&nbsp;</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DisplaySettings.ContrastSettings.html" title="interface in org.micromanager.display">DisplaySettings.ContrastSettings</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getContrastSettings-java.lang.Integer-java.lang.Integer-java.lang.Double-java.lang.Boolean-">getContrastSettings</a></span>(java.lang.Integer&nbsp;contrastMin,
                    java.lang.Integer&nbsp;contrastMax,
@@ -232,7 +240,7 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 </div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display">DisplayWindow</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getCurrentWindow--">getCurrentWindow</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -240,13 +248,13 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 </div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display">DisplayWindow</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getDisplays-org.micromanager.data.DataProvider-">getDisplays</a></span>(<a href="../../../org/micromanager/data/DataProvider.html" title="interface in org.micromanager.data">DataProvider</a>&nbsp;dataProvider)</code>
 <div class="block">Return all associated DisplayWindows for the DataProvider.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display">DisplayWindow</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getDisplays-org.micromanager.data.Datastore-">getDisplays</a></span>(<a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;store)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -254,7 +262,7 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 </div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getDisplaySettingsBuilder--">getDisplaySettingsBuilder</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -262,7 +270,7 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 </div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>default boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getIsManaged-org.micromanager.data.DataProvider-">getIsManaged</a></span>(<a href="../../../org/micromanager/data/DataProvider.html" title="interface in org.micromanager.data">DataProvider</a>&nbsp;provider)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -270,14 +278,14 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 </div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/data/DataProvider.html" title="interface in org.micromanager.data">DataProvider</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getManagedDataProviders--">getManagedDataProviders</a></span>()</code>
 <div class="block">Return a list of all DataProviders that MicroManager is managing (see the
  manage() method for more information).</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.Builder.html" title="interface in org.micromanager">PropertyMap.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getPropertyMapBuilder--">getPropertyMapBuilder</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -285,33 +293,33 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 </div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#getStandardDisplaySettings--">getStandardDisplaySettings</a></span>()</code>
 <div class="block">Retrieve a DisplaySettings holding the values the user has saved as their
  default values.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#isManaged-org.micromanager.data.DataProvider-">isManaged</a></span>(<a href="../../../org/micromanager/data/DataProvider.html" title="interface in org.micromanager.data">DataProvider</a>&nbsp;provider)</code>
 <div class="block">Returns true if the DataProvider is being managed by MicroManager.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display">DisplayWindow</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#loadDisplays-org.micromanager.data.Datastore-">loadDisplays</a></span>(<a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;store)</code>
 <div class="block">Load saved DisplayWindows for the given Datastore, which is assumed to
  represent data that is saved on disk.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#manage-org.micromanager.data.DataProvider-">manage</a></span>(<a href="../../../org/micromanager/data/DataProvider.html" title="interface in org.micromanager.data">DataProvider</a>&nbsp;store)</code>
 <div class="block">Request that MicroManager manage the specified DataProvider for you.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#promptToCloseWindows--">promptToCloseWindows</a></span>()</code>
 <div class="block">Show a dialog to the user giving them a prompt to close all open windows,
@@ -319,21 +327,21 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
  unsaved open window (or simply cancel the entire action).</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#promptToSave-org.micromanager.data.Datastore-org.micromanager.display.DisplayWindow-">promptToSave</a></span>(<a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a>&nbsp;store,
             <a href="../../../org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display">DisplayWindow</a>&nbsp;display)</code>
 <div class="block">Display a prompt for the user to save their data.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#removeViewer-org.micromanager.display.DataViewer-">removeViewer</a></span>(<a href="../../../org/micromanager/display/DataViewer.html" title="interface in org.micromanager.display">DataViewer</a>&nbsp;viewer)</code>
 <div class="block">Cause Micro-Manager to stop tracking a DataViewer that was previously
  added with addViewer().</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayManager.html#show-org.micromanager.data.Image-">show</a></span>(<a href="../../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)</code>
 <div class="block">Create a new Datastore with an associated DisplayWindow that will
@@ -560,6 +568,30 @@ extends <a href="../../../org/micromanager/EventPublisher.html" title="interface
 <dd><code>dataProvider</code> - The DataProvider whose data should be displayed.</dd>
 <dd><code>factory</code> - A ControlsFactory used to create custom controls for
                      the DisplayWindow. May be null.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The created DisplayWindow.</dd>
+</dl>
+</li>
+</ul>
+<a name="createDisplay-org.micromanager.data.DataProvider-org.micromanager.display.DisplayWindowControlsFactory-org.micromanager.display.DisplaySettings-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createDisplay</h4>
+<pre><a href="../../../org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display">DisplayWindow</a>&nbsp;createDisplay(<a href="../../../org/micromanager/data/DataProvider.html" title="interface in org.micromanager.data">DataProvider</a>&nbsp;provider,
+                            <a href="../../../org/micromanager/display/DisplayWindowControlsFactory.html" title="interface in org.micromanager.display">DisplayWindowControlsFactory</a>&nbsp;factory,
+                            <a href="../../../org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a>&nbsp;displaySettings)</pre>
+<div class="block">Create a new DisplayWindow for the specified DataProvider and return it.
+ This version allows you to specify the DisplaySettings to use for the
+ DisplayWindow. Set the DisplayWindowControlsFactory to null if you do not
+ use custom controls.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>provider</code> - The DataProvider whose data should be displayed.</dd>
+<dd><code>factory</code> - A ControlsFactory used to create custom controls for
+                        the DisplayWindow. May be null.</dd>
+<dd><code>displaySettings</code> - The initial DisplaySettings to use for the DisplayWindow.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The created DisplayWindow.</dd>
 </dl>
