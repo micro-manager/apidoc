@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":38,"i7":38,"i8":38,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":38,"i18":6,"i19":6,"i20":6,"i21":38};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":38,"i7":38,"i8":38,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":38,"i19":6,"i20":6,"i21":6,"i22":38};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -236,11 +236,18 @@ extends <a href="../../../org/micromanager/display/DataViewer.html" title="inter
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayWindow.html#setDisplaySettingsProfileKey-java.lang.String-">setDisplaySettingsProfileKey</a></span>(java.lang.String&nbsp;key)</code>
+<div class="block">Set the key used to save and restore display settings to the
+ user profile for this display.</div>
+</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayWindow.html#setFullScreen-boolean-">setFullScreen</a></span>(boolean&nbsp;enable)</code>
 <div class="block">Enable or disable full screen mode.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayWindow.html#setMagnification-double-">setMagnification</a></span>(double&nbsp;ratio)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -248,25 +255,25 @@ extends <a href="../../../org/micromanager/display/DataViewer.html" title="inter
 </div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayWindow.html#setZoom-double-">setZoom</a></span>(double&nbsp;ratio)</code>
 <div class="block">Set the zoom ratio for this display.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayWindow.html#show--">show</a></span>()</code>
 <div class="block">DisplayWindows are not shown by default.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayWindow.html#toFront--">toFront</a></span>()</code>
 <div class="block">Raise this display window to the front.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplayWindow.html#toggleFullScreen--">toggleFullScreen</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -726,6 +733,21 @@ java.awt.Window&nbsp;getAsWindow()</pre>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>title</code> - a custom window title, or <code>null</code> to revert to the
               default</dd>
+</dl>
+</li>
+</ul>
+<a name="setDisplaySettingsProfileKey-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDisplaySettingsProfileKey</h4>
+<pre>void&nbsp;setDisplaySettingsProfileKey(java.lang.String&nbsp;key)</pre>
+<div class="block">Set the key used to save and restore display settings to the
+ user profile for this display.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>key</code> - String to use as the key for saving and restoring</dd>
 </dl>
 </li>
 </ul>

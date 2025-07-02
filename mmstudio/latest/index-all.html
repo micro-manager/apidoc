@@ -1368,6 +1368,11 @@
 <div class="block">Event used internally by a data viewer to respond to requests to update
  the display settings.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayManager.html#displaySettingsFromProfile-java.lang.String-">displaySettingsFromProfile(String)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayManager.html" title="interface in org.micromanager.display">DisplayManager</a></dt>
+<dd>
+<div class="block">Restore DisplaySettings from the UserProfile using the
+ profile key.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayWindow.html#displayStatusString-java.lang.String-">displayStatusString(String)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display">DisplayWindow</a></dt>
 <dd>
 <div class="block">Display a custom string in the window.</div>
@@ -3241,8 +3246,9 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayManager.html#getStandardDisplaySettings--">getStandardDisplaySettings()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayManager.html" title="interface in org.micromanager.display">DisplayManager</a></dt>
 <dd>
-<div class="block">Retrieve a DisplaySettings holding the values the user has saved as their
- default values.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>
+<div class="block"><span class="deprecationComment">use displaySettingsBuilder() instead</span></div>
+</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/SummaryMetadata.html#getStartDate--">getStartDate()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/SummaryMetadata.html" title="interface in org.micromanager.data">SummaryMetadata</a></dt>
 <dd>
@@ -5331,6 +5337,11 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DataViewer.html#setDisplaySettings-org.micromanager.display.DisplaySettings-">setDisplaySettings(DisplaySettings)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DataViewer.html" title="interface in org.micromanager.display">DataViewer</a></dt>
 <dd>
 <div class="block">Set the display settings.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayWindow.html#setDisplaySettingsProfileKey-java.lang.String-">setDisplaySettingsProfileKey(String)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display">DisplayWindow</a></dt>
+<dd>
+<div class="block">Set the key used to save and restore display settings to the
+ user profile for this display.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/UserProfile.html#setDouble-java.lang.Class-java.lang.String-java.lang.Double-">setDouble(Class&lt;?&gt;, String, Double)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/UserProfile.html" title="interface in org.micromanager">UserProfile</a></dt>
 <dd>
