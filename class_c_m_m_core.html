@@ -3291,7 +3291,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <p>Returns the angle between the camera's x axis and the axis (direction) of the z drive. This angle is dimensionless (i.e. the ratio of the translation in x caused by a translation in z, i.e. dx / dz). <br  />
  This angle can be different for different z drives (if there are multiple Z drives in the system, please add the Core-Focus device to the pixel size configuration). <br  />
  See: <a href="https://github.com/micro-manager/micro-manager/issues/1984">https://github.com/micro-manager/micro-manager/issues/1984</a></p>
-<p>@cached use the System state cache when true, otherwise checks the hardware. </p><dl class="section return"><dt>Returns</dt><dd>angle (dx/dz) of the Z-stage axis with the camera axis (dimensionless) </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cached</td><td>use the System state cache when true, otherwise checks the hardware. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>angle (dx/dz) of the Z-stage axis with the camera axis (dimensionless) </dd></dl>
 
 </div>
 </div>
@@ -3367,7 +3373,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <p>Returns the angle between the camera's y axis and the axis (direction) of the z drive optionally using the System cache. This angle is dimensionless (i.e. the ratio of the translation in y caused by a translation in z, i.e. dy / dz). <br  />
  This angle can be different for different z drives (if there are multiple Z drives in the system, please add the Core-Focus device to the pixel size configuration). <br  />
  See: <a href="https://github.com/micro-manager/micro-manager/issues/1984">https://github.com/micro-manager/micro-manager/issues/1984</a></p>
-<p>@cached Uses System state cache to find active pixel size config when true </p><dl class="section return"><dt>Returns</dt><dd>angle (dy/dz) of the Z-stage axis with the camera axis (dimensionless) </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cached</td><td>Uses System state cache to find active pixel size config when true </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>angle (dy/dz) of the Z-stage axis with the camera axis (dimensionless) </dd></dl>
 
 </div>
 </div>
@@ -3390,7 +3402,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
  This angle is dimensionless (i.e. the ratio of the translation in y caused by a translation in z, i.e. dy / dz). <br  />
  This angle can be different for different z drives (if there are multiple Z drives in the system, please add the Core-Focus device to the pixel size configuration). <br  />
  See: <a href="https://github.com/micro-manager/micro-manager/issues/1984">https://github.com/micro-manager/micro-manager/issues/1984</a></p>
-<p>@resolutionID Name of Pixel Size configuration for this dy /dz angle </p><dl class="section return"><dt>Returns</dt><dd>angle (dy/dz) of the Z-stage axis with the camera axis (dimensionless) </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">resolutionID</td><td>Name of Pixel Size configuration for this dy /dz angle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>angle (dy/dz) of the Z-stage axis with the camera axis (dimensionless) </dd></dl>
 
 </div>
 </div>
@@ -3432,7 +3450,12 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Returns the optimal z step size in um, optionally using cached pixel configuration There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration</p>
-<p>@cached Uses System state cache to find active pixel size config when true </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cached</td><td>Uses System state cache to find active pixel size config when true </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -4459,12 +4482,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Obtains the current position of the X axis of the XY stage in microns. Uses the current XY stage device. </p><dl class="section return"><dt>Returns</dt><dd>the x position </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
-  </table>
-  </dd>
-</dl>
 
 <p class="reference">References <a class="el" href="class_c_m_m_core.html#ad3dc8a876a7c636417b614eb52b58f4d">getXPosition()</a>, and <a class="el" href="class_c_m_m_core.html#a6e4e67f416ed685bad044dd48e2dcc09">getXYStageDevice()</a>.</p>
 
@@ -4634,12 +4651,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Obtains the current position of the Y axis of the XY stage in microns. Uses the current XY stage device. </p><dl class="section return"><dt>Returns</dt><dd>the y position </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
-  </table>
-  </dd>
-</dl>
 
 <p class="reference">References <a class="el" href="class_c_m_m_core.html#a6e4e67f416ed685bad044dd48e2dcc09">getXYStageDevice()</a>, and <a class="el" href="class_c_m_m_core.html#afb4ae98d1feb351dacc1cb90f550eb38">getYPosition()</a>.</p>
 
@@ -5580,7 +5591,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">deviceLabel</td><td>name of the SLM </td></tr>
-    <tr><td class="paramname">imagesequence</td><td>pointers to the images to be used in the sequence </td></tr>
+    <tr><td class="paramname">imageSequence</td><td>pointers to the images to be used in the sequence </td></tr>
   </table>
   </dd>
 </dl>
@@ -6518,7 +6529,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 </div><div class="memdoc">
 <p>Sets the current camera device. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">camera</td><td>the camera device label </td></tr>
+    <tr><td class="paramname">cameraLabel</td><td>the camera device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -6746,7 +6757,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 </div><div class="memdoc">
 <p>Sets the current focus device. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">focus</td><td>the focus stage device label </td></tr>
+    <tr><td class="paramname">focusLabel</td><td>the focus stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -7477,6 +7488,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The log filename. If empty or null, the primary log file is disabled. </td></tr>
+    <tr><td class="paramname">truncate</td><td>Whether to truncate the log file if it already exists. </td></tr>
   </table>
   </dd>
 </dl>
@@ -8179,7 +8191,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 </div><div class="memdoc">
 <p>Sets the current shutter device. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">shutter</td><td>the shutter device label </td></tr>
+    <tr><td class="paramname">shutterLabel</td><td>the shutter device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -8237,6 +8249,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 </div><div class="memdoc">
 <p>Opens or closes the specified shutter. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">shutterLabel</td><td>the shutter device label </td></tr>
     <tr><td class="paramname">state</td><td>the desired state of the shutter (true for open) </td></tr>
   </table>
   </dd>
@@ -9473,7 +9486,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <p>Blocks until all devices included in the configuration become ready. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">group</td><td>the configuration group </td></tr>
-    <tr><td class="paramname">config</td><td>the configuration preset </td></tr>
+    <tr><td class="paramname">configName</td><td>the configuration preset </td></tr>
   </table>
   </dd>
 </dl>
