@@ -129,6 +129,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetXYPosition</b> (dou
 <tr class="separator:a41d93270c29e364c411cdf0f84062300"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41bcb66e5a10ea897f6612259995e529" id="r_a41bcb66e5a10ea897f6612259995e529"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_callback.html#a41bcb66e5a10ea897f6612259995e529">OnMagnifierChanged</a> (const MM::Device *device)</td></tr>
 <tr class="separator:a41bcb66e5a10ea897f6612259995e529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af214b3d9e223195d105f3c9a4300b4b9" id="r_af214b3d9e223195d105f3c9a4300b4b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_callback.html#af214b3d9e223195d105f3c9a4300b4b9">OnShutterOpenChanged</a> (const MM::Device *device, bool open)</td></tr>
+<tr class="separator:af214b3d9e223195d105f3c9a4300b4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4db456db65ac70caa478566028131d1" id="r_aa4db456db65ac70caa478566028131d1"><td class="memItemLeft" align="right" valign="top"><a id="aa4db456db65ac70caa478566028131d1" name="aa4db456db65ac70caa478566028131d1"></a>
 MM::SignalIO *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSignalIODevice</b> (const MM::Device *caller, const char *label)</td></tr>
 <tr class="separator:aa4db456db65ac70caa478566028131d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -376,6 +378,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>GetLoadedDeviceOfType
 <p>Device signals that a specific property changed and reports the new value </p>
 
 <p class="reference">References <a class="el" href="class_configuration.html#ae5f3c4dff5874ea05ea19ac2ecdf9c96">Configuration::addSetting()</a>, <a class="el" href="class_c_m_m_core.html#a469653c4e9ecdffa3787ddee8a0c49a2">CMMCore::getAvailableConfigGroups()</a>, <a class="el" href="class_c_m_m_core.html#a4c4c6c64953ea3cde7057fae158a6ffc">CMMCore::getAvailableConfigs()</a>, <a class="el" href="class_c_m_m_core.html#a7066a98b909a95daf8c50898010ae6c5">CMMCore::getAvailablePixelSizeConfigs()</a>, <a class="el" href="class_c_m_m_core.html#ac55630358d22720aa3bd281975dba0a3">CMMCore::getConfigData()</a>, <a class="el" href="class_c_m_m_core.html#aa34a6b3e3aacb583ccdfe70a21b2d817">CMMCore::getCurrentConfigFromCache()</a>, <a class="el" href="class_c_m_m_core.html#a3911bd0bfab197170366790eb1ba874e">CMMCore::getPixelSizeAffine()</a>, <a class="el" href="class_c_m_m_core.html#ac2f2cac1d79222697fe7cad2352a88e5">CMMCore::getPixelSizeConfigData()</a>, <a class="el" href="class_c_m_m_core.html#a9405577e58d8a9c0291903ef7a89ca8e">CMMCore::getPixelSizeUm()</a>, <a class="el" href="class_configuration.html#a2d26d69e044a7a74f009671d895861be">Configuration::isPropertyIncluded()</a>, and <a class="el" href="class_configuration.html#a64836e801252a70e1625e470dbc62b74">Configuration::size()</a>.</p>
+
+</div>
+</div>
+<a id="af214b3d9e223195d105f3c9a4300b4b9" name="af214b3d9e223195d105f3c9a4300b4b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af214b3d9e223195d105f3c9a4300b4b9">&#9670;&#160;</a></span>OnShutterOpenChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CoreCallback::OnShutterOpenChanged </td>
+          <td>(</td>
+          <td class="paramtype">const MM::Device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Handler for Shutter State changes. </p>
 
 </div>
 </div>
