@@ -67,8 +67,6 @@ typedef <a class="el" href="class_m_m_1_1_action_ex.html">MM::ActionEx</a>&lt; U
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a915852d23f51bd01749f85bbf8b7d88b" id="r_a915852d23f51bd01749f85bbf8b7d88b"><td class="memItemLeft" align="right" valign="top">virtual HDEVMODULE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#a915852d23f51bd01749f85bbf8b7d88b">GetModuleHandle</a> () const</td></tr>
-<tr class="separator:a915852d23f51bd01749f85bbf8b7d88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8627f4c42d089d40a0a12ea21ae46602" id="r_a8627f4c42d089d40a0a12ea21ae46602"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#a8627f4c42d089d40a0a12ea21ae46602">SetModuleName</a> (const char *name)</td></tr>
 <tr class="separator:a8627f4c42d089d40a0a12ea21ae46602"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d38cbdd3c808261eb3200d41ba5e85c" id="r_a9d38cbdd3c808261eb3200d41ba5e85c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#a9d38cbdd3c808261eb3200d41ba5e85c">GetModuleName</a> (char *name) const</td></tr>
@@ -77,8 +75,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adbe4a67e9701d1e57cad3a7b41a31a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95a4c37840d969cf6107e4eef39e3442" id="r_a95a4c37840d969cf6107e4eef39e3442"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#a95a4c37840d969cf6107e4eef39e3442">GetDescription</a> (char *name) const</td></tr>
 <tr class="separator:a95a4c37840d969cf6107e4eef39e3442"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f717414b6844c17cfa0ff092c05cf5d" id="r_a4f717414b6844c17cfa0ff092c05cf5d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#a4f717414b6844c17cfa0ff092c05cf5d">SetModuleHandle</a> (HDEVMODULE hModule)</td></tr>
-<tr class="separator:a4f717414b6844c17cfa0ff092c05cf5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99255dedbf64c339b651596f6c3cc85f" id="r_a99255dedbf64c339b651596f6c3cc85f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#a99255dedbf64c339b651596f6c3cc85f">SetLabel</a> (const char *label)</td></tr>
 <tr class="separator:a99255dedbf64c339b651596f6c3cc85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a930a83f13195d450015c15fef552bdb9" id="r_a930a83f13195d450015c15fef552bdb9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#a930a83f13195d450015c15fef552bdb9">GetLabel</a> (char *name) const</td></tr>
@@ -1233,34 +1229,6 @@ template&lt;class T , class U &gt; </div>
 <p>Provides access to the names of devices of a given type deviceIterator determines which device in the list of devices of the given type will become accessible in deviceName. If deviceIterator exceeds the number of devices of the given type, no action will be taked (i.e., the memory pointed to by deviceName will be unchanged). </p>
 
 <p class="reference">References <a class="el" href="class_m_m_1_1_core.html#a43dde78c5f40c332ebf597f12cbdfc61">MM::Core::GetLoadedDeviceOfType()</a>.</p>
-
-</div>
-</div>
-<a id="a915852d23f51bd01749f85bbf8b7d88b" name="a915852d23f51bd01749f85bbf8b7d88b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a915852d23f51bd01749f85bbf8b7d88b">&#9670;&#160;</a></span>GetModuleHandle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class U &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual HDEVMODULE <a class="el" href="class_c_device_base.html">CDeviceBase</a>&lt; T, U &gt;::GetModuleHandle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the library handle (for use only by the calling code). </p>
 
 </div>
 </div>
@@ -2884,35 +2852,6 @@ template&lt;class T , class U &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Sets the device label (for use only by the calling code). Labels are usually manipulated by the parent application and used for high-level programming. </p>
-
-</div>
-</div>
-<a id="a4f717414b6844c17cfa0ff092c05cf5d" name="a4f717414b6844c17cfa0ff092c05cf5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f717414b6844c17cfa0ff092c05cf5d">&#9670;&#160;</a></span>SetModuleHandle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class U &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="class_c_device_base.html">CDeviceBase</a>&lt; T, U &gt;::SetModuleHandle </td>
-          <td>(</td>
-          <td class="paramtype">HDEVMODULE&#160;</td>
-          <td class="paramname"><em>hModule</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sets the library handle (for use only by the calling code). </p>
 
 </div>
 </div>
