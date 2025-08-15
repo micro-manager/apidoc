@@ -103,6 +103,8 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnPropertiesCh
 <tr class="separator:acf8dc7c2022f915713a2b2528cd7c972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a280c557321e4a49791c662a99fe39b0b" id="r_a280c557321e4a49791c662a99fe39b0b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a280c557321e4a49791c662a99fe39b0b">OnMagnifierChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller)=0</td></tr>
 <tr class="separator:a280c557321e4a49791c662a99fe39b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa45cadd58a6a9f7a6e77e95c0e0afa" id="r_abfa45cadd58a6a9f7a6e77e95c0e0afa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#abfa45cadd58a6a9f7a6e77e95c0e0afa">OnShutterOpenChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, bool open)=0</td></tr>
+<tr class="separator:abfa45cadd58a6a9f7a6e77e95c0e0afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a192202bd0fa0b73cbcc01abb0c3a7f0c" id="r_a192202bd0fa0b73cbcc01abb0c3a7f0c"><td class="memItemLeft" align="right" valign="top"><a id="a192202bd0fa0b73cbcc01abb0c3a7f0c" name="a192202bd0fa0b73cbcc01abb0c3a7f0c"></a>
 virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>GetClockTicksUs</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller)=0</td></tr>
 <tr class="separator:a192202bd0fa0b73cbcc01abb0c3a7f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -539,6 +541,43 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 <p>Callback to signal the UI that a property changed The <a class="el" href="class_m_m_1_1_core.html">Core</a> will check if groups or pixel size changed as a consequence of the change of this property and inform the UI </p>
 
 <p class="reference">Referenced by <a class="el" href="class_c_device_base.html#a54820c958866fa7ff71de88fb5b28e93">CDeviceBase&lt; T, U &gt;::OnPropertyChanged()</a>.</p>
+
+</div>
+</div>
+<a id="abfa45cadd58a6a9f7a6e77e95c0e0afa" name="abfa45cadd58a6a9f7a6e77e95c0e0afa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfa45cadd58a6a9f7a6e77e95c0e0afa">&#9670;&#160;</a></span>OnShutterOpenChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int MM::Core::OnShutterOpenChanged </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>open</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Signals that the shutter opened or closed </p>
 
 </div>
 </div>
