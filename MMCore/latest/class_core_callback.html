@@ -91,24 +91,12 @@ MM::MMTime&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentMMTim
 <tr class="memitem:a41a7615a3d90b5ca3791e4b321c8eaa5" id="r_a41a7615a3d90b5ca3791e4b321c8eaa5"><td class="memItemLeft" align="right" valign="top"><a id="a41a7615a3d90b5ca3791e4b321c8eaa5" name="a41a7615a3d90b5ca3791e4b321c8eaa5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Sleep</b> (const MM::Device *caller, double intervalMs)</td></tr>
 <tr class="separator:a41a7615a3d90b5ca3791e4b321c8eaa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf067f85c3497f463e05075e3a96f8a4" id="r_abf067f85c3497f463e05075e3a96f8a4"><td class="memItemLeft" align="right" valign="top"><a id="abf067f85c3497f463e05075e3a96f8a4" name="abf067f85c3497f463e05075e3a96f8a4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>InsertImage</b> (const MM::Device *caller, const ImgBuffer &amp;imgBuf)</td></tr>
-<tr class="separator:abf067f85c3497f463e05075e3a96f8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24986b4ca1114e80d8c21477c10ecbe1" id="r_a24986b4ca1114e80d8c21477c10ecbe1"><td class="memItemLeft" align="right" valign="top"><a id="a24986b4ca1114e80d8c21477c10ecbe1" name="a24986b4ca1114e80d8c21477c10ecbe1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>InsertImage</b> (const MM::Device *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned byteDepth, const char *serializedMetadata, const bool doProcess=true)</td></tr>
 <tr class="separator:a24986b4ca1114e80d8c21477c10ecbe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cd82c34e4de6c504ac2322a2fc98450" id="r_a0cd82c34e4de6c504ac2322a2fc98450"><td class="memItemLeft" align="right" valign="top"><a id="a0cd82c34e4de6c504ac2322a2fc98450" name="a0cd82c34e4de6c504ac2322a2fc98450"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>InsertImage</b> (const MM::Device *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned byteDepth, unsigned nComponents, const char *serializedMetadata, const bool doProcess=true)</td></tr>
 <tr class="separator:a0cd82c34e4de6c504ac2322a2fc98450"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8148e4e7a40aead3ce0cf84d5e7c65e3" id="r_a8148e4e7a40aead3ce0cf84d5e7c65e3"><td class="memItemLeft" align="right" valign="top"><a id="a8148e4e7a40aead3ce0cf84d5e7c65e3" name="a8148e4e7a40aead3ce0cf84d5e7c65e3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>InsertImage</b> (const MM::Device *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned byteDepth, const Metadata *pMd=0, const bool doProcess=true)</td></tr>
-<tr class="separator:a8148e4e7a40aead3ce0cf84d5e7c65e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1bb9a13e4247f9b81ac6202bceec65" id="r_adf1bb9a13e4247f9b81ac6202bceec65"><td class="memItemLeft" align="right" valign="top"><a id="adf1bb9a13e4247f9b81ac6202bceec65" name="adf1bb9a13e4247f9b81ac6202bceec65"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>InsertImage</b> (const MM::Device *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned byteDepth, unsigned nComponents, const Metadata *pMd=0, const bool doProcess=true)</td></tr>
-<tr class="separator:adf1bb9a13e4247f9b81ac6202bceec65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c5c474aec04c58b43f94f56cf80472c" id="r_a8c5c474aec04c58b43f94f56cf80472c"><td class="memItemLeft" align="right" valign="top"><a id="a8c5c474aec04c58b43f94f56cf80472c" name="a8c5c474aec04c58b43f94f56cf80472c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>InsertMultiChannel</b> (const MM::Device *caller, const unsigned char *buf, unsigned numChannels, unsigned width, unsigned height, unsigned byteDepth, Metadata *pMd=0)</td></tr>
-<tr class="separator:a8c5c474aec04c58b43f94f56cf80472c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfb9e762366b980f612134cab39d6525" id="r_acfb9e762366b980f612134cab39d6525"><td class="memItemLeft" align="right" valign="top"><a id="acfb9e762366b980f612134cab39d6525" name="acfb9e762366b980f612134cab39d6525"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearImageBuffer</b> (const MM::Device *caller)</td></tr>
 <tr class="separator:acfb9e762366b980f612134cab39d6525"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,45 +109,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>AcqFinished</b> (const
 <tr class="memitem:a90cd6388af50a7181d5a985791c0c3e1" id="r_a90cd6388af50a7181d5a985791c0c3e1"><td class="memItemLeft" align="right" valign="top"><a id="a90cd6388af50a7181d5a985791c0c3e1" name="a90cd6388af50a7181d5a985791c0c3e1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareForAcq</b> (const MM::Device *caller)</td></tr>
 <tr class="separator:a90cd6388af50a7181d5a985791c0c3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2484632009902b39f3bf741955ccbc3" id="r_af2484632009902b39f3bf741955ccbc3"><td class="memItemLeft" align="right" valign="top"><a id="af2484632009902b39f3bf741955ccbc3" name="af2484632009902b39f3bf741955ccbc3"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetImage</b> ()</td></tr>
-<tr class="separator:af2484632009902b39f3bf741955ccbc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85a65192bca94865980adda01fd426ee" id="r_a85a65192bca94865980adda01fd426ee"><td class="memItemLeft" align="right" valign="top"><a id="a85a65192bca94865980adda01fd426ee" name="a85a65192bca94865980adda01fd426ee"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetImageDimensions</b> (int &amp;width, int &amp;height, int &amp;depth)</td></tr>
-<tr class="separator:a85a65192bca94865980adda01fd426ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad653d00f4cc2dca413026745f8e017fb" id="r_ad653d00f4cc2dca413026745f8e017fb"><td class="memItemLeft" align="right" valign="top"><a id="ad653d00f4cc2dca413026745f8e017fb" name="ad653d00f4cc2dca413026745f8e017fb"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>GetFocusPosition</b> (double &amp;pos)</td></tr>
 <tr class="separator:ad653d00f4cc2dca413026745f8e017fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bf51832570b0d550b24499980627048" id="r_a2bf51832570b0d550b24499980627048"><td class="memItemLeft" align="right" valign="top"><a id="a2bf51832570b0d550b24499980627048" name="a2bf51832570b0d550b24499980627048"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>SetFocusPosition</b> (double pos)</td></tr>
-<tr class="separator:a2bf51832570b0d550b24499980627048"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5138575f1c90c7e6ab3f4c765e893b6b" id="r_a5138575f1c90c7e6ab3f4c765e893b6b"><td class="memItemLeft" align="right" valign="top"><a id="a5138575f1c90c7e6ab3f4c765e893b6b" name="a5138575f1c90c7e6ab3f4c765e893b6b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>MoveFocus</b> (double v)</td></tr>
-<tr class="separator:a5138575f1c90c7e6ab3f4c765e893b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9626010cc3f35f903f0f3957966d41cf" id="r_a9626010cc3f35f903f0f3957966d41cf"><td class="memItemLeft" align="right" valign="top"><a id="a9626010cc3f35f903f0f3957966d41cf" name="a9626010cc3f35f903f0f3957966d41cf"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>SetXYPosition</b> (double x, double y)</td></tr>
-<tr class="separator:a9626010cc3f35f903f0f3957966d41cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9303968b6de8bdd7ff091f235e8f0e79" id="r_a9303968b6de8bdd7ff091f235e8f0e79"><td class="memItemLeft" align="right" valign="top"><a id="a9303968b6de8bdd7ff091f235e8f0e79" name="a9303968b6de8bdd7ff091f235e8f0e79"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>GetXYPosition</b> (double &amp;x, double &amp;y)</td></tr>
 <tr class="separator:a9303968b6de8bdd7ff091f235e8f0e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96851529c16b243d71d3091d3f66facf" id="r_a96851529c16b243d71d3091d3f66facf"><td class="memItemLeft" align="right" valign="top"><a id="a96851529c16b243d71d3091d3f66facf" name="a96851529c16b243d71d3091d3f66facf"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>MoveXYStage</b> (double vX, double vY)</td></tr>
-<tr class="separator:a96851529c16b243d71d3091d3f66facf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e75a4ca20ee6a527cff68e431008dc2" id="r_a7e75a4ca20ee6a527cff68e431008dc2"><td class="memItemLeft" align="right" valign="top"><a id="a7e75a4ca20ee6a527cff68e431008dc2" name="a7e75a4ca20ee6a527cff68e431008dc2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>SetExposure</b> (double expMs)</td></tr>
-<tr class="separator:a7e75a4ca20ee6a527cff68e431008dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaa93c81b957452274590aa774a8aba4" id="r_abaa93c81b957452274590aa774a8aba4"><td class="memItemLeft" align="right" valign="top"><a id="abaa93c81b957452274590aa774a8aba4" name="abaa93c81b957452274590aa774a8aba4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetExposure</b> (double &amp;expMs)</td></tr>
-<tr class="separator:abaa93c81b957452274590aa774a8aba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3388da1e1357717b0f372bc6384f6ef8" id="r_a3388da1e1357717b0f372bc6384f6ef8"><td class="memItemLeft" align="right" valign="top"><a id="a3388da1e1357717b0f372bc6384f6ef8" name="a3388da1e1357717b0f372bc6384f6ef8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>SetConfig</b> (const char *group, const char *name)</td></tr>
-<tr class="separator:a3388da1e1357717b0f372bc6384f6ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a245036663d217a2af9749baa11713f61" id="r_a245036663d217a2af9749baa11713f61"><td class="memItemLeft" align="right" valign="top"><a id="a245036663d217a2af9749baa11713f61" name="a245036663d217a2af9749baa11713f61"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentConfig</b> (const char *group, int bufLen, char *name)</td></tr>
-<tr class="separator:a245036663d217a2af9749baa11713f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aced5702887e784dea1e00cc494ebb64c" id="r_aced5702887e784dea1e00cc494ebb64c"><td class="memItemLeft" align="right" valign="top"><a id="aced5702887e784dea1e00cc494ebb64c" name="aced5702887e784dea1e00cc494ebb64c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetChannelConfig</b> (char *channelConfigName, const unsigned int channelConfigIterator)</td></tr>
-<tr class="separator:aced5702887e784dea1e00cc494ebb64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38fa030a27b703b9596e0e9bf41d20a5" id="r_a38fa030a27b703b9596e0e9bf41d20a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_callback.html#a38fa030a27b703b9596e0e9bf41d20a5">OnPropertiesChanged</a> (const MM::Device *caller)</td></tr>
 <tr class="separator:a38fa030a27b703b9596e0e9bf41d20a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83d0973bfbd2a237ede596333b7edea7" id="r_a83d0973bfbd2a237ede596333b7edea7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_callback.html#a83d0973bfbd2a237ede596333b7edea7">OnPropertyChanged</a> (const MM::Device *device, const char *propName, const char *value)</td></tr>
@@ -174,27 +129,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetChannelConfig</b> (
 <tr class="separator:a41d93270c29e364c411cdf0f84062300"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41bcb66e5a10ea897f6612259995e529" id="r_a41bcb66e5a10ea897f6612259995e529"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_core_callback.html#a41bcb66e5a10ea897f6612259995e529">OnMagnifierChanged</a> (const MM::Device *device)</td></tr>
 <tr class="separator:a41bcb66e5a10ea897f6612259995e529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bb0f7571a867607c2d755d3d531fcd3" id="r_a1bb0f7571a867607c2d755d3d531fcd3"><td class="memItemLeft" align="right" valign="top"><a id="a1bb0f7571a867607c2d755d3d531fcd3" name="a1bb0f7571a867607c2d755d3d531fcd3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>NextPostedError</b> (int &amp;errorCode, char *pMessage, int maxlen, int &amp;messageLength)</td></tr>
-<tr class="separator:a1bb0f7571a867607c2d755d3d531fcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8647d58a2cbf2d6e6e7b3b35a2383206" id="r_a8647d58a2cbf2d6e6e7b3b35a2383206"><td class="memItemLeft" align="right" valign="top"><a id="a8647d58a2cbf2d6e6e7b3b35a2383206" name="a8647d58a2cbf2d6e6e7b3b35a2383206"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PostError</b> (const int errorCode, const char *pMessage)</td></tr>
-<tr class="separator:a8647d58a2cbf2d6e6e7b3b35a2383206"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12caaa99624de704209387077f36c54c" id="r_a12caaa99624de704209387077f36c54c"><td class="memItemLeft" align="right" valign="top"><a id="a12caaa99624de704209387077f36c54c" name="a12caaa99624de704209387077f36c54c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearPostedErrors</b> ()</td></tr>
-<tr class="separator:a12caaa99624de704209387077f36c54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac80d285ff34b99ee9ca7c3ddbe99c7dc" id="r_ac80d285ff34b99ee9ca7c3ddbe99c7dc"><td class="memItemLeft" align="right" valign="top"><a id="ac80d285ff34b99ee9ca7c3ddbe99c7dc" name="ac80d285ff34b99ee9ca7c3ddbe99c7dc"></a>
-MM::ImageProcessor *&#160;</td><td class="memItemRight" valign="bottom"><b>GetImageProcessor</b> (const MM::Device *caller)</td></tr>
-<tr class="separator:ac80d285ff34b99ee9ca7c3ddbe99c7dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23165af7924fe1598c1140338d6a7210" id="r_a23165af7924fe1598c1140338d6a7210"><td class="memItemLeft" align="right" valign="top"><a id="a23165af7924fe1598c1140338d6a7210" name="a23165af7924fe1598c1140338d6a7210"></a>
-MM::State *&#160;</td><td class="memItemRight" valign="bottom"><b>GetStateDevice</b> (const MM::Device *caller, const char *label)</td></tr>
-<tr class="separator:a23165af7924fe1598c1140338d6a7210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4db456db65ac70caa478566028131d1" id="r_aa4db456db65ac70caa478566028131d1"><td class="memItemLeft" align="right" valign="top"><a id="aa4db456db65ac70caa478566028131d1" name="aa4db456db65ac70caa478566028131d1"></a>
 MM::SignalIO *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSignalIODevice</b> (const MM::Device *caller, const char *label)</td></tr>
 <tr class="separator:aa4db456db65ac70caa478566028131d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee6f0a1cdd45057549e0f7dce37cb5cf" id="r_aee6f0a1cdd45057549e0f7dce37cb5cf"><td class="memItemLeft" align="right" valign="top"><a id="aee6f0a1cdd45057549e0f7dce37cb5cf" name="aee6f0a1cdd45057549e0f7dce37cb5cf"></a>
-MM::AutoFocus *&#160;</td><td class="memItemRight" valign="bottom"><b>GetAutoFocus</b> (const MM::Device *caller)</td></tr>
-<tr class="separator:aee6f0a1cdd45057549e0f7dce37cb5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80afd52ab80f57449d9de50837b1ae43" id="r_a80afd52ab80f57449d9de50837b1ae43"><td class="memItemLeft" align="right" valign="top"><a id="a80afd52ab80f57449d9de50837b1ae43" name="a80afd52ab80f57449d9de50837b1ae43"></a>
 MM::Hub *&#160;</td><td class="memItemRight" valign="bottom"><b>GetParentHub</b> (const MM::Device *caller) const</td></tr>
 <tr class="separator:a80afd52ab80f57449d9de50837b1ae43"><td class="memSeparator" colspan="2">&#160;</td></tr>
