@@ -121,8 +121,7 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareForAcq<
 <tr class="separator:aad39712ff686edf5938d7c7de092125e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf79ecb404b3a18c25ffe19a905b43eb" id="r_abf79ecb404b3a18c25ffe19a905b43eb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#abf79ecb404b3a18c25ffe19a905b43eb">InsertImage</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned byteDepth, const char *serializedMetadata=nullptr, const bool doProcess=true)=0</td></tr>
 <tr class="separator:abf79ecb404b3a18c25ffe19a905b43eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06329e4277fcfe295002386b74376b68" id="r_a06329e4277fcfe295002386b74376b68"><td class="memItemLeft" align="right" valign="top"><a id="a06329e4277fcfe295002386b74376b68" name="a06329e4277fcfe295002386b74376b68"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>InitializeImageBuffer</b> (unsigned channels, unsigned slices, unsigned int w, unsigned int h, unsigned int pixDepth)=0</td></tr>
+<tr class="memitem:a06329e4277fcfe295002386b74376b68" id="r_a06329e4277fcfe295002386b74376b68"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a06329e4277fcfe295002386b74376b68">InitializeImageBuffer</a> (unsigned channels, unsigned slices, unsigned int w, unsigned int h, unsigned int pixDepth)=0</td></tr>
 <tr class="separator:a06329e4277fcfe295002386b74376b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad32e63725c4e345adfd931175c8fd76b" id="r_ad32e63725c4e345adfd931175c8fd76b"><td class="memItemLeft" align="right" valign="top"><a id="ad32e63725c4e345adfd931175c8fd76b" name="ad32e63725c4e345adfd931175c8fd76b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MM_DEPRECATED</b> (virtual int GetFocusPosition(double &amp;pos))=0</td></tr>
@@ -234,6 +233,62 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 </dl>
 
 <p class="reference">Referenced by <a class="el" href="class_c_device_base.html#a4faedede75819a5e1ecf23e5a9dc57f2">CDeviceBase&lt; T, U &gt;::GetLoadedDeviceOfType()</a>.</p>
+
+</div>
+</div>
+<a id="a06329e4277fcfe295002386b74376b68" name="a06329e4277fcfe295002386b74376b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06329e4277fcfe295002386b74376b68">&#9670;&#160;</a></span>InitializeImageBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool MM::Core::InitializeImageBuffer </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>channels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>slices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>pixDepth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prepare the sequence buffer for the given image size and pixel format.</p>
+<p>Cameras normally do not need to call this explicitly. 'channels' is ignored (should be 1) and 'slices' must be 1. </p>
 
 </div>
 </div>
