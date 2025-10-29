@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -135,6 +135,20 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/Album.html#addImagesWithoutProcessing-java.util.Collection-">addImagesWithoutProcessing</a></span>(java.util.Collection&lt;<a href="../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images)</code>
+<div class="block">Add the specified Images to the Album's datastore without passing them 
+ through the processor pipeline.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/Album.html#addImageWithoutProcessing-org.micromanager.data.Image-">addImageWithoutProcessing</a></span>(<a href="../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)</code>
+<div class="block">Add the specified Image to the Album's datastore without passing it 
+ through the processor pipeline.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/Album.html#getDatastore--">getDatastore</a></span>()</code>
 <div class="block">Return the Datastore that currently backs the Album.</div>
@@ -202,13 +216,62 @@ var activeTableTab = "activeTableTab";
 <a name="addImages-java.util.Collection-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>addImages</h4>
 <pre>boolean&nbsp;addImages(java.util.Collection&lt;<a href="../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images)
            throws java.io.IOException</pre>
 <div class="block">Add the specified Images to the Album's datastore. Equivalent to
  repeatedly calling addImage().</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>images</code> - The Images to add to the album</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>True if a new Datastore and DisplayWindow were created as a
+     side-effect of adding the images.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - these happen with disk-based stores</dd>
+</dl>
+</li>
+</ul>
+<a name="addImageWithoutProcessing-org.micromanager.data.Image-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addImageWithoutProcessing</h4>
+<pre>boolean&nbsp;addImageWithoutProcessing(<a href="../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&nbsp;image)
+                           throws java.io.IOException</pre>
+<div class="block">Add the specified Image to the Album's datastore without passing it 
+ through the processor pipeline. If no Datastore exists for the Album yet, 
+ or if the current Datastore is frozen, or if the channel has changed, 
+ then a new Datastore will be created, as well as a new DisplayWindow to 
+ go with it, and future additions will be sent to that Datastore.
+ The channel name used for the image will be the current channel (i.e. the
+ config setting for the config group set as the channel group), or "" if
+ it does not exist.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>image</code> - The Image to add to the album</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>True if a new Datastore and DisplayWindow were created as a
+     side-effect of adding the image.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.io.IOException</code> - these happen with disk-based stores</dd>
+</dl>
+</li>
+</ul>
+<a name="addImagesWithoutProcessing-java.util.Collection-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>addImagesWithoutProcessing</h4>
+<pre>boolean&nbsp;addImagesWithoutProcessing(java.util.Collection&lt;<a href="../../org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a>&gt;&nbsp;images)
+                            throws java.io.IOException</pre>
+<div class="block">Add the specified Images to the Album's datastore without passing them 
+ through the processor pipeline. Equivalent to repeatedly calling 
+ addImageWithoutProcessing().</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>images</code> - The Images to add to the album</dd>
