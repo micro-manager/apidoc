@@ -2340,23 +2340,6 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02564" name="l02564"></a><span class="lineno"> 2564</span>    }</div>
 <div class="line"><a id="l02565" name="l02565"></a><span class="lineno"> 2565</span>};</div>
 </div>
-<div class="line"><a id="l02566" name="l02566"></a><span class="lineno"> 2566</span> </div>
-<div class="line"><a id="l02567" name="l02567"></a><span class="lineno"> 2567</span> </div>
-<div class="line"><a id="l02568" name="l02568"></a><span class="lineno"> 2568</span><span class="comment">// _t, a macro for timing single lines.</span></div>
-<div class="line"><a id="l02569" name="l02569"></a><span class="lineno"> 2569</span><span class="comment">// This macros logs the text of the line, x, measures</span></div>
-<div class="line"><a id="l02570" name="l02570"></a><span class="lineno"> 2570</span><span class="comment">// the time it takes, and then logs that time.</span></div>
-<div class="line"><a id="l02571" name="l02571"></a><span class="lineno"> 2571</span><span class="comment">// Usage example:</span></div>
-<div class="line"><a id="l02572" name="l02572"></a><span class="lineno"> 2572</span><span class="comment">// _t( ex = GetExposure(); )</span></div>
-<div class="line"><a id="l02573" name="l02573"></a><span class="lineno"> 2573</span> </div>
-<div class="line"><a id="l02574" name="l02574"></a><span class="lineno"> 2574</span> </div>
-<div class="line"><a id="l02575" name="l02575"></a><span class="lineno"> 2575</span><span class="preprocessor">#define _t(x) \</span></div>
-<div class="line"><a id="l02576" name="l02576"></a><span class="lineno"> 2576</span><span class="preprocessor">   { \</span></div>
-<div class="line"><a id="l02577" name="l02577"></a><span class="lineno"> 2577</span><span class="preprocessor">      LogMessage(#x, true); \</span></div>
-<div class="line"><a id="l02578" name="l02578"></a><span class="lineno"> 2578</span><span class="preprocessor">      _start_time = GetCurrentMMTime(); \</span></div>
-<div class="line"><a id="l02579" name="l02579"></a><span class="lineno"> 2579</span><span class="preprocessor">      x; \</span></div>
-<div class="line"><a id="l02580" name="l02580"></a><span class="lineno"> 2580</span><span class="preprocessor">      _end_time = GetCurrentMMTime(); \</span></div>
-<div class="line"><a id="l02581" name="l02581"></a><span class="lineno"> 2581</span><span class="preprocessor">      LogTimeDiff(_start_time,_end_time, true); \</span></div>
-<div class="line"><a id="l02582" name="l02582"></a><span class="lineno"> 2582</span><span class="preprocessor">   }</span></div>
 <div class="ttc" id="aclass_c_auto_focus_base_html"><div class="ttname"><a href="class_c_auto_focus_base.html">CAutoFocusBase</a></div><div class="ttdef"><b>Definition</b> DeviceBase.h:2110</div></div>
 <div class="ttc" id="aclass_c_camera_base_html"><div class="ttname"><a href="class_c_camera_base.html">CCameraBase</a></div><div class="ttdef"><b>Definition</b> DeviceBase.h:1280</div></div>
 <div class="ttc" id="aclass_c_camera_base_html_a2a79e94c08256bfb8d2cb5652cfa640f"><div class="ttname"><a href="class_c_camera_base.html#a2a79e94c08256bfb8d2cb5652cfa640f">CCameraBase::PrepareSequenceAcqusition</a></div><div class="ttdeci">virtual int PrepareSequenceAcqusition()</div><div class="ttdef"><b>Definition</b> DeviceBase.h:1388</div></div>
