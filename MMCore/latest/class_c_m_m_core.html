@@ -729,12 +729,12 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a20b08bd102c07bfeed672751a7543639" id="r_a20b08bd102c07bfeed672751a7543639"><td class="memItemLeft" align="right" valign="top"><a id="a20b08bd102c07bfeed672751a7543639" name="a20b08bd102c07bfeed672751a7543639"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>CoreCallback</b></td></tr>
-<tr class="separator:a20b08bd102c07bfeed672751a7543639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dd37852a35a07b9fd8ce1002a53747c" id="r_a5dd37852a35a07b9fd8ce1002a53747c"><td class="memItemLeft" align="right" valign="top"><a id="a5dd37852a35a07b9fd8ce1002a53747c" name="a5dd37852a35a07b9fd8ce1002a53747c"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollection</b></td></tr>
-<tr class="separator:a5dd37852a35a07b9fd8ce1002a53747c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7571c5cdf33f8ddcdeb2612e714e5e7a" id="r_a7571c5cdf33f8ddcdeb2612e714e5e7a"><td class="memItemLeft" align="right" valign="top"><a id="a7571c5cdf33f8ddcdeb2612e714e5e7a" name="a7571c5cdf33f8ddcdeb2612e714e5e7a"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::CoreCallback</b></td></tr>
+<tr class="separator:a7571c5cdf33f8ddcdeb2612e714e5e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f252e2593c48eddba0fc832f5f7b4f3" id="r_a2f252e2593c48eddba0fc832f5f7b4f3"><td class="memItemLeft" align="right" valign="top"><a id="a2f252e2593c48eddba0fc832f5f7b4f3" name="a2f252e2593c48eddba0fc832f5f7b4f3"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::CorePropertyCollection</b></td></tr>
+<tr class="separator:a2f252e2593c48eddba0fc832f5f7b4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Initialization and setup.</h2></td></tr>
 <tr class="memitem:a43cb784fa023dcb12b8310227d23801f" id="r_a43cb784fa023dcb12b8310227d23801f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a43cb784fa023dcb12b8310227d23801f">loadDevice</a> (const char *label, const char *moduleName, const char *deviceName) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
@@ -1661,10 +1661,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 </div><div class="memdoc">
 <p>Returns the names of all defined configuration groups </p><dl class="section return"><dt>Returns</dt><dd>an array of names of configuration groups </dd></dl>
 
-<p class="reference">References <a class="el" href="class_config_group_collection.html#ab4e178f9f21ba1c56bd7698a5bf3bbcd">ConfigGroupCollection::GetAvailableGroups()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="class_core_callback.html#a83d0973bfbd2a237ede596333b7edea7">CoreCallback::OnPropertyChanged()</a>.</p>
-
 </div>
 </div>
 <a id="a4c4c6c64953ea3cde7057fae158a6ffc" name="a4c4c6c64953ea3cde7057fae158a6ffc"></a>
@@ -1685,10 +1681,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <p>Returns all defined configuration names in a given group</p>
 <p>For legacy reasons, an exception is not thrown if there is an error. Instead, an empty vector is returned if group is not a valid config group.</p>
 <dl class="section return"><dt>Returns</dt><dd>an array of configuration names </dd></dl>
-
-<p class="reference">References <a class="el" href="class_config_group_collection.html#a2150807d3e090d1362c7d5c240fd8984">ConfigGroupCollection::GetAvailableConfigs()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="class_core_callback.html#a83d0973bfbd2a237ede596333b7edea7">CoreCallback::OnPropertyChanged()</a>.</p>
 
 </div>
 </div>
@@ -1766,8 +1758,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <p>Returns all defined resolution preset names </p><dl class="section return"><dt>Returns</dt><dd>an array of resolution presets </dd></dl>
 
 <p class="reference">References <a class="el" href="class_config_group_base.html#ae88adaf54c8fa8d6c7b75c11f57d423d">ConfigGroupBase&lt; T &gt;::GetAvailable()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="class_core_callback.html#a83d0973bfbd2a237ede596333b7edea7">CoreCallback::OnPropertyChanged()</a>.</p>
 
 </div>
 </div>
@@ -1926,8 +1916,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <p>Returns the configuration object for a given group and name.</p>
 <dl class="section return"><dt>Returns</dt><dd>The configuration object </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="class_core_callback.html#a83d0973bfbd2a237ede596333b7edea7">CoreCallback::OnPropertyChanged()</a>.</p>
-
 </div>
 </div>
 <a id="abe167136415ba066e99c874dfaa7aebf" name="abe167136415ba066e99c874dfaa7aebf"></a>
@@ -2061,8 +2049,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <dl class="section return"><dt>Returns</dt><dd>The cache's current configuration preset name </dd></dl>
 
 <p class="reference">References <a class="el" href="class_configuration.html#a90504de4a87d79270b4baeb80445d6d6">Configuration::isConfigurationIncluded()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="class_core_callback.html#a83d0973bfbd2a237ede596333b7edea7">CoreCallback::OnPropertyChanged()</a>.</p>
 
 </div>
 </div>
@@ -3185,7 +3171,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 
 <p class="reference">References <a class="el" href="class_c_m_m_core.html#a3911bd0bfab197170366790eb1ba874e">getPixelSizeAffine()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#a3911bd0bfab197170366790eb1ba874e">getPixelSizeAffine()</a>, <a class="el" href="class_core_callback.html#a41bcb66e5a10ea897f6612259995e529">CoreCallback::OnMagnifierChanged()</a>, and <a class="el" href="class_core_callback.html#a83d0973bfbd2a237ede596333b7edea7">CoreCallback::OnPropertyChanged()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#a3911bd0bfab197170366790eb1ba874e">getPixelSizeAffine()</a>.</p>
 
 </div>
 </div>
@@ -3243,8 +3229,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Returns the configuration object for a give pixel size preset. </p><dl class="section return"><dt>Returns</dt><dd>The configuration object </dd></dl>
-
-<p class="reference">Referenced by <a class="el" href="class_core_callback.html#a83d0973bfbd2a237ede596333b7edea7">CoreCallback::OnPropertyChanged()</a>.</p>
 
 </div>
 </div>
@@ -3496,7 +3480,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 
 <p class="reference">References <a class="el" href="class_c_m_m_core.html#a9405577e58d8a9c0291903ef7a89ca8e">getPixelSizeUm()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#a9405577e58d8a9c0291903ef7a89ca8e">getPixelSizeUm()</a>, <a class="el" href="class_core_callback.html#a41bcb66e5a10ea897f6612259995e529">CoreCallback::OnMagnifierChanged()</a>, and <a class="el" href="class_core_callback.html#a83d0973bfbd2a237ede596333b7edea7">CoreCallback::OnPropertyChanged()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#a9405577e58d8a9c0291903ef7a89ca8e">getPixelSizeUm()</a>.</p>
 
 </div>
 </div>
@@ -4034,8 +4018,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Continuously read from the serial port until the terminating sequence is encountered. </p>
-
-<p class="reference">Referenced by <a class="el" href="class_core_callback.html#a0f02f3e29727d10f3cda90425ba01237">CoreCallback::GetSerialAnswer()</a>.</p>
 
 </div>
 </div>
@@ -4939,8 +4921,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 <p>Checks if the configuration already exists within a group.</p>
 <dl class="section return"><dt>Returns</dt><dd>true if the configuration is already defined </dd></dl>
 
-<p class="reference">References <a class="el" href="class_config_group_collection.html#acfe7a7a214ff227a5ce39ec5f6ff5679">ConfigGroupCollection::Find()</a>.</p>
-
 <p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#aaf67497dc702ee3029780d91c47116e3">reset()</a>.</p>
 
 </div>
@@ -5087,8 +5067,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
 </div><div class="memdoc">
 <p>Checks if the group already exists.</p>
 <dl class="section return"><dt>Returns</dt><dd>true if the group is already defined </dd></dl>
-
-<p class="reference">References <a class="el" href="class_config_group_collection.html#af6a6577f4843573d0d7f4bef3801dce0">ConfigGroupCollection::isDefined()</a>.</p>
 
 </div>
 </div>
@@ -8111,8 +8089,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollecti
       </table>
 </div><div class="memdoc">
 <p>Send string to the serial device and return an answer. This command blocks until it receives an answer from the device terminated by the specified sequence. </p>
-
-<p class="reference">Referenced by <a class="el" href="class_core_callback.html#a7627ee37c4a5e0f27e25af9f1942a3e5">CoreCallback::SetSerialCommand()</a>.</p>
 
 </div>
 </div>
