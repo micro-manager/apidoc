@@ -51,6 +51,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Volumetric Pump API.  
+ <a href="class_m_m_1_1_volumetric_pump.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MM::VolumetricPump:</div>
@@ -58,9 +61,9 @@ Inheritance diagram for MM::VolumetricPump:</div>
  <div class="center">
   <img src="class_m_m_1_1_volumetric_pump.png" usemap="#MM::VolumetricPump_map" alt=""/>
   <map id="MM::VolumetricPump_map" name="MM::VolumetricPump_map">
-<area href="class_m_m_1_1_device.html" alt="MM::Device" shape="rect" coords="0,0,249,24"/>
+<area href="class_m_m_1_1_device.html" title="Generic device interface." alt="MM::Device" shape="rect" coords="0,0,249,24"/>
 <area href="class_c_device_base.html" alt="CDeviceBase&lt; MM::VolumetricPump, U &gt;" shape="rect" coords="0,112,249,136"/>
-<area href="class_c_volumetric_pump_base.html" alt="CVolumetricPumpBase&lt; U &gt;" shape="rect" coords="0,168,249,192"/>
+<area href="class_c_volumetric_pump_base.html" title="Base class for creating volumetric pump device adapters." alt="CVolumetricPumpBase&lt; U &gt;" shape="rect" coords="0,168,249,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -69,32 +72,46 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0267af78a13e06e08853fdd34d0d3235" id="r_a0267af78a13e06e08853fdd34d0d3235"><td class="memItemLeft" align="right" valign="top">virtual DeviceType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#a0267af78a13e06e08853fdd34d0d3235">GetType</a> () const</td></tr>
 <tr class="separator:a0267af78a13e06e08853fdd34d0d3235"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0113b340427181848343760e70109ad9" id="r_a0113b340427181848343760e70109ad9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#a0113b340427181848343760e70109ad9">Home</a> ()=0</td></tr>
+<tr class="memdesc:a0113b340427181848343760e70109ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Home the pump.  <br /></td></tr>
 <tr class="separator:a0113b340427181848343760e70109ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa80de1c9e7987ecc61a315b3f8eb7750" id="r_aa80de1c9e7987ecc61a315b3f8eb7750"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#aa80de1c9e7987ecc61a315b3f8eb7750">Stop</a> ()=0</td></tr>
+<tr class="memdesc:aa80de1c9e7987ecc61a315b3f8eb7750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the pump.  <br /></td></tr>
 <tr class="separator:aa80de1c9e7987ecc61a315b3f8eb7750"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7623f095b766aa4b868dca9e22eae806" id="r_a7623f095b766aa4b868dca9e22eae806"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#a7623f095b766aa4b868dca9e22eae806">RequiresHoming</a> ()=0</td></tr>
+<tr class="memdesc:a7623f095b766aa4b868dca9e22eae806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the pump requires homing before being operational.  <br /></td></tr>
 <tr class="separator:a7623f095b766aa4b868dca9e22eae806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedf923c8923a39e4b3eb2cc21db9a449" id="r_aedf923c8923a39e4b3eb2cc21db9a449"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#aedf923c8923a39e4b3eb2cc21db9a449">InvertDirection</a> (bool inverted)=0</td></tr>
+<tr class="memdesc:aedf923c8923a39e4b3eb2cc21db9a449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the direction of the pump.  <br /></td></tr>
 <tr class="separator:aedf923c8923a39e4b3eb2cc21db9a449"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbda02c9162b49b48386ea9658b56f75" id="r_abbda02c9162b49b48386ea9658b56f75"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#abbda02c9162b49b48386ea9658b56f75">IsDirectionInverted</a> (bool &amp;inverted)=0</td></tr>
+<tr class="memdesc:abbda02c9162b49b48386ea9658b56f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the direction of the pump is inverted.  <br /></td></tr>
 <tr class="separator:abbda02c9162b49b48386ea9658b56f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac130ef4ced7f964f49981558d678c978" id="r_ac130ef4ced7f964f49981558d678c978"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#ac130ef4ced7f964f49981558d678c978">SetVolumeUl</a> (double volUl)=0</td></tr>
+<tr class="memdesc:ac130ef4ced7f964f49981558d678c978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current volume of the pump in microliters (uL).  <br /></td></tr>
 <tr class="separator:ac130ef4ced7f964f49981558d678c978"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1278157f5def0b878b6fced1f2b7b2e6" id="r_a1278157f5def0b878b6fced1f2b7b2e6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#a1278157f5def0b878b6fced1f2b7b2e6">GetVolumeUl</a> (double &amp;volUl)=0</td></tr>
+<tr class="memdesc:a1278157f5def0b878b6fced1f2b7b2e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current volume of the pump in microliters (uL).  <br /></td></tr>
 <tr class="separator:a1278157f5def0b878b6fced1f2b7b2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d39d2e165686cce8de86ef50ade4103" id="r_a9d39d2e165686cce8de86ef50ade4103"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#a9d39d2e165686cce8de86ef50ade4103">SetMaxVolumeUl</a> (double volUl)=0</td></tr>
+<tr class="memdesc:a9d39d2e165686cce8de86ef50ade4103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the maximum volume of the pump in microliters (uL).  <br /></td></tr>
 <tr class="separator:a9d39d2e165686cce8de86ef50ade4103"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cbd6aeeacef7cac7ca44b44432b02e7" id="r_a0cbd6aeeacef7cac7ca44b44432b02e7"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#a0cbd6aeeacef7cac7ca44b44432b02e7">GetMaxVolumeUl</a> (double &amp;volUl)=0</td></tr>
+<tr class="memdesc:a0cbd6aeeacef7cac7ca44b44432b02e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the maximum volume of the pump in microliters (uL).  <br /></td></tr>
 <tr class="separator:a0cbd6aeeacef7cac7ca44b44432b02e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae85ce599010cc3dae7c0d857e0ed2c58" id="r_ae85ce599010cc3dae7c0d857e0ed2c58"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#ae85ce599010cc3dae7c0d857e0ed2c58">SetFlowrateUlPerSecond</a> (double flowrate)=0</td></tr>
+<tr class="memdesc:ae85ce599010cc3dae7c0d857e0ed2c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the flowrate in microliter (uL) per second.  <br /></td></tr>
 <tr class="separator:ae85ce599010cc3dae7c0d857e0ed2c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9337b158cfa06a42a1f246c8587031e" id="r_ac9337b158cfa06a42a1f246c8587031e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#ac9337b158cfa06a42a1f246c8587031e">GetFlowrateUlPerSecond</a> (double &amp;flowrate)=0</td></tr>
+<tr class="memdesc:ac9337b158cfa06a42a1f246c8587031e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the flowrate in microliter (uL) per second.  <br /></td></tr>
 <tr class="separator:ac9337b158cfa06a42a1f246c8587031e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d3f36351c6efd3909205a9f6d68de21" id="r_a4d3f36351c6efd3909205a9f6d68de21"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#a4d3f36351c6efd3909205a9f6d68de21">Start</a> ()=0</td></tr>
+<tr class="memdesc:a4d3f36351c6efd3909205a9f6d68de21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start dispensing/withdrawing until the minimum or maximum volume has been reached, or the pumping is manually stopped.  <br /></td></tr>
 <tr class="separator:a4d3f36351c6efd3909205a9f6d68de21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90c32896108f4cfd2c82b12a5c7e07f3" id="r_a90c32896108f4cfd2c82b12a5c7e07f3"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#a90c32896108f4cfd2c82b12a5c7e07f3">DispenseDurationSeconds</a> (double durSec)=0</td></tr>
+<tr class="memdesc:a90c32896108f4cfd2c82b12a5c7e07f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispense/withdraw for the provided time.  <br /></td></tr>
 <tr class="separator:a90c32896108f4cfd2c82b12a5c7e07f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8fd68d40db0c54bc10b477aaee5004c" id="r_ad8fd68d40db0c54bc10b477aaee5004c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_volumetric_pump.html#ad8fd68d40db0c54bc10b477aaee5004c">DispenseVolumeUl</a> (double volUl)=0</td></tr>
+<tr class="memdesc:ad8fd68d40db0c54bc10b477aaee5004c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispense/withdraw the provided volume.  <br /></td></tr>
 <tr class="separator:ad8fd68d40db0c54bc10b477aaee5004c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_m_m_1_1_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_m_m_1_1_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_m_m_1_1_device.html">MM::Device</a></td></tr>
 <tr class="memitem:acb91caf15c6b4359241af03cc4ff228e inherit pub_methods_class_m_m_1_1_device" id="r_acb91caf15c6b4359241af03cc4ff228e"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#acb91caf15c6b4359241af03cc4ff228e">GetNumberOfProperties</a> () const =0</td></tr>
@@ -125,18 +142,25 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>HasPropertyLim
 <tr class="memitem:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device" id="r_a8708f0e3b1b1f3b0d76aa328b5534320"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a8708f0e3b1b1f3b0d76aa328b5534320">GetPropertyValueAt</a> (const char *propertyName, unsigned index, char *value) const =0</td></tr>
 <tr class="separator:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device" id="r_a5aaf506ea243391b2246413dfe26c32c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a5aaf506ea243391b2246413dfe26c32c">IsPropertySequenceable</a> (const char *name, bool &amp;isSequenceable) const =0</td></tr>
+<tr class="memdesc:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the given property can be used with sequences.  <br /></td></tr>
 <tr class="separator:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device" id="r_a138d28a3b47ddf283028c76037c13faa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a138d28a3b47ddf283028c76037c13faa">GetPropertySequenceMaxLength</a> (const char *propertyName, long &amp;nrEvents) const =0</td></tr>
+<tr class="memdesc:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the largest sequence that can be stored in the device.  <br /></td></tr>
 <tr class="separator:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device" id="r_a6ee8959df5b0e4bb1afc9170c090168a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a6ee8959df5b0e4bb1afc9170c090168a">StartPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start execution of the sequence.  <br /></td></tr>
 <tr class="separator:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device" id="r_a52338dbd4965c2bf5544fc07c0edc848"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a52338dbd4965c2bf5544fc07c0edc848">StopPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop execution of the sequence.  <br /></td></tr>
 <tr class="separator:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device" id="r_a73e1162a7fe54c45070f7da9e156d404"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a73e1162a7fe54c45070f7da9e156d404">ClearPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove previously added sequence.  <br /></td></tr>
 <tr class="separator:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device" id="r_a83f0e1a7e6b95ee1c7a17a92c0e3e9a1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a83f0e1a7e6b95ee1c7a17a92c0e3e9a1">AddToPropertySequence</a> (const char *propertyName, const char *value)=0</td></tr>
+<tr class="memdesc:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one value to the sequence.  <br /></td></tr>
 <tr class="separator:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device" id="r_ab34c093b10e6009e1a8de222e31900e5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#ab34c093b10e6009e1a8de222e31900e5">SendPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device.  <br /></td></tr>
 <tr class="separator:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device" id="r_a2e3d2850566043ae22f78e0d5261aacf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a2e3d2850566043ae22f78e0d5261aacf">GetErrorText</a> (int errorCode, char *errMessage) const =0</td></tr>
 <tr class="separator:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +189,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Busy</b> ()=0
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
 <tr class="separator:a386129455fb88841d8a158fbff385a04 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device" id="r_afc605a7274caa42b1fcce49eb17804c6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#afc605a7274caa42b1fcce49eb17804c6">Shutdown</a> ()=0</td></tr>
+<tr class="memdesc:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shut down (unload) the device.  <br /></td></tr>
 <tr class="separator:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac885139492ef8982681339cee936101c inherit pub_methods_class_m_m_1_1_device" id="r_ac885139492ef8982681339cee936101c"><td class="memItemLeft" align="right" valign="top">
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> (char *name) const =0</td></tr>
@@ -191,7 +216,7 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 <tr class="separator:a6ccd7924c2601f028deacc8c68ff2cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Volumetric Pump API </p>
+<div class="textblock"><p>Volumetric Pump API. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a90c32896108f4cfd2c82b12a5c7e07f3" name="a90c32896108f4cfd2c82b12a5c7e07f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90c32896108f4cfd2c82b12a5c7e07f3">&#9670;&#160;</a></span>DispenseDurationSeconds()</h2>
@@ -216,8 +241,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Dispenses/withdraws for the provided time, with the flowrate provided by GetFlowrate_uLperMin Dispensing for an undetermined amount of time can be done with DBL_MAX During the dispensing/withdrawal, Busy() should return "true".</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Dispense/withdraw for the provided time. </p>
+<p>Uses the flowrate provided by GetFlowrate_uLperMin. Dispensing for an undetermined amount of time can be done with DBL_MAX. During the dispensing/withdrawal, Busy() should return "true".</p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -244,10 +271,11 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Dispenses/withdraws the provided volume.</p>
+
+<p>Dispense/withdraw the provided volume. </p>
 <p>The implementation should cause positive volumes to be dispensed, whereas negative volumes should be withdrawn. The implementation should prevent the volume to go negative (i.e. stop the pump once the syringe is empty), or to go over the maximum volume (i.e. stop the pump once it is full). This automatically allows for dispensing/withdrawal for an undetermined amount of time by providing DBL_MAX for dispense, and DBL_MIN for withdraw.</p>
 <p>During the dispensing/withdrawal, Busy() should return "true".</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -274,8 +302,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets the flowrate in microliter (uL) per second.</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Get the flowrate in microliter (uL) per second. </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -302,8 +331,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets the maximum volume of the pump in microliters (uL).</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Get the maximum volume of the pump in microliters (uL). </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -357,8 +387,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets the current volume of the pump in microliters (uL).</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Get the current volume of the pump in microliters (uL). </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -384,8 +415,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Homes the pump. If no homing is supported, just return DEVICE_UNSUPPORTED_COMMAND.</p>
-<p>Optional function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Home the pump. </p>
+<p>If no homing is supported, just return DEVICE_UNSUPPORTED_COMMAND.</p>
+<p>Optional function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -412,9 +445,11 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the direction of the pump. Certain pump (e.g. peristaltic and DC pumps) don't have an apriori forward-reverse direction, as it depends on how it is connected. This function allows you to switch forward and reverse.</p>
+
+<p>Set the direction of the pump. </p>
+<p>Certain pumps (e.g. peristaltic and DC pumps) don't have an apriori forward-reverse direction, as it depends on how it is connected. This function allows you to switch forward and reverse.</p>
 <p>If the pump is uni-directional, this function does not need to be implemented (return DEVICE_UNSUPPORTED_COMMAND).</p>
-<p>Optional function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+<p>Optional function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -441,9 +476,11 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the direction of the pump. Certain pump (e.g. peristaltic and DC pumps) don't have an apriori forward-reverse direction, as it depends on how it is connected. This function allows you to switch forward and reverse.</p>
-<p>When the pump is uni-directional, this function should always assign false to <code>inverted</code></p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Check whether the direction of the pump is inverted. </p>
+<p>Certain pumps (e.g. peristaltic and DC pumps) don't have an apriori forward-reverse direction, as it depends on how it is connected.</p>
+<p>When the pump is uni-directional, this function should always assign false to <code>inverted</code>.</p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -469,8 +506,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Flag to check whether the pump requires homing before being operational</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Check whether the pump requires homing before being operational. </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -497,8 +535,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the flowrate in microliter (uL) per second. The implementation should convert the provided flowrate to whichever unit the pump desires (steps/s, mL/h, V).</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Set the flowrate in microliter (uL) per second. </p>
+<p>The implementation should convert the provided flowrate to whichever unit the pump desires (steps/s, mL/h, V).</p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -525,8 +565,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the maximum volume of the pump in microliters (uL).</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Set the maximum volume of the pump in microliters (uL). </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -553,8 +594,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the current volume of the pump in microliters (uL).</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Set the current volume of the pump in microliters (uL). </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -580,8 +622,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Dispenses/withdraws until the minimum or maximum volume has been reached, or the pumping is manually stopped</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Start dispensing/withdrawing until the minimum or maximum volume has been reached, or the pumping is manually stopped. </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>
@@ -607,8 +650,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Stops the pump. The implementation should halt any dispensing/withdrawal, and make the pump available again (make Busy() return false).</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html">VolumetricPump</a> API </p>
+
+<p>Stop the pump. </p>
+<p>The implementation should halt any dispensing/withdrawal, and make the pump available again (make Busy() return false).</p>
+<p>Required function of <a class="el" href="class_m_m_1_1_volumetric_pump.html" title="Volumetric Pump API.">VolumetricPump</a> API. </p>
 
 </div>
 </div>

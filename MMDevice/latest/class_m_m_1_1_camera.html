@@ -51,6 +51,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">Camera</a> API.  
+ <a href="class_m_m_1_1_camera.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MM::Camera:</div>
@@ -58,10 +61,10 @@ Inheritance diagram for MM::Camera:</div>
  <div class="center">
   <img src="class_m_m_1_1_camera.png" usemap="#MM::Camera_map" alt=""/>
   <map id="MM::Camera_map" name="MM::Camera_map">
-<area href="class_m_m_1_1_device.html" alt="MM::Device" shape="rect" coords="0,0,202,24"/>
+<area href="class_m_m_1_1_device.html" title="Generic device interface." alt="MM::Device" shape="rect" coords="0,0,202,24"/>
 <area href="class_c_device_base.html" alt="CDeviceBase&lt; MM::Camera, U &gt;" shape="rect" coords="0,112,202,136"/>
-<area href="class_c_camera_base.html" alt="CCameraBase&lt; U &gt;" shape="rect" coords="0,168,202,192"/>
-<area href="class_c_legacy_camera_base.html" alt="CLegacyCameraBase&lt; U &gt;" shape="rect" coords="0,224,202,248"/>
+<area href="class_c_camera_base.html" title="Base class for creating camera device adapters." alt="CCameraBase&lt; U &gt;" shape="rect" coords="0,168,202,192"/>
+<area href="class_c_legacy_camera_base.html" title="Legacy base class for creating camera device adapters." alt="CLegacyCameraBase&lt; U &gt;" shape="rect" coords="0,224,202,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -70,46 +73,73 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a882ddd63e5edbd6cb67953ed1b734ed7" id="r_a882ddd63e5edbd6cb67953ed1b734ed7"><td class="memItemLeft" align="right" valign="top">virtual DeviceType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a882ddd63e5edbd6cb67953ed1b734ed7">GetType</a> () const</td></tr>
 <tr class="separator:a882ddd63e5edbd6cb67953ed1b734ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3020fcab518327d74c3efaca2e3b31f8" id="r_a3020fcab518327d74c3efaca2e3b31f8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a3020fcab518327d74c3efaca2e3b31f8">SnapImage</a> ()=0</td></tr>
+<tr class="memdesc:a3020fcab518327d74c3efaca2e3b31f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform exposure and grab a single image.  <br /></td></tr>
 <tr class="separator:a3020fcab518327d74c3efaca2e3b31f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ca4a6ce41abb9a81751e813930c7069" id="r_a2ca4a6ce41abb9a81751e813930c7069"><td class="memItemLeft" align="right" valign="top">virtual const unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a2ca4a6ce41abb9a81751e813930c7069">GetImageBuffer</a> ()=0</td></tr>
+<tr class="memdesc:a2ca4a6ce41abb9a81751e813930c7069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pixel data.  <br /></td></tr>
 <tr class="separator:a2ca4a6ce41abb9a81751e813930c7069"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75033836741964516eb5de3fc91a47bf" id="r_a75033836741964516eb5de3fc91a47bf"><td class="memItemLeft" align="right" valign="top">virtual const unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a75033836741964516eb5de3fc91a47bf">GetImageBuffer</a> (unsigned channelNr)=0</td></tr>
+<tr class="memdesc:a75033836741964516eb5de3fc91a47bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pixel data for cameras with multiple channels.  <br /></td></tr>
 <tr class="separator:a75033836741964516eb5de3fc91a47bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca46b40cdf8ca7acaf1390d27f171bb7" id="r_aca46b40cdf8ca7acaf1390d27f171bb7"><td class="memItemLeft" align="right" valign="top">virtual const unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#aca46b40cdf8ca7acaf1390d27f171bb7">GetImageBufferAsRGB32</a> ()=0</td></tr>
+<tr class="memdesc:aca46b40cdf8ca7acaf1390d27f171bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return pixel data with interleaved RGB pixels in 32 bpp format.  <br /></td></tr>
 <tr class="separator:aca46b40cdf8ca7acaf1390d27f171bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac05b23e36492fc9ad2e6c813c75d7ab7" id="r_ac05b23e36492fc9ad2e6c813c75d7ab7"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#ac05b23e36492fc9ad2e6c813c75d7ab7">GetNumberOfComponents</a> () const =0</td></tr>
+<tr class="memdesc:ac05b23e36492fc9ad2e6c813c75d7ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of components in this image.  <br /></td></tr>
 <tr class="separator:ac05b23e36492fc9ad2e6c813c75d7ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13ba0efb1dc3336803d038fb985ba4f6" id="r_a13ba0efb1dc3336803d038fb985ba4f6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a13ba0efb1dc3336803d038fb985ba4f6">GetComponentName</a> (unsigned component, char *name)=0</td></tr>
+<tr class="memdesc:a13ba0efb1dc3336803d038fb985ba4f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name for each component.  <br /></td></tr>
 <tr class="separator:a13ba0efb1dc3336803d038fb985ba4f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a578061d054ce24776c9e569b4cc87a08" id="r_a578061d054ce24776c9e569b4cc87a08"><td class="memItemLeft" align="right" valign="top">virtual int unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a578061d054ce24776c9e569b4cc87a08">GetNumberOfChannels</a> () const =0</td></tr>
+<tr class="memdesc:a578061d054ce24776c9e569b4cc87a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of simultaneous channels that camera is capable of.  <br /></td></tr>
 <tr class="separator:a578061d054ce24776c9e569b4cc87a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a697d5820dcdb9c2de414d952f4015562" id="r_a697d5820dcdb9c2de414d952f4015562"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a697d5820dcdb9c2de414d952f4015562">GetChannelName</a> (unsigned channel, char *name)=0</td></tr>
+<tr class="memdesc:a697d5820dcdb9c2de414d952f4015562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name for each Channel.  <br /></td></tr>
 <tr class="separator:a697d5820dcdb9c2de414d952f4015562"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0179def1529ae3166e0b3f20ffad5f1c" id="r_a0179def1529ae3166e0b3f20ffad5f1c"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a0179def1529ae3166e0b3f20ffad5f1c">GetImageBufferSize</a> () const =0</td></tr>
+<tr class="memdesc:a0179def1529ae3166e0b3f20ffad5f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size in bytes of the image buffer.  <br /></td></tr>
 <tr class="separator:a0179def1529ae3166e0b3f20ffad5f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbe5d35855e4fe95cbad77d3e9694cf5" id="r_adbe5d35855e4fe95cbad77d3e9694cf5"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#adbe5d35855e4fe95cbad77d3e9694cf5">GetImageWidth</a> () const =0</td></tr>
+<tr class="memdesc:adbe5d35855e4fe95cbad77d3e9694cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return image buffer X-size in pixels.  <br /></td></tr>
 <tr class="separator:adbe5d35855e4fe95cbad77d3e9694cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a487f43ff283f4e1e8e89faa0f58a4ddb" id="r_a487f43ff283f4e1e8e89faa0f58a4ddb"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a487f43ff283f4e1e8e89faa0f58a4ddb">GetImageHeight</a> () const =0</td></tr>
+<tr class="memdesc:a487f43ff283f4e1e8e89faa0f58a4ddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return image buffer Y-size in pixels.  <br /></td></tr>
 <tr class="separator:a487f43ff283f4e1e8e89faa0f58a4ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9515dd11aa9cddbfc81b495f936925e" id="r_af9515dd11aa9cddbfc81b495f936925e"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#af9515dd11aa9cddbfc81b495f936925e">GetImageBytesPerPixel</a> () const =0</td></tr>
+<tr class="memdesc:af9515dd11aa9cddbfc81b495f936925e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return image buffer pixel depth in bytes.  <br /></td></tr>
 <tr class="separator:af9515dd11aa9cddbfc81b495f936925e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6979e87587df73db038042b29c0e003d" id="r_a6979e87587df73db038042b29c0e003d"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a6979e87587df73db038042b29c0e003d">GetBitDepth</a> () const =0</td></tr>
+<tr class="memdesc:a6979e87587df73db038042b29c0e003d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the bit depth (dynamic range) of the pixel.  <br /></td></tr>
 <tr class="separator:a6979e87587df73db038042b29c0e003d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a025e55ff808d9b700a46f30875088e84" id="r_a025e55ff808d9b700a46f30875088e84"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a025e55ff808d9b700a46f30875088e84">GetPixelSizeUm</a> () const =0</td></tr>
+<tr class="memdesc:a025e55ff808d9b700a46f30875088e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unused and slated for removal. Implemented in <a class="el" href="_device_base_8h_source.html">DeviceBase.h</a>.  <br /></td></tr>
 <tr class="separator:a025e55ff808d9b700a46f30875088e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c181e0b815b7df64122a6e31dfc72db" id="r_a0c181e0b815b7df64122a6e31dfc72db"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a0c181e0b815b7df64122a6e31dfc72db">GetBinning</a> () const =0</td></tr>
+<tr class="memitem:a0c181e0b815b7df64122a6e31dfc72db" id="r_a0c181e0b815b7df64122a6e31dfc72db"><td class="memItemLeft" align="right" valign="top"><a id="a0c181e0b815b7df64122a6e31dfc72db" name="a0c181e0b815b7df64122a6e31dfc72db"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetBinning</b> () const =0</td></tr>
+<tr class="memdesc:a0c181e0b815b7df64122a6e31dfc72db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current binning factor. <br /></td></tr>
 <tr class="separator:a0c181e0b815b7df64122a6e31dfc72db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef4865c87f34dcf91153b985fe95b4e4" id="r_aef4865c87f34dcf91153b985fe95b4e4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#aef4865c87f34dcf91153b985fe95b4e4">SetBinning</a> (int binSize)=0</td></tr>
+<tr class="memitem:aef4865c87f34dcf91153b985fe95b4e4" id="r_aef4865c87f34dcf91153b985fe95b4e4"><td class="memItemLeft" align="right" valign="top"><a id="aef4865c87f34dcf91153b985fe95b4e4" name="aef4865c87f34dcf91153b985fe95b4e4"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>SetBinning</b> (int binSize)=0</td></tr>
+<tr class="memdesc:aef4865c87f34dcf91153b985fe95b4e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set binning factor. <br /></td></tr>
 <tr class="separator:aef4865c87f34dcf91153b985fe95b4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c393f8de32dbaa5883d2e935a5693f3" id="r_a1c393f8de32dbaa5883d2e935a5693f3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a1c393f8de32dbaa5883d2e935a5693f3">SetExposure</a> (double exp_ms)=0</td></tr>
+<tr class="memitem:a1c393f8de32dbaa5883d2e935a5693f3" id="r_a1c393f8de32dbaa5883d2e935a5693f3"><td class="memItemLeft" align="right" valign="top"><a id="a1c393f8de32dbaa5883d2e935a5693f3" name="a1c393f8de32dbaa5883d2e935a5693f3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SetExposure</b> (double exp_ms)=0</td></tr>
+<tr class="memdesc:a1c393f8de32dbaa5883d2e935a5693f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set exposure in milliseconds. <br /></td></tr>
 <tr class="separator:a1c393f8de32dbaa5883d2e935a5693f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a894f41a1992ff57a9a84ff50ad914494" id="r_a894f41a1992ff57a9a84ff50ad914494"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a894f41a1992ff57a9a84ff50ad914494">GetExposure</a> () const =0</td></tr>
+<tr class="memitem:a894f41a1992ff57a9a84ff50ad914494" id="r_a894f41a1992ff57a9a84ff50ad914494"><td class="memItemLeft" align="right" valign="top"><a id="a894f41a1992ff57a9a84ff50ad914494" name="a894f41a1992ff57a9a84ff50ad914494"></a>
+virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>GetExposure</b> () const =0</td></tr>
+<tr class="memdesc:a894f41a1992ff57a9a84ff50ad914494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current exposure setting in milliseconds. <br /></td></tr>
 <tr class="separator:a894f41a1992ff57a9a84ff50ad914494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d5ce725e4919b70a6017a02a01af9c9" id="r_a6d5ce725e4919b70a6017a02a01af9c9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a6d5ce725e4919b70a6017a02a01af9c9">SetROI</a> (unsigned x, unsigned y, unsigned xSize, unsigned ySize)=0</td></tr>
+<tr class="memdesc:a6d5ce725e4919b70a6017a02a01af9c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the camera Region Of Interest.  <br /></td></tr>
 <tr class="separator:a6d5ce725e4919b70a6017a02a01af9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6e8a9ecb060778b56709a4becf9e75d" id="r_ad6e8a9ecb060778b56709a4becf9e75d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#ad6e8a9ecb060778b56709a4becf9e75d">GetROI</a> (unsigned &amp;x, unsigned &amp;y, unsigned &amp;xSize, unsigned &amp;ySize)=0</td></tr>
+<tr class="memitem:ad6e8a9ecb060778b56709a4becf9e75d" id="r_ad6e8a9ecb060778b56709a4becf9e75d"><td class="memItemLeft" align="right" valign="top"><a id="ad6e8a9ecb060778b56709a4becf9e75d" name="ad6e8a9ecb060778b56709a4becf9e75d"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetROI</b> (unsigned &amp;x, unsigned &amp;y, unsigned &amp;xSize, unsigned &amp;ySize)=0</td></tr>
+<tr class="memdesc:ad6e8a9ecb060778b56709a4becf9e75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the actual dimensions of the current ROI. <br /></td></tr>
 <tr class="separator:ad6e8a9ecb060778b56709a4becf9e75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02677fd74166bd446bb59ed8b49c818c" id="r_a02677fd74166bd446bb59ed8b49c818c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a02677fd74166bd446bb59ed8b49c818c">ClearROI</a> ()=0</td></tr>
+<tr class="memitem:a02677fd74166bd446bb59ed8b49c818c" id="r_a02677fd74166bd446bb59ed8b49c818c"><td class="memItemLeft" align="right" valign="top"><a id="a02677fd74166bd446bb59ed8b49c818c" name="a02677fd74166bd446bb59ed8b49c818c"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>ClearROI</b> ()=0</td></tr>
+<tr class="memdesc:a02677fd74166bd446bb59ed8b49c818c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the Region of Interest to full frame. <br /></td></tr>
 <tr class="separator:a02677fd74166bd446bb59ed8b49c818c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac49a8f5766849ad579ab8ae7d289a73" id="r_aac49a8f5766849ad579ab8ae7d289a73"><td class="memItemLeft" align="right" valign="top"><a id="aac49a8f5766849ad579ab8ae7d289a73" name="aac49a8f5766849ad579ab8ae7d289a73"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportsMultiROI</b> ()=0</td></tr>
@@ -127,22 +157,31 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>SetMultiROI</b
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetMultiROI</b> (unsigned *xs, unsigned *ys, unsigned *widths, unsigned *heights, unsigned *length)=0</td></tr>
 <tr class="separator:a704252f4e5a1b0d9ccb90ccfe55c27b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa47f87cf2765d3196d7504cd5265ccc6" id="r_aa47f87cf2765d3196d7504cd5265ccc6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#aa47f87cf2765d3196d7504cd5265ccc6">StartSequenceAcquisition</a> (long numImages, double interval_ms, bool stopOnOverflow)=0</td></tr>
+<tr class="memdesc:aa47f87cf2765d3196d7504cd5265ccc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start continuous acquisition.  <br /></td></tr>
 <tr class="separator:aa47f87cf2765d3196d7504cd5265ccc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2c295727a48ebf4536982844a12f3f5" id="r_ac2c295727a48ebf4536982844a12f3f5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#ac2c295727a48ebf4536982844a12f3f5">StartSequenceAcquisition</a> (double interval_ms)=0</td></tr>
+<tr class="memdesc:ac2c295727a48ebf4536982844a12f3f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start Sequence Acquisition with given interval.  <br /></td></tr>
 <tr class="separator:ac2c295727a48ebf4536982844a12f3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35fdfcba40d27f7703e3fdc4fee8259d" id="r_a35fdfcba40d27f7703e3fdc4fee8259d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a35fdfcba40d27f7703e3fdc4fee8259d">StopSequenceAcquisition</a> ()=0</td></tr>
+<tr class="memdesc:a35fdfcba40d27f7703e3fdc4fee8259d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop an ongoing sequence acquisition.  <br /></td></tr>
 <tr class="separator:a35fdfcba40d27f7703e3fdc4fee8259d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7943c96cf586d5698a3a4ca2c56a6e6a" id="r_a7943c96cf586d5698a3a4ca2c56a6e6a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a7943c96cf586d5698a3a4ca2c56a6e6a">PrepareSequenceAcqusition</a> ()=0</td></tr>
+<tr class="memdesc:a7943c96cf586d5698a3a4ca2c56a6e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the camera so that Sequence acquisition can start without delay.  <br /></td></tr>
 <tr class="separator:a7943c96cf586d5698a3a4ca2c56a6e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5198289f81237fa788f2cd2b3b234ef2" id="r_a5198289f81237fa788f2cd2b3b234ef2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a5198289f81237fa788f2cd2b3b234ef2">IsCapturing</a> ()=0</td></tr>
+<tr class="memdesc:a5198289f81237fa788f2cd2b3b234ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether sequence acquisition is currently running.  <br /></td></tr>
 <tr class="separator:a5198289f81237fa788f2cd2b3b234ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a484af1fa8d25b963749fc82f33190392" id="r_a484af1fa8d25b963749fc82f33190392"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a484af1fa8d25b963749fc82f33190392">GetTags</a> (char *serializedMetadata)=0</td></tr>
+<tr class="memdesc:a484af1fa8d25b963749fc82f33190392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the metadata tags stored in this device.  <br /></td></tr>
 <tr class="separator:a484af1fa8d25b963749fc82f33190392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5bdfbe3b6e0ae929d2fc1f20bbf3e31" id="r_ab5bdfbe3b6e0ae929d2fc1f20bbf3e31"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#ab5bdfbe3b6e0ae929d2fc1f20bbf3e31">AddTag</a> (const char *key, const char *deviceLabel, const char *value)=0</td></tr>
+<tr class="memdesc:ab5bdfbe3b6e0ae929d2fc1f20bbf3e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new tag or modify the value of an existing one.  <br /></td></tr>
 <tr class="separator:ab5bdfbe3b6e0ae929d2fc1f20bbf3e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad499d2909fac1374e8a961760867b065" id="r_ad499d2909fac1374e8a961760867b065"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#ad499d2909fac1374e8a961760867b065">RemoveTag</a> (const char *key)=0</td></tr>
+<tr class="memdesc:ad499d2909fac1374e8a961760867b065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an existing tag from the metadata associated with this device.  <br /></td></tr>
 <tr class="separator:ad499d2909fac1374e8a961760867b065"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8df8b90283dddfdc862cb15faafe8ed7" id="r_a8df8b90283dddfdc862cb15faafe8ed7"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a8df8b90283dddfdc862cb15faafe8ed7">IsExposureSequenceable</a> (bool &amp;isSequenceable) const =0</td></tr>
+<tr class="memdesc:a8df8b90283dddfdc862cb15faafe8ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether a camera's exposure time can be sequenced.  <br /></td></tr>
 <tr class="separator:a8df8b90283dddfdc862cb15faafe8ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12a7f3fb0c28157dd4b5f0f164d882ce" id="r_a12a7f3fb0c28157dd4b5f0f164d882ce"><td class="memItemLeft" align="right" valign="top"><a id="a12a7f3fb0c28157dd4b5f0f164d882ce" name="a12a7f3fb0c28157dd4b5f0f164d882ce"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetExposureSequenceMaxLength</b> (long &amp;nrEvents) const =0</td></tr>
@@ -191,18 +230,25 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>HasPropertyLim
 <tr class="memitem:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device" id="r_a8708f0e3b1b1f3b0d76aa328b5534320"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a8708f0e3b1b1f3b0d76aa328b5534320">GetPropertyValueAt</a> (const char *propertyName, unsigned index, char *value) const =0</td></tr>
 <tr class="separator:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device" id="r_a5aaf506ea243391b2246413dfe26c32c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a5aaf506ea243391b2246413dfe26c32c">IsPropertySequenceable</a> (const char *name, bool &amp;isSequenceable) const =0</td></tr>
+<tr class="memdesc:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the given property can be used with sequences.  <br /></td></tr>
 <tr class="separator:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device" id="r_a138d28a3b47ddf283028c76037c13faa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a138d28a3b47ddf283028c76037c13faa">GetPropertySequenceMaxLength</a> (const char *propertyName, long &amp;nrEvents) const =0</td></tr>
+<tr class="memdesc:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the largest sequence that can be stored in the device.  <br /></td></tr>
 <tr class="separator:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device" id="r_a6ee8959df5b0e4bb1afc9170c090168a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a6ee8959df5b0e4bb1afc9170c090168a">StartPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start execution of the sequence.  <br /></td></tr>
 <tr class="separator:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device" id="r_a52338dbd4965c2bf5544fc07c0edc848"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a52338dbd4965c2bf5544fc07c0edc848">StopPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop execution of the sequence.  <br /></td></tr>
 <tr class="separator:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device" id="r_a73e1162a7fe54c45070f7da9e156d404"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a73e1162a7fe54c45070f7da9e156d404">ClearPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove previously added sequence.  <br /></td></tr>
 <tr class="separator:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device" id="r_a83f0e1a7e6b95ee1c7a17a92c0e3e9a1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a83f0e1a7e6b95ee1c7a17a92c0e3e9a1">AddToPropertySequence</a> (const char *propertyName, const char *value)=0</td></tr>
+<tr class="memdesc:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one value to the sequence.  <br /></td></tr>
 <tr class="separator:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device" id="r_ab34c093b10e6009e1a8de222e31900e5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#ab34c093b10e6009e1a8de222e31900e5">SendPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device.  <br /></td></tr>
 <tr class="separator:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device" id="r_a2e3d2850566043ae22f78e0d5261aacf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a2e3d2850566043ae22f78e0d5261aacf">GetErrorText</a> (int errorCode, char *errMessage) const =0</td></tr>
 <tr class="separator:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,6 +277,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Busy</b> ()=0
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
 <tr class="separator:a386129455fb88841d8a158fbff385a04 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device" id="r_afc605a7274caa42b1fcce49eb17804c6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#afc605a7274caa42b1fcce49eb17804c6">Shutdown</a> ()=0</td></tr>
+<tr class="memdesc:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shut down (unload) the device.  <br /></td></tr>
 <tr class="separator:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac885139492ef8982681339cee936101c inherit pub_methods_class_m_m_1_1_device" id="r_ac885139492ef8982681339cee936101c"><td class="memItemLeft" align="right" valign="top">
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> (char *name) const =0</td></tr>
@@ -257,7 +304,7 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 <tr class="separator:acd2c620a5af8fa7cb23a84af4481e2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_m_m_1_1_camera.html">Camera</a> API </p>
+<div class="textblock"><p><a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">Camera</a> API. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab5bdfbe3b6e0ae929d2fc1f20bbf3e31" name="ab5bdfbe3b6e0ae929d2fc1f20bbf3e31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5bdfbe3b6e0ae929d2fc1f20bbf3e31">&#9670;&#160;</a></span>AddTag()</h2>
@@ -298,61 +345,11 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Adds new tag or modifies the value of an existing one These will automatically be added to images inserted into the circular buffer. Use this mechanism for tags that do not change often. For metadata that change often, create an instance of metadata yourself and add to one of the versions of the InsertImage function </p>
+
+<p>Add new tag or modify the value of an existing one. </p>
+<p>These will automatically be added to images inserted into the circular buffer. Use this mechanism for tags that do not change often. For metadata that change often, create an instance of metadata yourself and add to one of the versions of the InsertImage function. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#ad4b5723bd5c96bbdb73e5b3e67bef7c3">CCameraBase&lt; U &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a02677fd74166bd446bb59ed8b49c818c" name="a02677fd74166bd446bb59ed8b49c818c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02677fd74166bd446bb59ed8b49c818c">&#9670;&#160;</a></span>ClearROI()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Camera::ClearROI </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Resets the Region of Interest to full frame. </p>
-
-</div>
-</div>
-<a id="a0c181e0b815b7df64122a6e31dfc72db" name="a0c181e0b815b7df64122a6e31dfc72db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c181e0b815b7df64122a6e31dfc72db">&#9670;&#160;</a></span>GetBinning()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Camera::GetBinning </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the current binning factor. </p>
 
 </div>
 </div>
@@ -378,7 +375,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the bit depth (dynamic range) of the pixel. This does not affect the buffer size, it just gives the client application a guideline on how to interpret pixel values. Required by the <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a> API. </p>
+
+<p>Return the bit depth (dynamic range) of the pixel. </p>
+<p>This does not affect the buffer size, it just gives the client application a guideline on how to interpret pixel values. Required by the <a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">MM::Camera</a> API. </p>
 
 </div>
 </div>
@@ -415,7 +414,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the name for each Channel. An implementation of this function is provided in <a class="el" href="_device_base_8h_source.html">DeviceBase.h</a>. It will return an empty string </p>
+
+<p>Return the name for each Channel. </p>
+<p>An implementation of this function is provided in <a class="el" href="_device_base_8h_source.html">DeviceBase.h</a>. It will return an empty string </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#afd8f03e8c0ad131f7267d9de9aecffce">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -454,35 +455,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the name for each component </p>
+
+<p>Return the name for each component. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#aaab0da6d0373d6aad6745fbeef7564d6">CCameraBase&lt; U &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a894f41a1992ff57a9a84ff50ad914494" name="a894f41a1992ff57a9a84ff50ad914494"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a894f41a1992ff57a9a84ff50ad914494">&#9670;&#160;</a></span>GetExposure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double MM::Camera::GetExposure </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the current exposure setting in milliseconds. </p>
 
 </div>
 </div>
@@ -508,9 +484,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns pixel data. Required by the <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a> API. GetImageBuffer will be called shortly after SnapImage returns. Use it to wait for camera read-out and transfer of data into memory Return a pointer to a buffer containing the image data The calling program will assume the size of the buffer based on the values obtained from <a class="el" href="class_m_m_1_1_camera.html#a0179def1529ae3166e0b3f20ffad5f1c">GetImageBufferSize()</a>, which in turn should be consistent with values returned by <a class="el" href="class_m_m_1_1_camera.html#adbe5d35855e4fe95cbad77d3e9694cf5">GetImageWidth()</a>, <a class="el" href="class_m_m_1_1_camera.html#a487f43ff283f4e1e8e89faa0f58a4ddb">GetImageHeight()</a>, <a class="el" href="class_m_m_1_1_camera.html#af9515dd11aa9cddbfc81b495f936925e">GetImageBytesPerPixel()</a>, and getNumberOfComponents(). The calling program also assumes that camera never changes the size of the pixel buffer on its own. In other words, the buffer can change only if appropriate properties are set (such as binning, pixel type, etc.) Multi-Channel cameras should return the content of the first channel in this call.</p>
-<p>Supported data types are byte (8 bits per pixel, 1 component), short (16 bits per pixel, 1 component), float (32 bits per pixel, 1 component, not supported by the UI yet), RGB_32 (8 bits per component, 4 components), RGB_64 (16 bits per component, 4 components, not supported by UI yet). <br  />
- RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian format (currently most/all? code is compiled for little endian architecture), the format is BGRA888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>). </p>
+
+<p>Return pixel data. </p>
+<p>Required by the <a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">MM::Camera</a> API. GetImageBuffer will be called shortly after SnapImage returns. Use it to wait for camera read-out and transfer of data into memory Return a pointer to a buffer containing the image data The calling program will assume the size of the buffer based on the values obtained from <a class="el" href="class_m_m_1_1_camera.html#a0179def1529ae3166e0b3f20ffad5f1c" title="Return the size in bytes of the image buffer.">GetImageBufferSize()</a>, which in turn should be consistent with values returned by <a class="el" href="class_m_m_1_1_camera.html#adbe5d35855e4fe95cbad77d3e9694cf5" title="Return image buffer X-size in pixels.">GetImageWidth()</a>, <a class="el" href="class_m_m_1_1_camera.html#a487f43ff283f4e1e8e89faa0f58a4ddb" title="Return image buffer Y-size in pixels.">GetImageHeight()</a>, <a class="el" href="class_m_m_1_1_camera.html#af9515dd11aa9cddbfc81b495f936925e" title="Return image buffer pixel depth in bytes.">GetImageBytesPerPixel()</a>, and getNumberOfComponents(). The calling program also assumes that camera never changes the size of the pixel buffer on its own. In other words, the buffer can change only if appropriate properties are set (such as binning, pixel type, etc.) Multi-Channel cameras should return the content of the first channel in this call.</p>
+<p>Supported data types are byte (8 bits per pixel, 1 component), short (16 bits per pixel, 1 component), float (32 bits per pixel, 1 component, not supported by the UI yet), RGB_32 (8 bits per component, 4 components), RGB_64 (16 bits per component, 4 components, not supported by UI yet). RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian format (currently most/all? code is compiled for little endian architecture), the format is BGRA888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>). </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#aa8f274fba6c5d53513b021506babc4b7">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -539,7 +516,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns pixel data for cameras with multiple channels. See description for <a class="el" href="class_m_m_1_1_camera.html#a2ca4a6ce41abb9a81751e813930c7069">GetImageBuffer()</a> for details. Use this overloaded version for cameras with multiple channels When calling this function for a single channel camera, this function should return the content of the imagebuffer as returned by the function <a class="el" href="class_m_m_1_1_camera.html#a2ca4a6ce41abb9a81751e813930c7069">GetImageBuffer()</a>. This behavior is implemented in the DeviceBase. When <a class="el" href="class_m_m_1_1_camera.html#a2ca4a6ce41abb9a81751e813930c7069">GetImageBuffer()</a> is called for a multi-channel camera, the camera adapter should return the ImageBuffer for the first channel </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Return pixel data for cameras with multiple channels. </p>
+<p>See description for <a class="el" href="class_m_m_1_1_camera.html#a2ca4a6ce41abb9a81751e813930c7069" title="Return pixel data.">GetImageBuffer()</a> for details. Use this overloaded version for cameras with multiple channels When calling this function for a single channel camera, this function should return the content of the imagebuffer as returned by the function <a class="el" href="class_m_m_1_1_camera.html#a2ca4a6ce41abb9a81751e813930c7069" title="Return pixel data.">GetImageBuffer()</a>. This behavior is implemented in the DeviceBase. When <a class="el" href="class_m_m_1_1_camera.html#a2ca4a6ce41abb9a81751e813930c7069" title="Return pixel data.">GetImageBuffer()</a> is called for a multi-channel camera, the camera adapter should return the ImageBuffer for the first channel</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">channelNr</td><td>Number of the channel for which the image data are requested. </td></tr>
   </table>
@@ -572,7 +552,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns pixel data with interleaved RGB pixels in 32 bpp format </p>
+
+<p>Return pixel data with interleaved RGB pixels in 32 bpp format. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#af67df4b7a424318692dd96384d41ed5a">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -600,7 +581,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the size in bytes of the image buffer. Required by the <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a> API. For multi-channel cameras, return the size of a single channel </p>
+
+<p>Return the size in bytes of the image buffer. </p>
+<p>Required by the <a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">MM::Camera</a> API. For multi-channel cameras, return the size of a single channel </p>
 
 </div>
 </div>
@@ -626,7 +609,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns image buffer pixel depth in bytes. Required by the <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a> API. </p>
+
+<p>Return image buffer pixel depth in bytes. </p>
+<p>Required by the <a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">MM::Camera</a> API. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#a2cc0e207df0650e27a798035bcaae76d">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -654,7 +639,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns image buffer Y-size in pixels. Required by the <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a> API. </p>
+
+<p>Return image buffer Y-size in pixels. </p>
+<p>Required by the <a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">MM::Camera</a> API. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#a73c63be606ad7c632d8bc98f8fbfb07f">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -682,7 +669,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns image buffer X-size in pixels. Required by the <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a> API. </p>
+
+<p>Return image buffer X-size in pixels. </p>
+<p>Required by the <a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">MM::Camera</a> API. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#ad1dd6252e778b93f21d10f5dad9f3e92">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -710,7 +699,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the number of simultaneous channels that camera is capable of. This should be used by devices capable of generating multiple channels of imagedata simultaneously. Note: this should not be used by color cameras (use getNumberOfComponents instead). </p>
+
+<p>Return the number of simultaneous channels that camera is capable of. </p>
+<p>This should be used by devices capable of generating multiple channels of imagedata simultaneously. Note: this should not be used by color cameras (use getNumberOfComponents instead). </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#a8b1b95634021c77feac941ff7a179bf9">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -738,7 +729,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the number of components in this image. This is '1' for grayscale cameras, and '4' for RGB cameras. </p>
+
+<p>Return the number of components in this image. </p>
+<p>This is '1' for grayscale cameras, and '4' for RGB cameras. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#ab70cf35779830c4c2f944fbc563d2ba3">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -766,58 +759,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Unused and slated for removal. Implemented in <a class="el" href="_device_base_8h_source.html">DeviceBase.h</a>. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#ab541f2bf30b426db136fd2e7af409cab">CCameraBase&lt; U &gt;</a>.</p>
-
-</div>
-</div>
-<a id="ad6e8a9ecb060778b56709a4becf9e75d" name="ad6e8a9ecb060778b56709a4becf9e75d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6e8a9ecb060778b56709a4becf9e75d">&#9670;&#160;</a></span>GetROI()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Camera::GetROI </td>
-          <td>(</td>
-          <td class="paramtype">unsigned &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned &amp;&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned &amp;&#160;</td>
-          <td class="paramname"><em>xSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned &amp;&#160;</td>
-          <td class="paramname"><em>ySize</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Returns the actual dimensions of the current ROI. </p>
 
 </div>
 </div>
@@ -844,7 +789,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the metadata tags stored in this device. These tags will automatically be add to the metadata of an image inserted into the circular buffer </p>
+
+<p>Get the metadata tags stored in this device. </p>
+<p>These tags will automatically be add to the metadata of an image inserted into the circular buffer. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#afb097cee9403f4471970d1ed9584d4a6">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -899,7 +846,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Flag to indicate whether Sequence Acquisition is currently running. Return true when Sequence acquisition is active, false otherwise </p>
+
+<p>Indicate whether sequence acquisition is currently running. </p>
+<p>Returns true when sequence acquisition is active, false otherwise. </p>
 
 <p>Implemented in <a class="el" href="class_c_legacy_camera_base.html#ab81eed33ea4eedfc09798afa053eac3c">CLegacyCameraBase&lt; U &gt;</a>, and <a class="el" href="class_c_camera_base.html#af26277a4c84c174748b72a92e1ce0f97">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -928,7 +877,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns whether a camera's exposure time can be sequenced. If returning true, then a <a class="el" href="class_m_m_1_1_camera.html">Camera</a> adapter class should also inherit the SequenceableExposure class and implement its methods. </p>
+
+<p>Return whether a camera's exposure time can be sequenced. </p>
+<p>If returning true, then a <a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">Camera</a> adapter class should also inherit the SequenceableExposure class and implement its methods. </p>
 
 </div>
 </div>
@@ -954,7 +905,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets up the camera so that Sequence acquisition can start without delay </p>
+
+<p>Set up the camera so that Sequence acquisition can start without delay. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#a2a79e94c08256bfb8d2cb5652cfa640f">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -983,63 +935,11 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Removes an existing tag from the metadata associated with this device These tags will automatically be add to the metadata of an image inserted into the circular buffer </p>
+
+<p>Remove an existing tag from the metadata associated with this device. </p>
+<p>These tags will automatically be add to the metadata of an image inserted into the circular buffer. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#a888a011200544cb844ab3ec9f3d640e4">CCameraBase&lt; U &gt;</a>.</p>
-
-</div>
-</div>
-<a id="aef4865c87f34dcf91153b985fe95b4e4" name="aef4865c87f34dcf91153b985fe95b4e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef4865c87f34dcf91153b985fe95b4e4">&#9670;&#160;</a></span>SetBinning()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Camera::SetBinning </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>binSize</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sets binning factor. </p>
-
-</div>
-</div>
-<a id="a1c393f8de32dbaa5883d2e935a5693f3" name="a1c393f8de32dbaa5883d2e935a5693f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c393f8de32dbaa5883d2e935a5693f3">&#9670;&#160;</a></span>SetExposure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void MM::Camera::SetExposure </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>exp_ms</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Sets exposure in milliseconds. </p>
 
 </div>
 </div>
@@ -1088,12 +988,15 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the camera Region Of Interest. Required by the <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a> API. This command will change the dimensions of the image. Depending on the hardware capabilities the camera may not be able to configure the exact dimensions requested - but should try do as close as possible. If the hardware does not have this capability the software should simulate the ROI by appropriately cropping each frame. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Set the camera Region Of Interest. </p>
+<p>Required by the <a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">MM::Camera</a> API. This command will change the dimensions of the image. Depending on the hardware capabilities the camera may not be able to configure the exact dimensions requested - but should try do as close as possible. If the hardware does not have this capability the software should simulate the ROI by appropriately cropping each frame.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>- top-left corner coordinate </td></tr>
-    <tr><td class="paramname">y</td><td>- top-left corner coordinate </td></tr>
-    <tr><td class="paramname">xSize</td><td>- width </td></tr>
-    <tr><td class="paramname">ySize</td><td>- height </td></tr>
+    <tr><td class="paramname">x</td><td>top-left corner coordinate </td></tr>
+    <tr><td class="paramname">y</td><td>top-left corner coordinate </td></tr>
+    <tr><td class="paramname">xSize</td><td>width </td></tr>
+    <tr><td class="paramname">ySize</td><td>height </td></tr>
   </table>
   </dd>
 </dl>
@@ -1122,7 +1025,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Performs exposure and grabs a single image. Required by the <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a> API.</p>
+
+<p>Perform exposure and grab a single image. </p>
+<p>Required by the <a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">MM::Camera</a> API.</p>
 <p>SnapImage should start the image exposure in the camera and block until the exposure is finished. It should not wait for read-out and transfer of data. Return DEVICE_OK on success, error code otherwise. </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#acaa6d0158862151b1698abee86383d03">CCameraBase&lt; U &gt;</a>.</p>
@@ -1152,7 +1057,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Starts Sequence Acquisition with given interval. Most camera adapters will ignore this number </p>
+
+<p>Start Sequence Acquisition with given interval. </p>
+<p>Most camera adapters will ignore this number. </p>
 
 <p>Implemented in <a class="el" href="class_c_legacy_camera_base.html#ac5590a926f62f4e0737bc02f36dc0d58">CLegacyCameraBase&lt; U &gt;</a>, and <a class="el" href="class_c_camera_base.html#a642b4c383c139c961722103a2c109c04">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -1197,7 +1104,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Starts continuous acquisition. </p>
+
+<p>Start continuous acquisition. </p>
 
 <p>Implemented in <a class="el" href="class_c_legacy_camera_base.html#a4b0d9127815866d084622619f28b97de">CLegacyCameraBase&lt; U &gt;</a>, and <a class="el" href="class_c_camera_base.html#a945fda309f0147a7ef27e642fcd323aa">CCameraBase&lt; U &gt;</a>.</p>
 
@@ -1225,7 +1133,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Stops an ongoing sequence acquisition </p>
+
+<p>Stop an ongoing sequence acquisition. </p>
 
 <p>Implemented in <a class="el" href="class_c_legacy_camera_base.html#ae2b27c545c9c9a8a19c120ba425c3ee7">CLegacyCameraBase&lt; U &gt;</a>, and <a class="el" href="class_c_camera_base.html#a87117d2d3415d496b4149e96db9b5450">CCameraBase&lt; U &gt;</a>.</p>
 

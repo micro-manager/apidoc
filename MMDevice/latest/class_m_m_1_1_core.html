@@ -50,13 +50,18 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Callback API to the core control module.  
+ <a href="class_m_m_1_1_core.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a79ffdca756b680f79648d5937f1a5930" id="r_a79ffdca756b680f79648d5937f1a5930"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a79ffdca756b680f79648d5937f1a5930">LogMessage</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const char *msg, bool debugOnly) const =0</td></tr>
+<tr class="memdesc:a79ffdca756b680f79648d5937f1a5930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a message (msg) in the Corelog output, labeled with the device name (derived from caller).  <br /></td></tr>
 <tr class="separator:a79ffdca756b680f79648d5937f1a5930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa539b582bc2f607e570c00dd9d849fc8" id="r_aa539b582bc2f607e570c00dd9d849fc8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#aa539b582bc2f607e570c00dd9d849fc8">GetDevice</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const char *label)=0</td></tr>
+<tr class="memdesc:aa539b582bc2f607e570c00dd9d849fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to another device.  <br /></td></tr>
 <tr class="separator:aa539b582bc2f607e570c00dd9d849fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af711c5dac56388a80828b857732a7d2d" id="r_af711c5dac56388a80828b857732a7d2d"><td class="memItemLeft" align="right" valign="top"><a id="af711c5dac56388a80828b857732a7d2d" name="af711c5dac56388a80828b857732a7d2d"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetDeviceProperty</b> (const char *deviceName, const char *propName, char *value)=0</td></tr>
@@ -92,18 +97,31 @@ virtual MM::PortType&#160;</td><td class="memItemRight" valign="bottom"><b>GetSe
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnPropertiesChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller)=0</td></tr>
 <tr class="separator:a15429a95adfaddb687819f29aa7d85e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd95ec9506afd662297b23d983583650" id="r_acd95ec9506afd662297b23d983583650"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#acd95ec9506afd662297b23d983583650">OnPropertyChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const char *propName, const char *propValue)=0</td></tr>
+<tr class="memdesc:acd95ec9506afd662297b23d983583650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the UI that a property changed.  <br /></td></tr>
 <tr class="separator:acd95ec9506afd662297b23d983583650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3843e42f071f6d67b6bfcb4d6dc384e9" id="r_a3843e42f071f6d67b6bfcb4d6dc384e9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a3843e42f071f6d67b6bfcb4d6dc384e9">OnStagePositionChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double pos)=0</td></tr>
+<tr class="memitem:a3843e42f071f6d67b6bfcb4d6dc384e9" id="r_a3843e42f071f6d67b6bfcb4d6dc384e9"><td class="memItemLeft" align="right" valign="top"><a id="a3843e42f071f6d67b6bfcb4d6dc384e9" name="a3843e42f071f6d67b6bfcb4d6dc384e9"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnStagePositionChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double pos)=0</td></tr>
+<tr class="memdesc:a3843e42f071f6d67b6bfcb4d6dc384e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the UI when the stage has reached a new position. <br /></td></tr>
 <tr class="separator:a3843e42f071f6d67b6bfcb4d6dc384e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dbd7828ac71b8b0b663d821e9c8e8f4" id="r_a7dbd7828ac71b8b0b663d821e9c8e8f4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a7dbd7828ac71b8b0b663d821e9c8e8f4">OnXYStagePositionChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double xPos, double yPos)=0</td></tr>
+<tr class="memitem:a7dbd7828ac71b8b0b663d821e9c8e8f4" id="r_a7dbd7828ac71b8b0b663d821e9c8e8f4"><td class="memItemLeft" align="right" valign="top"><a id="a7dbd7828ac71b8b0b663d821e9c8e8f4" name="a7dbd7828ac71b8b0b663d821e9c8e8f4"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnXYStagePositionChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double xPos, double yPos)=0</td></tr>
+<tr class="memdesc:a7dbd7828ac71b8b0b663d821e9c8e8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the UI when the XY stage has reached a new position. <br /></td></tr>
 <tr class="separator:a7dbd7828ac71b8b0b663d821e9c8e8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59a5c1391e0803dfe4d37a962429e27e" id="r_a59a5c1391e0803dfe4d37a962429e27e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a59a5c1391e0803dfe4d37a962429e27e">OnExposureChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double newExposure)=0</td></tr>
+<tr class="memitem:a59a5c1391e0803dfe4d37a962429e27e" id="r_a59a5c1391e0803dfe4d37a962429e27e"><td class="memItemLeft" align="right" valign="top"><a id="a59a5c1391e0803dfe4d37a962429e27e" name="a59a5c1391e0803dfe4d37a962429e27e"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnExposureChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double newExposure)=0</td></tr>
+<tr class="memdesc:a59a5c1391e0803dfe4d37a962429e27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform the UI when the exposure time has changed. <br /></td></tr>
 <tr class="separator:a59a5c1391e0803dfe4d37a962429e27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf8dc7c2022f915713a2b2528cd7c972" id="r_acf8dc7c2022f915713a2b2528cd7c972"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#acf8dc7c2022f915713a2b2528cd7c972">OnSLMExposureChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double newExposure)=0</td></tr>
+<tr class="memitem:acf8dc7c2022f915713a2b2528cd7c972" id="r_acf8dc7c2022f915713a2b2528cd7c972"><td class="memItemLeft" align="right" valign="top"><a id="acf8dc7c2022f915713a2b2528cd7c972" name="acf8dc7c2022f915713a2b2528cd7c972"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnSLMExposureChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double newExposure)=0</td></tr>
+<tr class="memdesc:acf8dc7c2022f915713a2b2528cd7c972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform the UI when the <a class="el" href="class_m_m_1_1_s_l_m.html" title="Spatial Light Modulator (SLM) API.">SLM</a> exposure time has changed. <br /></td></tr>
 <tr class="separator:acf8dc7c2022f915713a2b2528cd7c972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a280c557321e4a49791c662a99fe39b0b" id="r_a280c557321e4a49791c662a99fe39b0b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a280c557321e4a49791c662a99fe39b0b">OnMagnifierChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller)=0</td></tr>
+<tr class="memitem:a280c557321e4a49791c662a99fe39b0b" id="r_a280c557321e4a49791c662a99fe39b0b"><td class="memItemLeft" align="right" valign="top"><a id="a280c557321e4a49791c662a99fe39b0b" name="a280c557321e4a49791c662a99fe39b0b"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnMagnifierChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller)=0</td></tr>
+<tr class="memdesc:a280c557321e4a49791c662a99fe39b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal changes in magnification. <br /></td></tr>
 <tr class="separator:a280c557321e4a49791c662a99fe39b0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfa45cadd58a6a9f7a6e77e95c0e0afa" id="r_abfa45cadd58a6a9f7a6e77e95c0e0afa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#abfa45cadd58a6a9f7a6e77e95c0e0afa">OnShutterOpenChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, bool open)=0</td></tr>
+<tr class="memitem:abfa45cadd58a6a9f7a6e77e95c0e0afa" id="r_abfa45cadd58a6a9f7a6e77e95c0e0afa"><td class="memItemLeft" align="right" valign="top"><a id="abfa45cadd58a6a9f7a6e77e95c0e0afa" name="abfa45cadd58a6a9f7a6e77e95c0e0afa"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnShutterOpenChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, bool open)=0</td></tr>
+<tr class="memdesc:abfa45cadd58a6a9f7a6e77e95c0e0afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that the shutter opened or closed. <br /></td></tr>
 <tr class="separator:abfa45cadd58a6a9f7a6e77e95c0e0afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a192202bd0fa0b73cbcc01abb0c3a7f0c" id="r_a192202bd0fa0b73cbcc01abb0c3a7f0c"><td class="memItemLeft" align="right" valign="top"><a id="a192202bd0fa0b73cbcc01abb0c3a7f0c" name="a192202bd0fa0b73cbcc01abb0c3a7f0c"></a>
 virtual unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>GetClockTicksUs</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller)=0</td></tr>
@@ -118,10 +136,13 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>AcqFinished</b
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareForAcq</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller)=0</td></tr>
 <tr class="separator:affd9bbbd8a76fc8e8596b37be4926b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad39712ff686edf5938d7c7de092125e" id="r_aad39712ff686edf5938d7c7de092125e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e">InsertImage</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned byteDepth, unsigned nComponents, const char *serializedMetadata, const bool doProcess=true)=0</td></tr>
+<tr class="memdesc:aad39712ff686edf5938d7c7de092125e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> during sequence acquisition.  <br /></td></tr>
 <tr class="separator:aad39712ff686edf5938d7c7de092125e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf79ecb404b3a18c25ffe19a905b43eb" id="r_abf79ecb404b3a18c25ffe19a905b43eb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#abf79ecb404b3a18c25ffe19a905b43eb">InsertImage</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned byteDepth, const char *serializedMetadata=nullptr, const bool doProcess=true)=0</td></tr>
+<tr class="memdesc:abf79ecb404b3a18c25ffe19a905b43eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a grayscale frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> during sequence acquisition.  <br /></td></tr>
 <tr class="separator:abf79ecb404b3a18c25ffe19a905b43eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06329e4277fcfe295002386b74376b68" id="r_a06329e4277fcfe295002386b74376b68"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a06329e4277fcfe295002386b74376b68">InitializeImageBuffer</a> (unsigned channels, unsigned slices, unsigned int w, unsigned int h, unsigned int pixDepth)=0</td></tr>
+<tr class="memdesc:a06329e4277fcfe295002386b74376b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare the sequence buffer for the given image size and pixel format.  <br /></td></tr>
 <tr class="separator:a06329e4277fcfe295002386b74376b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a988d757b054de06e53cd2b33616fdb40" id="r_a988d757b054de06e53cd2b33616fdb40"><td class="memItemLeft" align="right" valign="top"><a id="a988d757b054de06e53cd2b33616fdb40" name="a988d757b054de06e53cd2b33616fdb40"></a>
 virtual MMDEVICE_DEPRECATED int&#160;</td><td class="memItemRight" valign="bottom"><b>GetFocusPosition</b> (double &amp;pos)=0</td></tr>
@@ -134,7 +155,8 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 <tr class="separator:a75f81cc401372541ae1aa3f4e2c2964c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Callback API to the core control module. Devices use this abstract interface to use <a class="el" href="class_m_m_1_1_core.html">Core</a> services </p>
+<div class="textblock"><p>Callback API to the core control module. </p>
+<p>Devices use this abstract interface to use <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> services. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa539b582bc2f607e570c00dd9d849fc8" name="aa539b582bc2f607e570c00dd9d849fc8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa539b582bc2f607e570c00dd9d849fc8">&#9670;&#160;</a></span>GetDevice()</h2>
@@ -169,7 +191,9 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Callback that allows this device adapter to get a pointer to another device. Be aware of potential threading issues. Provide a valid label for the device and receive a pointer to the desired device. </p>
+
+<p>Get a pointer to another device. </p>
+<p>Be aware of potential threading issues. Provide a valid label for the device and receive a pointer to the desired device. </p>
 
 <p class="reference">Referenced by <a class="el" href="class_c_device_base.html#af0259e96357e3f6e20aef5ea9aedabf5">CDeviceBase&lt; T, U &gt;::GetDevice()</a>.</p>
 
@@ -225,10 +249,10 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 <p>If deviceIterator exceeds or is equal to the number of currently loaded devices of type devType, an empty string is returned.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">caller</td><td>- the calling device </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">devType</td><td>- the device type </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pDeviceName</td><td>- buffer in which device name will be returned </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deviceIterator</td><td>- index of device (within the given type) </td></tr>
+    <tr><td class="paramname">caller</td><td>the calling device </td></tr>
+    <tr><td class="paramname">devType</td><td>the device type </td></tr>
+    <tr><td class="paramname">pDeviceName</td><td>buffer in which device name will be returned </td></tr>
+    <tr><td class="paramname">deviceIterator</td><td>index of device (within the given type) </td></tr>
   </table>
   </dd>
 </dl>
@@ -288,7 +312,8 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Prepare the sequence buffer for the given image size and pixel format.</p>
+
+<p>Prepare the sequence buffer for the given image size and pixel format. </p>
 <p>Cameras normally do not need to call this explicitly. 'channels' is ignored (should be 1) and 'slices' must be 1. </p>
 
 </div>
@@ -356,8 +381,9 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Same as the overload with the added nComponents parameter.</p>
-<p>Assumes nComponents == 1 (grayscale). </p>
+
+<p>Send a grayscale frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> during sequence acquisition. </p>
+<p>Same as the overload with the added nComponents parameter. Assumes nComponents == 1 (grayscale). </p>
 
 </div>
 </div>
@@ -430,12 +456,14 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Cameras must call this function during sequence acquisition to send each frame to the <a class="el" href="class_m_m_1_1_core.html">Core</a>.</p>
+
+<p>Send a frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> during sequence acquisition. </p>
+<p>Cameras must call this function during sequence acquisition to send each frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a>.</p>
 <p>byteDepth: 1 or 2 for grayscale images; 4 for BGR_</p>
 <p>nComponents: 1 for grayscale; 4 for BGR_ (_: unused component)</p>
 <p>serializedMetadata: must be the result of md.serialize().c_str() (md being an instance of <a class="el" href="class_metadata.html">Metadata</a>)</p>
 <p>doProcess: must be true, except for the case mentioned below</p>
-<p>Legacy note: Previously, cameras were required to perform special handling when <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e">InsertImage()</a> returns DEVICE_BUFFER_OVERFLOW and stopOnOverflow == false. However, <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e">InsertImage()</a> no longer ever returns that particular error when stopOnOverflow == false. So cameras should always just stop the acquisition if <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e">InsertImage()</a> returns any error. </p>
+<p>Legacy note: Previously, cameras were required to perform special handling when <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> returns DEVICE_BUFFER_OVERFLOW and stopOnOverflow == false. However, <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> no longer ever returns that particular error when stopOnOverflow == false. So cameras should always just stop the acquisition if <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> returns any error. </p>
 
 </div>
 </div>
@@ -478,73 +506,11 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Logs a message (msg) in the Corelog output, labeled with the device name (derived from caller). If debugOnly flag is true, the output will only be logged if the general system has been set to output debug logging. </p>
+
+<p>Log a message (msg) in the Corelog output, labeled with the device name (derived from caller). </p>
+<p>If debugOnly flag is true, the output will only be logged if the general system has been set to output debug logging. </p>
 
 <p class="reference">Referenced by <a class="el" href="class_c_device_base.html#a528a4cf2210cbcf17cffa03b266befb5">CDeviceBase&lt; T, U &gt;::LogMessage()</a>, <a class="el" href="class_c_device_base.html#a94c0549732f6afd1dd61350da9ee919c">CDeviceBase&lt; T, U &gt;::LogMessage()</a>, <a class="el" href="class_c_device_base.html#a14d22b110b7ba62021562d18f3ff8211">CDeviceBase&lt; T, U &gt;::LogMessageCode()</a>, and <a class="el" href="class_c_device_base.html#ad3b25994e787750b18405a14bb9436d4">CDeviceBase&lt; T, U &gt;::LogTimeDiff()</a>.</p>
-
-</div>
-</div>
-<a id="a59a5c1391e0803dfe4d37a962429e27e" name="a59a5c1391e0803dfe4d37a962429e27e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59a5c1391e0803dfe4d37a962429e27e">&#9670;&#160;</a></span>OnExposureChanged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Core::OnExposureChanged </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
-          <td class="paramname"><em>caller</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>newExposure</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>When the exposure time has changed, use this callback to inform the UI </p>
-
-</div>
-</div>
-<a id="a280c557321e4a49791c662a99fe39b0b" name="a280c557321e4a49791c662a99fe39b0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a280c557321e4a49791c662a99fe39b0b">&#9670;&#160;</a></span>OnMagnifierChanged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Core::OnMagnifierChanged </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
-          <td class="paramname"><em>caller</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Magnifiers can use this to signal changes in magnification </p>
 
 </div>
 </div>
@@ -587,163 +553,11 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Callback to signal the UI that a property changed The <a class="el" href="class_m_m_1_1_core.html">Core</a> will check if groups or pixel size changed as a consequence of the change of this property and inform the UI </p>
+
+<p>Signal the UI that a property changed. </p>
+<p>The <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> will check if groups or pixel size changed as a consequence of the change of this property and inform the UI. </p>
 
 <p class="reference">Referenced by <a class="el" href="class_c_device_base.html#a54820c958866fa7ff71de88fb5b28e93">CDeviceBase&lt; T, U &gt;::OnPropertyChanged()</a>.</p>
-
-</div>
-</div>
-<a id="abfa45cadd58a6a9f7a6e77e95c0e0afa" name="abfa45cadd58a6a9f7a6e77e95c0e0afa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfa45cadd58a6a9f7a6e77e95c0e0afa">&#9670;&#160;</a></span>OnShutterOpenChanged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Core::OnShutterOpenChanged </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
-          <td class="paramname"><em>caller</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>open</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Signals that the shutter opened or closed </p>
-
-</div>
-</div>
-<a id="acf8dc7c2022f915713a2b2528cd7c972" name="acf8dc7c2022f915713a2b2528cd7c972"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf8dc7c2022f915713a2b2528cd7c972">&#9670;&#160;</a></span>OnSLMExposureChanged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Core::OnSLMExposureChanged </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
-          <td class="paramname"><em>caller</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>newExposure</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>When the <a class="el" href="class_m_m_1_1_s_l_m.html">SLM</a> exposure time has changed, use this callback to inform the UI </p>
-
-</div>
-</div>
-<a id="a3843e42f071f6d67b6bfcb4d6dc384e9" name="a3843e42f071f6d67b6bfcb4d6dc384e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3843e42f071f6d67b6bfcb4d6dc384e9">&#9670;&#160;</a></span>OnStagePositionChanged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Core::OnStagePositionChanged </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
-          <td class="paramname"><em>caller</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>If the stage is aware that it has reached a new position, it should call this callback to signal the UI </p>
-
-</div>
-</div>
-<a id="a7dbd7828ac71b8b0b663d821e9c8e8f4" name="a7dbd7828ac71b8b0b663d821e9c8e8f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dbd7828ac71b8b0b663d821e9c8e8f4">&#9670;&#160;</a></span>OnXYStagePositionChanged()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Core::OnXYStagePositionChanged </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
-          <td class="paramname"><em>caller</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>xPos</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>yPos</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>If an XY stage is aware that it has reached a new position, it should call this callback to signal the UI </p>
 
 </div>
 </div>

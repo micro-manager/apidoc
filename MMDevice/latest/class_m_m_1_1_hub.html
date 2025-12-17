@@ -51,6 +51,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>HUB device.  
+ <a href="class_m_m_1_1_hub.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MM::Hub:</div>
@@ -58,9 +61,9 @@ Inheritance diagram for MM::Hub:</div>
  <div class="center">
   <img src="class_m_m_1_1_hub.png" usemap="#MM::Hub_map" alt=""/>
   <map id="MM::Hub_map" name="MM::Hub_map">
-<area href="class_m_m_1_1_device.html" alt="MM::Device" shape="rect" coords="0,0,181,24"/>
+<area href="class_m_m_1_1_device.html" title="Generic device interface." alt="MM::Device" shape="rect" coords="0,0,181,24"/>
 <area href="class_c_device_base.html" alt="CDeviceBase&lt; MM::Hub, U &gt;" shape="rect" coords="0,112,181,136"/>
-<area href="class_hub_base.html" alt="HubBase&lt; U &gt;" shape="rect" coords="0,168,181,192"/>
+<area href="class_hub_base.html" title="Base class for creating special HUB devices for managing device libraries." alt="HubBase&lt; U &gt;" shape="rect" coords="0,168,181,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -69,12 +72,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae054b0cff04a6dcdb61bb9f0c3055d30" id="r_ae054b0cff04a6dcdb61bb9f0c3055d30"><td class="memItemLeft" align="right" valign="top">virtual DeviceType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_hub.html#ae054b0cff04a6dcdb61bb9f0c3055d30">GetType</a> () const</td></tr>
 <tr class="separator:ae054b0cff04a6dcdb61bb9f0c3055d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed2074a689dcfc430ef59655df08a0cf" id="r_aed2074a689dcfc430ef59655df08a0cf"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_hub.html#aed2074a689dcfc430ef59655df08a0cf">DetectInstalledDevices</a> ()=0</td></tr>
+<tr class="memdesc:aed2074a689dcfc430ef59655df08a0cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate all available child peripheral devices.  <br /></td></tr>
 <tr class="separator:aed2074a689dcfc430ef59655df08a0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2baa13bff5c0b8223f1a5be89831b80" id="r_ab2baa13bff5c0b8223f1a5be89831b80"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_hub.html#ab2baa13bff5c0b8223f1a5be89831b80">ClearInstalledDevices</a> ()=0</td></tr>
+<tr class="memdesc:ab2baa13bff5c0b8223f1a5be89831b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all <a class="el" href="class_m_m_1_1_device.html" title="Generic device interface.">Device</a> instances that were created by <a class="el" href="class_m_m_1_1_hub.html#aed2074a689dcfc430ef59655df08a0cf" title="Instantiate all available child peripheral devices.">DetectInstalledDevices()</a>. Not used.  <br /></td></tr>
 <tr class="separator:ab2baa13bff5c0b8223f1a5be89831b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab82474d8f36326117fbe56de95410dd" id="r_aab82474d8f36326117fbe56de95410dd"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_hub.html#aab82474d8f36326117fbe56de95410dd">GetNumberOfInstalledDevices</a> ()=0</td></tr>
+<tr class="memdesc:aab82474d8f36326117fbe56de95410dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of child Devices after DetectInstalledDevices was called.  <br /></td></tr>
 <tr class="separator:aab82474d8f36326117fbe56de95410dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a911ab53ccb175707ccef14c4b298d204" id="r_a911ab53ccb175707ccef14c4b298d204"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_hub.html#a911ab53ccb175707ccef14c4b298d204">GetInstalledDevice</a> (int devIdx)=0</td></tr>
+<tr class="memdesc:a911ab53ccb175707ccef14c4b298d204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the <a class="el" href="class_m_m_1_1_device.html" title="Generic device interface.">Device</a> with index devIdx.  <br /></td></tr>
 <tr class="separator:a911ab53ccb175707ccef14c4b298d204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_m_m_1_1_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_m_m_1_1_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_m_m_1_1_device.html">MM::Device</a></td></tr>
 <tr class="memitem:acb91caf15c6b4359241af03cc4ff228e inherit pub_methods_class_m_m_1_1_device" id="r_acb91caf15c6b4359241af03cc4ff228e"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#acb91caf15c6b4359241af03cc4ff228e">GetNumberOfProperties</a> () const =0</td></tr>
@@ -105,18 +112,25 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>HasPropertyLim
 <tr class="memitem:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device" id="r_a8708f0e3b1b1f3b0d76aa328b5534320"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a8708f0e3b1b1f3b0d76aa328b5534320">GetPropertyValueAt</a> (const char *propertyName, unsigned index, char *value) const =0</td></tr>
 <tr class="separator:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device" id="r_a5aaf506ea243391b2246413dfe26c32c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a5aaf506ea243391b2246413dfe26c32c">IsPropertySequenceable</a> (const char *name, bool &amp;isSequenceable) const =0</td></tr>
+<tr class="memdesc:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the given property can be used with sequences.  <br /></td></tr>
 <tr class="separator:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device" id="r_a138d28a3b47ddf283028c76037c13faa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a138d28a3b47ddf283028c76037c13faa">GetPropertySequenceMaxLength</a> (const char *propertyName, long &amp;nrEvents) const =0</td></tr>
+<tr class="memdesc:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the largest sequence that can be stored in the device.  <br /></td></tr>
 <tr class="separator:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device" id="r_a6ee8959df5b0e4bb1afc9170c090168a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a6ee8959df5b0e4bb1afc9170c090168a">StartPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start execution of the sequence.  <br /></td></tr>
 <tr class="separator:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device" id="r_a52338dbd4965c2bf5544fc07c0edc848"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a52338dbd4965c2bf5544fc07c0edc848">StopPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop execution of the sequence.  <br /></td></tr>
 <tr class="separator:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device" id="r_a73e1162a7fe54c45070f7da9e156d404"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a73e1162a7fe54c45070f7da9e156d404">ClearPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove previously added sequence.  <br /></td></tr>
 <tr class="separator:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device" id="r_a83f0e1a7e6b95ee1c7a17a92c0e3e9a1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a83f0e1a7e6b95ee1c7a17a92c0e3e9a1">AddToPropertySequence</a> (const char *propertyName, const char *value)=0</td></tr>
+<tr class="memdesc:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one value to the sequence.  <br /></td></tr>
 <tr class="separator:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device" id="r_ab34c093b10e6009e1a8de222e31900e5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#ab34c093b10e6009e1a8de222e31900e5">SendPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device.  <br /></td></tr>
 <tr class="separator:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device" id="r_a2e3d2850566043ae22f78e0d5261aacf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a2e3d2850566043ae22f78e0d5261aacf">GetErrorText</a> (int errorCode, char *errMessage) const =0</td></tr>
 <tr class="separator:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,6 +159,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Busy</b> ()=0
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
 <tr class="separator:a386129455fb88841d8a158fbff385a04 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device" id="r_afc605a7274caa42b1fcce49eb17804c6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#afc605a7274caa42b1fcce49eb17804c6">Shutdown</a> ()=0</td></tr>
+<tr class="memdesc:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shut down (unload) the device.  <br /></td></tr>
 <tr class="separator:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac885139492ef8982681339cee936101c inherit pub_methods_class_m_m_1_1_device" id="r_ac885139492ef8982681339cee936101c"><td class="memItemLeft" align="right" valign="top">
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> (char *name) const =0</td></tr>
@@ -171,7 +186,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 <tr class="separator:a78304d22e45ae7bb287df288db9f6a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>HUB device. Used for complex uber-device functionality in microscope stands and managing auto-configuration (discovery) of other devices </p>
+<div class="textblock"><p>HUB device. </p>
+<p>Used for complex uber-device functionality in microscope stands and managing auto-configuration (discovery) of other devices. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab2baa13bff5c0b8223f1a5be89831b80" name="ab2baa13bff5c0b8223f1a5be89831b80"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2baa13bff5c0b8223f1a5be89831b80">&#9670;&#160;</a></span>ClearInstalledDevices()</h2>
@@ -195,8 +211,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Removes all <a class="el" href="class_m_m_1_1_device.html">Device</a> instances that were created by <a class="el" href="class_m_m_1_1_hub.html#aed2074a689dcfc430ef59655df08a0cf">DetectInstalledDevices()</a>. Not used.</p>
-<p>Note: <a class="el" href="class_m_m_1_1_device.html">Device</a> adapters traditionally call this function at the beginning of their DetectInstalledDevices implementation. This is not necessary but is permissible. </p>
+
+<p>Remove all <a class="el" href="class_m_m_1_1_device.html" title="Generic device interface.">Device</a> instances that were created by <a class="el" href="class_m_m_1_1_hub.html#aed2074a689dcfc430ef59655df08a0cf" title="Instantiate all available child peripheral devices.">DetectInstalledDevices()</a>. Not used. </p>
+<p>Note: <a class="el" href="class_m_m_1_1_device.html" title="Generic device interface.">Device</a> adapters traditionally call this function at the beginning of their DetectInstalledDevices implementation. This is not necessary but is permissible. </p>
 
 <p>Implemented in <a class="el" href="class_hub_base.html#ab93201ad2edf29c1c5fa2832b1ff90f1">HubBase&lt; U &gt;</a>.</p>
 
@@ -224,9 +241,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Instantiate all available child peripheral devices.</p>
-<p>The implementation must instantiate all available child devices and register them by calling AddInstalledDevice() (currently in <a class="el" href="class_hub_base.html">HubBase</a>).</p>
-<p>Instantiated peripherals are owned by the <a class="el" href="class_m_m_1_1_core.html">Core</a>, and will be destroyed by calling the usual ModuleInterface DeleteDevice() function.</p>
+
+<p>Instantiate all available child peripheral devices. </p>
+<p>The implementation must instantiate all available child devices and register them by calling AddInstalledDevice() (currently in <a class="el" href="class_hub_base.html" title="Base class for creating special HUB devices for managing device libraries.">HubBase</a>).</p>
+<p>Instantiated peripherals are owned by the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a>, and will be destroyed by calling the usual ModuleInterface DeleteDevice() function.</p>
 <p>The result of calling this function more than once for a given hub instance is undefined. </p>
 
 <p>Implemented in <a class="el" href="class_hub_base.html#a8b5b401b122ae939b720c8bc557d9c0a">HubBase&lt; U &gt;</a>.</p>
@@ -256,7 +274,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns a pointer to the <a class="el" href="class_m_m_1_1_device.html">Device</a> with index devIdx. 0 &lt;= devIdx &lt; <a class="el" href="class_m_m_1_1_hub.html#aab82474d8f36326117fbe56de95410dd">GetNumberOfInstalledDevices()</a>.</p>
+
+<p>Return a pointer to the <a class="el" href="class_m_m_1_1_device.html" title="Generic device interface.">Device</a> with index devIdx. </p>
+<p>0 &lt;= devIdx &lt; <a class="el" href="class_m_m_1_1_hub.html#aab82474d8f36326117fbe56de95410dd" title="Return the number of child Devices after DetectInstalledDevices was called.">GetNumberOfInstalledDevices()</a>.</p>
 <p>Must not be called from device adapters. </p>
 
 <p>Implemented in <a class="el" href="class_hub_base.html#ad57fee1b75c6dad91793939f8ff77c87">HubBase&lt; U &gt;</a>.</p>
@@ -285,7 +305,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the number of child Devices after DetectInstalledDevices was called.</p>
+
+<p>Return the number of child Devices after DetectInstalledDevices was called. </p>
 <p>Must not be called from device adapters. </p>
 
 <p>Implemented in <a class="el" href="class_hub_base.html#a7f689447a33c4f1e6df59d076261b8f3">HubBase&lt; U &gt;</a>.</p>

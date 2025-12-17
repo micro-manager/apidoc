@@ -51,6 +51,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Single axis stage API.  
+ <a href="class_m_m_1_1_stage.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MM::Stage:</div>
@@ -58,9 +61,9 @@ Inheritance diagram for MM::Stage:</div>
  <div class="center">
   <img src="class_m_m_1_1_stage.png" usemap="#MM::Stage_map" alt=""/>
   <map id="MM::Stage_map" name="MM::Stage_map">
-<area href="class_m_m_1_1_device.html" alt="MM::Device" shape="rect" coords="0,0,190,24"/>
+<area href="class_m_m_1_1_device.html" title="Generic device interface." alt="MM::Device" shape="rect" coords="0,0,190,24"/>
 <area href="class_c_device_base.html" alt="CDeviceBase&lt; MM::Stage, U &gt;" shape="rect" coords="0,112,190,136"/>
-<area href="class_c_stage_base.html" alt="CStageBase&lt; U &gt;" shape="rect" coords="0,168,190,192"/>
+<area href="class_c_stage_base.html" title="Base class for creating single axis stage adapters." alt="CStageBase&lt; U &gt;" shape="rect" coords="0,168,190,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -105,8 +108,10 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetLimits</b> 
 <tr class="memdesc:a7bbed708d0a167c02b1ab39f3308a12e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the focus direction.  <br /></td></tr>
 <tr class="separator:a7bbed708d0a167c02b1ab39f3308a12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa406354fc211a4931d67c8d7e0f10863" id="r_aa406354fc211a4931d67c8d7e0f10863"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_stage.html#aa406354fc211a4931d67c8d7e0f10863">IsStageSequenceable</a> (bool &amp;isSequenceable) const =0</td></tr>
+<tr class="memdesc:aa406354fc211a4931d67c8d7e0f10863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether the stage can be sequenced (synchronized by TTLs).  <br /></td></tr>
 <tr class="separator:aa406354fc211a4931d67c8d7e0f10863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0778dfcc4ffa655f332b7d2922ebc4c6" id="r_a0778dfcc4ffa655f332b7d2922ebc4c6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_stage.html#a0778dfcc4ffa655f332b7d2922ebc4c6">IsStageLinearSequenceable</a> (bool &amp;isSequenceable) const =0</td></tr>
+<tr class="memdesc:a0778dfcc4ffa655f332b7d2922ebc4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether the stage can perform linear TTL sequencing.  <br /></td></tr>
 <tr class="separator:a0778dfcc4ffa655f332b7d2922ebc4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e6c7f8134930a615c28c553a6aa82cb" id="r_a6e6c7f8134930a615c28c553a6aa82cb"><td class="memItemLeft" align="right" valign="top"><a id="a6e6c7f8134930a615c28c553a6aa82cb" name="a6e6c7f8134930a615c28c553a6aa82cb"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsContinuousFocusDrive</b> () const =0</td></tr>
@@ -120,13 +125,20 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>StartStageSequ
 <tr class="memitem:a39434b9d807311a137a64c5f505bb1ba" id="r_a39434b9d807311a137a64c5f505bb1ba"><td class="memItemLeft" align="right" valign="top"><a id="a39434b9d807311a137a64c5f505bb1ba" name="a39434b9d807311a137a64c5f505bb1ba"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>StopStageSequence</b> ()=0</td></tr>
 <tr class="separator:a39434b9d807311a137a64c5f505bb1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a455f14df28fcf7c4cbba1d0694e6cd91" id="r_a455f14df28fcf7c4cbba1d0694e6cd91"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_stage.html#a455f14df28fcf7c4cbba1d0694e6cd91">ClearStageSequence</a> ()=0</td></tr>
+<tr class="memitem:a455f14df28fcf7c4cbba1d0694e6cd91" id="r_a455f14df28fcf7c4cbba1d0694e6cd91"><td class="memItemLeft" align="right" valign="top"><a id="a455f14df28fcf7c4cbba1d0694e6cd91" name="a455f14df28fcf7c4cbba1d0694e6cd91"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>ClearStageSequence</b> ()=0</td></tr>
+<tr class="memdesc:a455f14df28fcf7c4cbba1d0694e6cd91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all values in the sequence. <br /></td></tr>
 <tr class="separator:a455f14df28fcf7c4cbba1d0694e6cd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8014def1e9e4e80cb92979851bff44f9" id="r_a8014def1e9e4e80cb92979851bff44f9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_stage.html#a8014def1e9e4e80cb92979851bff44f9">AddToStageSequence</a> (double position)=0</td></tr>
+<tr class="memitem:a8014def1e9e4e80cb92979851bff44f9" id="r_a8014def1e9e4e80cb92979851bff44f9"><td class="memItemLeft" align="right" valign="top"><a id="a8014def1e9e4e80cb92979851bff44f9" name="a8014def1e9e4e80cb92979851bff44f9"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>AddToStageSequence</b> (double position)=0</td></tr>
+<tr class="memdesc:a8014def1e9e4e80cb92979851bff44f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one value to the sequence. <br /></td></tr>
 <tr class="separator:a8014def1e9e4e80cb92979851bff44f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a8b528bbc50d882eb21410a1b93f36b" id="r_a0a8b528bbc50d882eb21410a1b93f36b"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_stage.html#a0a8b528bbc50d882eb21410a1b93f36b">SendStageSequence</a> ()=0</td></tr>
+<tr class="memitem:a0a8b528bbc50d882eb21410a1b93f36b" id="r_a0a8b528bbc50d882eb21410a1b93f36b"><td class="memItemLeft" align="right" valign="top"><a id="a0a8b528bbc50d882eb21410a1b93f36b" name="a0a8b528bbc50d882eb21410a1b93f36b"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>SendStageSequence</b> ()=0</td></tr>
+<tr class="memdesc:a0a8b528bbc50d882eb21410a1b93f36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device. <br /></td></tr>
 <tr class="separator:a0a8b528bbc50d882eb21410a1b93f36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e92b66e6afc0a9c91c1880661b9e420" id="r_a2e92b66e6afc0a9c91c1880661b9e420"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_stage.html#a2e92b66e6afc0a9c91c1880661b9e420">SetStageLinearSequence</a> (double dZ_um, long nSlices)=0</td></tr>
+<tr class="memdesc:a2e92b66e6afc0a9c91c1880661b9e420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up to perform an equally-spaced triggered Z stack.  <br /></td></tr>
 <tr class="separator:a2e92b66e6afc0a9c91c1880661b9e420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_m_m_1_1_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_m_m_1_1_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_m_m_1_1_device.html">MM::Device</a></td></tr>
 <tr class="memitem:acb91caf15c6b4359241af03cc4ff228e inherit pub_methods_class_m_m_1_1_device" id="r_acb91caf15c6b4359241af03cc4ff228e"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#acb91caf15c6b4359241af03cc4ff228e">GetNumberOfProperties</a> () const =0</td></tr>
@@ -157,18 +169,25 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>HasPropertyLim
 <tr class="memitem:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device" id="r_a8708f0e3b1b1f3b0d76aa328b5534320"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a8708f0e3b1b1f3b0d76aa328b5534320">GetPropertyValueAt</a> (const char *propertyName, unsigned index, char *value) const =0</td></tr>
 <tr class="separator:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device" id="r_a5aaf506ea243391b2246413dfe26c32c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a5aaf506ea243391b2246413dfe26c32c">IsPropertySequenceable</a> (const char *name, bool &amp;isSequenceable) const =0</td></tr>
+<tr class="memdesc:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the given property can be used with sequences.  <br /></td></tr>
 <tr class="separator:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device" id="r_a138d28a3b47ddf283028c76037c13faa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a138d28a3b47ddf283028c76037c13faa">GetPropertySequenceMaxLength</a> (const char *propertyName, long &amp;nrEvents) const =0</td></tr>
+<tr class="memdesc:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the largest sequence that can be stored in the device.  <br /></td></tr>
 <tr class="separator:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device" id="r_a6ee8959df5b0e4bb1afc9170c090168a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a6ee8959df5b0e4bb1afc9170c090168a">StartPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start execution of the sequence.  <br /></td></tr>
 <tr class="separator:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device" id="r_a52338dbd4965c2bf5544fc07c0edc848"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a52338dbd4965c2bf5544fc07c0edc848">StopPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop execution of the sequence.  <br /></td></tr>
 <tr class="separator:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device" id="r_a73e1162a7fe54c45070f7da9e156d404"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a73e1162a7fe54c45070f7da9e156d404">ClearPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove previously added sequence.  <br /></td></tr>
 <tr class="separator:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device" id="r_a83f0e1a7e6b95ee1c7a17a92c0e3e9a1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a83f0e1a7e6b95ee1c7a17a92c0e3e9a1">AddToPropertySequence</a> (const char *propertyName, const char *value)=0</td></tr>
+<tr class="memdesc:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one value to the sequence.  <br /></td></tr>
 <tr class="separator:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device" id="r_ab34c093b10e6009e1a8de222e31900e5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#ab34c093b10e6009e1a8de222e31900e5">SendPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device.  <br /></td></tr>
 <tr class="separator:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device" id="r_a2e3d2850566043ae22f78e0d5261aacf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a2e3d2850566043ae22f78e0d5261aacf">GetErrorText</a> (int errorCode, char *errMessage) const =0</td></tr>
 <tr class="separator:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,6 +216,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Busy</b> ()=0
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
 <tr class="separator:a386129455fb88841d8a158fbff385a04 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device" id="r_afc605a7274caa42b1fcce49eb17804c6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#afc605a7274caa42b1fcce49eb17804c6">Shutdown</a> ()=0</td></tr>
+<tr class="memdesc:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shut down (unload) the device.  <br /></td></tr>
 <tr class="separator:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac885139492ef8982681339cee936101c inherit pub_methods_class_m_m_1_1_device" id="r_ac885139492ef8982681339cee936101c"><td class="memItemLeft" align="right" valign="top">
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> (char *name) const =0</td></tr>
@@ -223,61 +243,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 <tr class="separator:a5dacdcc3463ac551330df32dc73b73f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Single axis stage API </p>
+<div class="textblock"><p>Single axis stage API. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a8014def1e9e4e80cb92979851bff44f9" name="a8014def1e9e4e80cb92979851bff44f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8014def1e9e4e80cb92979851bff44f9">&#9670;&#160;</a></span>AddToStageSequence()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Stage::AddToStageSequence </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>position</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Add one value to the sequence </p>
-
-</div>
-</div>
-<a id="a455f14df28fcf7c4cbba1d0694e6cd91" name="a455f14df28fcf7c4cbba1d0694e6cd91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a455f14df28fcf7c4cbba1d0694e6cd91">&#9670;&#160;</a></span>ClearStageSequence()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Stage::ClearStageSequence </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Remove all values in the sequence </p>
-
-</div>
-</div>
 <a id="a7bbed708d0a167c02b1ab39f3308a12e" name="a7bbed708d0a167c02b1ab39f3308a12e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7bbed708d0a167c02b1ab39f3308a12e">&#9670;&#160;</a></span>GetFocusDirection()</h2>
 
@@ -359,9 +326,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Indicates whether the stage can perform linear TTL sequencing.</p>
-<p>Linear sequencing uses a delta and count instead of an arbitrary list of positions.</p>
-<p>If true, the following methods must be implemented: <a class="el" href="class_m_m_1_1_stage.html#a2e92b66e6afc0a9c91c1880661b9e420">SetStageLinearSequence()</a>, StartStageSequence(), StopStageSequence(). </p>
+
+<p>Indicate whether the stage can perform linear TTL sequencing. </p>
+<p>Linear sequencing uses a delta and count instead of an arbitrary list of positions. If true, the following methods must be implemented: <a class="el" href="class_m_m_1_1_stage.html#a2e92b66e6afc0a9c91c1880661b9e420" title="Set up to perform an equally-spaced triggered Z stack.">SetStageLinearSequence()</a>, StartStageSequence(), StopStageSequence(). </p>
 
 </div>
 </div>
@@ -388,34 +355,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Indicates whether a stage can be sequenced (synchronized by TTLs).</p>
-<p>If true, the following methods must be implemented: GetStageSequenceMaxLength(), StartStageSequence(), StopStageSequence(), <a class="el" href="class_m_m_1_1_stage.html#a455f14df28fcf7c4cbba1d0694e6cd91">ClearStageSequence()</a>, <a class="el" href="class_m_m_1_1_stage.html#a8014def1e9e4e80cb92979851bff44f9">AddToStageSequence()</a>, and <a class="el" href="class_m_m_1_1_stage.html#a0a8b528bbc50d882eb21410a1b93f36b">SendStageSequence()</a>. </p>
 
-</div>
-</div>
-<a id="a0a8b528bbc50d882eb21410a1b93f36b" name="a0a8b528bbc50d882eb21410a1b93f36b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8b528bbc50d882eb21410a1b93f36b">&#9670;&#160;</a></span>SendStageSequence()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Stage::SendStageSequence </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device </p>
+<p>Indicate whether the stage can be sequenced (synchronized by TTLs). </p>
+<p>If true, the following methods must be implemented: GetStageSequenceMaxLength(), StartStageSequence(), StopStageSequence(), <a class="el" href="class_m_m_1_1_stage.html#a455f14df28fcf7c4cbba1d0694e6cd91" title="Remove all values in the sequence.">ClearStageSequence()</a>, <a class="el" href="class_m_m_1_1_stage.html#a8014def1e9e4e80cb92979851bff44f9" title="Add one value to the sequence.">AddToStageSequence()</a>, and <a class="el" href="class_m_m_1_1_stage.html#a0a8b528bbc50d882eb21410a1b93f36b" title="Signal that we are done sending sequence values so that the adapter can send the whole sequence to th...">SendStageSequence()</a>. </p>
 
 </div>
 </div>
@@ -452,7 +394,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set up to perform an equally-spaced triggered Z stack.</p>
+
+<p>Set up to perform an equally-spaced triggered Z stack. </p>
 <p>After calling this function, StartStageSequence() must cause the stage to step by dZ_um on each trigger. On the Nth trigger, the stage must return to the position where it was when StartStageSequence() was called. </p>
 
 </div>

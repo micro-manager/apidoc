@@ -51,6 +51,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Dual axis stage API.  
+ <a href="class_m_m_1_1_x_y_stage.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MM::XYStage:</div>
@@ -58,9 +61,9 @@ Inheritance diagram for MM::XYStage:</div>
  <div class="center">
   <img src="class_m_m_1_1_x_y_stage.png" usemap="#MM::XYStage_map" alt=""/>
   <map id="MM::XYStage_map" name="MM::XYStage_map">
-<area href="class_m_m_1_1_device.html" alt="MM::Device" shape="rect" coords="0,0,208,24"/>
+<area href="class_m_m_1_1_device.html" title="Generic device interface." alt="MM::Device" shape="rect" coords="0,0,208,24"/>
 <area href="class_c_device_base.html" alt="CDeviceBase&lt; MM::XYStage, U &gt;" shape="rect" coords="0,112,208,136"/>
-<area href="class_c_x_y_stage_base.html" alt="CXYStageBase&lt; U &gt;" shape="rect" coords="0,168,208,192"/>
+<area href="class_c_x_y_stage_base.html" title="Base class for creating dual axis stage adapters." alt="CXYStageBase&lt; U &gt;" shape="rect" coords="0,168,208,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -98,11 +101,15 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Home</b> ()=0<
 <tr class="memitem:a39cf5e23bb1b6baac475dad83bcbc402" id="r_a39cf5e23bb1b6baac475dad83bcbc402"><td class="memItemLeft" align="right" valign="top"><a id="a39cf5e23bb1b6baac475dad83bcbc402" name="a39cf5e23bb1b6baac475dad83bcbc402"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()=0</td></tr>
 <tr class="separator:a39cf5e23bb1b6baac475dad83bcbc402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7283de0bdf0bb223b467d9b57c21215" id="r_aa7283de0bdf0bb223b467d9b57c21215"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_x_y_stage.html#aa7283de0bdf0bb223b467d9b57c21215">SetOrigin</a> ()=0</td></tr>
+<tr class="memitem:aa7283de0bdf0bb223b467d9b57c21215" id="r_aa7283de0bdf0bb223b467d9b57c21215"><td class="memItemLeft" align="right" valign="top"><a id="aa7283de0bdf0bb223b467d9b57c21215" name="aa7283de0bdf0bb223b467d9b57c21215"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>SetOrigin</b> ()=0</td></tr>
+<tr class="memdesc:aa7283de0bdf0bb223b467d9b57c21215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the current position as the (hardware) origin (0, 0). <br /></td></tr>
 <tr class="separator:aa7283de0bdf0bb223b467d9b57c21215"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38a558654c29a412bc105a143c704134" id="r_a38a558654c29a412bc105a143c704134"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_x_y_stage.html#a38a558654c29a412bc105a143c704134">SetXOrigin</a> ()=0</td></tr>
+<tr class="memdesc:a38a558654c29a412bc105a143c704134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the current position as X = 0 (in hardware if possible).  <br /></td></tr>
 <tr class="separator:a38a558654c29a412bc105a143c704134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e474948625d713e84541fc0f1f6c6a" id="r_a36e474948625d713e84541fc0f1f6c6a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_x_y_stage.html#a36e474948625d713e84541fc0f1f6c6a">SetYOrigin</a> ()=0</td></tr>
+<tr class="memdesc:a36e474948625d713e84541fc0f1f6c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the current position as Y = 0 (in hardware if possible).  <br /></td></tr>
 <tr class="separator:a36e474948625d713e84541fc0f1f6c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b85f342a8482a193857a193a5eaa490" id="r_a2b85f342a8482a193857a193a5eaa490"><td class="memItemLeft" align="right" valign="top"><a id="a2b85f342a8482a193857a193a5eaa490" name="a2b85f342a8482a193857a193a5eaa490"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetStepLimits</b> (long &amp;xMin, long &amp;xMax, long &amp;yMin, long &amp;yMax)=0</td></tr>
@@ -114,6 +121,7 @@ virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>GetStepSize
 virtual double&#160;</td><td class="memItemRight" valign="bottom"><b>GetStepSizeYUm</b> ()=0</td></tr>
 <tr class="separator:ad1501658139c21a9fd1ddde77dd2f1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a465ce78ae9990ea587cf40fe8f06c0ec" id="r_a465ce78ae9990ea587cf40fe8f06c0ec"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_x_y_stage.html#a465ce78ae9990ea587cf40fe8f06c0ec">IsXYStageSequenceable</a> (bool &amp;isSequenceable) const =0</td></tr>
+<tr class="memdesc:a465ce78ae9990ea587cf40fe8f06c0ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether a stage can be sequenced (synchronized by TTLs).  <br /></td></tr>
 <tr class="separator:a465ce78ae9990ea587cf40fe8f06c0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ba64071c1df2bc43157c1e5759e1257" id="r_a3ba64071c1df2bc43157c1e5759e1257"><td class="memItemLeft" align="right" valign="top"><a id="a3ba64071c1df2bc43157c1e5759e1257" name="a3ba64071c1df2bc43157c1e5759e1257"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetXYStageSequenceMaxLength</b> (long &amp;nrEvents) const =0</td></tr>
@@ -125,10 +133,13 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>StartXYStageSe
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>StopXYStageSequence</b> ()=0</td></tr>
 <tr class="separator:a4078c55ff90ac652670e8b6b56d2b351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a199ae72534a75b57ebfad35200760f28" id="r_a199ae72534a75b57ebfad35200760f28"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_x_y_stage.html#a199ae72534a75b57ebfad35200760f28">ClearXYStageSequence</a> ()=0</td></tr>
+<tr class="memdesc:a199ae72534a75b57ebfad35200760f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all values in the sequence.  <br /></td></tr>
 <tr class="separator:a199ae72534a75b57ebfad35200760f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae93b65c37f8524e4e7de383cfe729e96" id="r_ae93b65c37f8524e4e7de383cfe729e96"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_x_y_stage.html#ae93b65c37f8524e4e7de383cfe729e96">AddToXYStageSequence</a> (double positionX, double positionY)=0</td></tr>
+<tr class="memdesc:ae93b65c37f8524e4e7de383cfe729e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one value to the sequence.  <br /></td></tr>
 <tr class="separator:ae93b65c37f8524e4e7de383cfe729e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8473fea3f2c02ba9a373bda56185b29" id="r_ab8473fea3f2c02ba9a373bda56185b29"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_x_y_stage.html#ab8473fea3f2c02ba9a373bda56185b29">SendXYStageSequence</a> ()=0</td></tr>
+<tr class="memdesc:ab8473fea3f2c02ba9a373bda56185b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device.  <br /></td></tr>
 <tr class="separator:ab8473fea3f2c02ba9a373bda56185b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_m_m_1_1_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_m_m_1_1_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_m_m_1_1_device.html">MM::Device</a></td></tr>
 <tr class="memitem:acb91caf15c6b4359241af03cc4ff228e inherit pub_methods_class_m_m_1_1_device" id="r_acb91caf15c6b4359241af03cc4ff228e"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#acb91caf15c6b4359241af03cc4ff228e">GetNumberOfProperties</a> () const =0</td></tr>
@@ -159,18 +170,25 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>HasPropertyLim
 <tr class="memitem:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device" id="r_a8708f0e3b1b1f3b0d76aa328b5534320"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a8708f0e3b1b1f3b0d76aa328b5534320">GetPropertyValueAt</a> (const char *propertyName, unsigned index, char *value) const =0</td></tr>
 <tr class="separator:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device" id="r_a5aaf506ea243391b2246413dfe26c32c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a5aaf506ea243391b2246413dfe26c32c">IsPropertySequenceable</a> (const char *name, bool &amp;isSequenceable) const =0</td></tr>
+<tr class="memdesc:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the given property can be used with sequences.  <br /></td></tr>
 <tr class="separator:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device" id="r_a138d28a3b47ddf283028c76037c13faa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a138d28a3b47ddf283028c76037c13faa">GetPropertySequenceMaxLength</a> (const char *propertyName, long &amp;nrEvents) const =0</td></tr>
+<tr class="memdesc:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the largest sequence that can be stored in the device.  <br /></td></tr>
 <tr class="separator:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device" id="r_a6ee8959df5b0e4bb1afc9170c090168a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a6ee8959df5b0e4bb1afc9170c090168a">StartPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start execution of the sequence.  <br /></td></tr>
 <tr class="separator:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device" id="r_a52338dbd4965c2bf5544fc07c0edc848"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a52338dbd4965c2bf5544fc07c0edc848">StopPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop execution of the sequence.  <br /></td></tr>
 <tr class="separator:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device" id="r_a73e1162a7fe54c45070f7da9e156d404"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a73e1162a7fe54c45070f7da9e156d404">ClearPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove previously added sequence.  <br /></td></tr>
 <tr class="separator:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device" id="r_a83f0e1a7e6b95ee1c7a17a92c0e3e9a1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a83f0e1a7e6b95ee1c7a17a92c0e3e9a1">AddToPropertySequence</a> (const char *propertyName, const char *value)=0</td></tr>
+<tr class="memdesc:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one value to the sequence.  <br /></td></tr>
 <tr class="separator:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device" id="r_ab34c093b10e6009e1a8de222e31900e5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#ab34c093b10e6009e1a8de222e31900e5">SendPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device.  <br /></td></tr>
 <tr class="separator:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device" id="r_a2e3d2850566043ae22f78e0d5261aacf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a2e3d2850566043ae22f78e0d5261aacf">GetErrorText</a> (int errorCode, char *errMessage) const =0</td></tr>
 <tr class="separator:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,6 +217,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Busy</b> ()=0
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
 <tr class="separator:a386129455fb88841d8a158fbff385a04 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device" id="r_afc605a7274caa42b1fcce49eb17804c6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#afc605a7274caa42b1fcce49eb17804c6">Shutdown</a> ()=0</td></tr>
+<tr class="memdesc:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shut down (unload) the device.  <br /></td></tr>
 <tr class="separator:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac885139492ef8982681339cee936101c inherit pub_methods_class_m_m_1_1_device" id="r_ac885139492ef8982681339cee936101c"><td class="memItemLeft" align="right" valign="top">
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> (char *name) const =0</td></tr>
@@ -225,7 +244,7 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 <tr class="separator:a1c3b21e91fc5b3cd3c892d8508793a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Dual axis stage API </p>
+<div class="textblock"><p>Dual axis stage API. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae93b65c37f8524e4e7de383cfe729e96" name="ae93b65c37f8524e4e7de383cfe729e96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae93b65c37f8524e4e7de383cfe729e96">&#9670;&#160;</a></span>AddToXYStageSequence()</h2>
@@ -260,7 +279,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Add one value to the sequence </p>
+
+<p>Add one value to the sequence. </p>
 
 <p>Implemented in <a class="el" href="class_c_x_y_stage_base.html#a1d94b6ded5a3bc35217ad3dbdadb1fc1">CXYStageBase&lt; U &gt;</a>.</p>
 
@@ -288,7 +308,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Remove all values in the sequence </p>
+
+<p>Remove all values in the sequence. </p>
 
 <p>Implemented in <a class="el" href="class_c_x_y_stage_base.html#ac2923102e05d2f529bf60647ea6f2c07">CXYStageBase&lt; U &gt;</a>.</p>
 
@@ -344,7 +365,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns whether a stage can be sequenced (synchronized by TTLs) If returning true, then an <a class="el" href="class_m_m_1_1_x_y_stage.html">XYStage</a> class should also inherit the SequenceableXYStage class and implement its methods. </p>
+
+<p>Return whether a stage can be sequenced (synchronized by TTLs). </p>
+<p>If returning true, then an <a class="el" href="class_m_m_1_1_x_y_stage.html" title="Dual axis stage API.">XYStage</a> class should also inherit the SequenceableXYStage class and implement its methods. </p>
 
 </div>
 </div>
@@ -370,7 +393,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device </p>
+
+<p>Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device. </p>
 
 <p>Implemented in <a class="el" href="class_c_x_y_stage_base.html#a7fdb1f2f66f19b56544b13a2c626f1eb">CXYStageBase&lt; U &gt;</a>.</p>
 
@@ -411,32 +435,6 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_c_x_y_stage_base.html#a01e302aea73583900c487c8bfe91b52b">CXYStageBase&lt; U &gt;</a>.</p>
-
-</div>
-</div>
-<a id="aa7283de0bdf0bb223b467d9b57c21215" name="aa7283de0bdf0bb223b467d9b57c21215"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7283de0bdf0bb223b467d9b57c21215">&#9670;&#160;</a></span>SetOrigin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::XYStage::SetOrigin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Define the current position as the (hardware) origin (0, 0). </p>
 
 </div>
 </div>
@@ -538,7 +536,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Define the current position as X = 0 (in hardware if possible). Do not alter the Y coordinates. </p>
+
+<p>Define the current position as X = 0 (in hardware if possible). </p>
+<p>Do not alter the Y coordinates. </p>
 
 <p>Implemented in <a class="el" href="class_c_x_y_stage_base.html#ae094b12f23c54a9260e1455f8a7f85da">CXYStageBase&lt; U &gt;</a>.</p>
 
@@ -566,7 +566,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Define the current position as Y = 0 (in hardware if possible) Do not alter the X coordinates. </p>
+
+<p>Define the current position as Y = 0 (in hardware if possible). </p>
+<p>Do not alter the X coordinates. </p>
 
 <p>Implemented in <a class="el" href="class_c_x_y_stage_base.html#a2948ea67ae118618ac3c198e4a10ae85">CXYStageBase&lt; U &gt;</a>.</p>
 
