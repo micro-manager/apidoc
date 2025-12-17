@@ -51,6 +51,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Pressure Pump API.  
+ <a href="class_m_m_1_1_pressure_pump.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MM::PressurePump:</div>
@@ -58,9 +61,9 @@ Inheritance diagram for MM::PressurePump:</div>
  <div class="center">
   <img src="class_m_m_1_1_pressure_pump.png" usemap="#MM::PressurePump_map" alt=""/>
   <map id="MM::PressurePump_map" name="MM::PressurePump_map">
-<area href="class_m_m_1_1_device.html" alt="MM::Device" shape="rect" coords="0,0,240,24"/>
+<area href="class_m_m_1_1_device.html" title="Generic device interface." alt="MM::Device" shape="rect" coords="0,0,240,24"/>
 <area href="class_c_device_base.html" alt="CDeviceBase&lt; MM::PressurePump, U &gt;" shape="rect" coords="0,112,240,136"/>
-<area href="class_c_pressure_pump_base.html" alt="CPressurePumpBase&lt; U &gt;" shape="rect" coords="0,168,240,192"/>
+<area href="class_c_pressure_pump_base.html" title="Base class for creating pressure pump device adapters." alt="CPressurePumpBase&lt; U &gt;" shape="rect" coords="0,168,240,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -69,14 +72,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1965e105d54be34e3233cf6f98e36973" id="r_a1965e105d54be34e3233cf6f98e36973"><td class="memItemLeft" align="right" valign="top">virtual DeviceType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#a1965e105d54be34e3233cf6f98e36973">GetType</a> () const</td></tr>
 <tr class="separator:a1965e105d54be34e3233cf6f98e36973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2e8e299fc024ce03986af60b404496" id="r_a4c2e8e299fc024ce03986af60b404496"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#a4c2e8e299fc024ce03986af60b404496">Stop</a> ()=0</td></tr>
+<tr class="memdesc:a4c2e8e299fc024ce03986af60b404496"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the pump.  <br /></td></tr>
 <tr class="separator:a4c2e8e299fc024ce03986af60b404496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cbee7fa44154cf1a7688723491a4de4" id="r_a7cbee7fa44154cf1a7688723491a4de4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#a7cbee7fa44154cf1a7688723491a4de4">Calibrate</a> ()=0</td></tr>
+<tr class="memdesc:a7cbee7fa44154cf1a7688723491a4de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calibrate the pressure controller.  <br /></td></tr>
 <tr class="separator:a7cbee7fa44154cf1a7688723491a4de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0111d3f2b9e8762eb15ea0e98b43ab28" id="r_a0111d3f2b9e8762eb15ea0e98b43ab28"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#a0111d3f2b9e8762eb15ea0e98b43ab28">RequiresCalibration</a> ()=0</td></tr>
+<tr class="memdesc:a0111d3f2b9e8762eb15ea0e98b43ab28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether the pressure controller is functional before calibration, or it needs to undergo internal calibration before any commands can be executed.  <br /></td></tr>
 <tr class="separator:a0111d3f2b9e8762eb15ea0e98b43ab28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f371df3f383c589b04a1400ae4e2d50" id="r_a2f371df3f383c589b04a1400ae4e2d50"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#a2f371df3f383c589b04a1400ae4e2d50">SetPressureKPa</a> (double pressureKPa)=0</td></tr>
+<tr class="memdesc:a2f371df3f383c589b04a1400ae4e2d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pressure of the pressure controller.  <br /></td></tr>
 <tr class="separator:a2f371df3f383c589b04a1400ae4e2d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61789f6614ce705e8f3a7efc24eb62d0" id="r_a61789f6614ce705e8f3a7efc24eb62d0"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_pressure_pump.html#a61789f6614ce705e8f3a7efc24eb62d0">GetPressureKPa</a> (double &amp;pressureKPa)=0</td></tr>
+<tr class="memdesc:a61789f6614ce705e8f3a7efc24eb62d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pressure of the pressure controller.  <br /></td></tr>
 <tr class="separator:a61789f6614ce705e8f3a7efc24eb62d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_m_m_1_1_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_m_m_1_1_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_m_m_1_1_device.html">MM::Device</a></td></tr>
 <tr class="memitem:acb91caf15c6b4359241af03cc4ff228e inherit pub_methods_class_m_m_1_1_device" id="r_acb91caf15c6b4359241af03cc4ff228e"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#acb91caf15c6b4359241af03cc4ff228e">GetNumberOfProperties</a> () const =0</td></tr>
@@ -107,18 +115,25 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>HasPropertyLim
 <tr class="memitem:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device" id="r_a8708f0e3b1b1f3b0d76aa328b5534320"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a8708f0e3b1b1f3b0d76aa328b5534320">GetPropertyValueAt</a> (const char *propertyName, unsigned index, char *value) const =0</td></tr>
 <tr class="separator:a8708f0e3b1b1f3b0d76aa328b5534320 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device" id="r_a5aaf506ea243391b2246413dfe26c32c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a5aaf506ea243391b2246413dfe26c32c">IsPropertySequenceable</a> (const char *name, bool &amp;isSequenceable) const =0</td></tr>
+<tr class="memdesc:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the given property can be used with sequences.  <br /></td></tr>
 <tr class="separator:a5aaf506ea243391b2246413dfe26c32c inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device" id="r_a138d28a3b47ddf283028c76037c13faa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a138d28a3b47ddf283028c76037c13faa">GetPropertySequenceMaxLength</a> (const char *propertyName, long &amp;nrEvents) const =0</td></tr>
+<tr class="memdesc:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the largest sequence that can be stored in the device.  <br /></td></tr>
 <tr class="separator:a138d28a3b47ddf283028c76037c13faa inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device" id="r_a6ee8959df5b0e4bb1afc9170c090168a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a6ee8959df5b0e4bb1afc9170c090168a">StartPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start execution of the sequence.  <br /></td></tr>
 <tr class="separator:a6ee8959df5b0e4bb1afc9170c090168a inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device" id="r_a52338dbd4965c2bf5544fc07c0edc848"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a52338dbd4965c2bf5544fc07c0edc848">StopPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop execution of the sequence.  <br /></td></tr>
 <tr class="separator:a52338dbd4965c2bf5544fc07c0edc848 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device" id="r_a73e1162a7fe54c45070f7da9e156d404"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a73e1162a7fe54c45070f7da9e156d404">ClearPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove previously added sequence.  <br /></td></tr>
 <tr class="separator:a73e1162a7fe54c45070f7da9e156d404 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device" id="r_a83f0e1a7e6b95ee1c7a17a92c0e3e9a1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a83f0e1a7e6b95ee1c7a17a92c0e3e9a1">AddToPropertySequence</a> (const char *propertyName, const char *value)=0</td></tr>
+<tr class="memdesc:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add one value to the sequence.  <br /></td></tr>
 <tr class="separator:a83f0e1a7e6b95ee1c7a17a92c0e3e9a1 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device" id="r_ab34c093b10e6009e1a8de222e31900e5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#ab34c093b10e6009e1a8de222e31900e5">SendPropertySequence</a> (const char *propertyName)=0</td></tr>
+<tr class="memdesc:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that we are done sending sequence values so that the adapter can send the whole sequence to the device.  <br /></td></tr>
 <tr class="separator:ab34c093b10e6009e1a8de222e31900e5 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device" id="r_a2e3d2850566043ae22f78e0d5261aacf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#a2e3d2850566043ae22f78e0d5261aacf">GetErrorText</a> (int errorCode, char *errMessage) const =0</td></tr>
 <tr class="separator:a2e3d2850566043ae22f78e0d5261aacf inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +162,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>Busy</b> ()=0
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> ()=0</td></tr>
 <tr class="separator:a386129455fb88841d8a158fbff385a04 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device" id="r_afc605a7274caa42b1fcce49eb17804c6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_device.html#afc605a7274caa42b1fcce49eb17804c6">Shutdown</a> ()=0</td></tr>
+<tr class="memdesc:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shut down (unload) the device.  <br /></td></tr>
 <tr class="separator:afc605a7274caa42b1fcce49eb17804c6 inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac885139492ef8982681339cee936101c inherit pub_methods_class_m_m_1_1_device" id="r_ac885139492ef8982681339cee936101c"><td class="memItemLeft" align="right" valign="top">
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> (char *name) const =0</td></tr>
@@ -173,7 +189,7 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 <tr class="separator:ad1767d8de450c270b62ee83a8f8cad13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Pressure Pump API </p>
+<div class="textblock"><p>Pressure Pump API. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7cbee7fa44154cf1a7688723491a4de4" name="a7cbee7fa44154cf1a7688723491a4de4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7cbee7fa44154cf1a7688723491a4de4">&#9670;&#160;</a></span>Calibrate()</h2>
@@ -197,8 +213,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Calibrates the pressure controller. If no internal calibration is supported, just return DEVICE_UNSUPPORTED_COMMAND.</p>
-<p>Optional function of <a class="el" href="class_m_m_1_1_pressure_pump.html">PressurePump</a> API. </p>
+
+<p>Calibrate the pressure controller. </p>
+<p>If no internal calibration is supported, just return DEVICE_UNSUPPORTED_COMMAND.</p>
+<p>Optional function of <a class="el" href="class_m_m_1_1_pressure_pump.html" title="Pressure Pump API.">PressurePump</a> API. </p>
 
 </div>
 </div>
@@ -225,8 +243,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gets the pressure of the pressure controller. The returned value has to be in kPa. The implementation, therefore, should convert the value provided by the pressure controller to kPa.</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html">PressurePump</a> API. </p>
+
+<p>Get the pressure of the pressure controller. </p>
+<p>The returned value has to be in kPa. The implementation, therefore, should convert the value provided by the pressure controller to kPa.</p>
+<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html" title="Pressure Pump API.">PressurePump</a> API. </p>
 
 </div>
 </div>
@@ -279,8 +299,9 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns whether the pressure controller is functional before calibration, or it needs to undergo internal calibration before any commands can be executed.</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html">PressurePump</a> API. </p>
+
+<p>Return whether the pressure controller is functional before calibration, or it needs to undergo internal calibration before any commands can be executed. </p>
+<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html" title="Pressure Pump API.">PressurePump</a> API. </p>
 
 </div>
 </div>
@@ -307,8 +328,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the pressure of the pressure controller. The provided value will be in kPa. The implementation should convert the unit from kPa to the desired unit by the device.</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html">PressurePump</a> API. </p>
+
+<p>Set the pressure of the pressure controller. </p>
+<p>The provided value will be in kPa. The implementation should convert the unit from kPa to the desired unit by the device.</p>
+<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html" title="Pressure Pump API.">PressurePump</a> API. </p>
 
 </div>
 </div>
@@ -334,8 +357,10 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Stops the pump. The implementation should halt any dispensing/withdrawal, and make the pump available again (make Busy() return false).</p>
-<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html">PressurePump</a> API. </p>
+
+<p>Stop the pump. </p>
+<p>The implementation should halt any dispensing/withdrawal, and make the pump available again (make Busy() return false).</p>
+<p>Required function of <a class="el" href="class_m_m_1_1_pressure_pump.html" title="Pressure Pump API.">PressurePump</a> API. </p>
 
 </div>
 </div>
