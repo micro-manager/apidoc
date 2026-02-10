@@ -41,7 +41,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_c_camera_base-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">CCameraBase&lt; U &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -368,14 +367,19 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> (char *name) const =0</td></tr>
 <tr class="separator:ac885139492ef8982681339cee936101c inherit pub_methods_class_m_m_1_1_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:aadb17f06cc3cbf2a741d13e92e1ddd47" id="r_aadb17f06cc3cbf2a741d13e92e1ddd47"><td class="memItemLeft" align="right" valign="top"><a id="aadb17f06cc3cbf2a741d13e92e1ddd47" name="aadb17f06cc3cbf2a741d13e92e1ddd47"></a>
-virtual std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetTagKeys</b> ()</td></tr>
-<tr class="separator:aadb17f06cc3cbf2a741d13e92e1ddd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade8483707c6ae5e6fefb2f30c5c303ef" id="r_ade8483707c6ae5e6fefb2f30c5c303ef"><td class="memItemLeft" align="right" valign="top"><a id="ade8483707c6ae5e6fefb2f30c5c303ef" name="ade8483707c6ae5e6fefb2f30c5c303ef"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetTagValue</b> (const char *key)</td></tr>
-<tr class="separator:ade8483707c6ae5e6fefb2f30c5c303ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_c_device_base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_c_device_base')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_c_device_base.html">CDeviceBase&lt; MM::Camera, U &gt;</a></td></tr>
+<tr class="memitem:a04d2bae6a5f873bebafd7a9b870908c0 inherit pub_types_class_c_device_base" id="r_a04d2bae6a5f873bebafd7a9b870908c0"><td class="memItemLeft" align="right" valign="top">
+typedef <a class="el" href="class_m_m_1_1_action.html">MM::Action</a>&lt; U &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CPropertyAction</b></td></tr>
+<tr class="separator:a04d2bae6a5f873bebafd7a9b870908c0 inherit pub_types_class_c_device_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c9e2fd93d0f1869f54e6517ccb148ba inherit pub_types_class_c_device_base" id="r_a3c9e2fd93d0f1869f54e6517ccb148ba"><td class="memItemLeft" align="right" valign="top">
+typedef <a class="el" href="class_m_m_1_1_action_ex.html">MM::ActionEx</a>&lt; U &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CPropertyActionEx</b></td></tr>
+<tr class="separator:a3c9e2fd93d0f1869f54e6517ccb148ba inherit pub_types_class_c_device_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_class_m_m_1_1_camera"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_m_m_1_1_camera')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a></td></tr>
+<tr class="memitem:acd2c620a5af8fa7cb23a84af4481e2fa inherit pub_static_attribs_class_m_m_1_1_camera" id="r_acd2c620a5af8fa7cb23a84af4481e2fa"><td class="memItemLeft" align="right" valign="top">
+static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> = CameraDevice</td></tr>
+<tr class="separator:acd2c620a5af8fa7cb23a84af4481e2fa inherit pub_static_attribs_class_m_m_1_1_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_c_device_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_c_device_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_c_device_base.html">CDeviceBase&lt; MM::Camera, U &gt;</a></td></tr>
 <tr class="memitem:a1def68a266c65d5665bc116a5b2d8f60 inherit pro_methods_class_c_device_base" id="r_a1def68a266c65d5665bc116a5b2d8f60"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetErrorText</b> (int errorCode, const char *text)</td></tr>
@@ -487,20 +491,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsCallbackRegistered<
 <tr class="memitem:a6e2bf548097be69451a19adceead7f8c inherit pro_methods_class_c_device_base" id="r_a6e2bf548097be69451a19adceead7f8c"><td class="memItemLeft" align="right" valign="top">T_HUB *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#a6e2bf548097be69451a19adceead7f8c">AssignToHub</a> ()</td></tr>
 <tr class="memdesc:a6e2bf548097be69451a19adceead7f8c inherit pro_methods_class_c_device_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the parent Hub device pointer, or null if there isn't any.  <br /></td></tr>
 <tr class="separator:a6e2bf548097be69451a19adceead7f8c inherit pro_methods_class_c_device_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_class_c_device_base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_c_device_base')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_c_device_base.html">CDeviceBase&lt; MM::Camera, U &gt;</a></td></tr>
-<tr class="memitem:a04d2bae6a5f873bebafd7a9b870908c0 inherit pub_types_class_c_device_base" id="r_a04d2bae6a5f873bebafd7a9b870908c0"><td class="memItemLeft" align="right" valign="top">
-typedef <a class="el" href="class_m_m_1_1_action.html">MM::Action</a>&lt; U &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CPropertyAction</b></td></tr>
-<tr class="separator:a04d2bae6a5f873bebafd7a9b870908c0 inherit pub_types_class_c_device_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c9e2fd93d0f1869f54e6517ccb148ba inherit pub_types_class_c_device_base" id="r_a3c9e2fd93d0f1869f54e6517ccb148ba"><td class="memItemLeft" align="right" valign="top">
-typedef <a class="el" href="class_m_m_1_1_action_ex.html">MM::ActionEx</a>&lt; U &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CPropertyActionEx</b></td></tr>
-<tr class="separator:a3c9e2fd93d0f1869f54e6517ccb148ba inherit pub_types_class_c_device_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_class_m_m_1_1_camera"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_m_m_1_1_camera')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a></td></tr>
-<tr class="memitem:acd2c620a5af8fa7cb23a84af4481e2fa inherit pub_static_attribs_class_m_m_1_1_camera" id="r_acd2c620a5af8fa7cb23a84af4481e2fa"><td class="memItemLeft" align="right" valign="top">
-static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Type</b> = CameraDevice</td></tr>
-<tr class="separator:acd2c620a5af8fa7cb23a84af4481e2fa inherit pub_static_attribs_class_m_m_1_1_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class U&gt;<br />
