@@ -271,6 +271,14 @@
 <div class="block">This event is posted when the ApplicationSkin is set via
  <a href="org/micromanager/ApplicationSkin.html#setSkin-org.micromanager.ApplicationSkin.SkinMode-"><code>ApplicationSkin.setSkin(org.micromanager.ApplicationSkin.SkinMode)</code></a>.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.html#applyScopeData-org.micromanager.PropertyMap-">applyScopeData(PropertyMap)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.html" title="interface in org.micromanager.acquisition">ScopeDataUtils</a></dt>
+<dd>
+<div class="block">Applies ScopeData to hardware with default options.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.html#applyScopeData-org.micromanager.PropertyMap-org.micromanager.acquisition.ScopeDataUtils.ApplyOptions-">applyScopeData(PropertyMap, ScopeDataUtils.ApplyOptions)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.html" title="interface in org.micromanager.acquisition">ScopeDataUtils</a></dt>
+<dd>
+<div class="block">Applies ScopeData to hardware with configurable options.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/AutofocusPlugin.html#applySettings--">applySettings()</a></span> - Method in interface org.micromanager.<a href="org/micromanager/AutofocusPlugin.html" title="interface in org.micromanager">AutofocusPlugin</a></dt>
 <dd>
 <div class="block">Pushes setting to the hardware or software autofocus.</div>
@@ -350,6 +358,8 @@
 &nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ChannelSpec.Builder.html#build--">build()</a></span> - Method in class org.micromanager.acquisition.<a href="org/micromanager/acquisition/ChannelSpec.Builder.html" title="class in org.micromanager.acquisition">ChannelSpec.Builder</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html#build--">build()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/SequenceSettings.Builder.html#build--">build()</a></span> - Method in class org.micromanager.acquisition.<a href="org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></dt>
 <dd>
 <div class="block">Constructs SequenceSettings.</div>
@@ -385,6 +395,10 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ChannelSpec.Builder.html#Builder--">Builder()</a></span> - Constructor for class org.micromanager.acquisition.<a href="org/micromanager/acquisition/ChannelSpec.Builder.html" title="class in org.micromanager.acquisition">ChannelSpec.Builder</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html#builder--">builder()</a></span> - Static method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions</a></dt>
+<dd>
+<div class="block">Returns a new builder for ApplyOptions.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/SequenceSettings.Builder.html#Builder--">Builder()</a></span> - Constructor for class org.micromanager.acquisition.<a href="org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/SequenceSettings.Builder.html#Builder-org.micromanager.acquisition.SequenceSettings-">Builder(SequenceSettings)</a></span> - Constructor for class org.micromanager.acquisition.<a href="org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></dt>
@@ -766,6 +780,11 @@
 <dt><a href="org/micromanager/events/ConfigGroupChangedEvent.html" title="interface in org.micromanager.events"><span class="typeNameLink">ConfigGroupChangedEvent</span></a> - Interface in <a href="org/micromanager/events/package-summary.html">org.micromanager.events</a></dt>
 <dd>
 <div class="block">Event signaling that the "active" preset in a config group changed.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.html#configurationToPropertyMap-mmcorej.Configuration-">configurationToPropertyMap(Configuration)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.html" title="interface in org.micromanager.acquisition">ScopeDataUtils</a></dt>
+<dd>
+<div class="block">Converts a Configuration (from core.getSystemStateCache()) to a PropertyMap
+ in the standard ScopeData format ("DeviceLabel-PropertyName" keys).</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/quickaccess/WidgetPlugin.html#configureControl-java.awt.Frame-">configureControl(Frame)</a></span> - Method in class org.micromanager.quickaccess.<a href="org/micromanager/quickaccess/WidgetPlugin.html" title="class in org.micromanager.quickaccess">WidgetPlugin</a></dt>
 <dd>
@@ -1279,6 +1298,10 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DataViewerListener.html#DataViewerListener--">DataViewerListener()</a></span> - Constructor for class org.micromanager.display.<a href="org/micromanager/display/DataViewerListener.html" title="class in org.micromanager.display">DataViewerListener</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html#defaults--">defaults()</a></span> - Static method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions</a></dt>
+<dd>
+<div class="block">Returns default options: skip read-only, skip unchanged, validate first.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/RewritableDatastore.html#deleteAllImages--">deleteAllImages()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/RewritableDatastore.html" title="interface in org.micromanager.data">RewritableDatastore</a></dt>
 <dd>
 <div class="block">Delete all images from the Datastore.</div>
@@ -1468,6 +1491,14 @@
 <div class="block">Provides access to the EventManager instance for subscribing to and
  posting events on the application-wide EventBus.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html#excludeDevice-java.lang.String-">excludeDevice(String)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html#excludeDevices-java.util.Set-">excludeDevices(Set&lt;String&gt;)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html#excludeKey-java.lang.String-">excludeKey(String)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html#excludeKeys-java.util.Set-">excludeKeys(Set&lt;String&gt;)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ImageExporter.html#export--">export()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ImageExporter.html" title="interface in org.micromanager.display">ImageExporter</a></dt>
 <dd>
 <div class="block">Run the export process.</div>
@@ -1507,6 +1538,20 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.html#FILENAME">FILENAME</a></span> - Static variable in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.html#filterChangedProperties-mmcorej.CMMCore-org.micromanager.PropertyMap-">filterChangedProperties(CMMCore, PropertyMap)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.html" title="interface in org.micromanager.acquisition">ScopeDataUtils</a></dt>
+<dd>
+<div class="block">Filters ScopeData to only include properties that exist in the current
+ hardware configuration and have different values from the current state.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.html#filterReadOnlyProperties-mmcorej.CMMCore-org.micromanager.PropertyMap-">filterReadOnlyProperties(CMMCore, PropertyMap)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.html" title="interface in org.micromanager.acquisition">ScopeDataUtils</a></dt>
+<dd>
+<div class="block">Filters ScopeData to remove read-only properties.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.html#filterStateProperties-org.micromanager.PropertyMap-">filterStateProperties(PropertyMap)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.html" title="interface in org.micromanager.acquisition">ScopeDataUtils</a></dt>
+<dd>
+<div class="block">Filters ScopeData to remove "State" properties when the device also has
+ a "Label" property.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/inspector/AbstractInspectorPanelController.html#fireInspectorPanelDidChangeHeight--">fireInspectorPanelDidChangeHeight()</a></span> - Method in class org.micromanager.display.inspector.<a href="org/micromanager/display/inspector/AbstractInspectorPanelController.html" title="class in org.micromanager.display.inspector">AbstractInspectorPanelController</a></dt>
 <dd>&nbsp;</dd>
@@ -1691,6 +1736,10 @@
 <dd>
 <div class="block">Provides access to the application skin API for determining colors for
  various GUI components.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html#getAppliedProperties--">getAppliedProperties()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyResult</a></dt>
+<dd>
+<div class="block">Returns list of properties that were successfully applied.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getAsNumber-java.lang.String-java.lang.Number-">getAsNumber(String, Number)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
 <dd>
@@ -1886,6 +1935,12 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/quickaccess/WidgetPlugin.html#getCanCustomizeIcon--">getCanCustomizeIcon()</a></span> - Method in class org.micromanager.quickaccess.<a href="org/micromanager/quickaccess/WidgetPlugin.html" title="class in org.micromanager.quickaccess">WidgetPlugin</a></dt>
 <dd>
 <div class="block">Returns true if the widget can accept custom icons (i.e.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.html#getChangedProperties-mmcorej.CMMCore-org.micromanager.PropertyMap-">getChangedProperties(CMMCore, PropertyMap)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.html" title="interface in org.micromanager.acquisition">ScopeDataUtils</a></dt>
+<dd>
+<div class="block">Filters ScopeData to only include properties that exist in the current
+ hardware configuration and have different values, returning detailed
+ information about each property difference.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coords.html#getChannel--">getChannel()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></dt>
 <dd>
@@ -2154,6 +2209,10 @@
 <dd>
 <div class="block">Returns a description of this skin.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.PropertyEntry.html#getDevice--">getDevice()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.PropertyEntry.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.PropertyEntry</a></dt>
+<dd>
+<div class="block">Returns the device label.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/events/PropertyChangedEvent.html#getDevice--">getDevice()</a></span> - Method in interface org.micromanager.events.<a href="org/micromanager/events/PropertyChangedEvent.html" title="interface in org.micromanager.events">PropertyChangedEvent</a></dt>
 <dd>
 <div class="block">Device to which the changed property belongs.</div>
@@ -2317,15 +2376,35 @@
 <dd>
 <div class="block">Return the current color for enabled text.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.PropertyError.html#getErrorMessage--">getErrorMessage()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.PropertyError.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.PropertyError</a></dt>
+<dd>
+<div class="block">Returns the error message.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html#getErrors--">getErrors()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyResult</a></dt>
+<dd>
+<div class="block">Returns list of properties that failed to apply.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/Studio.html#getEventManager--">getEventManager()</a></span> - Method in interface org.micromanager.<a href="org/micromanager/Studio.html" title="interface in org.micromanager">Studio</a></dt>
 <dd>
 <div class="block">Provides access to the EventManager instance for subscribing to and
  posting events on the application-wide EventBus.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.PropertyError.html#getException--">getException()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.PropertyError.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.PropertyError</a></dt>
+<dd>
+<div class="block">Returns the exception that caused the error, if available.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Pipeline.html#getExceptions--">getExceptions()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Pipeline.html" title="interface in org.micromanager.data">Pipeline</a></dt>
 <dd>
 <div class="block">Return a list containing any exceptions that have occurred during
  processing of images.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html#getExcludedDevices--">getExcludedDevices()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions</a></dt>
+<dd>
+<div class="block">Returns set of device labels to exclude entirely.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html#getExcludedKeys--">getExcludedKeys()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions</a></dt>
+<dd>
+<div class="block">Returns set of property keys to exclude (in "DeviceLabel-PropertyName" format).</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Metadata.html#getExposureMs--">getExposureMs()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Metadata.html" title="interface in org.micromanager.data">Metadata</a></dt>
 <dd>
@@ -2490,6 +2569,10 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/data/SummaryMetadata.html#getInitialScopeData--">getInitialScopeData()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/SummaryMetadata.html" title="interface in org.micromanager.data">SummaryMetadata</a></dt>
+<dd>
+<div class="block">Device properties at the start of the acquisition.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/PluginManager.html#getInspectorPlugins--">getInspectorPlugins()</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PluginManager.html" title="interface in org.micromanager">PluginManager</a></dt>
 <dd>
 <div class="block">Return a HashMap that maps plugin class names to InspectorPlugin
@@ -2580,6 +2663,10 @@
 <div class="block"><span class="deprecationComment">use <a href="org/micromanager/events/LiveModeEvent.html#isOn--"><code>LiveModeEvent.isOn()</code></a> instead.</span></div>
 </div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html#getIssueCount--">getIssueCount()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ValidationResult</a></dt>
+<dd>
+<div class="block">Returns count of all issues.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Pipeline.html#getIsSynchronous--">getIsSynchronous()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Pipeline.html" title="interface in org.micromanager.data">Pipeline</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -2601,6 +2688,10 @@
 <dd>
 <div class="block">For acquisitions with more than one Z slice, whether or not the shutter
  was left open in between each slice.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.PropertyEntry.html#getKey--">getKey()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.PropertyEntry.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.PropertyEntry</a></dt>
+<dd>
+<div class="block">Returns the key in "DeviceLabel-PropertyName" format.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#getKeys--">getKeys()</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
 <dd>
@@ -2744,6 +2835,14 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Retrieve the intensity of the dimmest sample in the dataset used to
  generate the histogram.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html#getMissingDevices--">getMissingDevices()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ValidationResult</a></dt>
+<dd>
+<div class="block">Returns list of properties where the device does not exist.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html#getMissingProperties--">getMissingProperties()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ValidationResult</a></dt>
+<dd>
+<div class="block">Returns list of properties where the property name does not exist.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/DataProvider.html#getName--">getName()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/DataProvider.html" title="interface in org.micromanager.data">DataProvider</a></dt>
 <dd>
@@ -2964,6 +3063,10 @@
 <div class="block">The user-supplied portion of the filename, plus any additional numerical
  identifier needed to ensure uniqueness.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html#getPreInitProperties--">getPreInitProperties()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ValidationResult</a></dt>
+<dd>
+<div class="block">Returns list of properties that are pre-initialization only.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayPositionChangedEvent.html#getPreviousDisplayPosition--">getPreviousDisplayPosition()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayPositionChangedEvent.html" title="interface in org.micromanager.display">DisplayPositionChangedEvent</a></dt>
 <dd>
 <div class="block">Returns the previously displayed position.</div>
@@ -2971,6 +3074,10 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettingsChangedEvent.html#getPreviousDisplaySettings--">getPreviousDisplaySettings()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettingsChangedEvent.html" title="interface in org.micromanager.display">DisplaySettingsChangedEvent</a></dt>
 <dd>
 <div class="block">Get the display settings before the change being handled.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.PropertyChange.html#getPreviousValue--">getPreviousValue()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.PropertyChange.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.PropertyChange</a></dt>
+<dd>
+<div class="block">Returns the previous value before the change.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayDidShowImageEvent.html#getPrimaryImage--">getPrimaryImage()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayDidShowImageEvent.html" title="interface in org.micromanager.display">DisplayDidShowImageEvent</a></dt>
 <dd>
@@ -2996,6 +3103,10 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/AutofocusPlugin.html#getProperties--">getProperties()</a></span> - Method in interface org.micromanager.<a href="org/micromanager/AutofocusPlugin.html" title="interface in org.micromanager">AutofocusPlugin</a></dt>
 <dd>
 <div class="block">Returns an array of the properties for this autofocus plugin.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.PropertyEntry.html#getProperty--">getProperty()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.PropertyEntry.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.PropertyEntry</a></dt>
+<dd>
+<div class="block">Returns the property name.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/AutofocusPlugin.html#getProperty-java.lang.String-">getProperty(String)</a></span> - Method in interface org.micromanager.<a href="org/micromanager/AutofocusPlugin.html" title="interface in org.micromanager">AutofocusPlugin</a></dt>
 <dd>
@@ -3078,6 +3189,10 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Image.html#getRawPixelsForComponent-int-">getRawPixelsForComponent(int)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></dt>
 <dd>
 <div class="block">Return a copy of the raw pixel data for the specified component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html#getReadOnlyProperties--">getReadOnlyProperties()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ValidationResult</a></dt>
+<dd>
+<div class="block">Returns list of properties that are read-only.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Metadata.html#getReceivedTime--">getReceivedTime()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Metadata.html" title="interface in org.micromanager.data">Metadata</a></dt>
 <dd>
@@ -3220,6 +3335,10 @@
 <dd>
 <div class="block">Returns the newly applied skin mode.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html#getSkippedProperties--">getSkippedProperties()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyResult</a></dt>
+<dd>
+<div class="block">Returns list of properties that were skipped.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/Studio.html#getSnapLiveManager--">getSnapLiveManager()</a></span> - Method in interface org.micromanager.<a href="org/micromanager/Studio.html" title="interface in org.micromanager">Studio</a></dt>
 <dd>
 <div class="block">Provides access to the Snap/Live display and associated logic.</div>
@@ -3338,6 +3457,14 @@
 <div class="block">Indicate which sub-menu of the Plugins menu this plugin should appear
  in.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html#getSummary--">getSummary()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyResult</a></dt>
+<dd>
+<div class="block">Returns a human-readable summary of apply results.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html#getSummary--">getSummary()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ValidationResult</a></dt>
+<dd>
+<div class="block">Returns a human-readable summary of validation results.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/DataProvider.html#getSummaryMetadata--">getSummaryMetadata()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/DataProvider.html" title="interface in org.micromanager.data">DataProvider</a></dt>
 <dd>
 <div class="block">Returns Summary Metadata.</div>
@@ -3440,6 +3567,18 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/propertymap/MutablePropertyMapView.html#getUUIDList-java.lang.String-java.lang.Iterable-">getUUIDList(String, Iterable&lt;UUID&gt;)</a></span> - Method in interface org.micromanager.propertymap.<a href="org/micromanager/propertymap/MutablePropertyMapView.html" title="interface in org.micromanager.propertymap">MutablePropertyMapView</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html#getValidationResult--">getValidationResult()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyResult</a></dt>
+<dd>
+<div class="block">Returns the validation result if validateFirst was true.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html#getValidProperties--">getValidProperties()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ValidationResult</a></dt>
+<dd>
+<div class="block">Returns list of properties that are valid and writable.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.PropertyEntry.html#getValue--">getValue()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.PropertyEntry.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.PropertyEntry</a></dt>
+<dd>
+<div class="block">Returns the property value.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/events/PropertyChangedEvent.html#getValue--">getValue()</a></span> - Method in interface org.micromanager.events.<a href="org/micromanager/events/PropertyChangedEvent.html" title="interface in org.micromanager.events">PropertyChangedEvent</a></dt>
 <dd>
 <div class="block">New value of the property.</div>
@@ -3578,6 +3717,10 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Datastore.html#hasAnnotation-java.lang.String-">hasAnnotation(String)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Datastore.html" title="interface in org.micromanager.data">Datastore</a></dt>
 <dd>
 <div class="block">Return whether an annotation with the given tag exists.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html#hasAnyValid--">hasAnyValid()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ValidationResult</a></dt>
+<dd>
+<div class="block">Returns true if at least some properties can be applied.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coords.html#hasAxis-java.lang.String-">hasAxis(String)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></dt>
 <dd>
@@ -3720,6 +3863,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/inspector/InspectorPanelController.html#initiallyExpand--">initiallyExpand()</a></span> - Method in interface org.micromanager.display.inspector.<a href="org/micromanager/display/inspector/InspectorPanelController.html" title="interface in org.micromanager.display.inspector">InspectorPanelController</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/data/SummaryMetadata.Builder.html#initialScopeData-org.micromanager.PropertyMap-">initialScopeData(PropertyMap)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Pipeline.html#insertImage-org.micromanager.data.Image-">insertImage(Image)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Pipeline.html" title="interface in org.micromanager.data">Pipeline</a></dt>
 <dd>
 <div class="block">Insert an Image into the Pipeline.</div>
@@ -3836,6 +3981,10 @@
 <dd>
 <div class="block">Tell whether full screen mode is currently enabled.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html#isFullyValid--">isFullyValid()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ValidationResult</a></dt>
+<dd>
+<div class="block">Returns true if all properties in ScopeData exist and are writable.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Pipeline.html#isHalted--">isHalted()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Pipeline.html" title="interface in org.micromanager.data">Pipeline</a></dt>
 <dd>
 <div class="block">Returns true if the pipeline has been halted (that is, its halt() method
@@ -3876,6 +4025,10 @@
  "source" object that Micro-Manager's acquisition system uses when
  publishing AcquisitionStartedEvent and AcquisitionEndedEvent.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html#isPartialSuccess--">isPartialSuccess()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyResult</a></dt>
+<dd>
+<div class="block">Returns true if at least some properties were applied.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/AcquisitionManager.html#isPaused--">isPaused()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/AcquisitionManager.html" title="interface in org.micromanager.acquisition">AcquisitionManager</a></dt>
 <dd>
 <div class="block">Returns true if the acquisition is currently paused.</div>
@@ -3887,6 +4040,26 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/events/ShutterOpenChangedEvent.html#isShutterOpened--">isShutterOpened()</a></span> - Method in interface org.micromanager.events.<a href="org/micromanager/events/ShutterOpenChangedEvent.html" title="interface in org.micromanager.events">ShutterOpenChangedEvent</a></dt>
 <dd>
 <div class="block">Indicates whether the Shutter was opened or closed.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html#isSkipMissingDevices--">isSkipMissingDevices()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions</a></dt>
+<dd>
+<div class="block">If true, skip properties for missing devices instead of reporting errors.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html#isSkipReadOnly--">isSkipReadOnly()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions</a></dt>
+<dd>
+<div class="block">If true, skip read-only properties instead of reporting errors.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html#isSkipUnchanged--">isSkipUnchanged()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions</a></dt>
+<dd>
+<div class="block">If true, skip properties whose values already match current hardware.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html#isStrictMode--">isStrictMode()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions</a></dt>
+<dd>
+<div class="block">If true, stop on first error.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html#isSuccess--">isSuccess()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyResult</a></dt>
+<dd>
+<div class="block">Returns true if all properties were applied successfully (no errors).</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Pipeline.html#isSynchronous--">isSynchronous()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Pipeline.html" title="interface in org.micromanager.data">Pipeline</a></dt>
 <dd>
@@ -3911,6 +4084,10 @@
 <dd>
 <div class="block">Returns whether or not this Alert is still visible to the user and can
  therefore be updated or have more content added to it.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html#isValidateFirst--">isValidateFirst()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions</a></dt>
+<dd>
+<div class="block">If true, validate before applying.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/inspector/AbstractInspectorPanelController.html#isVerticallyResizableByUser--">isVerticallyResizableByUser()</a></span> - Method in class org.micromanager.display.inspector.<a href="org/micromanager/display/inspector/AbstractInspectorPanelController.html" title="class in org.micromanager.display.inspector">AbstractInspectorPanelController</a></dt>
 <dd>
@@ -4360,6 +4537,10 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/display/overlay/Overlay.html#paintOverlay-java.awt.Graphics2D-java.awt.Rectangle-org.micromanager.display.DisplaySettings-java.util.List-org.micromanager.data.Image-java.awt.geom.Rectangle2D.Float-">paintOverlay(Graphics2D, Rectangle, DisplaySettings, List&lt;Image&gt;, Image, Rectangle2D.Float)</a></span> - Method in interface org.micromanager.display.overlay.<a href="org/micromanager/display/overlay/Overlay.html" title="interface in org.micromanager.display.overlay">Overlay</a></dt>
 <dd>
 <div class="block">Paint the overlay to the given graphics context.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.html#parseKey-java.lang.String-">parseKey(String)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.html" title="interface in org.micromanager.acquisition">ScopeDataUtils</a></dt>
+<dd>
+<div class="block">Parses a ScopeData key into device and property name.</div>
 </dd>
 <dt><a href="org/micromanager/data/Pipeline.html" title="interface in org.micromanager.data"><span class="typeNameLink">Pipeline</span></a> - Interface in <a href="org/micromanager/data/package-summary.html">org.micromanager.data</a></dt>
 <dd>
@@ -5185,6 +5366,11 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentDisplaySettings.Builder.html#scalingRange-long-long-">scalingRange(long, long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentDisplaySettings.Builder.html" title="interface in org.micromanager.display">ComponentDisplaySettings.Builder</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/AcquisitionManager.html#scopeData--">scopeData()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/AcquisitionManager.html" title="interface in org.micromanager.acquisition">AcquisitionManager</a></dt>
+<dd>
+<div class="block">Provide access to the ScopeDataUtils object for validating and applying
+ hardware state from image metadata.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Metadata.Builder.html#scopeData-org.micromanager.PropertyMap-">scopeData(PropertyMap)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Metadata.Builder.html" title="interface in org.micromanager.data">Metadata.Builder</a></dt>
 <dd>
 <div class="block">Add device property data.</div>
@@ -5193,6 +5379,39 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 &nbsp;</dd>
+<dt><a href="org/micromanager/acquisition/ScopeDataUtils.html" title="interface in org.micromanager.acquisition"><span class="typeNameLink">ScopeDataUtils</span></a> - Interface in <a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></dt>
+<dd>
+<div class="block">Utility functions for validating and applying ScopeData (PropertyMap from
+ image metadata) to hardware.</div>
+</dd>
+<dt><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition"><span class="typeNameLink">ScopeDataUtils.ApplyOptions</span></a> - Interface in <a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></dt>
+<dd>
+<div class="block">Options for controlling how ScopeData is applied to hardware.</div>
+</dd>
+<dt><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition"><span class="typeNameLink">ScopeDataUtils.ApplyOptions.Builder</span></a> - Interface in <a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></dt>
+<dd>
+<div class="block">Builder for ApplyOptions.</div>
+</dd>
+<dt><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html" title="interface in org.micromanager.acquisition"><span class="typeNameLink">ScopeDataUtils.ApplyResult</span></a> - Interface in <a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></dt>
+<dd>
+<div class="block">Result of applying ScopeData to hardware.</div>
+</dd>
+<dt><a href="org/micromanager/acquisition/ScopeDataUtils.PropertyChange.html" title="interface in org.micromanager.acquisition"><span class="typeNameLink">ScopeDataUtils.PropertyChange</span></a> - Interface in <a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></dt>
+<dd>
+<div class="block">Represents a property change with both previous and new values.</div>
+</dd>
+<dt><a href="org/micromanager/acquisition/ScopeDataUtils.PropertyEntry.html" title="interface in org.micromanager.acquisition"><span class="typeNameLink">ScopeDataUtils.PropertyEntry</span></a> - Interface in <a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></dt>
+<dd>
+<div class="block">Represents a single property entry from ScopeData.</div>
+</dd>
+<dt><a href="org/micromanager/acquisition/ScopeDataUtils.PropertyError.html" title="interface in org.micromanager.acquisition"><span class="typeNameLink">ScopeDataUtils.PropertyError</span></a> - Interface in <a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></dt>
+<dd>
+<div class="block">Represents a property that failed to apply with error information.</div>
+</dd>
+<dt><a href="org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition"><span class="typeNameLink">ScopeDataUtils.ValidationResult</span></a> - Interface in <a href="org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></dt>
+<dd>
+<div class="block">Result of validating ScopeData against current hardware configuration.</div>
+</dd>
 <dt><a href="org/micromanager/ScriptController.html" title="interface in org.micromanager"><span class="typeNameLink">ScriptController</span></a> - Interface in <a href="org/micromanager/package-summary.html">org.micromanager</a></dt>
 <dd>
 <div class="block">Provides access to some utility methods for use in the Beanshell scripting
@@ -5709,6 +5928,12 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ChannelSpec.html#skipFactorFrame--">skipFactorFrame()</a></span> - Method in class org.micromanager.acquisition.<a href="org/micromanager/acquisition/ChannelSpec.html" title="class in org.micromanager.acquisition">ChannelSpec</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html#skipMissingDevices-boolean-">skipMissingDevices(boolean)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html#skipReadOnly-boolean-">skipReadOnly(boolean)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html#skipUnchanged-boolean-">skipUnchanged(boolean)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/SequenceSettings.Builder.html#slices-java.util.ArrayList-">slices(ArrayList&lt;Double&gt;)</a></span> - Method in class org.micromanager.acquisition.<a href="org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/SequenceSettings.html#slices">slices</a></span> - Variable in class org.micromanager.acquisition.<a href="org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a></dt>
@@ -5818,6 +6043,8 @@
 <div class="block">Storages are responsible for providing image data to Datastores when
  requested.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html#strictMode-boolean-">strictMode(boolean)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org/micromanager/Studio.html" title="interface in org.micromanager"><span class="typeNameLink">Studio</span></a> - Interface in <a href="org/micromanager/package-summary.html">org.micromanager</a></dt>
 <dd>
 <div class="block">Interface to execute commands in the main panel.</div>
@@ -6115,6 +6342,12 @@
 </a>
 <h2 class="title">V</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html#validateFirst-boolean-">validateFirst(boolean)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.Builder.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions.Builder</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/acquisition/ScopeDataUtils.html#validateScopeData-mmcorej.CMMCore-org.micromanager.PropertyMap-">validateScopeData(CMMCore, PropertyMap)</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/ScopeDataUtils.html" title="interface in org.micromanager.acquisition">ScopeDataUtils</a></dt>
+<dd>
+<div class="block">Validates that all properties in ScopeData exist in current hardware configuration.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/ApplicationSkin.SkinMode.html#valueOf-java.lang.String-">valueOf(String)</a></span> - Static method in enum org.micromanager.<a href="org/micromanager/ApplicationSkin.SkinMode.html" title="enum in org.micromanager">ApplicationSkin.SkinMode</a></dt>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
