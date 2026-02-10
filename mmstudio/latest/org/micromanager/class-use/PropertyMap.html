@@ -88,25 +88,32 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#org.micromanager.acquisition">org.micromanager.acquisition</a></td>
+<td class="colLast">
+<div class="block">This package contains classes for acquiring data and accessing Micro-
+ Manager's Acquisition Engine.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#org.micromanager.data">org.micromanager.data</a></td>
 <td class="colLast">
 <div class="block">This package contains classes related to the storage and internal
  representation of image data and metadata.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.micromanager.display.overlay">org.micromanager.display.overlay</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.micromanager.profile">org.micromanager.profile</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="#org.micromanager.propertymap">org.micromanager.propertymap</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="#org.micromanager.quickaccess">org.micromanager.quickaccess</a></td>
 <td class="colLast">
 <div class="block">This package contains classes related to Micro-Manager's Quick-Access
@@ -315,6 +322,109 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="org.micromanager.acquisition">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a> in <a href="../../../org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a> that return <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#configurationToPropertyMap-mmcorej.Configuration-">configurationToPropertyMap</a></span>(mmcorej.Configuration&nbsp;config)</code>
+<div class="block">Converts a Configuration (from core.getSystemStateCache()) to a PropertyMap
+ in the standard ScopeData format ("DeviceLabel-PropertyName" keys).</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#filterChangedProperties-mmcorej.CMMCore-org.micromanager.PropertyMap-">filterChangedProperties</a></span>(mmcorej.CMMCore&nbsp;core,
+                       <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
+<div class="block">Filters ScopeData to only include properties that exist in the current
+ hardware configuration and have different values from the current state.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#filterReadOnlyProperties-mmcorej.CMMCore-org.micromanager.PropertyMap-">filterReadOnlyProperties</a></span>(mmcorej.CMMCore&nbsp;core,
+                        <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
+<div class="block">Filters ScopeData to remove read-only properties.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#filterStateProperties-org.micromanager.PropertyMap-">filterStateProperties</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
+<div class="block">Filters ScopeData to remove "State" properties when the device also has
+ a "Label" property.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../org/micromanager/acquisition/package-summary.html">org.micromanager.acquisition</a> with parameters of type <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyResult</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#applyScopeData-org.micromanager.PropertyMap-">applyScopeData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
+<div class="block">Applies ScopeData to hardware with default options.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/acquisition/ScopeDataUtils.ApplyResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyResult</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#applyScopeData-org.micromanager.PropertyMap-org.micromanager.acquisition.ScopeDataUtils.ApplyOptions-">applyScopeData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData,
+              <a href="../../../org/micromanager/acquisition/ScopeDataUtils.ApplyOptions.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ApplyOptions</a>&nbsp;options)</code>
+<div class="block">Applies ScopeData to hardware with configurable options.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#filterChangedProperties-mmcorej.CMMCore-org.micromanager.PropertyMap-">filterChangedProperties</a></span>(mmcorej.CMMCore&nbsp;core,
+                       <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
+<div class="block">Filters ScopeData to only include properties that exist in the current
+ hardware configuration and have different values from the current state.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#filterReadOnlyProperties-mmcorej.CMMCore-org.micromanager.PropertyMap-">filterReadOnlyProperties</a></span>(mmcorej.CMMCore&nbsp;core,
+                        <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
+<div class="block">Filters ScopeData to remove read-only properties.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#filterStateProperties-org.micromanager.PropertyMap-">filterStateProperties</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
+<div class="block">Filters ScopeData to remove "State" properties when the device also has
+ a "Label" property.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../org/micromanager/acquisition/ScopeDataUtils.PropertyChange.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.PropertyChange</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#getChangedProperties-mmcorej.CMMCore-org.micromanager.PropertyMap-">getChangedProperties</a></span>(mmcorej.CMMCore&nbsp;core,
+                    <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
+<div class="block">Filters ScopeData to only include properties that exist in the current
+ hardware configuration and have different values, returning detailed
+ information about each property difference.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/acquisition/ScopeDataUtils.ValidationResult.html" title="interface in org.micromanager.acquisition">ScopeDataUtils.ValidationResult</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ScopeDataUtils.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/ScopeDataUtils.html#validateScopeData-mmcorej.CMMCore-org.micromanager.PropertyMap-">validateScopeData</a></span>(mmcorej.CMMCore&nbsp;core,
+                 <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
+<div class="block">Validates that all properties in ScopeData exist in current hardware configuration.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="org.micromanager.data">
 <!--   -->
 </a>
@@ -342,31 +452,37 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SummaryMetadata.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getInitialScopeData--">getInitialScopeData</a></span>()</code>
+<div class="block">Device properties at the start of the acquisition.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Metadata.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Metadata.html#getScopeData--">getScopeData</a></span>()</code>
 <div class="block">Any information provided by Micro-Manager or its device adapters that
  is relevant to this image.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ProcessorConfigurator.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/ProcessorConfigurator.html#getSettings--">getSettings</a></span>()</code>
 <div class="block">Provide a PropertyMap fully encapsulating the settings needed to set up
  a new DataProcessor.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Metadata.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Metadata.html#getUserData--">getUserData</a></span>()</code>
 <div class="block">Arbitrary additional metadata added by third-party code.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SummaryMetadata.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.html#getUserData--">getUserData</a></span>()</code>
 <div class="block">Any general-purpose user meta data.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DataManager.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/DataManager.html#loadPropertyMap-java.lang.String-">loadPropertyMap</a></span>(java.lang.String&nbsp;path)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -404,25 +520,29 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SummaryMetadata.Builder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html#initialScopeData-org.micromanager.PropertyMap-">initialScopeData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;initialScopeData)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.Builder.html" title="interface in org.micromanager.data">Metadata.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Metadata.Builder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Metadata.Builder.html#scopeData-org.micromanager.PropertyMap-">scopeData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
 <div class="block">Add device property data.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.MetadataBuilder.html" title="interface in org.micromanager.data">Metadata.MetadataBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Metadata.MetadataBuilder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Metadata.MetadataBuilder.html#scopeData-org.micromanager.PropertyMap-">scopeData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 &nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Annotation.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Annotation.html#setGeneralAnnotation-org.micromanager.PropertyMap-">setGeneralAnnotation</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;newData)</code>
 <div class="block">Replace the data this Annotation has for the Datastore as a whole with the
  provided PropertyMap.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Annotation.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Annotation.html#setImageAnnotation-org.micromanager.data.Coords-org.micromanager.PropertyMap-">setImageAnnotation</a></span>(<a href="../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords,
                   <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;newData)</code>
@@ -430,23 +550,23 @@
  provided PropertyMap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.Builder.html" title="interface in org.micromanager.data">Metadata.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Metadata.Builder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Metadata.Builder.html#userData-org.micromanager.PropertyMap-">userData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;userData)</code>
 <div class="block">Add user-defined data.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.MetadataBuilder.html" title="interface in org.micromanager.data">Metadata.MetadataBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Metadata.MetadataBuilder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Metadata.MetadataBuilder.html#userData-org.micromanager.PropertyMap-">userData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;userData)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 &nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SummaryMetadata.Builder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html#userData-org.micromanager.PropertyMap-">userData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;userData)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/SummaryMetadata.SummaryMetadataBuilder.html" title="interface in org.micromanager.data">SummaryMetadata.SummaryMetadataBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SummaryMetadata.SummaryMetadataBuilder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.SummaryMetadataBuilder.html#userData-org.micromanager.PropertyMap-">userData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;userData)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
