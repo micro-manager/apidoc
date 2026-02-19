@@ -399,8 +399,8 @@ std::vector&lt; long &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>
 <tr class="separator:a08312fc741ac3bfd685ceab66299938f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ee456596d413340efa6e66d177a4974" id="r_a7ee456596d413340efa6e66d177a4974"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a7ee456596d413340efa6e66d177a4974">startSequenceAcquisition</a> (const char *cameraLabel, long numImages, double intervalMs, bool stopOnOverflow) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
 <tr class="separator:a7ee456596d413340efa6e66d177a4974"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe237420b8ab8628dc9656bbccdd667c" id="r_afe237420b8ab8628dc9656bbccdd667c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#afe237420b8ab8628dc9656bbccdd667c">prepareSequenceAcquisition</a> (const char *cameraLabel) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
-<tr class="separator:afe237420b8ab8628dc9656bbccdd667c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb63dabd405a464b01f03d7147fa1e6" id="r_a0cb63dabd405a464b01f03d7147fa1e6"><td class="memItemLeft" align="right" valign="top">MMCORE_DEPRECATED void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a0cb63dabd405a464b01f03d7147fa1e6">prepareSequenceAcquisition</a> (const char *cameraLabel) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a0cb63dabd405a464b01f03d7147fa1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38c0f0d84bc682fd8e6220e6631de97a" id="r_a38c0f0d84bc682fd8e6220e6631de97a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a38c0f0d84bc682fd8e6220e6631de97a">startContinuousSequenceAcquisition</a> (double intervalMs) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
 <tr class="separator:a38c0f0d84bc682fd8e6220e6631de97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a944b10b182a2afe7866eebc9eaf8aac6" id="r_a944b10b182a2afe7866eebc9eaf8aac6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a944b10b182a2afe7866eebc9eaf8aac6">stopSequenceAcquisition</a> () MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
@@ -5954,14 +5954,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 
 </div>
 </div>
-<a id="afe237420b8ab8628dc9656bbccdd667c" name="afe237420b8ab8628dc9656bbccdd667c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe237420b8ab8628dc9656bbccdd667c">&#9670;&#160;</a></span>prepareSequenceAcquisition()</h2>
+<a id="a0cb63dabd405a464b01f03d7147fa1e6" name="a0cb63dabd405a464b01f03d7147fa1e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cb63dabd405a464b01f03d7147fa1e6">&#9670;&#160;</a></span>prepareSequenceAcquisition()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void CMMCore::prepareSequenceAcquisition </td>
+          <td class="memname">MMCORE_DEPRECATED void CMMCore::prepareSequenceAcquisition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>label</em></td><td>)</td>
@@ -5969,7 +5969,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Prepare the camera for the sequence acquisition to save the time in the StartSequenceAcqusition() call which is supposed to come next. </p>
+<p>Deprecated and only checks that the camera is not running a sequence acquisition.</p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>
