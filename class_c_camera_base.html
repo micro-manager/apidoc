@@ -112,9 +112,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afb097cee9403f4471970d1ed9584d4a6" id="r_afb097cee9403f4471970d1ed9584d4a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#afb097cee9403f4471970d1ed9584d4a6">GetTags</a> (char *serializedMetadata)</td></tr>
 <tr class="memdesc:afb097cee9403f4471970d1ed9584d4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill serializedMetadata with the device's metadata tags.  <br /></td></tr>
 <tr class="separator:afb097cee9403f4471970d1ed9584d4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a79e94c08256bfb8d2cb5652cfa640f" id="r_a2a79e94c08256bfb8d2cb5652cfa640f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#a2a79e94c08256bfb8d2cb5652cfa640f">PrepareSequenceAcqusition</a> ()</td></tr>
-<tr class="memdesc:a2a79e94c08256bfb8d2cb5652cfa640f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the camera so that Sequence acquisition can start without delay.  <br /></td></tr>
-<tr class="separator:a2a79e94c08256bfb8d2cb5652cfa640f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b4788e5a648b04a44577d91261d283" id="r_a97b4788e5a648b04a44577d91261d283"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#a97b4788e5a648b04a44577d91261d283">PrepareSequenceAcqusition</a> () final</td></tr>
+<tr class="memdesc:a97b4788e5a648b04a44577d91261d283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the camera so that Sequence acquisition can start without delay.  <br /></td></tr>
+<tr class="separator:a97b4788e5a648b04a44577d91261d283"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a945fda309f0147a7ef27e642fcd323aa" id="r_a945fda309f0147a7ef27e642fcd323aa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#a945fda309f0147a7ef27e642fcd323aa">StartSequenceAcquisition</a> (long numImages, double interval_ms, bool stopOnOverflow)=0</td></tr>
 <tr class="memdesc:a945fda309f0147a7ef27e642fcd323aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start sequence acquisition.  <br /></td></tr>
 <tr class="separator:a945fda309f0147a7ef27e642fcd323aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1232,8 +1232,8 @@ template&lt;class U &gt; </div>
 
 </div>
 </div>
-<a id="a2a79e94c08256bfb8d2cb5652cfa640f" name="a2a79e94c08256bfb8d2cb5652cfa640f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a79e94c08256bfb8d2cb5652cfa640f">&#9670;&#160;</a></span>PrepareSequenceAcqusition()</h2>
+<a id="a97b4788e5a648b04a44577d91261d283" name="a97b4788e5a648b04a44577d91261d283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97b4788e5a648b04a44577d91261d283">&#9670;&#160;</a></span>PrepareSequenceAcqusition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1252,7 +1252,7 @@ template&lt;class U &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
