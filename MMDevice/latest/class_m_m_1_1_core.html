@@ -461,7 +461,7 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 <p>Cameras must call this function during sequence acquisition to send each frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a>.</p>
 <p>byteDepth: 1 or 2 for grayscale images; 4 for BGR_</p>
 <p>nComponents: 1 for grayscale; 4 for BGR_ (_: unused component)</p>
-<p>serializedMetadata: must be the result of md.serialize().c_str() (md being an instance of <a class="el" href="class_metadata.html">Metadata</a>)</p>
+<p>serializedMetadata: must be the result of md.serialize().c_str() (md being an instance of Metadata)</p>
 <p>doProcess: must be true, except for the case mentioned below</p>
 <p>Legacy note: Previously, cameras were required to perform special handling when <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> returns DEVICE_BUFFER_OVERFLOW and stopOnOverflow == false. However, <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> no longer ever returns that particular error when stopOnOverflow == false. So cameras should always just stop the acquisition if <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> returns any error. </p>
 
