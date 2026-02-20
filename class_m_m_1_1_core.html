@@ -97,15 +97,13 @@ virtual MM::PortType&#160;</td><td class="memItemRight" valign="bottom"><b>GetSe
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnPropertiesChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller)=0</td></tr>
 <tr class="separator:a15429a95adfaddb687819f29aa7d85e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd95ec9506afd662297b23d983583650" id="r_acd95ec9506afd662297b23d983583650"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#acd95ec9506afd662297b23d983583650">OnPropertyChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const char *propName, const char *propValue)=0</td></tr>
-<tr class="memdesc:acd95ec9506afd662297b23d983583650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the UI that a property changed.  <br /></td></tr>
+<tr class="memdesc:acd95ec9506afd662297b23d983583650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform the UI that a property changed.  <br /></td></tr>
 <tr class="separator:acd95ec9506afd662297b23d983583650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3843e42f071f6d67b6bfcb4d6dc384e9" id="r_a3843e42f071f6d67b6bfcb4d6dc384e9"><td class="memItemLeft" align="right" valign="top"><a id="a3843e42f071f6d67b6bfcb4d6dc384e9" name="a3843e42f071f6d67b6bfcb4d6dc384e9"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnStagePositionChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double pos)=0</td></tr>
-<tr class="memdesc:a3843e42f071f6d67b6bfcb4d6dc384e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the UI when the stage has reached a new position. <br /></td></tr>
+<tr class="memitem:a3843e42f071f6d67b6bfcb4d6dc384e9" id="r_a3843e42f071f6d67b6bfcb4d6dc384e9"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a3843e42f071f6d67b6bfcb4d6dc384e9">OnStagePositionChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double pos)=0</td></tr>
+<tr class="memdesc:a3843e42f071f6d67b6bfcb4d6dc384e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform the UI when a stage has changed its position.  <br /></td></tr>
 <tr class="separator:a3843e42f071f6d67b6bfcb4d6dc384e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dbd7828ac71b8b0b663d821e9c8e8f4" id="r_a7dbd7828ac71b8b0b663d821e9c8e8f4"><td class="memItemLeft" align="right" valign="top"><a id="a7dbd7828ac71b8b0b663d821e9c8e8f4" name="a7dbd7828ac71b8b0b663d821e9c8e8f4"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnXYStagePositionChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double xPos, double yPos)=0</td></tr>
-<tr class="memdesc:a7dbd7828ac71b8b0b663d821e9c8e8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal the UI when the XY stage has reached a new position. <br /></td></tr>
+<tr class="memitem:a7dbd7828ac71b8b0b663d821e9c8e8f4" id="r_a7dbd7828ac71b8b0b663d821e9c8e8f4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a7dbd7828ac71b8b0b663d821e9c8e8f4">OnXYStagePositionChanged</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double xPos, double yPos)=0</td></tr>
+<tr class="memdesc:a7dbd7828ac71b8b0b663d821e9c8e8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inform the UI when an XY stage has changed its position.  <br /></td></tr>
 <tr class="separator:a7dbd7828ac71b8b0b663d821e9c8e8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59a5c1391e0803dfe4d37a962429e27e" id="r_a59a5c1391e0803dfe4d37a962429e27e"><td class="memItemLeft" align="right" valign="top"><a id="a59a5c1391e0803dfe4d37a962429e27e" name="a59a5c1391e0803dfe4d37a962429e27e"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>OnExposureChanged</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, double newExposure)=0</td></tr>
@@ -554,10 +552,98 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 </table>
 </div><div class="memdoc">
 
-<p>Signal the UI that a property changed. </p>
+<p>Inform the UI that a property changed. </p>
 <p>The <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> will check if groups or pixel size changed as a consequence of the change of this property and inform the UI. </p>
 
 <p class="reference">Referenced by <a class="el" href="class_c_device_base.html#a54820c958866fa7ff71de88fb5b28e93">CDeviceBase&lt; T, U &gt;::OnPropertyChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a3843e42f071f6d67b6bfcb4d6dc384e9" name="a3843e42f071f6d67b6bfcb4d6dc384e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3843e42f071f6d67b6bfcb4d6dc384e9">&#9670;&#160;</a></span>OnStagePositionChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int MM::Core::OnStagePositionChanged </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inform the UI when a stage has changed its position. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_c_device_base.html#aa731ff0eb4d12ba468078bb803243af4" title="Report position change (for single-axis stage).">CDeviceBase::OnStagePositionChanged()</a>. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="class_c_device_base.html#aa731ff0eb4d12ba468078bb803243af4">CDeviceBase&lt; T, U &gt;::OnStagePositionChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a7dbd7828ac71b8b0b663d821e9c8e8f4" name="a7dbd7828ac71b8b0b663d821e9c8e8f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dbd7828ac71b8b0b663d821e9c8e8f4">&#9670;&#160;</a></span>OnXYStagePositionChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int MM::Core::OnXYStagePositionChanged </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_m_m_1_1_device.html">Device</a> *&#160;</td>
+          <td class="paramname"><em>caller</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yPos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inform the UI when an XY stage has changed its position. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_c_device_base.html#a409451975b45dc986329511b1587d01c" title="Report position change (for XY stage).">CDeviceBase::OnXYStagePositionChanged()</a> </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="class_c_device_base.html#a409451975b45dc986329511b1587d01c">CDeviceBase&lt; T, U &gt;::OnXYStagePositionChanged()</a>.</p>
 
 </div>
 </div>

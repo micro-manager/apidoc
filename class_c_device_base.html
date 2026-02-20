@@ -317,13 +317,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>PurgeComPort</b> (cons
 int&#160;</td><td class="memItemRight" valign="bottom"><b>OnPropertyChanged</b> (const char *propName, const char *propValue)</td></tr>
 <tr class="memdesc:a54820c958866fa7ff71de88fb5b28e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal to the core that a property value has changed. <br /></td></tr>
 <tr class="separator:a54820c958866fa7ff71de88fb5b28e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa731ff0eb4d12ba468078bb803243af4" id="r_aa731ff0eb4d12ba468078bb803243af4"><td class="memItemLeft" align="right" valign="top"><a id="aa731ff0eb4d12ba468078bb803243af4" name="aa731ff0eb4d12ba468078bb803243af4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>OnStagePositionChanged</b> (double pos)</td></tr>
-<tr class="memdesc:aa731ff0eb4d12ba468078bb803243af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that the stage has arrived at a new position. <br /></td></tr>
+<tr class="memitem:aa731ff0eb4d12ba468078bb803243af4" id="r_aa731ff0eb4d12ba468078bb803243af4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#aa731ff0eb4d12ba468078bb803243af4">OnStagePositionChanged</a> (double pos)</td></tr>
+<tr class="memdesc:aa731ff0eb4d12ba468078bb803243af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report position change (for single-axis stage).  <br /></td></tr>
 <tr class="separator:aa731ff0eb4d12ba468078bb803243af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a409451975b45dc986329511b1587d01c" id="r_a409451975b45dc986329511b1587d01c"><td class="memItemLeft" align="right" valign="top"><a id="a409451975b45dc986329511b1587d01c" name="a409451975b45dc986329511b1587d01c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>OnXYStagePositionChanged</b> (double xPos, double yPos)</td></tr>
-<tr class="memdesc:a409451975b45dc986329511b1587d01c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that the XY stage has arrived at a new position. <br /></td></tr>
+<tr class="memitem:a409451975b45dc986329511b1587d01c" id="r_a409451975b45dc986329511b1587d01c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#a409451975b45dc986329511b1587d01c">OnXYStagePositionChanged</a> (double xPos, double yPos)</td></tr>
+<tr class="memdesc:a409451975b45dc986329511b1587d01c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report position change (for XY stage).  <br /></td></tr>
 <tr class="separator:a409451975b45dc986329511b1587d01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc209d1ff78ecf7d50a431a112a528c9" id="r_acc209d1ff78ecf7d50a431a112a528c9"><td class="memItemLeft" align="right" valign="top"><a id="acc209d1ff78ecf7d50a431a112a528c9" name="acc209d1ff78ecf7d50a431a112a528c9"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>OnExposureChanged</b> (double exposure)</td></tr>
@@ -1915,6 +1913,84 @@ template&lt;class T , class U &gt; </div>
 
 <p>Signal that something changed in the property structure. </p>
 <p>Signals the need for GUI update. This function should be called only after the initialize function finished. Calling it in the constructor or in the Initialize function will cause other device adapters to be called before they are initialized. </p>
+
+</div>
+</div>
+<a id="aa731ff0eb4d12ba468078bb803243af4" name="aa731ff0eb4d12ba468078bb803243af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa731ff0eb4d12ba468078bb803243af4">&#9670;&#160;</a></span>OnStagePositionChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_c_device_base.html">CDeviceBase</a>&lt; T, U &gt;::OnStagePositionChanged </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Report position change (for single-axis stage). </p>
+<p>Stages that do not receive change notifications from the hardware/driver don't have to call this. In particular, they should not use this to report the destination of a move that has not yet completed.</p>
+<p>It is up to the stage whether to report only after moves finish or also periodically during moves. But the reported position should eventually catch up to the actual position after the stage stops moving. </p>
+
+<p class="reference">References <a class="el" href="class_m_m_1_1_core.html#a3843e42f071f6d67b6bfcb4d6dc384e9">MM::Core::OnStagePositionChanged()</a>.</p>
+
+</div>
+</div>
+<a id="a409451975b45dc986329511b1587d01c" name="a409451975b45dc986329511b1587d01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409451975b45dc986329511b1587d01c">&#9670;&#160;</a></span>OnXYStagePositionChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_c_device_base.html">CDeviceBase</a>&lt; T, U &gt;::OnXYStagePositionChanged </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yPos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Report position change (for XY stage). </p>
+<p>Stages that do not receive change notifications from the hardware/driver don't have to call this. In particular, they should not use this to report the destination of a move that has not yet completed.</p>
+<p>It is up to the stage whether to report only after moves finish or also periodically during moves. But the reported position should eventually catch up to the actual position after the stage stops moving. </p>
+
+<p class="reference">References <a class="el" href="class_m_m_1_1_core.html#a7dbd7828ac71b8b0b663d821e9c8e8f4">MM::Core::OnXYStagePositionChanged()</a>.</p>
 
 </div>
 </div>
