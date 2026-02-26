@@ -101,6 +101,9 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Home</b> ()=0<
 <tr class="memitem:a39cf5e23bb1b6baac475dad83bcbc402" id="r_a39cf5e23bb1b6baac475dad83bcbc402"><td class="memItemLeft" align="right" valign="top"><a id="a39cf5e23bb1b6baac475dad83bcbc402" name="a39cf5e23bb1b6baac475dad83bcbc402"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()=0</td></tr>
 <tr class="separator:a39cf5e23bb1b6baac475dad83bcbc402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7187e0de1786519c5a5016cd4ba9b5f6" id="r_a7187e0de1786519c5a5016cd4ba9b5f6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_x_y_stage.html#a7187e0de1786519c5a5016cd4ba9b5f6">UsesOnXYStagePositionChanged</a> (bool &amp;result) const =0</td></tr>
+<tr class="memdesc:a7187e0de1786519c5a5016cd4ba9b5f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">XY stages can use the OnXYStagePositionChanged callback to signal updates about their position. Some stage adapters do so, others do not, in which case the UI code can use polling. This function signals whether the device adapters uses callbacks, so that the UI knows it does not need to poll this device. It is best practice to not change the result of this function (i.e. use a const value) as the UI will query the function only once.  <br /></td></tr>
+<tr class="separator:a7187e0de1786519c5a5016cd4ba9b5f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7283de0bdf0bb223b467d9b57c21215" id="r_aa7283de0bdf0bb223b467d9b57c21215"><td class="memItemLeft" align="right" valign="top"><a id="aa7283de0bdf0bb223b467d9b57c21215" name="aa7283de0bdf0bb223b467d9b57c21215"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>SetOrigin</b> ()=0</td></tr>
 <tr class="memdesc:aa7283de0bdf0bb223b467d9b57c21215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the current position as the (hardware) origin (0, 0). <br /></td></tr>
@@ -571,6 +574,36 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 <p>Do not alter the X coordinates. </p>
 
 <p>Implemented in <a class="el" href="class_c_x_y_stage_base.html#a2948ea67ae118618ac3c198e4a10ae85">CXYStageBase&lt; U &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a7187e0de1786519c5a5016cd4ba9b5f6" name="a7187e0de1786519c5a5016cd4ba9b5f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7187e0de1786519c5a5016cd4ba9b5f6">&#9670;&#160;</a></span>UsesOnXYStagePositionChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int MM::XYStage::UsesOnXYStagePositionChanged </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>XY stages can use the OnXYStagePositionChanged callback to signal updates about their position. Some stage adapters do so, others do not, in which case the UI code can use polling. This function signals whether the device adapters uses callbacks, so that the UI knows it does not need to poll this device. It is best practice to not change the result of this function (i.e. use a const value) as the UI will query the function only once. </p>
+
+<p>Implemented in <a class="el" href="class_c_x_y_stage_base.html#af3d47979edf1355a6f7c07352e655477">CXYStageBase&lt; U &gt;</a>.</p>
 
 </div>
 </div>

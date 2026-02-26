@@ -87,8 +87,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac05b23e36492fc9ad2e6c813c75d7ab7" id="r_ac05b23e36492fc9ad2e6c813c75d7ab7"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#ac05b23e36492fc9ad2e6c813c75d7ab7">GetNumberOfComponents</a> () const =0</td></tr>
 <tr class="memdesc:ac05b23e36492fc9ad2e6c813c75d7ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of components in this image.  <br /></td></tr>
 <tr class="separator:ac05b23e36492fc9ad2e6c813c75d7ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13ba0efb1dc3336803d038fb985ba4f6" id="r_a13ba0efb1dc3336803d038fb985ba4f6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a13ba0efb1dc3336803d038fb985ba4f6">GetComponentName</a> (unsigned component, char *name)=0</td></tr>
-<tr class="separator:a13ba0efb1dc3336803d038fb985ba4f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a578061d054ce24776c9e569b4cc87a08" id="r_a578061d054ce24776c9e569b4cc87a08"><td class="memItemLeft" align="right" valign="top">virtual int unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a578061d054ce24776c9e569b4cc87a08">GetNumberOfChannels</a> () const =0</td></tr>
 <tr class="memdesc:a578061d054ce24776c9e569b4cc87a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of simultaneous channels that camera is capable of.  <br /></td></tr>
 <tr class="separator:a578061d054ce24776c9e569b4cc87a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,9 +108,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6979e87587df73db038042b29c0e003d" id="r_a6979e87587df73db038042b29c0e003d"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a6979e87587df73db038042b29c0e003d">GetBitDepth</a> () const =0</td></tr>
 <tr class="memdesc:a6979e87587df73db038042b29c0e003d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the bit depth (dynamic range) of the pixel.  <br /></td></tr>
 <tr class="separator:a6979e87587df73db038042b29c0e003d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a025e55ff808d9b700a46f30875088e84" id="r_a025e55ff808d9b700a46f30875088e84"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a025e55ff808d9b700a46f30875088e84">GetPixelSizeUm</a> () const =0</td></tr>
-<tr class="memdesc:a025e55ff808d9b700a46f30875088e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unused and slated for removal. Implemented in <a class="el" href="_device_base_8h_source.html">DeviceBase.h</a>.  <br /></td></tr>
-<tr class="separator:a025e55ff808d9b700a46f30875088e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c181e0b815b7df64122a6e31dfc72db" id="r_a0c181e0b815b7df64122a6e31dfc72db"><td class="memItemLeft" align="right" valign="top"><a id="a0c181e0b815b7df64122a6e31dfc72db" name="a0c181e0b815b7df64122a6e31dfc72db"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetBinning</b> () const =0</td></tr>
 <tr class="memdesc:a0c181e0b815b7df64122a6e31dfc72db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current binning factor. <br /></td></tr>
@@ -164,9 +159,6 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetMultiROI</b
 <tr class="memitem:a35fdfcba40d27f7703e3fdc4fee8259d" id="r_a35fdfcba40d27f7703e3fdc4fee8259d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a35fdfcba40d27f7703e3fdc4fee8259d">StopSequenceAcquisition</a> ()=0</td></tr>
 <tr class="memdesc:a35fdfcba40d27f7703e3fdc4fee8259d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop an ongoing sequence acquisition.  <br /></td></tr>
 <tr class="separator:a35fdfcba40d27f7703e3fdc4fee8259d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7943c96cf586d5698a3a4ca2c56a6e6a" id="r_a7943c96cf586d5698a3a4ca2c56a6e6a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a7943c96cf586d5698a3a4ca2c56a6e6a">PrepareSequenceAcqusition</a> ()=0</td></tr>
-<tr class="memdesc:a7943c96cf586d5698a3a4ca2c56a6e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the camera so that Sequence acquisition can start without delay.  <br /></td></tr>
-<tr class="separator:a7943c96cf586d5698a3a4ca2c56a6e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5198289f81237fa788f2cd2b3b234ef2" id="r_a5198289f81237fa788f2cd2b3b234ef2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a5198289f81237fa788f2cd2b3b234ef2">IsCapturing</a> ()=0</td></tr>
 <tr class="memdesc:a5198289f81237fa788f2cd2b3b234ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate whether sequence acquisition is currently running.  <br /></td></tr>
 <tr class="separator:a5198289f81237fa788f2cd2b3b234ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -418,45 +410,6 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 <p>An implementation of this function is provided in <a class="el" href="_device_base_8h_source.html">DeviceBase.h</a>. It will return an empty string </p>
 
 <p>Implemented in <a class="el" href="class_c_camera_base.html#afd8f03e8c0ad131f7267d9de9aecffce">CCameraBase&lt; U &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a13ba0efb1dc3336803d038fb985ba4f6" name="a13ba0efb1dc3336803d038fb985ba4f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13ba0efb1dc3336803d038fb985ba4f6">&#9670;&#160;</a></span>GetComponentName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Camera::GetComponentName </td>
-          <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>component</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Unused; to be removed. </p>
-
-<p>Implemented in <a class="el" href="class_c_camera_base.html#aac800dc9324c66e0416875fdfb3ab1e8">CCameraBase&lt; U &gt;</a>.</p>
 
 </div>
 </div>
@@ -735,35 +688,6 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 
 </div>
 </div>
-<a id="a025e55ff808d9b700a46f30875088e84" name="a025e55ff808d9b700a46f30875088e84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a025e55ff808d9b700a46f30875088e84">&#9670;&#160;</a></span>GetPixelSizeUm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual double MM::Camera::GetPixelSizeUm </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Unused and slated for removal. Implemented in <a class="el" href="_device_base_8h_source.html">DeviceBase.h</a>. </p>
-
-<p>Implemented in <a class="el" href="class_c_camera_base.html#ab541f2bf30b426db136fd2e7af409cab">CCameraBase&lt; U &gt;</a>.</p>
-
-</div>
-</div>
 <a id="a484af1fa8d25b963749fc82f33190392" name="a484af1fa8d25b963749fc82f33190392"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a484af1fa8d25b963749fc82f33190392">&#9670;&#160;</a></span>GetTags()</h2>
 
@@ -878,35 +802,6 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 
 <p>Return whether a camera's exposure time can be sequenced. </p>
 <p>If returning true, then a <a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">Camera</a> adapter class should also inherit the SequenceableExposure class and implement its methods. </p>
-
-</div>
-</div>
-<a id="a7943c96cf586d5698a3a4ca2c56a6e6a" name="a7943c96cf586d5698a3a4ca2c56a6e6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7943c96cf586d5698a3a4ca2c56a6e6a">&#9670;&#160;</a></span>PrepareSequenceAcqusition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int MM::Camera::PrepareSequenceAcqusition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set up the camera so that Sequence acquisition can start without delay. </p>
-
-<p>Implemented in <a class="el" href="class_c_camera_base.html#a97b4788e5a648b04a44577d91261d283">CCameraBase&lt; U &gt;</a>.</p>
 
 </div>
 </div>
