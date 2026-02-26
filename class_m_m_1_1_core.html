@@ -133,12 +133,12 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>AcqFinished</b
 <tr class="memitem:affd9bbbd8a76fc8e8596b37be4926b37" id="r_affd9bbbd8a76fc8e8596b37be4926b37"><td class="memItemLeft" align="right" valign="top"><a id="affd9bbbd8a76fc8e8596b37be4926b37" name="affd9bbbd8a76fc8e8596b37be4926b37"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>PrepareForAcq</b> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller)=0</td></tr>
 <tr class="separator:affd9bbbd8a76fc8e8596b37be4926b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad39712ff686edf5938d7c7de092125e" id="r_aad39712ff686edf5938d7c7de092125e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e">InsertImage</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned byteDepth, unsigned nComponents, const char *serializedMetadata, const bool doProcess=true)=0</td></tr>
-<tr class="memdesc:aad39712ff686edf5938d7c7de092125e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> during sequence acquisition.  <br /></td></tr>
-<tr class="separator:aad39712ff686edf5938d7c7de092125e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf79ecb404b3a18c25ffe19a905b43eb" id="r_abf79ecb404b3a18c25ffe19a905b43eb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#abf79ecb404b3a18c25ffe19a905b43eb">InsertImage</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned byteDepth, const char *serializedMetadata=nullptr, const bool doProcess=true)=0</td></tr>
-<tr class="memdesc:abf79ecb404b3a18c25ffe19a905b43eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a grayscale frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> during sequence acquisition.  <br /></td></tr>
-<tr class="separator:abf79ecb404b3a18c25ffe19a905b43eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9fc3adf4753c4dbd3c5d8b2054f3bd5" id="r_ae9fc3adf4753c4dbd3c5d8b2054f3bd5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#ae9fc3adf4753c4dbd3c5d8b2054f3bd5">InsertImage</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned bytePerPixel, unsigned nComponents, const char *serializedMetadata=nullptr)=0</td></tr>
+<tr class="memdesc:ae9fc3adf4753c4dbd3c5d8b2054f3bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> during sequence acquisition.  <br /></td></tr>
+<tr class="separator:ae9fc3adf4753c4dbd3c5d8b2054f3bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a261c8d49494754565f1b045e364d92f1" id="r_a261c8d49494754565f1b045e364d92f1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a261c8d49494754565f1b045e364d92f1">InsertImage</a> (const <a class="el" href="class_m_m_1_1_device.html">Device</a> *caller, const unsigned char *buf, unsigned width, unsigned height, unsigned bytePerPixel, const char *serializedMetadata=nullptr)=0</td></tr>
+<tr class="memdesc:a261c8d49494754565f1b045e364d92f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a grayscale frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> during sequence acquisition.  <br /></td></tr>
+<tr class="separator:a261c8d49494754565f1b045e364d92f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06329e4277fcfe295002386b74376b68" id="r_a06329e4277fcfe295002386b74376b68"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_core.html#a06329e4277fcfe295002386b74376b68">InitializeImageBuffer</a> (unsigned channels, unsigned slices, unsigned int w, unsigned int h, unsigned int pixDepth)=0</td></tr>
 <tr class="memdesc:a06329e4277fcfe295002386b74376b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare the sequence buffer for the given image size and pixel format.  <br /></td></tr>
 <tr class="separator:a06329e4277fcfe295002386b74376b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,8 +316,8 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 
 </div>
 </div>
-<a id="abf79ecb404b3a18c25ffe19a905b43eb" name="abf79ecb404b3a18c25ffe19a905b43eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf79ecb404b3a18c25ffe19a905b43eb">&#9670;&#160;</a></span>InsertImage() <span class="overload">[1/2]</span></h2>
+<a id="a261c8d49494754565f1b045e364d92f1" name="a261c8d49494754565f1b045e364d92f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a261c8d49494754565f1b045e364d92f1">&#9670;&#160;</a></span>InsertImage() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,19 +353,13 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>byteDepth</em>, </td>
+          <td class="paramname"><em>bytePerPixel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>serializedMetadata</em> = <code>nullptr</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>doProcess</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>serializedMetadata</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -385,8 +379,8 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 
 </div>
 </div>
-<a id="aad39712ff686edf5938d7c7de092125e" name="aad39712ff686edf5938d7c7de092125e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad39712ff686edf5938d7c7de092125e">&#9670;&#160;</a></span>InsertImage() <span class="overload">[2/2]</span></h2>
+<a id="ae9fc3adf4753c4dbd3c5d8b2054f3bd5" name="ae9fc3adf4753c4dbd3c5d8b2054f3bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9fc3adf4753c4dbd3c5d8b2054f3bd5">&#9670;&#160;</a></span>InsertImage() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,7 +416,7 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>byteDepth</em>, </td>
+          <td class="paramname"><em>bytePerPixel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -434,13 +428,7 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>serializedMetadata</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>doProcess</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>serializedMetadata</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -457,11 +445,11 @@ virtual <a class="el" href="class_m_m_1_1_hub.html">MM::Hub</a> *&#160;</td><td 
 
 <p>Send a frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a> during sequence acquisition. </p>
 <p>Cameras must call this function during sequence acquisition to send each frame to the <a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">Core</a>.</p>
-<p>byteDepth: 1 or 2 for grayscale images; 4 for BGR_</p>
-<p>nComponents: 1 for grayscale; 4 for BGR_ (_: unused component)</p>
-<p>serializedMetadata: must be the result of md.serialize().c_str() (md being an instance of Metadata)</p>
-<p>doProcess: must be true, except for the case mentioned below</p>
-<p>Legacy note: Previously, cameras were required to perform special handling when <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> returns DEVICE_BUFFER_OVERFLOW and stopOnOverflow == false. However, <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> no longer ever returns that particular error when stopOnOverflow == false. So cameras should always just stop the acquisition if <a class="el" href="class_m_m_1_1_core.html#aad39712ff686edf5938d7c7de092125e" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> returns any error. </p>
+<p>bytesPerPixel: 1 or 2 for grayscale images; 4 or 8 for BGRx</p>
+<p>nComponents: 1 for grayscale; 4 for BGRx (x: an unused component)</p>
+<p>(8-byte BGRx may not be supported by the Micro-Manager GUI)</p>
+<p>serializedMetadata: must be the result of md.Serialize() (md being an instance of <a class="el" href="class_m_m_1_1_camera_image_metadata.html">MM::CameraImageMetadata</a>) or nullptr (= no tags)</p>
+<p>Legacy note: Previously, cameras were required to perform special handling when <a class="el" href="class_m_m_1_1_core.html#ae9fc3adf4753c4dbd3c5d8b2054f3bd5" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> returns DEVICE_BUFFER_OVERFLOW and stopOnOverflow == false. However, <a class="el" href="class_m_m_1_1_core.html#ae9fc3adf4753c4dbd3c5d8b2054f3bd5" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> no longer ever returns that particular error when stopOnOverflow == false. So cameras should always just stop the acquisition if <a class="el" href="class_m_m_1_1_core.html#ae9fc3adf4753c4dbd3c5d8b2054f3bd5" title="Send a frame to the Core during sequence acquisition.">InsertImage()</a> returns any error. </p>
 
 </div>
 </div>

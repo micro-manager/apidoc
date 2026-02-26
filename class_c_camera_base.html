@@ -88,14 +88,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a87117d2d3415d496b4149e96db9b5450" id="r_a87117d2d3415d496b4149e96db9b5450"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#a87117d2d3415d496b4149e96db9b5450">StopSequenceAcquisition</a> ()=0</td></tr>
 <tr class="memdesc:a87117d2d3415d496b4149e96db9b5450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop and wait for the thread to finish.  <br /></td></tr>
 <tr class="separator:a87117d2d3415d496b4149e96db9b5450"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab541f2bf30b426db136fd2e7af409cab" id="r_ab541f2bf30b426db136fd2e7af409cab"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#ab541f2bf30b426db136fd2e7af409cab">GetPixelSizeUm</a> () const final</td></tr>
-<tr class="memdesc:ab541f2bf30b426db136fd2e7af409cab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unused and slated for removal. Implemented in <a class="el" href="_device_base_8h_source.html">DeviceBase.h</a>.  <br /></td></tr>
-<tr class="separator:ab541f2bf30b426db136fd2e7af409cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70cf35779830c4c2f944fbc563d2ba3" id="r_ab70cf35779830c4c2f944fbc563d2ba3"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#ab70cf35779830c4c2f944fbc563d2ba3">GetNumberOfComponents</a> () const</td></tr>
 <tr class="memdesc:ab70cf35779830c4c2f944fbc563d2ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of components in this image.  <br /></td></tr>
 <tr class="separator:ab70cf35779830c4c2f944fbc563d2ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac800dc9324c66e0416875fdfb3ab1e8" id="r_aac800dc9324c66e0416875fdfb3ab1e8"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#aac800dc9324c66e0416875fdfb3ab1e8">GetComponentName</a> (unsigned channel, char *name) final</td></tr>
-<tr class="separator:aac800dc9324c66e0416875fdfb3ab1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b1b95634021c77feac941ff7a179bf9" id="r_a8b1b95634021c77feac941ff7a179bf9"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#a8b1b95634021c77feac941ff7a179bf9">GetNumberOfChannels</a> () const</td></tr>
 <tr class="memdesc:a8b1b95634021c77feac941ff7a179bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of channels.  <br /></td></tr>
 <tr class="separator:a8b1b95634021c77feac941ff7a179bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,9 +106,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afb097cee9403f4471970d1ed9584d4a6" id="r_afb097cee9403f4471970d1ed9584d4a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#afb097cee9403f4471970d1ed9584d4a6">GetTags</a> (char *serializedMetadata)</td></tr>
 <tr class="memdesc:afb097cee9403f4471970d1ed9584d4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill serializedMetadata with the device's metadata tags.  <br /></td></tr>
 <tr class="separator:afb097cee9403f4471970d1ed9584d4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97b4788e5a648b04a44577d91261d283" id="r_a97b4788e5a648b04a44577d91261d283"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#a97b4788e5a648b04a44577d91261d283">PrepareSequenceAcqusition</a> () final</td></tr>
-<tr class="memdesc:a97b4788e5a648b04a44577d91261d283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up the camera so that Sequence acquisition can start without delay.  <br /></td></tr>
-<tr class="separator:a97b4788e5a648b04a44577d91261d283"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a945fda309f0147a7ef27e642fcd323aa" id="r_a945fda309f0147a7ef27e642fcd323aa"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_camera_base.html#a945fda309f0147a7ef27e642fcd323aa">StartSequenceAcquisition</a> (long numImages, double interval_ms, bool stopOnOverflow)=0</td></tr>
 <tr class="memdesc:a945fda309f0147a7ef27e642fcd323aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start sequence acquisition.  <br /></td></tr>
 <tr class="separator:a945fda309f0147a7ef27e642fcd323aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -676,49 +668,6 @@ template&lt;class U &gt; </div>
 
 </div>
 </div>
-<a id="aac800dc9324c66e0416875fdfb3ab1e8" name="aac800dc9324c66e0416875fdfb3ab1e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac800dc9324c66e0416875fdfb3ab1e8">&#9670;&#160;</a></span>GetComponentName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class U &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int <a class="el" href="class_c_camera_base.html">CCameraBase</a>&lt; U &gt;::GetComponentName </td>
-          <td>(</td>
-          <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>component</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Unused; to be removed. </p>
-
-<p>Implements <a class="el" href="class_m_m_1_1_camera.html#a13ba0efb1dc3336803d038fb985ba4f6">MM::Camera</a>.</p>
-
-<p class="reference">References <a class="el" href="class_c_device_utils.html#a780e528469161e446c3948c5187f12d4">CDeviceUtils::CopyLimitedString()</a>.</p>
-
-</div>
-</div>
 <a id="a3226f9417592314c8eb26e40964711f2" name="a3226f9417592314c8eb26e40964711f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3226f9417592314c8eb26e40964711f2">&#9670;&#160;</a></span>GetExposureSequenceMaxLength()</h2>
 
@@ -1100,37 +1049,6 @@ template&lt;class U &gt; </div>
 
 </div>
 </div>
-<a id="ab541f2bf30b426db136fd2e7af409cab" name="ab541f2bf30b426db136fd2e7af409cab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab541f2bf30b426db136fd2e7af409cab">&#9670;&#160;</a></span>GetPixelSizeUm()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class U &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">double <a class="el" href="class_c_camera_base.html">CCameraBase</a>&lt; U &gt;::GetPixelSizeUm </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Unused and slated for removal. Implemented in <a class="el" href="_device_base_8h_source.html">DeviceBase.h</a>. </p>
-
-<p>Implements <a class="el" href="class_m_m_1_1_camera.html#a025e55ff808d9b700a46f30875088e84">MM::Camera</a>.</p>
-
-</div>
-</div>
 <a id="afb097cee9403f4471970d1ed9584d4a6" name="afb097cee9403f4471970d1ed9584d4a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb097cee9403f4471970d1ed9584d4a6">&#9670;&#160;</a></span>GetTags()</h2>
 
@@ -1225,37 +1143,6 @@ template&lt;class U &gt; </div>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_m_m_1_1_camera.html">MM::Camera</a>.</p>
-
-</div>
-</div>
-<a id="a97b4788e5a648b04a44577d91261d283" name="a97b4788e5a648b04a44577d91261d283"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97b4788e5a648b04a44577d91261d283">&#9670;&#160;</a></span>PrepareSequenceAcqusition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class U &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int <a class="el" href="class_c_camera_base.html">CCameraBase</a>&lt; U &gt;::PrepareSequenceAcqusition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set up the camera so that Sequence acquisition can start without delay. </p>
-
-<p>Implements <a class="el" href="class_m_m_1_1_camera.html#a7943c96cf586d5698a3a4ca2c56a6e6a">MM::Camera</a>.</p>
 
 </div>
 </div>
