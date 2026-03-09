@@ -55,21 +55,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5c12138cd2c9e4ecea8c7cf989b86874" id="r_a5c12138cd2c9e4ecea8c7cf989b86874"><td class="memItemLeft" align="right" valign="top"><a id="a5c12138cd2c9e4ecea8c7cf989b86874" name="a5c12138cd2c9e4ecea8c7cf989b86874"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CorePropertyCollection</b> (<a class="el" href="class_c_m_m_core.html">CMMCore</a> *core)</td></tr>
 <tr class="separator:a5c12138cd2c9e4ecea8c7cf989b86874"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ef225403af90a0b2ce53b641fa1d98d" id="r_a6ef225403af90a0b2ce53b641fa1d98d"><td class="memItemLeft" align="right" valign="top"><a id="a6ef225403af90a0b2ce53b641fa1d98d" name="a6ef225403af90a0b2ce53b641fa1d98d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Get</b> (const char *PropName) const</td></tr>
-<tr class="separator:a6ef225403af90a0b2ce53b641fa1d98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72078364941f003a1d594280d983b753" id="r_a72078364941f003a1d594280d983b753"><td class="memItemLeft" align="right" valign="top"><a id="a72078364941f003a1d594280d983b753" name="a72078364941f003a1d594280d983b753"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>Get</b> (const char *propName) const</td></tr>
+<tr class="separator:a72078364941f003a1d594280d983b753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afad2bd3cca903d24e44b04df8a0dd923" id="r_afad2bd3cca903d24e44b04df8a0dd923"><td class="memItemLeft" align="right" valign="top"><a id="afad2bd3cca903d24e44b04df8a0dd923" name="afad2bd3cca903d24e44b04df8a0dd923"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>Has</b> (const char *name) const</td></tr>
 <tr class="separator:afad2bd3cca903d24e44b04df8a0dd923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830ef4fbc49d59db32a791c9c8d9b605" id="r_a830ef4fbc49d59db32a791c9c8d9b605"><td class="memItemLeft" align="right" valign="top"><a id="a830ef4fbc49d59db32a791c9c8d9b605" name="a830ef4fbc49d59db32a791c9c8d9b605"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAllowedValues</b> (const char *propName) const</td></tr>
 <tr class="separator:a830ef4fbc49d59db32a791c9c8d9b605"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a907da3f0f9caa8f69576b2ed0722761d" id="r_a907da3f0f9caa8f69576b2ed0722761d"><td class="memItemLeft" align="right" valign="top"><a id="a907da3f0f9caa8f69576b2ed0722761d" name="a907da3f0f9caa8f69576b2ed0722761d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ClearAllowedValues</b> (const char *propName)</td></tr>
-<tr class="separator:a907da3f0f9caa8f69576b2ed0722761d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae388c65f423c1763efba22885ecb26f1" id="r_ae388c65f423c1763efba22885ecb26f1"><td class="memItemLeft" align="right" valign="top"><a id="ae388c65f423c1763efba22885ecb26f1" name="ae388c65f423c1763efba22885ecb26f1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddAllowedValue</b> (const char *propName, const char *value)</td></tr>
-<tr class="separator:ae388c65f423c1763efba22885ecb26f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebe0619bcbd1b0682d605b56ba901f96" id="r_aebe0619bcbd1b0682d605b56ba901f96"><td class="memItemLeft" align="right" valign="top"><a id="aebe0619bcbd1b0682d605b56ba901f96" name="aebe0619bcbd1b0682d605b56ba901f96"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsReadOnly</b> (const char *propName) const</td></tr>
 <tr class="separator:aebe0619bcbd1b0682d605b56ba901f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -79,18 +73,30 @@ MM::PropertyType&#160;</td><td class="memItemRight" valign="bottom"><b>GetProper
 <tr class="memitem:a6f2e213e5cf2443a7a32c0b5244d357e" id="r_a6f2e213e5cf2443a7a32c0b5244d357e"><td class="memItemLeft" align="right" valign="top"><a id="a6f2e213e5cf2443a7a32c0b5244d357e" name="a6f2e213e5cf2443a7a32c0b5244d357e"></a>
 std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetNames</b> () const</td></tr>
 <tr class="separator:a6f2e213e5cf2443a7a32c0b5244d357e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2981529e3807430dd65c23f98b66ce69" id="r_a2981529e3807430dd65c23f98b66ce69"><td class="memItemLeft" align="right" valign="top"><a id="a2981529e3807430dd65c23f98b66ce69" name="a2981529e3807430dd65c23f98b66ce69"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Add</b> (const char *name, <a class="el" href="classmmcore_1_1internal_1_1_core_property.html">CoreProperty</a> &amp;p)</td></tr>
-<tr class="separator:a2981529e3807430dd65c23f98b66ce69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f6838a6e05075713f65434b85c9b263" id="r_a7f6838a6e05075713f65434b85c9b263"><td class="memItemLeft" align="right" valign="top"><a id="a7f6838a6e05075713f65434b85c9b263" name="a7f6838a6e05075713f65434b85c9b263"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Refresh</b> ()</td></tr>
-<tr class="separator:a7f6838a6e05075713f65434b85c9b263"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d0dd18e0bbc4a5b7ed0a3de0d44b84f" id="r_a2d0dd18e0bbc4a5b7ed0a3de0d44b84f"><td class="memItemLeft" align="right" valign="top"><a id="a2d0dd18e0bbc4a5b7ed0a3de0d44b84f" name="a2d0dd18e0bbc4a5b7ed0a3de0d44b84f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Execute</b> (const char *PropName, const char *Value)</td></tr>
-<tr class="separator:a2d0dd18e0bbc4a5b7ed0a3de0d44b84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9fad0dcc0a1d1c4c93d2effbb1fc1d1" id="r_aa9fad0dcc0a1d1c4c93d2effbb1fc1d1"><td class="memItemLeft" align="right" valign="top"><a id="aa9fad0dcc0a1d1c4c93d2effbb1fc1d1" name="aa9fad0dcc0a1d1c4c93d2effbb1fc1d1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> (const char *PropName, const char *Value)</td></tr>
-<tr class="separator:aa9fad0dcc0a1d1c4c93d2effbb1fc1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ac85728b5ff61a12a5b801ac5b9f8c1" id="r_a5ac85728b5ff61a12a5b801ac5b9f8c1"><td class="memItemLeft" align="right" valign="top"><a id="a5ac85728b5ff61a12a5b801ac5b9f8c1" name="a5ac85728b5ff61a12a5b801ac5b9f8c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> (const char *propName, const std::string &amp;value)</td></tr>
+<tr class="separator:a5ac85728b5ff61a12a5b801ac5b9f8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681719daf15b9c9c5a44a57b441b53e0" id="r_a681719daf15b9c9c5a44a57b441b53e0"><td class="memItemLeft" align="right" valign="top"><a id="a681719daf15b9c9c5a44a57b441b53e0" name="a681719daf15b9c9c5a44a57b441b53e0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsPropertyPreInit</b> (const char *propName) const</td></tr>
+<tr class="separator:a681719daf15b9c9c5a44a57b441b53e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cf40458f7d2a085b7b7e73433787ee" id="r_aa3cf40458f7d2a085b7b7e73433787ee"><td class="memItemLeft" align="right" valign="top"><a id="aa3cf40458f7d2a085b7b7e73433787ee" name="aa3cf40458f7d2a085b7b7e73433787ee"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>HasPropertyLimits</b> (const char *propName) const</td></tr>
+<tr class="separator:aa3cf40458f7d2a085b7b7e73433787ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a59bde76bb16d09de8400721f8da377" id="r_a1a59bde76bb16d09de8400721f8da377"><td class="memItemLeft" align="right" valign="top"><a id="a1a59bde76bb16d09de8400721f8da377" name="a1a59bde76bb16d09de8400721f8da377"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>GetPropertyLowerLimit</b> (const char *propName) const</td></tr>
+<tr class="separator:a1a59bde76bb16d09de8400721f8da377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a922158dff3db14031f3fc27514641d90" id="r_a922158dff3db14031f3fc27514641d90"><td class="memItemLeft" align="right" valign="top"><a id="a922158dff3db14031f3fc27514641d90" name="a922158dff3db14031f3fc27514641d90"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>GetPropertyUpperLimit</b> (const char *propName) const</td></tr>
+<tr class="separator:a922158dff3db14031f3fc27514641d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a152bec469d24705a87c55ba45860d6e2" id="r_a152bec469d24705a87c55ba45860d6e2"><td class="memItemLeft" align="right" valign="top"><a id="a152bec469d24705a87c55ba45860d6e2" name="a152bec469d24705a87c55ba45860d6e2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsPropertySequenceable</b> (const char *propName) const</td></tr>
+<tr class="separator:a152bec469d24705a87c55ba45860d6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6457fd15e8578f660abe9b9b62f8c13f" id="r_a6457fd15e8578f660abe9b9b62f8c13f"><td class="memItemLeft" align="right" valign="top"><a id="a6457fd15e8578f660abe9b9b62f8c13f" name="a6457fd15e8578f660abe9b9b62f8c13f"></a>
+long&#160;</td><td class="memItemRight" valign="bottom"><b>GetPropertySequenceMaxLength</b> (const char *propName) const</td></tr>
+<tr class="separator:a6457fd15e8578f660abe9b9b62f8c13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7e2c2b17b53b19b6d9d1cf1ef282981" id="r_aa7e2c2b17b53b19b6d9d1cf1ef282981"><td class="memItemLeft" align="right" valign="top"><a id="aa7e2c2b17b53b19b6d9d1cf1ef282981" name="aa7e2c2b17b53b19b6d9d1cf1ef282981"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Add</b> (const char *name, <a class="el" href="structmmcore_1_1internal_1_1_core_property_def.html">CorePropertyDef</a> def)</td></tr>
+<tr class="separator:aa7e2c2b17b53b19b6d9d1cf1ef282981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a483da6609758c59940ee2d70f11ce99e" id="r_a483da6609758c59940ee2d70f11ce99e"><td class="memItemLeft" align="right" valign="top"><a id="a483da6609758c59940ee2d70f11ce99e" name="a483da6609758c59940ee2d70f11ce99e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Clear</b> ()</td></tr>
 <tr class="separator:a483da6609758c59940ee2d70f11ce99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
