@@ -60,7 +60,186 @@ Building MMDevice</h1>
 <div class="line">meson setup --vsenv builddir  # --vsenv recommended on Windows</div>
 <div class="line">meson compile -C builddir</div>
 <div class="line">meson test -C builddir</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Compatibility</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Device Interface Version (DIV)</h2>
+<p>The Device Interface Version (DIV) is a single integer compiled into each device adapter (by statically linking to MMDevice). At runtime, MMCore checks that the device adapter's DIV exactly matches its own. On mismatch, MMCore refuses to load the adapter with an error message stating both version numbers. The DIV is the only version number adapter authors and users need to care about. See <a class="el" href="md_mm_core_and_devices_2_m_m_device_2_r_e_a_d_m_e.html#div-history">DIV history</a> for a complete list.</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Cross-runtime compatibility</h2>
+<p>Given a matching DIV, adapters and MMCore built with different compilers, compiler versions, C++ standard versions, or C++ runtimes (e.g., MSVC Debug vs Release, libstdc++ vs libc++) are compatible. The exception is MinGW vs MSVC on Windows (mixing is not supported due to virtual destructor incompatibility).</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Source vs binary compatibility</h2>
+<p>Source compatibility (whether adapter code compiles against a new MMDevice) is distinct from binary compatibility (whether a compiled adapter works with a given MMCore). A DIV bump always breaks binary compatibility but does not necessarily break source compatibility.</p>
+<p>Our source compatibility policy: existing device adapter source must not silently change its semantics. If a change to MMDevice alters the contract of an interface method, it must either (a) cause a compile error in affected adapters, or (b) preserve the correctness of unchanged adapter source when combined with a DIV-matched MMCore. Source-breaking changes may be made when it is practical to safely update all affected in-tree device adapters.</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Requirements and recommendations</h2>
+<p><b>DeviceBase required.</b> Device adapters must inherit from the DeviceBase class templates (in <code><a class="el" href="_device_base_8h_source.html">DeviceBase.h</a></code>). Deriving directly from the <code><a class="el" href="class_m_m_1_1_device.html" title="Generic device interface.">MM::Device</a></code> interface classes is not supported.</p>
+<p><b>In-tree adapters recommended.</b> Device adapters should be kept in-tree (in the mmCoreAndDevices repository) so that they are automatically maintained for source and binary compatibility. Out-of-tree adapters require careful and regular maintenance by their authors to keep up with interface changes.</p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Known portability issues</h2>
+<p><b>Use of <code>long</code>.</b> <code>long</code> is 32-bit on Windows but 64-bit on Linux/macOS. It is unfortunately used extensively in MMDevice, a leftover from the 32-bit days when <code>long</code> was 32-bit on all platforms we supported. Device adapters should assume that <code>long</code> cannot handle values outside of the range of <code>std::int32_t</code> (and same for <code>unsigned long</code> and <code>std::uint32_t</code>).</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Recent source-incompatible changes</h2>
+<p>The following table lists source-breaking changes to MMDevice that required updates in device adapter code. Note the reverse-chronological order.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Date   </th><th class="markdownTableHeadNone">PR   </th><th class="markdownTableHeadNone">Change   </th><th class="markdownTableHeadNone">Fix    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2026-02-26   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/861">#861</a>   </td><td class="markdownTableBodyNone">Removed <code>GetPixelSizeUm()</code>, <code>GetComponentName()</code>, <code>PrepareSequenceAcqusition()</code> from <code><a class="el" href="class_m_m_1_1_camera.html" title="Camera API.">MM::Camera</a></code> interface. Removed <code>doProcess</code> parameter from <code>InsertImage()</code>. Added <code>UsesOnStagePositionChanged()</code> / <code>UsesOnXYStagePositionChanged()</code> to stage interfaces. DIV bumped to 75.   </td><td class="markdownTableBodyNone">Remove <code>doProcess</code> argument from <code>InsertImage()</code> calls. Override <code>UsesOn[XY]StagePositionChanged()</code> if your stage uses position-changed callbacks.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2026-02-19   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/853">#853</a>   </td><td class="markdownTableBodyNone">Made <code>GetComponentName()</code> <code>final</code>   </td><td class="markdownTableBodyNone">Remove override.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2026-02-19   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/852">#852</a>   </td><td class="markdownTableBodyNone">Made <code>PrepareSequenceAcqusition()</code> <code>final</code>   </td><td class="markdownTableBodyNone">Remove override.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2026-02-19   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/845">#845</a>   </td><td class="markdownTableBodyNone">Moved <code>ImageMetadata.h</code> from MMDevice to MMCore   </td><td class="markdownTableBodyNone">Remove <code>#include "ImageMetadata.h"</code> from adapter code.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2026-02-19   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/843">#843</a>   </td><td class="markdownTableBodyNone">Replaced <code>Metadata</code> with <code><a class="el" href="class_m_m_1_1_camera_image_metadata.html">MM::CameraImageMetadata</a></code> for camera image metadata. Removed <code>#include "ImageMetadata.h"</code> from <code><a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a></code>.   </td><td class="markdownTableBodyNone">Use <code><a class="el" href="class_m_m_1_1_camera_image_metadata.html">MM::CameraImageMetadata</a></code> and <code>AddTag()</code> instead of <code>Metadata</code> and <code>PutImageTag()</code>. Use <code>md.Serialize()</code> (returns <code>const char*</code>) instead of <code>md.Serialize().c_str()</code>.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2026-02-09   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/832">#832</a>   </td><td class="markdownTableBodyNone">Removed <code>GetTagKeys()</code> and <code>GetTagValue()</code> from <code><a class="el" href="class_c_camera_base.html" title="Base class for creating camera device adapters.">CCameraBase</a></code>   </td><td class="markdownTableBodyNone">Stop calling these methods.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2026-02-06   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/827">#827</a>   </td><td class="markdownTableBodyNone">Removed <code>ImgBuffer::SetMetadata()</code> and <code>GetMetadata()</code>   </td><td class="markdownTableBodyNone">Stop calling these methods.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2025-10-30   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/771">#771</a>   </td><td class="markdownTableBodyNone">Deleted <code>_t()</code> timing macro   </td><td class="markdownTableBodyNone">Remove uses of <code>_t()</code>.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2025-09-26   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/752">#752</a>   </td><td class="markdownTableBodyNone">Made <code>GetPixelSizeUm()</code> <code>final</code> in camera base classes   </td><td class="markdownTableBodyNone">Remove override of <code>GetPixelSizeUm()</code>.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2025-09-25   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/753">#753</a>   </td><td class="markdownTableBodyNone">Removed <code>using</code> declarations for <code>CreateProperty</code>, <code>SetAllowedValues</code>, <code>SetProperty</code> from <code><a class="el" href="class_c_camera_base.html" title="Base class for creating camera device adapters.">CCameraBase</a></code> (reverted from public to protected)   </td><td class="markdownTableBodyNone">No change needed if calling from within the class hierarchy (normal case).    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2025-09-25   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/590">#590</a>   </td><td class="markdownTableBodyNone">Split <code><a class="el" href="class_c_camera_base.html" title="Base class for creating camera device adapters.">CCameraBase</a></code> into <code><a class="el" href="class_c_camera_base.html" title="Base class for creating camera device adapters.">CCameraBase</a></code> (new; cameras correctly implementing sequence acquisition) and <code><a class="el" href="class_c_legacy_camera_base.html" title="Legacy base class for creating camera device adapters.">CLegacyCameraBase</a></code> (cameras relying on deprecated snap-thread behavior, or parts of it)   </td><td class="markdownTableBodyNone">Cameras using the old snap-thread pattern: change base class to <code><a class="el" href="class_c_legacy_camera_base.html" title="Legacy base class for creating camera device adapters.">CLegacyCameraBase</a>&lt;T&gt;</code>. New <code><a class="el" href="class_c_camera_base.html" title="Base class for creating camera device adapters.">CCameraBase</a></code> also requires implementing <code>Busy()</code>.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2025-08-15   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/710">#710</a>, <a href="https://github.com/micro-manager/mmCoreAndDevices/pull/715">#715</a>, <a href="https://github.com/micro-manager/mmCoreAndDevices/pull/717">#717</a>   </td><td class="markdownTableBodyNone">Removed deprecated Core callback functions (<code>GetXYPosition</code>, <code>ClearImageBuffer</code>, <code>InsertImage(ImgBuffer)</code>, <code>InsertMultiChannel</code>, <code>GetImage</code>, <code>GetImageDimensions</code>, <code>SetFocusPosition</code>, <code>MoveFocus</code>, <code>SetXYPosition</code>, <code>MoveXYStage</code>, <code>SetExposure</code>, <code>GetExposure</code>, <code>SetConfig</code>, <code>GetCurrentConfig</code>, <code>GetChannelConfig</code>, <code>GetImageProcessor</code>, <code>GetAutoFocus</code>, <code>GetStateDevice</code>, <code>NextPostedError</code>, <code>PostError</code>, <code>ClearPostedErrors</code>). Removed <code>HDEVMODULE</code> type, <code>GetModuleHandle()</code>, <code>SetModuleHandle()</code>. DIV bumped to 74.   </td><td class="markdownTableBodyNone">Remove calls to these functions. For <code>ClearImageBuffer</code>: just stop acquisition on any <code>InsertImage()</code> error.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2024-01-24   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/435">#435</a>   </td><td class="markdownTableBodyNone">Replaced <code>MODULE_EXPORTS</code> preprocessor macro with <code>MMDEVICE_CLIENT_BUILD</code> (with inverted logic; adapters no longer need to define any macro).   </td><td class="markdownTableBodyNone">Remove <code>MODULE_EXPORTS</code> from preprocessor definitions.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2024-01-22   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/433">#433</a>   </td><td class="markdownTableBodyNone">Removed <code>gettimeofday()</code> shim, <code>DELTA_EPOCH_IN_MICROSECS</code> macro, and <code>struct timezone</code> from <code><a class="el" href="_device_utils_8h_source.html">DeviceUtils.h</a></code>. Removed transitive <code>&lt;windows.h&gt;</code> include.   </td><td class="markdownTableBodyNone">Remove uses of <code>gettimeofday()</code>. Add explicit <code>&lt;windows.h&gt;</code> include if needed for Windows-specific types.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2023-08-26   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/367">#367</a>   </td><td class="markdownTableBodyNone">Deleted <code>FixSnprintf.h</code> and removed its <code>#include</code> from <code><a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a></code>.   </td><td class="markdownTableBodyNone">Remove <code>#include "FixSnprintf.h"</code> from adapter code.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2022-10-27   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/277">#277</a>, <a href="https://github.com/micro-manager/mmCoreAndDevices/pull/278">#278</a>, <a href="https://github.com/micro-manager/mmCoreAndDevices/pull/279">#279</a>, <a href="https://github.com/micro-manager/mmCoreAndDevices/pull/280">#280</a>, <a href="https://github.com/micro-manager/mmCoreAndDevices/pull/281">#281</a>   </td><td class="markdownTableBodyNone"><code><a class="el" href="class_m_m_1_1_m_m_time.html" title="Utility class used both MMCore and devices to maintain time intervals in the uniform,...">MM::MMTime</a></code> overhaul: removed <code>MMTime(std::string)</code> constructor, made constructors <code>explicit</code>, made <code>sec_</code>/<code>uSec_</code> data members private, replaced <code>serialize()</code> with <code>toString()</code>, changed <code>fromUs()</code> parameter from <code>double</code> to <code>long long</code>, removed <code>MM::g_Keyword_Metadata_StartTime</code> constant.   </td><td class="markdownTableBodyNone">Use <code><a class="el" href="class_m_m_1_1_m_m_time.html" title="Utility class used both MMCore and devices to maintain time intervals in the uniform,...">MM::MMTime</a>{}</code> or <code><a class="el" href="class_m_m_1_1_m_m_time.html" title="Utility class used both MMCore and devices to maintain time intervals in the uniform,...">MM::MMTime(0)</a></code> instead of implicit conversions. Access time via <code>getMicroseconds()</code>, <code>fromUs()</code>, <code>fromMs()</code>. Use <code>toString()</code> instead of <code>serialize()</code>. Remove references to <code>g_Keyword_Metadata_StartTime</code>.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2021-02-14   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/8687ddb51">SVN r17423</a>   </td><td class="markdownTableBodyNone">Removed unused <code>AcqBefore()</code>, <code>AcqAfter()</code>, <code>AcqBeforeFrame()</code>, <code>AcqAfterFrame()</code>, <code>AcqBeforeStack()</code>, <code>AcqAfterStack()</code> from <code><a class="el" href="class_m_m_1_1_device.html" title="Generic device interface.">MM::Device</a></code> and <code><a class="el" href="class_c_device_base.html" title="Implement functionality common to all devices.">CDeviceBase</a></code>. DIV bumped to 70.   </td><td class="markdownTableBodyNone">Remove overrides of these methods.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2017-01-30   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/e348a6f1a">SVN r16281</a>   </td><td class="markdownTableBodyNone">Removed <code>FrameBuffer</code> class from <code><a class="el" href="_img_buffer_8h_source.html">ImgBuffer.h</a></code>.   </td><td class="markdownTableBodyNone">Remove uses of <code>FrameBuffer</code>.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">2016-01-06   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/f53fa08d2">SVN r15892</a>   </td><td class="markdownTableBodyNone"><code>Property</code>, <code>StringProperty</code>, <code>FloatProperty</code>, <code>IntegerProperty</code> constructors now require a <code>name</code> parameter.   </td><td class="markdownTableBodyNone">Use <code>CreateProperty()</code> and family instead of direct constructor call.   </td></tr>
+</table>
+<blockquote class="doxtable">
+<p>&zwj;This table covers changes since early 2016. History back to 2014 has been reviewed; the next source-breaking changes before this period were in mid-2014 (DIV 55–61 era). </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Device Interface Version policy</h1>
+<p><em>This section is for MMDevice/MMCore maintainers.</em></p>
+<p>These are general guidelines but may not be perfect for every situation. They do not fully replace the need for careful consideration and review of each proposed change. Also, don't forget that compatibility is not the only concern in good interface design.</p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Where versions are defined</h2>
+<p>The Device Interface Version (DIV) is defined as <code>DEVICE_INTERFACE_VERSION</code> in <code><a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a></code>. The Module Interface Version (MIV) is defined as <code>MODULE_INTERFACE_VERSION</code> in <code><a class="el" href="_module_interface_8h_source.html">ModuleInterface.h</a></code>. Both are compiled into each device adapter (via <code>ModuleInterface.cpp</code>) and checked by MMCore at load time (exact match required for both).</p>
+<h2><a class="anchor" id="autotoc_md12"></a>
+Binary compatibility mechanism</h2>
+<p>The interface classes in <code><a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a></code> define pure virtual methods. MMCore calls device methods exclusively through virtual dispatch (vtable). Similarly, <code><a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">MM::Core</a></code> is a virtual callback interface implemented by MMCore and called by adapters. Binary compatibility means the vtable layout, method signatures, and data passed across the boundary must be identical on both sides.</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Building against matching MMDevice</h2>
+<p>Each device adapter (and MMCore) must individually be built against the matching MMDevice version from the same mmCoreAndDevices commit. There is no support for building against an older or newer MMDevice. However, adapters and MMCore built from different commits can be freely mixed as long as their DIV matches.</p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Constraints on interface classes</h2>
+<p>The following constraints are enforced to maintain ABI portability:</p>
+<ul>
+<li>Method parameters and return values must be POD types or pointers; no C++ types (<code>std::string</code>, <code>std::vector</code>, etc.) may cross the boundary.<ul>
+<li>Note: <code><a class="el" href="class_m_m_1_1_m_m_time.html" title="Utility class used both MMCore and devices to maintain time intervals in the uniform,...">MM::MMTime</a></code> and <code>MM::Core::GetCurrentMMTime()</code> violate this rule. <code><a class="el" href="class_m_m_1_1_m_m_time.html" title="Utility class used both MMCore and devices to maintain time intervals in the uniform,...">MM::MMTime</a></code> is slated for removal from the binary interface.</li>
+</ul>
+</li>
+<li>No cross-interface memory allocation/deallocation. Memory allocated on one side must be freed on the same side.</li>
+<li>Single inheritance only (no multiple inheritance, which, while theoretically might work, is likely to paint us into a corner regarding future possibilities such as MinGW compatibility or a pure C device interface).</li>
+<li>No exceptions may propagate across the adapter-Core boundary. Adapters and MMCore are free to use exceptions internally.</li>
+<li>No RTTI (<code>dynamic_cast</code>, <code>typeid</code>) in the interface classes. Adapters may use RTTI internally.</li>
+<li>No covariant return types in virtual methods. Some compilers implement covariant returns via thunks that alter vtable layout, breaking cross-compiler compatibility.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Changes that require a DIV bump</h2>
+<ul>
+<li>Adding, removing, or reordering virtual methods in any interface class, including <code><a class="el" href="class_m_m_1_1_core.html" title="Callback API to the core control module.">MM::Core</a></code> (the callback interface).</li>
+<li>Changing the signature of any virtual method (parameters, return type, const qualification).</li>
+<li>Adding or removing members in any struct whose instances cross the adapter-Core boundary (such structs do not currently exist but may be used in the future).</li>
+<li>Adding a new device type (a new class inheriting from <code><a class="el" href="class_m_m_1_1_device.html" title="Generic device interface.">MM::Device</a></code>), which is a compound change touching <code><a class="el" href="_m_m_device_8h_source.html">MMDevice.h</a></code>, <code><a class="el" href="_m_m_device_constants_8h_source.html">MMDeviceConstants.h</a></code> (<code>DeviceType</code> enum), <code><a class="el" href="_device_base_8h_source.html">DeviceBase.h</a></code>, and <code><a class="el" href="_module_interface_8h_source.html">ModuleInterface.h</a></code>/<code>.cpp</code>.</li>
+<li>Changing the camera image metadata serialization format so that <code>CameraImageMetadata::Serialize()</code> produces output not accepted by all DIV-matching versions of MMCore. (<code>CameraImageMetadata</code> is the structured metadata that cameras pass alongside image data via <code>InsertImage()</code>.) Other changes to the metadata classes may not require a DIV bump, but must be verified by reviewing all changes to both MMCore's deserialization and <code>CameraImageMetadata::Serialize()</code> since the last DIV bump.</li>
+<li>Any change to <code><a class="el" href="_module_interface_8h_source.html">ModuleInterface.h</a></code> exported functions (Module Interface Version bump) — the DIV must always be bumped when the MIV is bumped (not vice versa), so that the DIV alone suffices as the user-facing compatibility version. (The pymmcore ecosystem uses the DIV as its compatibility version number: pymmcore versions embed the DIV, and pymmcore-plus uses it to install matching components.)</li>
+<li>Adding or removing <code>noexcept</code> on a virtual method can change vtable layout in some ABIs. Also, <code>noexcept</code> should not be added to interface methods until C++14 support is dropped, because C++17 made <code>noexcept</code> part of the type system.</li>
+<li>Adding or removing enums or constants in <code><a class="el" href="_m_m_device_constants_8h_source.html">MMDeviceConstants.h</a></code>, if they cross the adapter-Core boundary in a way that would cause incompatibility (this is case-by-case).</li>
+<li>Any change that would cause an adapter built after the change to be incompatible with a Core built before the change (at the same DIV), or vice versa — including behavioral changes in <code><a class="el" href="_device_base_8h_source.html">DeviceBase.h</a></code> that affect the adapter-Core interaction.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Changes that do NOT require a DIV bump</h2>
+<ul>
+<li>Changes to MMCore internals that don't affect the device interface.</li>
+<li>Changes to <code><a class="el" href="_device_base_8h_source.html">DeviceBase.h</a></code> that only affect (at most) source compatibility (e.g., renaming a helper, changing a default implementation in a way that is a uniform improvement and doesn't break adapter-Core interaction).</li>
+<li>Adding new non-virtual utility functions or classes that don't cross the boundary.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Source compatibility notes</h2>
+<p>Adding overloads to existing methods must be done carefully so that implicit conversions don't silently redirect existing calls to a different overload, changing semantics. Similarly, removal of overloads must ensure that previously-valid calls produce a compile error rather than silently binding to a remaining overload via implicit conversion (unless the remaining overload is semantically equivalent).</p>
+<p>Default argument values are compiled into the caller. Changing a default value silently changes behavior for adapters built against the old default, and can cause a mismatch between what MMCore expects and the default a device adapter was compiled with.</p>
+<h2><a class="anchor" id="autotoc_md18"></a>
+DeviceBase.h default implementation technique</h2>
+<p>When adding a new virtual method to an interface class (which requires a DIV bump), a default implementation in <code><a class="el" href="_device_base_8h_source.html">DeviceBase.h</a></code> can shield adapter source from the change — adapters that don't override the new method will compile and work correctly with the default.</p>
+<h2><a class="anchor" id="autotoc_md19"></a>
+MMDeviceConstants.h and the public API</h2>
+<p><code><a class="el" href="_m_m_device_constants_8h_source.html">MMDeviceConstants.h</a></code> is part of the MMCore public API, and transitively the MMCoreJ (Java) and pymmcore (Python) public APIs. Removal of definitions must be coordinated with all those projects. Changing an existing definition (as opposed to removal) is almost never a good idea, even if it contains a typo.</p>
+<p><a class="anchor" id="div-history"></a></p>
+<h1><a class="anchor" id="autotoc_md20"></a>
+Device Interface Version history</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">DIV   </th><th class="markdownTableHeadNone">First Nightly   </th><th class="markdownTableHeadNone">Last Nightly   </th><th class="markdownTableHeadNone">PR   </th><th class="markdownTableHeadNone">Reason    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">75   </td><td class="markdownTableBodyNone">2026-02-26   </td><td class="markdownTableBodyNone">—   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/861">#861</a>   </td><td class="markdownTableBodyNone">Removed 3 camera functions, <code>doProcess</code> from <code>InsertImage</code>; stage position-changed signaling    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">74   </td><td class="markdownTableBodyNone">2025-08-15   </td><td class="markdownTableBodyNone">2026-02-25   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/710">#710</a>, <a href="https://github.com/micro-manager/mmCoreAndDevices/pull/697">#697</a>   </td><td class="markdownTableBodyNone">Removed deprecated Core callbacks; <code>OnShutterOpenChanged</code> callback    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">73   </td><td class="markdownTableBodyNone">2025-03-18   </td><td class="markdownTableBodyNone">2025-08-14   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/602">#602</a>   </td><td class="markdownTableBodyNone">Renamed pump methods to include units    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">72   </td><td class="markdownTableBodyNone">—   </td><td class="markdownTableBodyNone">—   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/462">#462</a>   </td><td class="markdownTableBodyNone">Pump API; superseded by 73 same day (not in any nightly build)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">71   </td><td class="markdownTableBodyNone">2022-10-31   </td><td class="markdownTableBodyNone">2025-03-10   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/pull/289">#289</a>   </td><td class="markdownTableBodyNone">Belated bump for <code>MMTime</code> struct layout change (<a href="https://github.com/micro-manager/mmCoreAndDevices/pull/281">#281</a>, 2022-10-26)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">70   </td><td class="markdownTableBodyNone">2021-02-13   </td><td class="markdownTableBodyNone">2022-10-30 (Windows), 2022-10-25 (macOS)   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/8687ddb51">SVN r17423</a>   </td><td class="markdownTableBodyNone">Removed unused <code>Acq*</code> functions    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">69   </td><td class="markdownTableBodyNone">2018-07-12   </td><td class="markdownTableBodyNone">2021-02-12   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/1a9938168">SVN r16724</a>   </td><td class="markdownTableBodyNone">Z stage linear sequence interface    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">68   </td><td class="markdownTableBodyNone">2017-11-07   </td><td class="markdownTableBodyNone">2018-07-11   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/285a9fbb2">SVN r16531</a>   </td><td class="markdownTableBodyNone">32-bit grayscale images (new <code>InsertImage</code> overload) (belated bump for <a href="https://github.com/micro-manager/mmCoreAndDevices/commit/d85d92d94">SVN r16466</a>, 2017-08-23)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">67   </td><td class="markdownTableBodyNone">2016-06-09   </td><td class="markdownTableBodyNone">2017-08-22   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/2cafb3481">SVN r16045</a>   </td><td class="markdownTableBodyNone"><code>SupportsDeviceDetection()</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">66   </td><td class="markdownTableBodyNone">2016-06-08   </td><td class="markdownTableBodyNone">2016-06-08   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/6378720c9">SVN r16043</a>   </td><td class="markdownTableBodyNone">Multiple simultaneous ROI support    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">65   </td><td class="markdownTableBodyNone">2015-05-28   </td><td class="markdownTableBodyNone">2016-06-07   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/b98858d3b">SVN r15480</a>   </td><td class="markdownTableBodyNone">Galvo <code>GetXMinimum()</code>, <code>GetYMinimum()</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">64   </td><td class="markdownTableBodyNone">2015-05-15   </td><td class="markdownTableBodyNone">2015-05-27   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/6fdcdc274">SVN r15439</a>   </td><td class="markdownTableBodyNone">Focus direction methods    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">63   </td><td class="markdownTableBodyNone">2015-05-05   </td><td class="markdownTableBodyNone">2015-05-14   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/ae4ced454">SVN r15408</a>   </td><td class="markdownTableBodyNone">Stage <code>Home()</code>, <code>Stop()</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">62   </td><td class="markdownTableBodyNone">2015-05-01   </td><td class="markdownTableBodyNone">2015-05-04   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/38cfde8ef">SVN r15387</a>   </td><td class="markdownTableBodyNone">XY stage <code>SetXOrigin()</code>, <code>SetYOrigin()</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">61   </td><td class="markdownTableBodyNone">2014-08-01   </td><td class="markdownTableBodyNone">2015-04-30   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/aac034a5c">SVN r14057</a>   </td><td class="markdownTableBodyNone">Removed deprecated callback functions    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">60   </td><td class="markdownTableBodyNone">2014-06-17   </td><td class="markdownTableBodyNone">2014-07-31   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/cff69f1c2">SVN r13639</a>   </td><td class="markdownTableBodyNone"><code>OnSLMExposureChanged</code> callback    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">59   </td><td class="markdownTableBodyNone">2014-05-14   </td><td class="markdownTableBodyNone">2014-06-16   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/1a3c3c884">SVN r13407</a>   </td><td class="markdownTableBodyNone">Fixed peripheral device double-deletion semantics    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">58   </td><td class="markdownTableBodyNone">—   </td><td class="markdownTableBodyNone">—   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/b3781c0a9">SVN r13396</a>   </td><td class="markdownTableBodyNone"><code><a class="el" href="class_m_m_1_1_generic.html" title="Generic Device.">MM::Generic</a></code> device type; superseded by 59 same day    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">57   </td><td class="markdownTableBodyNone">2014-01-24   </td><td class="markdownTableBodyNone">2014-05-13   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/97beb0f6c">SVN r12652</a>   </td><td class="markdownTableBodyNone">SLM sequence functions    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">56   </td><td class="markdownTableBodyNone">2014-01-19   </td><td class="markdownTableBodyNone">2014-01-23   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/bbf1b852c">SVN r12626</a>   </td><td class="markdownTableBodyNone">SLM <code>SetExposure()</code>, <code>GetExposure()</code> (belated bump for <a href="https://github.com/micro-manager/mmCoreAndDevices/commit/90d45dc45">SVN r12571</a>, 2014-01-15)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">55   </td><td class="markdownTableBodyNone">2013-12-21   </td><td class="markdownTableBodyNone">2014-01-14   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/d9d939aed">SVN r12440</a>   </td><td class="markdownTableBodyNone"><code>OnMagnifierChanged</code> callback    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">54   </td><td class="markdownTableBodyNone">2013-10-22   </td><td class="markdownTableBodyNone">2013-12-20   </td><td class="markdownTableBodyNone"><a href="https://github.com/micro-manager/mmCoreAndDevices/commit/0058a1202">SVN r11996</a>   </td><td class="markdownTableBodyNone">Avoid <code>std::string</code> for <code>AddTag()</code> parameter   </td></tr>
+</table>
+<blockquote class="doxtable">
+<p>&zwj;All nightly build dates prior to DIV 70 are based on commit times and the actual nightly builds should be verified if you need exact data. Gaps between the date ranges indicate where binary compatibility was broken but the DIV failed to change (as noted in remarks), or where nightly builds did not occur.</p>
+<p>Nightly build dates prior to DIV 71 are for MM 1.4 only. MM 2.x DIV prior to 71 tracked MM 1.4 with an irregular delay; it is best to check the nightly builds themselves if you need the actual dates for any of the MM 2.x branches ("beta", "gamma") in this period. </p>
+</blockquote>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
