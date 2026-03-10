@@ -1773,8 +1773,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Returns all defined resolution preset names </p><dl class="section return"><dt>Returns</dt><dd>an array of resolution presets </dd></dl>
 
-<p class="reference">References <a class="el" href="class_config_group_base.html#ae88adaf54c8fa8d6c7b75c11f57d423d">ConfigGroupBase&lt; T &gt;::GetAvailable()</a>.</p>
-
 </div>
 </div>
 <a id="a6eb09e0de2c1747d897c688ca8578aa1" name="a6eb09e0de2c1747d897c688ca8578aa1"></a>
@@ -3567,7 +3565,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Returns the current pixel size in microns. This method is based on sensing the current pixel size configuration and adjusting for the binning.</p>
 <p>For legacy reasons, an exception is not thrown if there is an error. Instead, 0.0 is returned if any property values cannot be read, or if no pixel size preset matches the property values. </p>
 
-<p class="reference">References <a class="el" href="class_config_group_base.html#a036bbe7a26a5779f631e1b63490c8d75">ConfigGroupBase&lt; T &gt;::Find()</a>, <a class="el" href="class_c_m_m_core.html#a7b38dd93184b67a0cb8bcf2f38b05b25">getCurrentPixelSizeConfig()</a>, and <a class="el" href="class_c_m_m_core.html#a0f1306269c2a51546287289627d2059c">getMagnificationFactor()</a>.</p>
+<p class="reference">References <a class="el" href="class_c_m_m_core.html#a7b38dd93184b67a0cb8bcf2f38b05b25">getCurrentPixelSizeConfig()</a>, and <a class="el" href="class_c_m_m_core.html#a0f1306269c2a51546287289627d2059c">getMagnificationFactor()</a>.</p>
 
 </div>
 </div>
@@ -9483,7 +9481,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Unloads all devices from the core and resets all configuration data.</p>
 <p>This function is not thread safe. </p>
 
-<p class="reference">References <a class="el" href="class_config_group_base.html#acfdce2ba9ab21b5c4ffcee6a94602603">ConfigGroupBase&lt; T &gt;::Delete()</a>, <a class="el" href="class_config_group_base.html#ae88adaf54c8fa8d6c7b75c11f57d423d">ConfigGroupBase&lt; T &gt;::GetAvailable()</a>, <a class="el" href="class_c_m_m_error.html#a5d3ebdd1b74df436a3889dc4f1704d67">CMMError::getMsg()</a>, and <a class="el" href="class_c_m_m_core.html#a2faf117d0b609f01e2f2a4b8101e5f00">setChannelGroup()</a>.</p>
+<p class="reference">References <a class="el" href="class_c_m_m_error.html#a5d3ebdd1b74df436a3889dc4f1704d67">CMMError::getMsg()</a>, and <a class="el" href="class_c_m_m_core.html#a2faf117d0b609f01e2f2a4b8101e5f00">setChannelGroup()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#aaf67497dc702ee3029780d91c47116e3">reset()</a>.</p>
 
