@@ -171,6 +171,21 @@
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../org/micromanager/display/overlay/package-summary.html">org.micromanager.display.overlay</a> that return types with arguments of type <a href="../../../../../org/micromanager/display/overlay/Overlay.html" title="interface in org.micromanager.display.overlay">Overlay</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>java.util.List&lt;<a href="../../../../../org/micromanager/display/overlay/Overlay.html" title="interface in org.micromanager.display.overlay">Overlay</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">OverlaySupport.</span><code><span class="memberNameLink"><a href="../../../../../org/micromanager/display/overlay/OverlaySupport.html#getOverlays--">getOverlays</a></span>()</code>
+<div class="block">Return the list of overlays currently attached to this viewer.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
 <caption><span>Methods in <a href="../../../../../org/micromanager/display/overlay/package-summary.html">org.micromanager.display.overlay</a> with parameters of type <a href="../../../../../org/micromanager/display/overlay/Overlay.html" title="interface in org.micromanager.display.overlay">Overlay</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
@@ -179,20 +194,32 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">OverlaySupport.</span><code><span class="memberNameLink"><a href="../../../../../org/micromanager/display/overlay/OverlaySupport.html#addOverlay-org.micromanager.display.overlay.Overlay-">addOverlay</a></span>(<a href="../../../../../org/micromanager/display/overlay/Overlay.html" title="interface in org.micromanager.display.overlay">Overlay</a>&nbsp;overlay)</code>
+<div class="block">Add an overlay to this viewer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">OverlayListener.</span><code><span class="memberNameLink"><a href="../../../../../org/micromanager/display/overlay/OverlayListener.html#overlayConfigurationChanged-org.micromanager.display.overlay.Overlay-">overlayConfigurationChanged</a></span>(<a href="../../../../../org/micromanager/display/overlay/Overlay.html" title="interface in org.micromanager.display.overlay">Overlay</a>&nbsp;overlay)</code>
 <div class="block">Called by the overlay when a repaint is required.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">OverlayListener.</span><code><span class="memberNameLink"><a href="../../../../../org/micromanager/display/overlay/OverlayListener.html#overlayTitleChanged-org.micromanager.display.overlay.Overlay-">overlayTitleChanged</a></span>(<a href="../../../../../org/micromanager/display/overlay/Overlay.html" title="interface in org.micromanager.display.overlay">Overlay</a>&nbsp;overlay)</code>
 <div class="block">Called by the overlay when its title has changed.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">OverlayListener.</span><code><span class="memberNameLink"><a href="../../../../../org/micromanager/display/overlay/OverlayListener.html#overlayVisibleChanged-org.micromanager.display.overlay.Overlay-">overlayVisibleChanged</a></span>(<a href="../../../../../org/micromanager/display/overlay/Overlay.html" title="interface in org.micromanager.display.overlay">Overlay</a>&nbsp;overlay)</code>
 <div class="block">Called by the overlay when it is shown or hidden.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">OverlaySupport.</span><code><span class="memberNameLink"><a href="../../../../../org/micromanager/display/overlay/OverlaySupport.html#removeOverlay-org.micromanager.display.overlay.Overlay-">removeOverlay</a></span>(<a href="../../../../../org/micromanager/display/overlay/Overlay.html" title="interface in org.micromanager.display.overlay">Overlay</a>&nbsp;overlay)</code>
+<div class="block">Remove an overlay from this viewer.</div>
 </td>
 </tr>
 </tbody>
