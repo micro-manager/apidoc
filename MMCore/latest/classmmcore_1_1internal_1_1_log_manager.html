@@ -77,15 +77,18 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetPrimaryLogF
 <tr class="memitem:a8cf50e4436a81120b35ca8532600323d" id="r_a8cf50e4436a81120b35ca8532600323d"><td class="memItemLeft" align="right" valign="top"><a id="a8cf50e4436a81120b35ca8532600323d" name="a8cf50e4436a81120b35ca8532600323d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsUsingPrimaryLogFile</b> () const</td></tr>
 <tr class="separator:a8cf50e4436a81120b35ca8532600323d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e758084493c74f0ad94cf2d8d130a49" id="r_a6e758084493c74f0ad94cf2d8d130a49"><td class="memItemLeft" align="right" valign="top"><a id="a6e758084493c74f0ad94cf2d8d130a49" name="a6e758084493c74f0ad94cf2d8d130a49"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPrimaryLogLevel</b> (logging::LogLevel level)</td></tr>
-<tr class="separator:a6e758084493c74f0ad94cf2d8d130a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a272a03df10f1168572335be1603dc" id="r_a65a272a03df10f1168572335be1603dc"><td class="memItemLeft" align="right" valign="top"><a id="a65a272a03df10f1168572335be1603dc" name="a65a272a03df10f1168572335be1603dc"></a>
-logging::LogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>GetPrimaryLogLevel</b> () const</td></tr>
-<tr class="separator:a65a272a03df10f1168572335be1603dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a264693f3f6640962dd899c7c7d7b31e5" id="r_a264693f3f6640962dd899c7c7d7b31e5"><td class="memItemLeft" align="right" valign="top"><a id="a264693f3f6640962dd899c7c7d7b31e5" name="a264693f3f6640962dd899c7c7d7b31e5"></a>
-LogFileHandle&#160;</td><td class="memItemRight" valign="bottom"><b>AddSecondaryLogFile</b> (logging::LogLevel level, const std::string &amp;filename, bool truncate=true, logging::SinkMode mode=logging::SinkModeAsynchronous)</td></tr>
-<tr class="separator:a264693f3f6640962dd899c7c7d7b31e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db720ed90f2aeee8d53f01e5bec74e7" id="r_a0db720ed90f2aeee8d53f01e5bec74e7"><td class="memItemLeft" align="right" valign="top"><a id="a0db720ed90f2aeee8d53f01e5bec74e7" name="a0db720ed90f2aeee8d53f01e5bec74e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPrimaryLogRotation</b> (std::size_t maxFileSize, int maxBackupFiles)</td></tr>
+<tr class="separator:a0db720ed90f2aeee8d53f01e5bec74e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7cb6c7f782ac473dee71849917104b3" id="r_ac7cb6c7f782ac473dee71849917104b3"><td class="memItemLeft" align="right" valign="top"><a id="ac7cb6c7f782ac473dee71849917104b3" name="ac7cb6c7f782ac473dee71849917104b3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPrimaryLogLevel</b> (LogLevel level)</td></tr>
+<tr class="separator:ac7cb6c7f782ac473dee71849917104b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd446ce534679e360dbacde91dedfe4" id="r_a3fd446ce534679e360dbacde91dedfe4"><td class="memItemLeft" align="right" valign="top"><a id="a3fd446ce534679e360dbacde91dedfe4" name="a3fd446ce534679e360dbacde91dedfe4"></a>
+LogLevel&#160;</td><td class="memItemRight" valign="bottom"><b>GetPrimaryLogLevel</b> () const</td></tr>
+<tr class="separator:a3fd446ce534679e360dbacde91dedfe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d013dcb70a98dd0e8d5edac5a395828" id="r_a0d013dcb70a98dd0e8d5edac5a395828"><td class="memItemLeft" align="right" valign="top"><a id="a0d013dcb70a98dd0e8d5edac5a395828" name="a0d013dcb70a98dd0e8d5edac5a395828"></a>
+LogFileHandle&#160;</td><td class="memItemRight" valign="bottom"><b>AddSecondaryLogFile</b> (LogLevel level, const std::string &amp;filename, bool truncate=true, logging::SinkMode mode=logging::SinkModeAsynchronous)</td></tr>
+<tr class="separator:a0d013dcb70a98dd0e8d5edac5a395828"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a586fb33b1c10cb13883bc058f84a42" id="r_a1a586fb33b1c10cb13883bc058f84a42"><td class="memItemLeft" align="right" valign="top"><a id="a1a586fb33b1c10cb13883bc058f84a42" name="a1a586fb33b1c10cb13883bc058f84a42"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveSecondaryLogFile</b> (LogFileHandle handle)</td></tr>
 <tr class="separator:a1a586fb33b1c10cb13883bc058f84a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
