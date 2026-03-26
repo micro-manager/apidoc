@@ -64,10 +64,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a86e30a6c58beb940aa660e71fa027500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5155d4ef5422ce53db1de5fb3a00c6db" id="r_a5155d4ef5422ce53db1de5fb3a00c6db"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a5155d4ef5422ce53db1de5fb3a00c6db">getPrimaryLogFile</a> () const</td></tr>
 <tr class="separator:a5155d4ef5422ce53db1de5fb3a00c6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d1011928d8b54dd63cd7c668f135d79" id="r_a1d1011928d8b54dd63cd7c668f135d79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a1d1011928d8b54dd63cd7c668f135d79">setPrimaryLogFileRotation</a> (long long maxFileSize, int maxBackupCount)</td></tr>
+<tr class="separator:a1d1011928d8b54dd63cd7c668f135d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f40dc91aaeefa43dbe158d6cb74537a" id="r_a3f40dc91aaeefa43dbe158d6cb74537a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a3f40dc91aaeefa43dbe158d6cb74537a">logMessage</a> (const char *msg)</td></tr>
 <tr class="separator:a3f40dc91aaeefa43dbe158d6cb74537a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacaa5f8eb532f051317162d1e13efaff" id="r_aacaa5f8eb532f051317162d1e13efaff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#aacaa5f8eb532f051317162d1e13efaff">logMessage</a> (const char *msg, bool debugOnly)</td></tr>
 <tr class="separator:aacaa5f8eb532f051317162d1e13efaff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27e35d4326e0223ad83b8fe5ff9585d" id="r_ab27e35d4326e0223ad83b8fe5ff9585d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#ab27e35d4326e0223ad83b8fe5ff9585d">log</a> (const char *msg, mmcore::LogLevel level)</td></tr>
+<tr class="separator:ab27e35d4326e0223ad83b8fe5ff9585d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a820d838a31f2b123e9efa6d555382" id="r_a50a820d838a31f2b123e9efa6d555382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a50a820d838a31f2b123e9efa6d555382">log</a> (const char *msg, mmcore::LogLevel level, const char *loggerName)</td></tr>
+<tr class="separator:a50a820d838a31f2b123e9efa6d555382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab974096845f0d41c6cca6933c1991cb1" id="r_ab974096845f0d41c6cca6933c1991cb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#ab974096845f0d41c6cca6933c1991cb1">setPrimaryLogLevel</a> (mmcore::LogLevel level)</td></tr>
+<tr class="separator:ab974096845f0d41c6cca6933c1991cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7261e881a128a78b6639d01c87643c18" id="r_a7261e881a128a78b6639d01c87643c18"><td class="memItemLeft" align="right" valign="top">mmcore::LogLevel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a7261e881a128a78b6639d01c87643c18">getPrimaryLogLevel</a> ()</td></tr>
+<tr class="separator:a7261e881a128a78b6639d01c87643c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0abdf7dc7b491c28b8d881f7c7a0ddf4" id="r_a0abdf7dc7b491c28b8d881f7c7a0ddf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a0abdf7dc7b491c28b8d881f7c7a0ddf4">enableDebugLog</a> (bool enable)</td></tr>
 <tr class="separator:a0abdf7dc7b491c28b8d881f7c7a0ddf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31ea648214f662a8573e8db4d6501a98" id="r_a31ea648214f662a8573e8db4d6501a98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a31ea648214f662a8573e8db4d6501a98">debugLogEnabled</a> ()</td></tr>
@@ -3653,6 +3663,24 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 
 </div>
 </div>
+<a id="a7261e881a128a78b6639d01c87643c18" name="a7261e881a128a78b6639d01c87643c18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7261e881a128a78b6639d01c87643c18">&#9670;&#160;</a></span>getPrimaryLogLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mmcore::LogLevel CMMCore::getPrimaryLogLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the current primary log level. </p>
+
+</div>
+</div>
 <a id="a3b59427f25c1907d5a02fb17caba5cfb" name="a3b59427f25c1907d5a02fb17caba5cfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b59427f25c1907d5a02fb17caba5cfb">&#9670;&#160;</a></span>getProperty()</h2>
 
@@ -5814,6 +5842,70 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 
 </div>
 </div>
+<a id="ab27e35d4326e0223ad83b8fe5ff9585d" name="ab27e35d4326e0223ad83b8fe5ff9585d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27e35d4326e0223ad83b8fe5ff9585d">&#9670;&#160;</a></span>log() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::log </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mmcore::LogLevel&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Record text message in the log file at the specified level. </p>
+
+</div>
+</div>
+<a id="a50a820d838a31f2b123e9efa6d555382" name="a50a820d838a31f2b123e9efa6d555382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50a820d838a31f2b123e9efa6d555382">&#9670;&#160;</a></span>log() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::log </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mmcore::LogLevel&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>loggerName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Record text message in the log file at the specified level, with a caller-specified logger name as the component label. </p>
+
+</div>
+</div>
 <a id="a3f40dc91aaeefa43dbe158d6cb74537a" name="a3f40dc91aaeefa43dbe158d6cb74537a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f40dc91aaeefa43dbe158d6cb74537a">&#9670;&#160;</a></span>logMessage() <span class="overload">[1/2]</span></h2>
 
@@ -7648,6 +7740,62 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a1d1011928d8b54dd63cd7c668f135d79" name="a1d1011928d8b54dd63cd7c668f135d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d1011928d8b54dd63cd7c668f135d79">&#9670;&#160;</a></span>setPrimaryLogFileRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::setPrimaryLogFileRotation </td>
+          <td>(</td>
+          <td class="paramtype">long long&#160;</td>
+          <td class="paramname"><em>maxFileSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxBackupCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set log rotation for the primary Core log file.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">maxFileSize</td><td>Maximum file size in bytes before rotation. 0 disables rotation. </td></tr>
+    <tr><td class="paramname">maxBackupCount</td><td>Maximum number of rotated files to keep. 0 means unlimited. Oldest files are deleted first. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab974096845f0d41c6cca6933c1991cb1" name="ab974096845f0d41c6cca6933c1991cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab974096845f0d41c6cca6933c1991cb1">&#9670;&#160;</a></span>setPrimaryLogLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::setPrimaryLogLevel </td>
+          <td>(</td>
+          <td class="paramtype">mmcore::LogLevel&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the primary log level.</p>
+<p>Messages below this level will not be recorded in the primary log file or stderr output. </p>
 
 </div>
 </div>
