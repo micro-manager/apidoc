@@ -86,6 +86,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a203399a4b4c77705b83205f26eaabf9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c1ef122c74e97d9261b1514cb24e587" id="r_a6c1ef122c74e97d9261b1514cb24e587"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a6c1ef122c74e97d9261b1514cb24e587">stderrLogEnabled</a> ()</td></tr>
 <tr class="separator:a6c1ef122c74e97d9261b1514cb24e587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912ce357bba07f879bb984f7f40f1770" id="r_a912ce357bba07f879bb984f7f40f1770"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a912ce357bba07f879bb984f7f40f1770">setStderrLogLevel</a> (mmcore::LogLevel level)</td></tr>
+<tr class="separator:a912ce357bba07f879bb984f7f40f1770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ca21c3bd15a9c7310faa02907c35a7f" id="r_a0ca21c3bd15a9c7310faa02907c35a7f"><td class="memItemLeft" align="right" valign="top">mmcore::LogLevel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a0ca21c3bd15a9c7310faa02907c35a7f">getStderrLogLevel</a> ()</td></tr>
+<tr class="separator:a0ca21c3bd15a9c7310faa02907c35a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1983ef36d92fd90409886221bc43b733" id="r_a1983ef36d92fd90409886221bc43b733"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a1983ef36d92fd90409886221bc43b733">startSecondaryLogFile</a> (const char *filename, bool enableDebug, bool truncate=true, bool synchronous=false) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
 <tr class="separator:a1983ef36d92fd90409886221bc43b733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a411691b69106cd7f5c9cef154e9fd1e9" id="r_a411691b69106cd7f5c9cef154e9fd1e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a411691b69106cd7f5c9cef154e9fd1e9">stopSecondaryLogFile</a> (int handle) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
@@ -955,7 +959,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Indicates if logging of debug messages is enabled </p>
+<p>Indicates if logging of debug messages is enabled.</p>
+<p>Returns true if both the primary log file and stderr log levels are at debug level or below. </p>
 
 </div>
 </div>
@@ -1446,9 +1451,12 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Enable or disable logging of debug messages. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Enable or disable logging of debug messages.</p>
+<p>When enabled, sets both the primary log file level and the stderr log level to trace. When disabled, sets both to info.</p>
+<p>It is not recommended to mix use of this function with <a class="el" href="class_c_m_m_core.html#ab974096845f0d41c6cca6933c1991cb1">setPrimaryLogLevel()</a> and <a class="el" href="class_c_m_m_core.html#a912ce357bba07f879bb984f7f40f1770">setStderrLogLevel()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable</td><td>if set to true, debug messages will be recorded in the log file </td></tr>
+    <tr><td class="paramname">enable</td><td>if set to true, debug messages will be recorded </td></tr>
   </table>
   </dd>
 </dl>
@@ -3677,7 +3685,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return the current primary log level. </p>
+<p>Return the current primary log file level. </p>
 
 </div>
 </div>
@@ -4475,6 +4483,24 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a0ca21c3bd15a9c7310faa02907c35a7f" name="a0ca21c3bd15a9c7310faa02907c35a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ca21c3bd15a9c7310faa02907c35a7f">&#9670;&#160;</a></span>getStderrLogLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mmcore::LogLevel CMMCore::getStderrLogLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the current stderr log level. </p>
 
 </div>
 </div>
@@ -7794,8 +7820,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Set the primary log level.</p>
-<p>Messages below this level will not be recorded in the primary log file or stderr output. </p>
+<p>Set the log level for the primary log file.</p>
+<p>Messages below this level will not be recorded in the primary log file.</p>
+<p>It is not recommended to mix use of this function with <a class="el" href="class_c_m_m_core.html#a0abdf7dc7b491c28b8d881f7c7a0ddf4">enableDebugLog()</a> and <a class="el" href="class_c_m_m_core.html#a31ea648214f662a8573e8db4d6501a98">debugLogEnabled()</a>. </p>
 
 </div>
 </div>
@@ -8846,6 +8873,27 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a912ce357bba07f879bb984f7f40f1770" name="a912ce357bba07f879bb984f7f40f1770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a912ce357bba07f879bb984f7f40f1770">&#9670;&#160;</a></span>setStderrLogLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::setStderrLogLevel </td>
+          <td>(</td>
+          <td class="paramtype">mmcore::LogLevel&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the stderr log level.</p>
+<p>Messages below this level will not be displayed on stderr.</p>
+<p>It is not recommended to mix use of this function with <a class="el" href="class_c_m_m_core.html#a0abdf7dc7b491c28b8d881f7c7a0ddf4">enableDebugLog()</a> and <a class="el" href="class_c_m_m_core.html#a31ea648214f662a8573e8db4d6501a98">debugLogEnabled()</a>. </p>
 
 </div>
 </div>
