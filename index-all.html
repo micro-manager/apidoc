@@ -564,6 +564,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="mmcorej/MMCoreJJNI.html#CMMCore_getStateLabels-long-mmcorej.CMMCore-java.lang.String-">CMMCore_getStateLabels(long, CMMCore, String)</a></span> - Static method in class mmcorej.<a href="mmcorej/MMCoreJJNI.html" title="class in mmcorej">MMCoreJJNI</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="mmcorej/MMCoreJJNI.html#CMMCore_getStderrLogLevel-long-mmcorej.CMMCore-">CMMCore_getStderrLogLevel(long, CMMCore)</a></span> - Static method in class mmcorej.<a href="mmcorej/MMCoreJJNI.html" title="class in mmcorej">MMCoreJJNI</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="mmcorej/MMCoreJJNI.html#CMMCore_getSystemState-long-mmcorej.CMMCore-">CMMCore_getSystemState(long, CMMCore)</a></span> - Static method in class mmcorej.<a href="mmcorej/MMCoreJJNI.html" title="class in mmcorej">MMCoreJJNI</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="mmcorej/MMCoreJJNI.html#CMMCore_getSystemStateCache-long-mmcorej.CMMCore-">CMMCore_getSystemStateCache(long, CMMCore)</a></span> - Static method in class mmcorej.<a href="mmcorej/MMCoreJJNI.html" title="class in mmcorej">MMCoreJJNI</a></dt>
@@ -870,6 +872,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="mmcorej/MMCoreJJNI.html#CMMCore_setStateLabel-long-mmcorej.CMMCore-java.lang.String-java.lang.String-">CMMCore_setStateLabel(long, CMMCore, String, String)</a></span> - Static method in class mmcorej.<a href="mmcorej/MMCoreJJNI.html" title="class in mmcorej">MMCoreJJNI</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="mmcorej/MMCoreJJNI.html#CMMCore_setStderrLogLevel-long-mmcorej.CMMCore-int-">CMMCore_setStderrLogLevel(long, CMMCore, int)</a></span> - Static method in class mmcorej.<a href="mmcorej/MMCoreJJNI.html" title="class in mmcorej">MMCoreJJNI</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="mmcorej/MMCoreJJNI.html#CMMCore_setSystemState-long-mmcorej.CMMCore-long-mmcorej.Configuration-">CMMCore_setSystemState(long, CMMCore, long, Configuration)</a></span> - Static method in class mmcorej.<a href="mmcorej/MMCoreJJNI.html" title="class in mmcorej">MMCoreJJNI</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="mmcorej/MMCoreJJNI.html#CMMCore_setTimeoutMs-long-mmcorej.CMMCore-int-">CMMCore_setTimeoutMs(long, CMMCore, int)</a></span> - Static method in class mmcorej.<a href="mmcorej/MMCoreJJNI.html" title="class in mmcorej">MMCoreJJNI</a></dt>
@@ -1008,7 +1012,7 @@
 <dl>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#debugLogEnabled--">debugLogEnabled()</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Indicates if logging of debug messages is enabled</div>
+<div class="block">Indicates if logging of debug messages is enabled.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#defineConfig-java.lang.String-java.lang.String-">defineConfig(String, String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -2435,7 +2439,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPrimaryLogLevel--">getPrimaryLogLevel()</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Return the current primary log level.</div>
+<div class="block">Return the current primary log file level.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getProperty-java.lang.String-java.lang.String-">getProperty(String, String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -2570,6 +2574,10 @@
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getStateLabels-java.lang.String-">getStateLabels(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
 <div class="block">Return labels for all states</div>
+</dd>
+<dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getStderrLogLevel--">getStderrLogLevel()</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
+<dd>
+<div class="block">Return the current stderr log level.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/org/json/JSONArray.html#getString-int-">getString(int)</a></span> - Method in class mmcorej.org.json.<a href="mmcorej/org/json/JSONArray.html" title="class in mmcorej.org.json">JSONArray</a></dt>
 <dd>
@@ -4107,7 +4115,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setPrimaryLogLevel-mmcorej.LogLevel-">setPrimaryLogLevel(LogLevel)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Set the primary log level.</div>
+<div class="block">Set the log level for the primary log file.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setProperty-java.lang.String-java.lang.String-java.lang.String-">setProperty(String, String, String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>&nbsp;</dd>
@@ -4204,6 +4212,10 @@
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setStateLabel-java.lang.String-java.lang.String-">setStateLabel(String, String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
 <div class="block">Sets device state using the previously assigned label (string).</div>
+</dd>
+<dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setStderrLogLevel-mmcorej.LogLevel-">setStderrLogLevel(LogLevel)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
+<dd>
+<div class="block">Set the stderr log level.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setSystemState-mmcorej.Configuration-">setSystemState(Configuration)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
