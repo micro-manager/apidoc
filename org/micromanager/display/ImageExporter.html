@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":18,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -138,7 +138,7 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -170,25 +170,31 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code>default void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setFfmpegPath-java.lang.String-">setFfmpegPath</a></span>(java.lang.String&nbsp;ffmpegPath)</code>
+<div class="block">Set the path to the ffmpeg executable.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setImageJName-java.lang.String-">setImageJName</a></span>(java.lang.String&nbsp;imageJName)</code>
 <div class="block">Sets the name to be used for the ImageJ Stack Window (if this was
  used as the output format).</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setOutputFormat-org.micromanager.display.ImageExporter.OutputFormat-">setOutputFormat</a></span>(<a href="../../../org/micromanager/display/ImageExporter.OutputFormat.html" title="enum in org.micromanager.display">ImageExporter.OutputFormat</a>&nbsp;format)</code>
 <div class="block">Set the output format to use.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setOutputQuality-int-">setOutputQuality</a></span>(int&nbsp;quality)</code>
 <div class="block">Set the image quality.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setSaveInfo-java.lang.String-java.lang.String-">setSaveInfo</a></span>(java.lang.String&nbsp;path,
            java.lang.String&nbsp;prefix)</code>
@@ -196,14 +202,14 @@ var activeTableTab = "activeTableTab";
  saving images.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#setUseLabel-boolean-">setUseLabel</a></span>(boolean&nbsp;label)</code>
 <div class="block">Whether to use labels indicating position, channel, time point and z position
  (where) appropriate or to sequentially number output files.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ImageExporter.html#waitForExport--">waitForExport</a></span>()</code>
 <div class="block">Block until a prior call to export() returns.</div>
@@ -277,11 +283,29 @@ var activeTableTab = "activeTableTab";
 <h4>setOutputQuality</h4>
 <pre>void&nbsp;setOutputQuality(int&nbsp;quality)</pre>
 <div class="block">Set the image quality. This is currently only relevant if the output
- format is OUTPUT_JPG.</div>
+ format is OUTPUT_JPG or OUTPUT_MOVIE.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>quality</code> - An integer quality ranging from 1 through 100. The default
                 value is 90.</dd>
+</dl>
+</li>
+</ul>
+<a name="setFfmpegPath-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFfmpegPath</h4>
+<pre>default&nbsp;void&nbsp;setFfmpegPath(java.lang.String&nbsp;ffmpegPath)</pre>
+<div class="block">Set the path to the ffmpeg executable. Required when the output format is
+ OUTPUT_MOVIE. Ignored for other formats.
+
+ <p>This method has a default no-op implementation so that existing
+ implementations of this interface remain source- and binary-compatible.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>ffmpegPath</code> - Absolute path to the ffmpeg binary.</dd>
 </dl>
 </li>
 </ul>
