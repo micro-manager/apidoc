@@ -186,6 +186,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9cc2c279422350918ed958f485454a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af34331c001a14305220494ac5ded142f" id="r_af34331c001a14305220494ac5ded142f"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#af34331c001a14305220494ac5ded142f">getTimeoutMs</a> ()</td></tr>
 <tr class="separator:af34331c001a14305220494ac5ded142f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08500cc01d1212b023ff4c08651636a1" id="r_a08500cc01d1212b023ff4c08651636a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a08500cc01d1212b023ff4c08651636a1">setDeviceTimeoutMs</a> (const char *label, long timeoutMs) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a08500cc01d1212b023ff4c08651636a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8acb0492acd11bc3547bbdfc0559bea0" id="r_a8acb0492acd11bc3547bbdfc0559bea0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a8acb0492acd11bc3547bbdfc0559bea0">unsetDeviceTimeout</a> (const char *label) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a8acb0492acd11bc3547bbdfc0559bea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23d033dc9844ed8ef99fabd2e32ed8f1" id="r_a23d033dc9844ed8ef99fabd2e32ed8f1"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a23d033dc9844ed8ef99fabd2e32ed8f1">getDeviceTimeoutMs</a> (const char *label) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a23d033dc9844ed8ef99fabd2e32ed8f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d785d37aa7fed44691514cab49284d4" id="r_a2d785d37aa7fed44691514cab49284d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#a2d785d37aa7fed44691514cab49284d4">hasDeviceTimeout</a> (const char *label) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a2d785d37aa7fed44691514cab49284d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf0caf3d064e14154f09ce8e15a7bbae" id="r_abf0caf3d064e14154f09ce8e15a7bbae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_m_m_core.html#abf0caf3d064e14154f09ce8e15a7bbae">sleep</a> (double intervalMs) const</td></tr>
 <tr class="separator:abf0caf3d064e14154f09ce8e15a7bbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Management of 'current' device for specific roles.</div></td></tr>
@@ -2358,6 +2366,31 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Returns all property names supported by the device.</p>
 <dl class="section return"><dt>Returns</dt><dd>property name array </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a23d033dc9844ed8ef99fabd2e32ed8f1" name="a23d033dc9844ed8ef99fabd2e32ed8f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d033dc9844ed8ef99fabd2e32ed8f1">&#9670;&#160;</a></span>getDeviceTimeoutMs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long CMMCore::getDeviceTimeoutMs </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the effective wait/busy timeout for the specified device: the per-device override if set, otherwise the global timeout.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">label</td><td>the device label </td></tr>
@@ -4798,6 +4831,31 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 
 </div>
 </div>
+<a id="a2d785d37aa7fed44691514cab49284d4" name="a2d785d37aa7fed44691514cab49284d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d785d37aa7fed44691514cab49284d4">&#9670;&#160;</a></span>hasDeviceTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CMMCore::hasDeviceTimeout </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns true iff the specified device has a per-device timeout override.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab40ca2b03d2333d59582406f77af077e" name="ab40ca2b03d2333d59582406f77af077e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab40ca2b03d2333d59582406f77af077e">&#9670;&#160;</a></span>hasProperty()</h2>
 
@@ -6949,6 +7007,43 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
   <table class="params">
     <tr><td class="paramname">label</td><td>the device label </td></tr>
     <tr><td class="paramname">delayMs</td><td>the desired delay in milliseconds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a08500cc01d1212b023ff4c08651636a1" name="a08500cc01d1212b023ff4c08651636a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08500cc01d1212b023ff4c08651636a1">&#9670;&#160;</a></span>setDeviceTimeoutMs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::setDeviceTimeoutMs </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>timeoutMs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets a per-device override for the wait/busy timeout.</p>
+<p>When set, the override replaces the global timeout (see setTimeoutMs) for waitForDevice on this specific device. The override does not persist across device unload/reload.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label (must name a loaded non-Core device) </td></tr>
+    <tr><td class="paramname">timeoutMs</td><td>the timeout in milliseconds (must be positive) </td></tr>
   </table>
   </dd>
 </dl>
@@ -9726,6 +9821,31 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
       </table>
 </div><div class="memdoc">
 <p>Forcefully unload a library. Experimental. Don't use. </p>
+
+</div>
+</div>
+<a id="a8acb0492acd11bc3547bbdfc0559bea0" name="a8acb0492acd11bc3547bbdfc0559bea0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8acb0492acd11bc3547bbdfc0559bea0">&#9670;&#160;</a></span>unsetDeviceTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::unsetDeviceTimeout </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clears the per-device wait/busy timeout override, falling back to the global timeout. No-op if no override is set.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label (must name a loaded non-Core device) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
