@@ -82,8 +82,8 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>Height</b> ()
 <tr class="memitem:a2e43e071fb8ebe3cb59852d078bae5ac" id="r_a2e43e071fb8ebe3cb59852d078bae5ac"><td class="memItemLeft" align="right" valign="top"><a id="a2e43e071fb8ebe3cb59852d078bae5ac" name="a2e43e071fb8ebe3cb59852d078bae5ac"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>Depth</b> () const</td></tr>
 <tr class="separator:a2e43e071fb8ebe3cb59852d078bae5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a442d687cc8613cf43feea92e5fb654c3" id="r_a442d687cc8613cf43feea92e5fb654c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmmcore_1_1internal_1_1_circular_buffer.html#a442d687cc8613cf43feea92e5fb654c3">InsertImage</a> (const unsigned char *pixArray, unsigned int width, unsigned int height, unsigned int byteDepth, unsigned int nComponents, const <a class="el" href="class_metadata.html">Metadata</a> *pMd) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
-<tr class="separator:a442d687cc8613cf43feea92e5fb654c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1578c41073802cea4f1921746ccd3a" id="r_a5f1578c41073802cea4f1921746ccd3a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmmcore_1_1internal_1_1_circular_buffer.html#a5f1578c41073802cea4f1921746ccd3a">InsertImage</a> (const unsigned char *pixArray, unsigned int width, unsigned int height, unsigned int byteDepth, unsigned int nComponents, std::string_view serializedMetadata) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="separator:a5f1578c41073802cea4f1921746ccd3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a862dacdec1432539515f2b6331430717" id="r_a862dacdec1432539515f2b6331430717"><td class="memItemLeft" align="right" valign="top"><a id="a862dacdec1432539515f2b6331430717" name="a862dacdec1432539515f2b6331430717"></a>
 const unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTopImage</b> () const</td></tr>
 <tr class="separator:a862dacdec1432539515f2b6331430717"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,8 +110,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>Overflow</b> ()</td><
 <tr class="separator:a889f37713e6044c2e394cd810dfc4bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a442d687cc8613cf43feea92e5fb654c3" name="a442d687cc8613cf43feea92e5fb654c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a442d687cc8613cf43feea92e5fb654c3">&#9670;&#160;</a></span>InsertImage()</h2>
+<a id="a5f1578c41073802cea4f1921746ccd3a" name="a5f1578c41073802cea4f1921746ccd3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f1578c41073802cea4f1921746ccd3a">&#9670;&#160;</a></span>InsertImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -149,8 +149,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>Overflow</b> ()</td><
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="class_metadata.html">Metadata</a> *&#160;</td>
-          <td class="paramname"><em>pMd</em>&#160;</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>serializedMetadata</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
