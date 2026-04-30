@@ -383,8 +383,20 @@
 &nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelDisplaySettings.Builder.html#build--">build()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.Builder.html#build--">build()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.Builder.html" title="interface in org.micromanager.display">ChannelIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Builds and returns the <a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display"><code>ChannelIntensityRanges</code></a>.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentDisplaySettings.Builder.html#build--">build()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentDisplaySettings.Builder.html" title="interface in org.micromanager.display">ComponentDisplaySettings.Builder</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentIntensityRange.Builder.html#build--">build()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a></dt>
+<dd>
+<div class="block">Builds and returns the <a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display"><code>ComponentIntensityRange</code></a>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.Builder.html#build--">build()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.Builder.html" title="interface in org.micromanager.display">DisplayIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Builds and returns the <a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display"><code>DisplayIntensityRanges</code></a>.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.Builder.html#build--">build()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.DisplaySettingsBuilder.html#build--">build()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.DisplaySettingsBuilder.html" title="interface in org.micromanager.display">DisplaySettings.DisplaySettingsBuilder</a></dt>
@@ -411,6 +423,22 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coordinates.html#builder--">builder()</a></span> - Static method in class org.micromanager.data.<a href="org/micromanager/data/Coordinates.html" title="class in org.micromanager.data">Coordinates</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelDisplaySettings.html#builder--">builder()</a></span> - Static method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelDisplaySettings.html" title="interface in org.micromanager.display">ChannelDisplaySettings</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.html#builder--">builder()</a></span> - Static method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display">ChannelIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns a new builder with no components set (all defaults).</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentDisplaySettings.html#builder--">builder()</a></span> - Static method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentDisplaySettings.html" title="interface in org.micromanager.display">ComponentDisplaySettings</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentIntensityRange.html#builder--">builder()</a></span> - Static method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display">ComponentIntensityRange</a></dt>
+<dd>
+<div class="block">Returns a new builder with default values (<code>min=0</code>, <code>max=Long.MAX_VALUE</code>).</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#builder--">builder()</a></span> - Static method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns a new builder with no channels or components set (all defaults).</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/PropertyMaps.html#builder--">builder()</a></span> - Static method in class org.micromanager.<a href="org/micromanager/PropertyMaps.html" title="class in org.micromanager">PropertyMaps</a></dt>
 <dd>
 <div class="block">Returns a builder object for creating <code>PropertyMap</code> instances.</div>
@@ -554,6 +582,14 @@
 <dd>
 <div class="block">Event signaling that the "Channel Group" changed.</div>
 </dd>
+<dt><a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display"><span class="typeNameLink">ChannelIntensityRanges</span></a> - Interface in <a href="org/micromanager/display/package-summary.html">org.micromanager.display</a></dt>
+<dd>
+<div class="block">The intensity (brightness/contrast) scaling ranges for all components of one channel.</div>
+</dd>
+<dt><a href="org/micromanager/display/ChannelIntensityRanges.Builder.html" title="interface in org.micromanager.display"><span class="typeNameLink">ChannelIntensityRanges.Builder</span></a> - Interface in <a href="org/micromanager/display/package-summary.html">org.micromanager.display</a></dt>
+<dd>
+<div class="block">Builder for <a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display"><code>ChannelIntensityRanges</code></a>.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/SummaryMetadata.Builder.html#channelNames-java.lang.String...-">channelNames(String...)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/SummaryMetadata.Builder.html#channelNames-java.lang.Iterable-">channelNames(Iterable&lt;String&gt;)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></dt>
@@ -562,6 +598,10 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 &nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.Builder.html#channelRanges-java.util.List-">channelRanges(List&lt;ChannelIntensityRanges&gt;)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.Builder.html" title="interface in org.micromanager.display">DisplayIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Replaces all channel ranges with the given list.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/SequenceSettings.Builder.html#channels-java.util.ArrayList-">channels(ArrayList&lt;ChannelSpec&gt;)</a></span> - Method in class org.micromanager.acquisition.<a href="org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></dt>
 <dd>
 <div class="block">Sets the ChannelSpecs to be used in this builder.</div>
@@ -760,6 +800,55 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayManager.html#componentDisplaySettingsBuilder--">componentDisplaySettingsBuilder()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayManager.html" title="interface in org.micromanager.display">DisplayManager</a></dt>
 <dd>
 <div class="block">Generates a blank componentSettings Builder with all null values.</div>
+</dd>
+<dt><a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display"><span class="typeNameLink">ComponentIntensityRange</span></a> - Interface in <a href="org/micromanager/display/package-summary.html">org.micromanager.display</a></dt>
+<dd>
+<div class="block">The intensity (brightness/contrast) scaling range for a single image component.</div>
+</dd>
+<dt><a href="org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display"><span class="typeNameLink">ComponentIntensityRange.Builder</span></a> - Interface in <a href="org/micromanager/display/package-summary.html">org.micromanager.display</a></dt>
+<dd>
+<div class="block">Builder for <a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display"><code>ComponentIntensityRange</code></a>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.Builder.html#componentMaximum-int-long-">componentMaximum(int, long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.Builder.html" title="interface in org.micromanager.display">ChannelIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Sets only the maximum (white point) for the given component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.Builder.html#componentMaximum-int-int-long-">componentMaximum(int, int, long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.Builder.html" title="interface in org.micromanager.display">DisplayIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Sets only the maximum (white point) for a specific channel and component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.Builder.html#componentMinimum-int-long-">componentMinimum(int, long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.Builder.html" title="interface in org.micromanager.display">ChannelIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Sets only the minimum (black point) for the given component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.Builder.html#componentMinimum-int-int-long-">componentMinimum(int, int, long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.Builder.html" title="interface in org.micromanager.display">DisplayIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Sets only the minimum (black point) for a specific channel and component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.Builder.html#componentRange-int-long-long-">componentRange(int, long, long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.Builder.html" title="interface in org.micromanager.display">ChannelIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Sets the range for the given component by explicit min and max values.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.Builder.html#componentRange-int-org.micromanager.display.ComponentIntensityRange-">componentRange(int, ComponentIntensityRange)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.Builder.html" title="interface in org.micromanager.display">ChannelIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Sets the range for the given component from a <a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display"><code>ComponentIntensityRange</code></a>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.Builder.html#componentRange-int-int-long-long-">componentRange(int, int, long, long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.Builder.html" title="interface in org.micromanager.display">DisplayIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Sets the range for a specific channel and component by explicit min/max values.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.Builder.html#componentRange-int-int-org.micromanager.display.ComponentIntensityRange-">componentRange(int, int, ComponentIntensityRange)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.Builder.html" title="interface in org.micromanager.display">DisplayIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Sets the range for a specific channel and component from a
+ <a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display"><code>ComponentIntensityRange</code></a>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.Builder.html#componentRanges-java.util.List-">componentRanges(List&lt;ComponentIntensityRange&gt;)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.Builder.html" title="interface in org.micromanager.display">ChannelIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Replaces all component ranges with the given list.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.Builder.html#componentRanges-int-java.util.List-">componentRanges(int, List&lt;ComponentIntensityRange&gt;)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.Builder.html" title="interface in org.micromanager.display">DisplayIntensityRanges.Builder</a></dt>
+<dd>
+<div class="block">Replaces all component ranges for the given channel with the given list.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/SummaryMetadata.Builder.html#computerName-java.lang.String-">computerName(String)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></dt>
 <dd>&nbsp;</dd>
@@ -1030,8 +1119,20 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelDisplaySettings.html#copyBuilder--">copyBuilder()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelDisplaySettings.html" title="interface in org.micromanager.display">ChannelDisplaySettings</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.html#copyBuilder--">copyBuilder()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display">ChannelIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns a builder pre-populated with this instance's component ranges.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentDisplaySettings.html#copyBuilder--">copyBuilder()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentDisplaySettings.html" title="interface in org.micromanager.display">ComponentDisplaySettings</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentIntensityRange.html#copyBuilder--">copyBuilder()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display">ComponentIntensityRange</a></dt>
+<dd>
+<div class="block">Returns a builder pre-populated with this instance's values.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#copyBuilder--">copyBuilder()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns a builder pre-populated with all channel ranges from this instance.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.html#copyBuilder--">copyBuilder()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/PropertyMap.html#copyBuilder--">copyBuilder()</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></dt>
@@ -1352,6 +1453,15 @@
 <dd>
 <div class="block">Insert the provided image into the Datastore, causing it to be displayed
  in any open Snap/Live DisplayWindows.</div>
+</dd>
+<dt><a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display"><span class="typeNameLink">DisplayIntensityRanges</span></a> - Interface in <a href="org/micromanager/display/package-summary.html">org.micromanager.display</a></dt>
+<dd>
+<div class="block">The intensity (brightness/contrast) scaling ranges for all channels and components
+ of a display.</div>
+</dd>
+<dt><a href="org/micromanager/display/DisplayIntensityRanges.Builder.html" title="interface in org.micromanager.display"><span class="typeNameLink">DisplayIntensityRanges.Builder</span></a> - Interface in <a href="org/micromanager/display/package-summary.html">org.micromanager.display</a></dt>
+<dd>
+<div class="block">Builder for <a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display"><code>DisplayIntensityRanges</code></a>.</div>
 </dd>
 <dt><a href="org/micromanager/display/DisplayManager.html" title="interface in org.micromanager.display"><span class="typeNameLink">DisplayManager</span></a> - Interface in <a href="org/micromanager/display/package-summary.html">org.micromanager.display</a></dt>
 <dd>
@@ -1700,10 +1810,22 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.html#getAllChannelColors--">getAllChannelColors()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#getAllChannelRanges--">getAllChannelRanges()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns all channel ranges as a list.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.html#getAllChannelSettings--">getAllChannelSettings()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.html#getAllChannelVisibilities--">getAllChannelVisibilities()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.html" title="interface in org.micromanager.display">DisplaySettings</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.html#getAllComponentRanges--">getAllComponentRanges()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display">ChannelIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns all explicitly-set component ranges as a list.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#getAllComponentRanges-int-">getAllComponentRanges(int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns all explicitly-set component ranges for the given channel as a list.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelDisplaySettings.html#getAllComponentSettings--">getAllComponentSettings()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelDisplaySettings.html" title="interface in org.micromanager.display">ChannelDisplaySettings</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayManager.html#getAllDataViewers--">getAllDataViewers()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayManager.html" title="interface in org.micromanager.display">DisplayManager</a></dt>
@@ -1987,6 +2109,15 @@
 <div class="block"><span class="deprecationComment">- Use getChannelNameList() instead</span></div>
 </div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#getChannelNumberOfComponents-int-">getChannelNumberOfComponents(int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the number of components for which ranges have been explicitly set
+ in the given channel.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#getChannelRanges-int-">getChannelRanges(int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the <a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display"><code>ChannelIntensityRanges</code></a> for the given channel.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.Builder.html#getChannelSettings-int-">getChannelSettings(int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></dt>
 <dd>
 <div class="block">Returns the ChannelDisplaySettings for the given channel number.</div>
@@ -2030,6 +2161,47 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Image.html#getComponentIntensityAt-int-int-int-">getComponentIntensityAt(int, int, int)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Image.html" title="interface in org.micromanager.data">Image</a></dt>
 <dd>
 <div class="block">Get the intensity of a component of the pixel at the specified position.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.html#getComponentMaxima--">getComponentMaxima()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display">ChannelIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the maximum values for all explicitly-set components.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#getComponentMaxima-int-">getComponentMaxima(int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the maximum values for all explicitly-set components of the given channel.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.html#getComponentMaximum-int-">getComponentMaximum(int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display">ChannelIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the maximum intensity (white point) for the given component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#getComponentMaximum-int-int-">getComponentMaximum(int, int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the maximum intensity (white point) for the given channel and component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.html#getComponentMinima--">getComponentMinima()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display">ChannelIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the minimum values for all explicitly-set components.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#getComponentMinima-int-">getComponentMinima(int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the minimum values for all explicitly-set components of the given channel.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.html#getComponentMinimum-int-">getComponentMinimum(int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display">ChannelIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the minimum intensity (black point) for the given component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#getComponentMinimum-int-int-">getComponentMinimum(int, int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the minimum intensity (black point) for the given channel and component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.html#getComponentRange-int-">getComponentRange(int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display">ChannelIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the range for the given component as a <a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display"><code>ComponentIntensityRange</code></a>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#getComponentRange-int-int-">getComponentRange(int, int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the range for the given channel and component as a
+ <a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display"><code>ComponentIntensityRange</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelDisplaySettings.Builder.html#getComponentSettings-int-">getComponentSettings(int)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></dt>
 <dd>&nbsp;</dd>
@@ -2781,6 +2953,10 @@
 <div class="block">Retrieve the intensity of the brightest sample in the dataset once a
  fraction of all pixels have been discarded.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentIntensityRange.html#getMaximum--">getMaximum()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display">ComponentIntensityRange</a></dt>
+<dd>
+<div class="block">Returns the maximum intensity (white point).</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Storage.html#getMaxIndex-java.lang.String-">getMaxIndex(String)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Storage.html" title="interface in org.micromanager.data">Storage</a></dt>
 <dd>
 <div class="block">Return the largest stored position along the specified axis.</div>
@@ -2833,6 +3009,10 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <div class="block">Retrieve the intensity of the dimmest sample in the dataset once a
  fraction of all pixels have been discarded.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentIntensityRange.html#getMinimum--">getMinimum()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display">ComponentIntensityRange</a></dt>
+<dd>
+<div class="block">Returns the minimum intensity (black point).</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/HistogramData.html#getMinVal--">getMinVal()</a></span> - Method in class org.micromanager.display.<a href="org/micromanager/display/HistogramData.html" title="class in org.micromanager.display">HistogramData</a></dt>
 <dd>
@@ -2908,6 +3088,10 @@
 <dd>
 <div class="block">Returns the highest index along the given axis plus 1.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayIntensityRanges.html#getNumberOfChannels--">getNumberOfChannels()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the number of channels for which ranges have been set.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.Builder.html#getNumberOfChannels--">getNumberOfChannels()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></dt>
 <dd>
 <div class="block">Number of ChannelDisplaySettings in this builder.</div>
@@ -2922,6 +3106,10 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelDisplaySettings.html#getNumberOfComponents--">getNumberOfComponents()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelDisplaySettings.html" title="interface in org.micromanager.display">ChannelDisplaySettings</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelIntensityRanges.html#getNumberOfComponents--">getNumberOfComponents()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display">ChannelIntensityRanges</a></dt>
+<dd>
+<div class="block">Returns the number of components for which a range has been explicitly set.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/AutofocusPlugin.html#getNumberOfImages--">getNumberOfImages()</a></span> - Method in interface org.micromanager.<a href="org/micromanager/AutofocusPlugin.html" title="interface in org.micromanager">AutofocusPlugin</a></dt>
 <dd>
 <div class="block">Returns the number of images acquired.</div>
@@ -3910,6 +4098,14 @@
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 &nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ChannelDisplaySettings.Builder.html#intensityScaling-org.micromanager.display.ChannelIntensityRanges-">intensityScaling(ChannelIntensityRanges)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></dt>
+<dd>
+<div class="block">Sets the intensity scaling (min/max) for all components of this channel in one call.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettings.Builder.html#intensityScaling-org.micromanager.display.DisplayIntensityRanges-">intensityScaling(DisplayIntensityRanges)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></dt>
+<dd>
+<div class="block">Sets the intensity scaling (min/max) for all channels and components in one call.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/SequenceSettings.Builder.html#intervalMs-double-">intervalMs(double)</a></span> - Method in class org.micromanager.acquisition.<a href="org/micromanager/acquisition/SequenceSettings.Builder.html" title="class in org.micromanager.acquisition">SequenceSettings.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/SequenceSettings.html#intervalMs">intervalMs</a></span> - Variable in class org.micromanager.acquisition.<a href="org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a></dt>
@@ -4307,6 +4503,10 @@
 <div class="block"><span class="deprecationComment">Use equality (after removing specific axes) instead</span></div>
 </div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentIntensityRange.Builder.html#maximum-long-">maximum(long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a></dt>
+<dd>
+<div class="block">Sets the maximum intensity (white point) for this component.</div>
+</dd>
 <dt><a href="org/micromanager/MenuPlugin.html" title="interface in org.micromanager"><span class="typeNameLink">MenuPlugin</span></a> - Interface in <a href="org/micromanager/package-summary.html">org.micromanager</a></dt>
 <dd>
 <div class="block">A MenuPlugin is a plugin that should appear under the "Plugins" menu.</div>
@@ -4341,6 +4541,10 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/profile/UserProfileMigration.html#migrate-org.micromanager.PropertyMap-org.micromanager.propertymap.MutablePropertyMapView-">migrate(PropertyMap, MutablePropertyMapView)</a></span> - Method in interface org.micromanager.profile.<a href="org/micromanager/profile/UserProfileMigration.html" title="interface in org.micromanager.profile">UserProfileMigration</a></dt>
 <dd>
 <div class="block">Perform a migration from old settings storage.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentIntensityRange.Builder.html#minimum-long-">minimum(long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a></dt>
+<dd>
+<div class="block">Sets the minimum intensity (black point) for this component.</div>
 </dd>
 <dt><a href="org/micromanager/MMEvent.html" title="interface in org.micromanager"><span class="typeNameLink">MMEvent</span></a> - Interface in <a href="org/micromanager/package-summary.html">org.micromanager</a></dt>
 <dd>
@@ -5094,6 +5298,10 @@
 </a>
 <h2 class="title">R</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentIntensityRange.Builder.html#range-long-long-">range(long, long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a></dt>
+<dd>
+<div class="block">Convenience method to set both minimum and maximum in one call.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Metadata.Builder.html#receivedTime-java.lang.String-">receivedTime(String)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Metadata.Builder.html" title="interface in org.micromanager.data">Metadata.Builder</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Metadata.MetadataBuilder.html#receivedTime-java.lang.String-">receivedTime(String)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Metadata.MetadataBuilder.html" title="interface in org.micromanager.data">Metadata.MetadataBuilder</a></dt>
@@ -5383,6 +5591,10 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentDisplaySettings.Builder.html#scalingRange-long-long-">scalingRange(long, long)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentDisplaySettings.Builder.html" title="interface in org.micromanager.display">ComponentDisplaySettings.Builder</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/ComponentDisplaySettings.Builder.html#scalingRange-org.micromanager.display.ComponentIntensityRange-">scalingRange(ComponentIntensityRange)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/ComponentDisplaySettings.Builder.html" title="interface in org.micromanager.display">ComponentDisplaySettings.Builder</a></dt>
+<dd>
+<div class="block">Sets both minimum and maximum scaling values from a <a href="org/micromanager/display/ComponentIntensityRange.html" title="interface in org.micromanager.display"><code>ComponentIntensityRange</code></a>.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/acquisition/AcquisitionManager.html#scopeData--">scopeData()</a></span> - Method in interface org.micromanager.acquisition.<a href="org/micromanager/acquisition/AcquisitionManager.html" title="interface in org.micromanager.acquisition">AcquisitionManager</a></dt>
 <dd>
 <div class="block">Provide access to the ScopeDataUtils object for validating and applying
