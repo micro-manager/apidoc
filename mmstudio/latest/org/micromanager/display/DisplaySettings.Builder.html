@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -215,19 +215,25 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.Builder.html#playbackFPS-double-">playbackFPS</a></span>(double&nbsp;fps)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.Builder.html#intensityScaling-org.micromanager.display.DisplayIntensityRanges-">intensityScaling</a></span>(<a href="../../../org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a>&nbsp;ranges)</code>
+<div class="block">Sets the intensity scaling (min/max) for all channels and components in one call.</div>
+</td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.Builder.html#roiAutoscale-boolean-">roiAutoscale</a></span>(boolean&nbsp;enable)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.Builder.html#playbackFPS-double-">playbackFPS</a></span>(double&nbsp;fps)</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.Builder.html#roiAutoscale-boolean-">roiAutoscale</a></span>(boolean&nbsp;enable)</code>&nbsp;</td>
+</tr>
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.Builder.html#uniformChannelScaling-boolean-">uniformChannelScaling</a></span>(boolean&nbsp;enable)</code>
 <div class="block">Whether to use the same intensity scaling for every channel.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/DisplaySettings.Builder.html#zoomRatio-double-">zoomRatio</a></span>(double&nbsp;ratio)</code>&nbsp;</td>
 </tr>
@@ -455,6 +461,27 @@ var activeTableTab = "activeTableTab";
                         will be removed from this builder.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>builder instance to enable chaining commands</dd>
+</dl>
+</li>
+</ul>
+<a name="intensityScaling-org.micromanager.display.DisplayIntensityRanges-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>intensityScaling</h4>
+<pre><a href="../../../org/micromanager/display/DisplaySettings.Builder.html" title="interface in org.micromanager.display">DisplaySettings.Builder</a>&nbsp;intensityScaling(<a href="../../../org/micromanager/display/DisplayIntensityRanges.html" title="interface in org.micromanager.display">DisplayIntensityRanges</a>&nbsp;ranges)</pre>
+<div class="block">Sets the intensity scaling (min/max) for all channels and components in one call.
+
+ <p>This is a convenience alternative to calling
+ <a href="../../../org/micromanager/display/DisplaySettings.Builder.html#channel-int-org.micromanager.display.ChannelDisplaySettings-"><code>channel(int, ChannelDisplaySettings)</code></a> once per channel.
+ Only min and max are transferred per component; gamma values already set on
+ existing component settings are preserved.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>ranges</code> - per-channel, per-component intensity ranges for the whole display</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this builder</dd>
 </dl>
 </li>
 </ul>
