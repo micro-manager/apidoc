@@ -150,12 +150,12 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>SetMultiROI</b
 <tr class="memitem:a704252f4e5a1b0d9ccb90ccfe55c27b7" id="r_a704252f4e5a1b0d9ccb90ccfe55c27b7"><td class="memItemLeft" align="right" valign="top"><a id="a704252f4e5a1b0d9ccb90ccfe55c27b7" name="a704252f4e5a1b0d9ccb90ccfe55c27b7"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetMultiROI</b> (unsigned *xs, unsigned *ys, unsigned *widths, unsigned *heights, unsigned *length)=0</td></tr>
 <tr class="separator:a704252f4e5a1b0d9ccb90ccfe55c27b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa47f87cf2765d3196d7504cd5265ccc6" id="r_aa47f87cf2765d3196d7504cd5265ccc6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#aa47f87cf2765d3196d7504cd5265ccc6">StartSequenceAcquisition</a> (long numImages, double interval_ms, bool stopOnOverflow)=0</td></tr>
-<tr class="memdesc:aa47f87cf2765d3196d7504cd5265ccc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start continuous acquisition.  <br /></td></tr>
-<tr class="separator:aa47f87cf2765d3196d7504cd5265ccc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2c295727a48ebf4536982844a12f3f5" id="r_ac2c295727a48ebf4536982844a12f3f5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#ac2c295727a48ebf4536982844a12f3f5">StartSequenceAcquisition</a> (double interval_ms)=0</td></tr>
-<tr class="memdesc:ac2c295727a48ebf4536982844a12f3f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start Sequence Acquisition with given interval.  <br /></td></tr>
-<tr class="separator:ac2c295727a48ebf4536982844a12f3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af36046642cca083a2313f5672052d9c2" id="r_af36046642cca083a2313f5672052d9c2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#af36046642cca083a2313f5672052d9c2">StartSequenceAcquisition</a> (long numImages, double unused, bool stopOnOverflow)=0</td></tr>
+<tr class="memdesc:af36046642cca083a2313f5672052d9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start sequence acquisition.  <br /></td></tr>
+<tr class="separator:af36046642cca083a2313f5672052d9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacd30eb10b99d917e495c14ac33734f2" id="r_aacd30eb10b99d917e495c14ac33734f2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#aacd30eb10b99d917e495c14ac33734f2">StartSequenceAcquisition</a> (double unused)=0</td></tr>
+<tr class="memdesc:aacd30eb10b99d917e495c14ac33734f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start continuous sequence acquisition.  <br /></td></tr>
+<tr class="separator:aacd30eb10b99d917e495c14ac33734f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35fdfcba40d27f7703e3fdc4fee8259d" id="r_a35fdfcba40d27f7703e3fdc4fee8259d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_camera.html#a35fdfcba40d27f7703e3fdc4fee8259d">StopSequenceAcquisition</a> ()=0</td></tr>
 <tr class="memdesc:a35fdfcba40d27f7703e3fdc4fee8259d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop an ongoing sequence acquisition.  <br /></td></tr>
 <tr class="separator:a35fdfcba40d27f7703e3fdc4fee8259d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -927,8 +927,8 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 
 </div>
 </div>
-<a id="ac2c295727a48ebf4536982844a12f3f5" name="ac2c295727a48ebf4536982844a12f3f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2c295727a48ebf4536982844a12f3f5">&#9670;&#160;</a></span>StartSequenceAcquisition() <span class="overload">[1/2]</span></h2>
+<a id="aacd30eb10b99d917e495c14ac33734f2" name="aacd30eb10b99d917e495c14ac33734f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacd30eb10b99d917e495c14ac33734f2">&#9670;&#160;</a></span>StartSequenceAcquisition() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -940,7 +940,7 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
           <td class="memname">virtual int MM::Camera::StartSequenceAcquisition </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>interval_ms</em></td><td>)</td>
+          <td class="paramname"><em>unused</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -951,15 +951,20 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 </table>
 </div><div class="memdoc">
 
-<p>Start Sequence Acquisition with given interval. </p>
-<p>Most camera adapters will ignore this number. </p>
+<p>Start continuous sequence acquisition. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unused</td><td>Has no effect — see the three-argument overload. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="class_c_legacy_camera_base.html#ac5590a926f62f4e0737bc02f36dc0d58">CLegacyCameraBase&lt; U &gt;</a>, and <a class="el" href="class_c_camera_base.html#a642b4c383c139c961722103a2c109c04">CCameraBase&lt; U &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_c_camera_base.html#a0038aa7d886b27b917a3996aab5d3c8d">CCameraBase&lt; U &gt;</a>, and <a class="el" href="class_c_legacy_camera_base.html#a6119fda77a77ff5c2e9c86e1dda7a9c4">CLegacyCameraBase&lt; U &gt;</a>.</p>
 
 </div>
 </div>
-<a id="aa47f87cf2765d3196d7504cd5265ccc6" name="aa47f87cf2765d3196d7504cd5265ccc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa47f87cf2765d3196d7504cd5265ccc6">&#9670;&#160;</a></span>StartSequenceAcquisition() <span class="overload">[2/2]</span></h2>
+<a id="af36046642cca083a2313f5672052d9c2" name="af36046642cca083a2313f5672052d9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36046642cca083a2313f5672052d9c2">&#9670;&#160;</a></span>StartSequenceAcquisition() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -977,7 +982,7 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>interval_ms</em>, </td>
+          <td class="paramname"><em>unused</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -998,9 +1003,17 @@ static const DeviceType&#160;</td><td class="memItemRight" valign="bottom"><b>Ty
 </table>
 </div><div class="memdoc">
 
-<p>Start continuous acquisition. </p>
+<p>Start sequence acquisition. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numImages</td><td>Number of images to acquire. </td></tr>
+    <tr><td class="paramname">unused</td><td>Has no effect. Implementations <b>must</b> ignore this parameter. Previously named <code>intervalMs</code> / <code>interval_ms</code>, this parameter was never reliably implemented. Cameras that need a configurable frame rate should expose it as a device property. </td></tr>
+    <tr><td class="paramname">stopOnOverflow</td><td>If true, stop acquiring when MMCore's sequence buffer is full; if false, overwrite old frames. This is handled by MMCore automatically, but when false, the camera is allowed to drop frames. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="class_c_legacy_camera_base.html#a4b0d9127815866d084622619f28b97de">CLegacyCameraBase&lt; U &gt;</a>, and <a class="el" href="class_c_camera_base.html#a945fda309f0147a7ef27e642fcd323aa">CCameraBase&lt; U &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_c_camera_base.html#a12fbf0d988eca94cdea0612e4dcefc31">CCameraBase&lt; U &gt;</a>, and <a class="el" href="class_c_legacy_camera_base.html#ad832ebddda72a2f439aa6225b315de46">CLegacyCameraBase&lt; U &gt;</a>.</p>
 
 </div>
 </div>
