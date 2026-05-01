@@ -2248,7 +2248,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i339" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#startContinuousSequenceAcquisition-double-">startContinuousSequenceAcquisition</a></span>(double&nbsp;intervalMs)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#startContinuousSequenceAcquisition-double-">startContinuousSequenceAcquisition</a></span>(double&nbsp;unused)</code>
 <div class="block">Starts the continuous camera sequence acquisition.</div>
 </td>
 </tr>
@@ -2286,14 +2286,14 @@ extends java.lang.Object</pre>
 <tr id="i345" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#startSequenceAcquisition-int-double-boolean-">startSequenceAcquisition</a></span>(int&nbsp;numImages,
-                        double&nbsp;intervalMs,
+                        double&nbsp;unused,
                         boolean&nbsp;stopOnOverflow)</code>&nbsp;</td>
 </tr>
 <tr id="i346" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#startSequenceAcquisition-java.lang.String-int-double-boolean-">startSequenceAcquisition</a></span>(java.lang.String&nbsp;cameraLabel,
                         int&nbsp;numImages,
-                        double&nbsp;intervalMs,
+                        double&nbsp;unused,
                         boolean&nbsp;stopOnOverflow)</code>&nbsp;</td>
 </tr>
 <tr id="i347" class="rowColor">
@@ -5781,7 +5781,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>startSequenceAcquisition</h4>
 <pre>public&nbsp;void&nbsp;startSequenceAcquisition(int&nbsp;numImages,
-                                     double&nbsp;intervalMs,
+                                     double&nbsp;unused,
                                      boolean&nbsp;stopOnOverflow)
                               throws java.lang.Exception</pre>
 <dl>
@@ -5798,7 +5798,7 @@ extends java.lang.Object</pre>
 <h4>startSequenceAcquisition</h4>
 <pre>public&nbsp;void&nbsp;startSequenceAcquisition(java.lang.String&nbsp;cameraLabel,
                                      int&nbsp;numImages,
-                                     double&nbsp;intervalMs,
+                                     double&nbsp;unused,
                                      boolean&nbsp;stopOnOverflow)
                               throws java.lang.Exception</pre>
 <dl>
@@ -5828,7 +5828,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>startContinuousSequenceAcquisition</h4>
-<pre>public&nbsp;void&nbsp;startContinuousSequenceAcquisition(double&nbsp;intervalMs)
+<pre>public&nbsp;void&nbsp;startContinuousSequenceAcquisition(double&nbsp;unused)
                                         throws java.lang.Exception</pre>
 <div class="block">Starts the continuous camera sequence acquisition. This command does not block the calling thread for the duration of the acquisition.</div>
 <dl>
