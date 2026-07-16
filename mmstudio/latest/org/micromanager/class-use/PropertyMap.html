@@ -207,14 +207,14 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
-<td class="colLast"><span class="typeNameLabel">MultiStagePosition.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/MultiStagePosition.html#toPropertyMap--">toPropertyMap</a></span>()</code>
-<div class="block">Returns a propertymap describing this MultiStagePosition.</div>
+<td class="colLast"><span class="typeNameLabel">PositionList.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/PositionList.html#toPropertyMap--">toPropertyMap</a></span>()</code>
+<div class="block">Creates a PropertyMap from this PositionList.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PositionList.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/PositionList.html#toPropertyMap--">toPropertyMap</a></span>()</code>
-<div class="block">Creates a PropertyMap from this PositionList.</div>
+<td class="colLast"><span class="typeNameLabel">MultiStagePosition.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/MultiStagePosition.html#toPropertyMap--">toPropertyMap</a></span>()</code>
+<div class="block">Returns a propertymap describing this MultiStagePosition.</div>
 </td>
 </tr>
 </tbody>
@@ -490,6 +490,10 @@
 </div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
+<td class="colLast"><span class="typeNameLabel">MultiWellPlate.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/MultiWellPlate.html#toPropertyMap--">toPropertyMap</a></span>()</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -500,49 +504,53 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/micromanager/data/MultiWellPlate.html" title="interface in org.micromanager.data">MultiWellPlate</a></code></td>
+<td class="colLast"><span class="typeNameLabel">MultiWellPlate.FromPropertyMapBuilder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/MultiWellPlate.FromPropertyMapBuilder.html#build-org.micromanager.PropertyMap-">build</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;map)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/ProcessorConfigurator.html" title="interface in org.micromanager.data">ProcessorConfigurator</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ProcessorPlugin.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/ProcessorPlugin.html#createConfigurator-org.micromanager.PropertyMap-">createConfigurator</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;settings)</code>
 <div class="block">Generate any GUI needed to configure the plugin, using the provided settings to
  initialize the GUI.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/ProcessorFactory.html" title="interface in org.micromanager.data">ProcessorFactory</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ProcessorPlugin.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/ProcessorPlugin.html#createFactory-org.micromanager.PropertyMap-">createFactory</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;settings)</code>
 <div class="block">Generate a ProcessorFactory that can be used to generate Processor
  instances.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Coordinates.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Coordinates.html#fromPropertyMap-org.micromanager.PropertyMap-">fromPropertyMap</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;pmap)</code>
 <div class="block">Constructs a Coords instance from a PropertyMap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SummaryMetadata.Builder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html#initialScopeData-org.micromanager.PropertyMap-">initialScopeData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;initialScopeData)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.Builder.html" title="interface in org.micromanager.data">Metadata.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Metadata.Builder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Metadata.Builder.html#scopeData-org.micromanager.PropertyMap-">scopeData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
 <div class="block">Add device property data.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.MetadataBuilder.html" title="interface in org.micromanager.data">Metadata.MetadataBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Metadata.MetadataBuilder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Metadata.MetadataBuilder.html#scopeData-org.micromanager.PropertyMap-">scopeData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;scopeData)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 &nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Annotation.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Annotation.html#setGeneralAnnotation-org.micromanager.PropertyMap-">setGeneralAnnotation</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;newData)</code>
 <div class="block">Replace the data this Annotation has for the Datastore as a whole with the
  provided PropertyMap.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Annotation.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Annotation.html#setImageAnnotation-org.micromanager.data.Coords-org.micromanager.PropertyMap-">setImageAnnotation</a></span>(<a href="../../../org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a>&nbsp;coords,
                   <a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;newData)</code>
@@ -550,23 +558,23 @@
  provided PropertyMap.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.Builder.html" title="interface in org.micromanager.data">Metadata.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Metadata.Builder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Metadata.Builder.html#userData-org.micromanager.PropertyMap-">userData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;userData)</code>
 <div class="block">Add user-defined data.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/Metadata.MetadataBuilder.html" title="interface in org.micromanager.data">Metadata.MetadataBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Metadata.MetadataBuilder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/Metadata.MetadataBuilder.html#userData-org.micromanager.PropertyMap-">userData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;userData)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 &nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SummaryMetadata.Builder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html#userData-org.micromanager.PropertyMap-">userData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;userData)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/data/SummaryMetadata.SummaryMetadataBuilder.html" title="interface in org.micromanager.data">SummaryMetadata.SummaryMetadataBuilder</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SummaryMetadata.SummaryMetadataBuilder.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/data/SummaryMetadata.SummaryMetadataBuilder.html#userData-org.micromanager.PropertyMap-">userData</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;userData)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
@@ -588,13 +596,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/display/overlay/AbstractOverlay.html#getConfiguration--">getConfiguration</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/display/overlay/Overlay.html#getConfiguration--">getConfiguration</a></span>()</code>
 <div class="block">Return the user-customizable settings for this overlay.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/display/overlay/Overlay.html#getConfiguration--">getConfiguration</a></span>()</code>
+<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/display/overlay/AbstractOverlay.html#getConfiguration--">getConfiguration</a></span>()</code>
 <div class="block">Return the user-customizable settings for this overlay.</div>
 </td>
 </tr>
@@ -609,13 +617,13 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/display/overlay/AbstractOverlay.html#setConfiguration-org.micromanager.PropertyMap-">setConfiguration</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;config)</code>
+<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/display/overlay/Overlay.html#setConfiguration-org.micromanager.PropertyMap-">setConfiguration</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;config)</code>
 <div class="block">Configure the overlay with the given parameters.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Overlay.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/display/overlay/Overlay.html#setConfiguration-org.micromanager.PropertyMap-">setConfiguration</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;config)</code>
+<td class="colLast"><span class="typeNameLabel">AbstractOverlay.</span><code><span class="memberNameLink"><a href="../../../org/micromanager/display/overlay/AbstractOverlay.html#setConfiguration-org.micromanager.PropertyMap-">setConfiguration</a></span>(<a href="../../../org/micromanager/PropertyMap.html" title="interface in org.micromanager">PropertyMap</a>&nbsp;config)</code>
 <div class="block">Configure the overlay with the given parameters.</div>
 </td>
 </tr>
