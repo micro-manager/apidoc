@@ -209,6 +209,22 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../../org/micromanager/data/MultiWellPlate.html" title="interface in org.micromanager.data">MultiWellPlate</a></td>
+<td class="colLast">
+<div class="block">Metadata describing a multi-well plate, modelled after the OME Plate element.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><a href="../../../org/micromanager/data/MultiWellPlate.Builder.html" title="interface in org.micromanager.data">MultiWellPlate.Builder</a></td>
+<td class="colLast">
+<div class="block">Builder for MultiWellPlate, see <a href="../../../org/micromanager/data/MultiWellPlate.html" title="interface in org.micromanager.data"><code>MultiWellPlate</code></a> for function descriptions.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../org/micromanager/data/MultiWellPlate.FromPropertyMapBuilder.html" title="interface in org.micromanager.data">MultiWellPlate.FromPropertyMapBuilder</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/NewPipelineEvent.html" title="interface in org.micromanager.data">NewPipelineEvent</a></td>
 <td class="colLast">
 <div class="block">This class signifies that the configuration of the application pipeline
@@ -216,81 +232,81 @@
  a new copy of it (by invoking DataManager.copyApplicationPipeline()).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/Pipeline.html" title="interface in org.micromanager.data">Pipeline</a></td>
 <td class="colLast">
 <div class="block">Pipelines are used to apply a sequence of Processors to Images prior to
  those images being inserted into a Datastore.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/Processor.html" title="interface in org.micromanager.data">Processor</a></td>
 <td class="colLast">
 <div class="block">Processors manipulate images before they are added to a Datastore.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/ProcessorConfigurator.html" title="interface in org.micromanager.data">ProcessorConfigurator</a></td>
 <td class="colLast">
 <div class="block">ProcessorPluginConfigurators are used to generate the PropertyMaps needed
  to set up a ProcessorFactory.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/ProcessorContext.html" title="interface in org.micromanager.data">ProcessorContext</a></td>
 <td class="colLast">
 <div class="block">A ProcessorContext is an object that allows Processors to communicate with
  the ProcessorPipeline.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/ProcessorFactory.html" title="interface in org.micromanager.data">ProcessorFactory</a></td>
 <td class="colLast">
 <div class="block">A ProcessorFactory is an object that generates new DataProcessors.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/ProcessorPlugin.html" title="interface in org.micromanager.data">ProcessorPlugin</a></td>
 <td class="colLast">
 <div class="block">A ProcessorPlugin is the "root" class for creating Processors, which
  are used to modify images as they are collected by Micro-Manager.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/RewritableDatastore.html" title="interface in org.micromanager.data">RewritableDatastore</a></td>
 <td class="colLast">
 <div class="block">RewritableDatastores are Datastores that allow images and SummaryMetadata
  to be deleted or overwritten after they have been inserted.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/RewritableStorage.html" title="interface in org.micromanager.data">RewritableStorage</a></td>
 <td class="colLast">
 <div class="block">This interface is for Storage entities that allow the overwriting and
  deletion of Images and SummaryMetadata, as per RewritableDatastore.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/Storage.html" title="interface in org.micromanager.data">Storage</a></td>
 <td class="colLast">
 <div class="block">Storages are responsible for providing image data to Datastores when
  requested.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/SummaryMetadata.html" title="interface in org.micromanager.data">SummaryMetadata</a></td>
 <td class="colLast">
 <div class="block">This class defines the summary metadata that applies to all images in a
  dataset.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/SummaryMetadata.Builder.html" title="interface in org.micromanager.data">SummaryMetadata.Builder</a></td>
 <td class="colLast">
 <div class="block">Builder for SummaryMetadata.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../../org/micromanager/data/SummaryMetadata.SummaryMetadataBuilder.html" title="interface in org.micromanager.data">SummaryMetadata.SummaryMetadataBuilder</a></td>
 <td class="colLast">Deprecated
 <div class="block"><span class="deprecationComment">- Use SummaryMetadata.Builder instead</span></div>
@@ -329,6 +345,10 @@
 <td class="colLast">
 <div class="block">The file format to save to.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="../../../org/micromanager/data/MultiWellPlate.WellNamingConvention.html" title="enum in org.micromanager.data">MultiWellPlate.WellNamingConvention</a></td>
+<td class="colLast">&nbsp;</td>
 </tr>
 </tbody>
 </table>
