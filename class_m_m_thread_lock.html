@@ -53,6 +53,18 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a0b26562ce55c33a9e96b4d43c86ab858" id="r_a0b26562ce55c33a9e96b4d43c86ab858"><td class="memItemLeft" align="right" valign="top"><a id="a0b26562ce55c33a9e96b4d43c86ab858" name="a0b26562ce55c33a9e96b4d43c86ab858"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MMThreadLock</b> (const <a class="el" href="class_m_m_thread_lock.html">MMThreadLock</a> &amp;)=delete</td></tr>
+<tr class="separator:a0b26562ce55c33a9e96b4d43c86ab858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee1c03d1fcae6d99215f995a1b90be4" id="r_a2ee1c03d1fcae6d99215f995a1b90be4"><td class="memItemLeft" align="right" valign="top"><a id="a2ee1c03d1fcae6d99215f995a1b90be4" name="a2ee1c03d1fcae6d99215f995a1b90be4"></a>
+<a class="el" href="class_m_m_thread_lock.html">MMThreadLock</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_m_m_thread_lock.html">MMThreadLock</a> &amp;)=delete</td></tr>
+<tr class="separator:a2ee1c03d1fcae6d99215f995a1b90be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d6619d7ea8bbdef8980b22e17ce85d" id="r_ab9d6619d7ea8bbdef8980b22e17ce85d"><td class="memItemLeft" align="right" valign="top"><a id="ab9d6619d7ea8bbdef8980b22e17ce85d" name="ab9d6619d7ea8bbdef8980b22e17ce85d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MMThreadLock</b> (<a class="el" href="class_m_m_thread_lock.html">MMThreadLock</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:ab9d6619d7ea8bbdef8980b22e17ce85d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52dd891385eda99d41ea09ad97f8391c" id="r_a52dd891385eda99d41ea09ad97f8391c"><td class="memItemLeft" align="right" valign="top"><a id="a52dd891385eda99d41ea09ad97f8391c" name="a52dd891385eda99d41ea09ad97f8391c"></a>
+<a class="el" href="class_m_m_thread_lock.html">MMThreadLock</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_m_m_thread_lock.html">MMThreadLock</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a52dd891385eda99d41ea09ad97f8391c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50da15bfe4aa6a017c133367a3e3393b" id="r_a50da15bfe4aa6a017c133367a3e3393b"><td class="memItemLeft" align="right" valign="top"><a id="a50da15bfe4aa6a017c133367a3e3393b" name="a50da15bfe4aa6a017c133367a3e3393b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Lock</b> ()</td></tr>
 <tr class="separator:a50da15bfe4aa6a017c133367a3e3393b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -62,6 +74,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Unlock</b> ()</td></t
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Critical section lock. </p>
+<dl class="section attention"><dt>Attention</dt><dd>New code should use std::mutex or std::recursive_mutex instead (note that <a class="el" href="class_m_m_thread_lock.html" title="Critical section lock.">MMThreadLock</a> is recursive). </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_device_threads_8h_source.html">DeviceThreads.h</a></li>
 </ul>
