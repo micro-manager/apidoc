@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":18};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -121,7 +121,7 @@ extends <a href="../../../org/micromanager/MMEvent.html" title="interface in org
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -130,6 +130,13 @@ extends <a href="../../../org/micromanager/MMEvent.html" title="interface in org
 <td class="colFirst"><code><a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionSettingsChangedEvent.html#getNewSettings--">getNewSettings</a></span>()</code>
 <div class="block">Return the freshly changed SequenceSettings.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/acquisition/AcquisitionSettingsChangedEvent.html#isPrimaryEngine--">isPrimaryEngine</a></span>()</code>
+<div class="block">Indicates whether these settings belong to the application's primary
+ acquisition engine, i.e.</div>
 </td>
 </tr>
 </table>
@@ -150,7 +157,7 @@ extends <a href="../../../org/micromanager/MMEvent.html" title="interface in org
 <a name="getNewSettings--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getNewSettings</h4>
 <pre><a href="../../../org/micromanager/acquisition/SequenceSettings.html" title="class in org.micromanager.acquisition">SequenceSettings</a>&nbsp;getNewSettings()</pre>
@@ -159,6 +166,33 @@ extends <a href="../../../org/micromanager/MMEvent.html" title="interface in org
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Newly changed SequenceSettings</dd>
+</dl>
+</li>
+</ul>
+<a name="isPrimaryEngine--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isPrimaryEngine</h4>
+<pre>default&nbsp;boolean&nbsp;isPrimaryEngine()</pre>
+<div class="block">Indicates whether these settings belong to the application's primary
+ acquisition engine, i.e. the one driving the MDA window, as opposed to a
+ secondary engine such as a Test Acquisition.
+
+ <p>Secondary engines derive their settings from the MDA window and then
+ modify them for their own purposes (a Test Acquisition, for instance,
+ switches off saving, time-lapse, and the position list).  Those modified
+ settings are not the user's MDA settings, so subscribers that mirror the
+ state of the MDA window should ignore events for which this returns false.
+ Subscribers that simply want to observe whatever acquisition is being set
+ up can ignore this method.
+
+ <p>Defaults to true, which is the behavior of this event before this
+ method was introduced.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if these settings came from the primary acquisition engine.</dd>
 </dl>
 </li>
 </ul>
