@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":18,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -117,7 +117,7 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -130,45 +130,52 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>default java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/display/DataViewerGearMenuPlugin.html" title="interface in org.micromanager.display">DataViewerGearMenuPlugin</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/PluginManager.html#getDataViewerGearMenuPlugins--">getDataViewerGearMenuPlugins</a></span>()</code>
+<div class="block">Return a HashMap that maps plugin class names to DataViewerGearMenuPlugin
+ instances.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/display/DisplayGearMenuPlugin.html" title="interface in org.micromanager.display">DisplayGearMenuPlugin</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/PluginManager.html#getDisplayGearMenuPlugins--">getDisplayGearMenuPlugins</a></span>()</code>
 <div class="block">Return a HashMap that maps plugin class names to DisplayGearMenuPlugin
  instances.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/display/inspector/InspectorPanelPlugin.html" title="interface in org.micromanager.display.inspector">InspectorPanelPlugin</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/PluginManager.html#getInspectorPlugins--">getInspectorPlugins</a></span>()</code>
 <div class="block">Return a HashMap that maps plugin class names to InspectorPlugin
  instances.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/IntroPlugin.html" title="interface in org.micromanager">IntroPlugin</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/PluginManager.html#getIntroPlugins--">getIntroPlugins</a></span>()</code>
 <div class="block">Return a HashMap that maps plugin class names to IntroPlugin instances.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/MenuPlugin.html" title="interface in org.micromanager">MenuPlugin</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/PluginManager.html#getMenuPlugins--">getMenuPlugins</a></span>()</code>
 <div class="block">Return a HashMap that maps plugin class names to MenuPlugin instances.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/display/overlay/OverlayPlugin.html" title="interface in org.micromanager.display.overlay">OverlayPlugin</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/PluginManager.html#getOverlayPlugins--">getOverlayPlugins</a></span>()</code>
 <div class="block">Return a HashMap that maps plugin class names to OverlayPlugin instances.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/data/ProcessorPlugin.html" title="interface in org.micromanager.data">ProcessorPlugin</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/PluginManager.html#getProcessorPlugins--">getProcessorPlugins</a></span>()</code>
 <div class="block">Return a HashMap that maps plugin class names to ProcessorPlugin
  instances.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/quickaccess/QuickAccessPlugin.html" title="class in org.micromanager.quickaccess">QuickAccessPlugin</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/PluginManager.html#getQuickAccessPlugins--">getQuickAccessPlugins</a></span>()</code>
 <div class="block">Return a HashMap that maps plugin class names to QuickAccessPlugin
@@ -308,7 +315,7 @@ var activeTableTab = "activeTableTab";
 <a name="getDisplayGearMenuPlugins--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getDisplayGearMenuPlugins</h4>
 <pre>java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/display/DisplayGearMenuPlugin.html" title="interface in org.micromanager.display">DisplayGearMenuPlugin</a>&gt;&nbsp;getDisplayGearMenuPlugins()</pre>
@@ -318,6 +325,27 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>HashMap that maps plugin class names to DisplayGearMenuPlugin
+     instances</dd>
+</dl>
+</li>
+</ul>
+<a name="getDataViewerGearMenuPlugins--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getDataViewerGearMenuPlugins</h4>
+<pre>default&nbsp;java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/display/DataViewerGearMenuPlugin.html" title="interface in org.micromanager.display">DataViewerGearMenuPlugin</a>&gt;&nbsp;getDataViewerGearMenuPlugins()</pre>
+<div class="block">Return a HashMap that maps plugin class names to DataViewerGearMenuPlugin
+ instances. DataViewerGearMenuPlugins add entries to the gear menus of
+ viewers that are DataViewers but not DisplayWindows, such as the
+ TiledDataViewer.
+
+ <p>Defaults to reporting no such plugins, so that implementations written
+ before this plugin type existed keep working.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>HashMap that maps plugin class names to DataViewerGearMenuPlugin
      instances</dd>
 </dl>
 </li>
