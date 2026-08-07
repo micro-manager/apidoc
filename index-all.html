@@ -1401,6 +1401,11 @@
 <dd>
 <div class="block">General interface for any user interface displaying image data.</div>
 </dd>
+<dt><a href="org/micromanager/display/DataViewerGearMenuPlugin.html" title="interface in org.micromanager.display"><span class="typeNameLink">DataViewerGearMenuPlugin</span></a> - Interface in <a href="org/micromanager/display/package-summary.html">org.micromanager.display</a></dt>
+<dd>
+<div class="block">Adds an item to the gear menu of a viewer that is a <a href="org/micromanager/display/DataViewer.html" title="interface in org.micromanager.display"><code>DataViewer</code></a> but not
+ a <a href="org/micromanager/display/DisplayWindow.html" title="interface in org.micromanager.display"><code>DisplayWindow</code></a>, such as the TiledDataViewer.</div>
+</dd>
 <dt><a href="org/micromanager/display/DataViewerListener.html" title="class in org.micromanager.display"><span class="typeNameLink">DataViewerListener</span></a> - Class in <a href="org/micromanager/display/package-summary.html">org.micromanager.display</a></dt>
 <dd>
 <div class="block">Simple interface dedicated to the question if a dataviewer can be closed or not.</div>
@@ -2376,6 +2381,11 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplaySettingsChangedEvent.html#getDataViewer--">getDataViewer()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplaySettingsChangedEvent.html" title="interface in org.micromanager.display">DisplaySettingsChangedEvent</a></dt>
 <dd>
 <div class="block">Get the data viewer.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/PluginManager.html#getDataViewerGearMenuPlugins--">getDataViewerGearMenuPlugins()</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PluginManager.html" title="interface in org.micromanager">PluginManager</a></dt>
+<dd>
+<div class="block">Return a HashMap that maps plugin class names to DataViewerGearMenuPlugin
+ instances.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/MultiStagePosition.html#getDefaultXYStage--">getDefaultXYStage()</a></span> - Method in class org.micromanager.<a href="org/micromanager/MultiStagePosition.html" title="class in org.micromanager">MultiStagePosition</a></dt>
 <dd>
@@ -3699,6 +3709,10 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/propertymap/MutablePropertyMapView.html#getStringListAsEnumList-java.lang.String-java.lang.Class-java.lang.Iterable-">getStringListAsEnumList(String, Class&lt;E&gt;, Iterable&lt;E&gt;)</a></span> - Method in interface org.micromanager.propertymap.<a href="org/micromanager/propertymap/MutablePropertyMapView.html" title="interface in org.micromanager.propertymap">MutablePropertyMapView</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DataViewerGearMenuPlugin.html#getSubMenu--">getSubMenu()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DataViewerGearMenuPlugin.html" title="interface in org.micromanager.display">DataViewerGearMenuPlugin</a></dt>
+<dd>
+<div class="block">Indicate which sub-menu of the gear menu this plugin should appear in.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayGearMenuPlugin.html#getSubMenu--">getSubMenu()</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayGearMenuPlugin.html" title="interface in org.micromanager.display">DisplayGearMenuPlugin</a></dt>
 <dd>
 <div class="block">Indicate which sub-menu of the gear menu this plugin should appear
@@ -4192,6 +4206,10 @@
 <div class="block">Returns true when an acquisition is currently running (note: this
  function will not return true if live mode, snap, or "Camera --&gt;
  Album" is currently running.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DataViewerGearMenuPlugin.html#isApplicableToDataViewer-org.micromanager.display.DataViewer-">isApplicableToDataViewer(DataViewer)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DataViewerGearMenuPlugin.html" title="interface in org.micromanager.display">DataViewerGearMenuPlugin</a></dt>
+<dd>
+<div class="block">Indicate whether this plugin can operate on the given viewer.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/inspector/InspectorPanelPlugin.html#isApplicableToDataViewer-org.micromanager.display.DataViewer-">isApplicableToDataViewer(DataViewer)</a></span> - Method in interface org.micromanager.display.inspector.<a href="org/micromanager/display/inspector/InspectorPanelPlugin.html" title="interface in org.micromanager.display.inspector">InspectorPanelPlugin</a></dt>
 <dd>
@@ -4740,6 +4758,10 @@
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coords.CoordsBuilder.html#offset-java.lang.String-int-">offset(String, int)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Coords.CoordsBuilder.html" title="interface in org.micromanager.data">Coords.CoordsBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/display/DataViewerGearMenuPlugin.html#onPluginSelected-org.micromanager.display.DataViewer-">onPluginSelected(DataViewer)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DataViewerGearMenuPlugin.html" title="interface in org.micromanager.display">DataViewerGearMenuPlugin</a></dt>
+<dd>
+<div class="block">This method will be called when the plugin is selected from the gear menu.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/display/DisplayGearMenuPlugin.html#onPluginSelected-org.micromanager.display.DisplayWindow-">onPluginSelected(DisplayWindow)</a></span> - Method in interface org.micromanager.display.<a href="org/micromanager/display/DisplayGearMenuPlugin.html" title="interface in org.micromanager.display">DisplayGearMenuPlugin</a></dt>
 <dd>
 <div class="block">This method will be called when the plugin is selected from the
