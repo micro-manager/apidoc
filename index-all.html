@@ -498,6 +498,10 @@
 <dd>
 <div class="block">Whether or not the DataViewer can be closed.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/data/TiledDataOpenerPlugin.html#canOpen-java.lang.String-">canOpen(String)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/TiledDataOpenerPlugin.html" title="interface in org.micromanager.data">TiledDataOpenerPlugin</a></dt>
+<dd>
+<div class="block">Indicate whether this opener can handle the dataset at the given path.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/quickaccess/QuickAccessPlugin.html#CELL_HEIGHT">CELL_HEIGHT</a></span> - Static variable in class org.micromanager.quickaccess.<a href="org/micromanager/quickaccess/QuickAccessPlugin.html" title="class in org.micromanager.quickaccess">QuickAccessPlugin</a></dt>
 <dd>
 <div class="block">The height of a single cell in the Quick-Access Window.</div>
@@ -3830,6 +3834,11 @@
 <dd>
 <div class="block">Returns the current text of the alert.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/PluginManager.html#getTiledDataOpenerPlugins--">getTiledDataOpenerPlugins()</a></span> - Method in interface org.micromanager.<a href="org/micromanager/PluginManager.html" title="interface in org.micromanager">PluginManager</a></dt>
+<dd>
+<div class="block">Return a HashMap that maps plugin class names to TiledDataOpenerPlugin
+ instances.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coords.html#getTime--">getTime()</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></dt>
 <dd>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>
@@ -4851,6 +4860,10 @@
 <dd>
 <div class="block">This method will be called when the plugin is selected from the
  PluginsMenu.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/micromanager/data/TiledDataOpenerPlugin.html#open-java.lang.String-">open(String)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/TiledDataOpenerPlugin.html" title="interface in org.micromanager.data">TiledDataOpenerPlugin</a></dt>
+<dd>
+<div class="block">Open the dataset and show a viewer for it.</div>
 </dd>
 <dt><a href="org/micromanager/package-summary.html">org.micromanager</a> - package org.micromanager</dt>
 <dd>
@@ -6543,6 +6556,10 @@
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coords.html#T">T</a></span> - Static variable in interface org.micromanager.data.<a href="org/micromanager/data/Coords.html" title="interface in org.micromanager.data">Coords</a></dt>
 <dd>
 <div class="block">Axis label for the time point (frame) axis (short form).</div>
+</dd>
+<dt><a href="org/micromanager/data/TiledDataOpenerPlugin.html" title="interface in org.micromanager.data"><span class="typeNameLink">TiledDataOpenerPlugin</span></a> - Interface in <a href="org/micromanager/data/package-summary.html">org.micromanager.data</a></dt>
+<dd>
+<div class="block">Opens a tiled (pyramidal) dataset in a viewer of its own choosing.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="org/micromanager/data/Coords.Builder.html#time-int-">time(int)</a></span> - Method in interface org.micromanager.data.<a href="org/micromanager/data/Coords.Builder.html" title="interface in org.micromanager.data">Coords.Builder</a></dt>
 <dd>

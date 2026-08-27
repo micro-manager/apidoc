@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":18,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6};
+var methods = {"i0":6,"i1":18,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":18};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -182,6 +182,13 @@ var activeTableTab = "activeTableTab";
  instances.</div>
 </td>
 </tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>default java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/data/TiledDataOpenerPlugin.html" title="interface in org.micromanager.data">TiledDataOpenerPlugin</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../org/micromanager/PluginManager.html#getTiledDataOpenerPlugins--">getTiledDataOpenerPlugins</a></span>()</code>
+<div class="block">Return a HashMap that maps plugin class names to TiledDataOpenerPlugin
+ instances.</div>
+</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -332,7 +339,7 @@ var activeTableTab = "activeTableTab";
 <a name="getDataViewerGearMenuPlugins--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getDataViewerGearMenuPlugins</h4>
 <pre>default&nbsp;java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/display/DataViewerGearMenuPlugin.html" title="interface in org.micromanager.display">DataViewerGearMenuPlugin</a>&gt;&nbsp;getDataViewerGearMenuPlugins()</pre>
@@ -346,6 +353,26 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>HashMap that maps plugin class names to DataViewerGearMenuPlugin
+     instances</dd>
+</dl>
+</li>
+</ul>
+<a name="getTiledDataOpenerPlugins--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getTiledDataOpenerPlugins</h4>
+<pre>default&nbsp;java.util.HashMap&lt;java.lang.String,<a href="../../org/micromanager/data/TiledDataOpenerPlugin.html" title="interface in org.micromanager.data">TiledDataOpenerPlugin</a>&gt;&nbsp;getTiledDataOpenerPlugins()</pre>
+<div class="block">Return a HashMap that maps plugin class names to TiledDataOpenerPlugin
+ instances. TiledDataOpenerPlugins open tiled (pyramidal) datasets, such as
+ OME-Zarr or tiled NDTiff, that the standard data loading path cannot handle.
+
+ <p>Defaults to reporting no such plugins, so that implementations written
+ before this plugin type existed keep working.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>HashMap that maps plugin class names to TiledDataOpenerPlugin
      instances</dd>
 </dl>
 </li>
