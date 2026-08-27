@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":6,"i2":6,"i3":6,"i4":6};
+var methods = {"i0":17,"i1":6,"i2":18,"i3":18,"i4":18,"i5":18,"i6":6,"i7":6,"i8":6,"i9":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -151,16 +151,46 @@ var activeTableTab = "activeTableTab";
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#copyBuilder--">copyBuilder</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>default double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#getEffectiveScalingMaximum--">getEffectiveScalingMaximum</a></span>()</code>
+<div class="block">Scaling maximum as a pixel value, whichever range is in effect.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>default double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#getEffectiveScalingMinimum--">getEffectiveScalingMinimum</a></span>()</code>
+<div class="block">Scaling minimum as a pixel value, whichever range is in effect.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>default double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#getFloatScalingMaximum--">getFloatScalingMaximum</a></span>()</code>
+<div class="block">Returns the scaling maximum as an actual pixel value, for floating point images.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>default double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#getFloatScalingMinimum--">getFloatScalingMinimum</a></span>()</code>
+<div class="block">Returns the scaling minimum as an actual pixel value, for floating point images.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#getScalingGamma--">getScalingGamma</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#getScalingMaximum--">getScalingMaximum</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#getScalingMinimum--">getScalingMinimum</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#hasFloatScaling--">hasFloatScaling</a></span>()</code>
+<div class="block">Returns whether a floating point scaling range has been set.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -193,6 +223,94 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getScalingMaximum</h4>
 <pre>long&nbsp;getScalingMaximum()</pre>
+</li>
+</ul>
+<a name="getFloatScalingMinimum--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFloatScalingMinimum</h4>
+<pre>default&nbsp;double&nbsp;getFloatScalingMinimum()</pre>
+<div class="block">Returns the scaling minimum as an actual pixel value, for floating point images.
+
+ <p>The default implementation reports no float scaling, so that implementations
+ written before float scaling existed keep compiling.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>pixel value, or <code>Double.NaN</code> if no float scaling has been set</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#hasFloatScaling--"><code>hasFloatScaling()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="getFloatScalingMaximum--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFloatScalingMaximum</h4>
+<pre>default&nbsp;double&nbsp;getFloatScalingMaximum()</pre>
+<div class="block">Returns the scaling maximum as an actual pixel value, for floating point images.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>pixel value, or <code>Double.NaN</code> if no float scaling has been set</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#hasFloatScaling--"><code>hasFloatScaling()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="hasFloatScaling--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasFloatScaling</h4>
+<pre>default&nbsp;boolean&nbsp;hasFloatScaling()</pre>
+<div class="block">Returns whether a floating point scaling range has been set.
+
+ <p>When false, callers displaying float images should fall back to deriving a range
+ from the image statistics.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if both bounds are set and the maximum is strictly above the minimum;
+     an empty or inverted range counts as unset, since it cannot be displayed</dd>
+</dl>
+</li>
+</ul>
+<a name="getEffectiveScalingMinimum--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEffectiveScalingMinimum</h4>
+<pre>default&nbsp;double&nbsp;getEffectiveScalingMinimum()</pre>
+<div class="block">Scaling minimum as a pixel value, whichever range is in effect.
+
+ <p>Returns the float range when one is set, and otherwise the long-valued range
+ widened to a double. Use this rather than <a href="../../../org/micromanager/display/ComponentDisplaySettings.html#getScalingMinimum--"><code>getScalingMinimum()</code></a> anywhere the
+ value feeds a renderer or a file, so that float images are handled correctly without
+ every caller having to branch on <a href="../../../org/micromanager/display/ComponentDisplaySettings.html#hasFloatScaling--"><code>hasFloatScaling()</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the scaling minimum</dd>
+</dl>
+</li>
+</ul>
+<a name="getEffectiveScalingMaximum--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEffectiveScalingMaximum</h4>
+<pre>default&nbsp;double&nbsp;getEffectiveScalingMaximum()</pre>
+<div class="block">Scaling maximum as a pixel value, whichever range is in effect.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the scaling maximum</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/micromanager/display/ComponentDisplaySettings.html#getEffectiveScalingMinimum--"><code>getEffectiveScalingMinimum()</code></a></dd>
+</dl>
 </li>
 </ul>
 <a name="getScalingGamma--">

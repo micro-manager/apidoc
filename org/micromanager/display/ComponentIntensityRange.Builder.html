@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":18,"i2":18,"i3":18,"i4":6,"i5":6,"i6":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -122,7 +122,7 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -134,18 +134,37 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html#floatMaximum-double-">floatMaximum</a></span>(double&nbsp;max)</code>
+<div class="block">Sets the maximum as an actual pixel value, for floating point images.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>default <a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html#floatMinimum-double-">floatMinimum</a></span>(double&nbsp;min)</code>
+<div class="block">Sets the minimum as an actual pixel value, for floating point images.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html#floatRange-double-double-">floatRange</a></span>(double&nbsp;min,
+          double&nbsp;max)</code>
+<div class="block">Sets both float bounds as actual pixel values.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html#maximum-long-">maximum</a></span>(long&nbsp;max)</code>
 <div class="block">Sets the maximum intensity (white point) for this component.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html#minimum-long-">minimum</a></span>(long&nbsp;min)</code>
 <div class="block">Sets the minimum intensity (black point) for this component.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html#range-long-long-">range</a></span>(long&nbsp;min,
      long&nbsp;max)</code>
@@ -216,6 +235,67 @@ var activeTableTab = "activeTableTab";
 <dd><code>max</code> - intensity value at or above which pixels display at full brightness</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this builder</dd>
+</dl>
+</li>
+</ul>
+<a name="floatMinimum-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>floatMinimum</h4>
+<pre>default&nbsp;<a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a>&nbsp;floatMinimum(double&nbsp;min)</pre>
+<div class="block">Sets the minimum as an actual pixel value, for floating point images.
+
+ <p>For float images the long-valued <a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html#minimum-long-"><code>minimum(long)</code></a> is not usable, since
+ the interesting range is rarely integral. Pass <code>Double.NaN</code> to clear the
+ float range and fall back to the long-valued setting.
+
+ <p>The default implementation ignores the value, so that builders written before
+ the float range existed keep compiling; they simply carry no float range.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>min</code> - pixel value, or NaN to unset</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this builder</dd>
+</dl>
+</li>
+</ul>
+<a name="floatMaximum-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>floatMaximum</h4>
+<pre>default&nbsp;<a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a>&nbsp;floatMaximum(double&nbsp;max)</pre>
+<div class="block">Sets the maximum as an actual pixel value, for floating point images.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>max</code> - pixel value, or NaN to unset</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this builder</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html#floatMinimum-double-"><code>floatMinimum(double)</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="floatRange-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>floatRange</h4>
+<pre>default&nbsp;<a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html" title="interface in org.micromanager.display">ComponentIntensityRange.Builder</a>&nbsp;floatRange(double&nbsp;min,
+                                                   double&nbsp;max)</pre>
+<div class="block">Sets both float bounds as actual pixel values.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>min</code> - pixel value, or NaN to unset</dd>
+<dd><code>max</code> - pixel value, or NaN to unset</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this builder</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/micromanager/display/ComponentIntensityRange.Builder.html#floatMinimum-double-"><code>floatMinimum(double)</code></a></dd>
 </dl>
 </li>
 </ul>
