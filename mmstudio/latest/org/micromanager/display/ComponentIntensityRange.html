@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":6,"i2":6,"i3":6};
+var methods = {"i0":17,"i1":6,"i2":18,"i3":18,"i4":6,"i5":6,"i6":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -176,15 +176,33 @@ var activeTableTab = "activeTableTab";
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>default double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.html#getFloatMaximum--">getFloatMaximum</a></span>()</code>
+<div class="block">Returns the maximum as an actual pixel value, for floating point images.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>default double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.html#getFloatMinimum--">getFloatMinimum</a></span>()</code>
+<div class="block">Returns the minimum as an actual pixel value, for floating point images.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.html#getMaximum--">getMaximum</a></span>()</code>
 <div class="block">Returns the maximum intensity (white point).</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.html#getMinimum--">getMinimum</a></span>()</code>
 <div class="block">Returns the minimum intensity (black point).</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ComponentIntensityRange.html#hasFloatRange--">hasFloatRange</a></span>()</code>
+<div class="block">Returns whether a floating point range has been set.</div>
 </td>
 </tr>
 </table>
@@ -247,7 +265,7 @@ var activeTableTab = "activeTableTab";
 <a name="getMaximum--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getMaximum</h4>
 <pre>long&nbsp;getMaximum()</pre>
@@ -256,6 +274,56 @@ var activeTableTab = "activeTableTab";
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>maximum intensity; <code>Long.MAX_VALUE</code> when not explicitly set,
      which means "use the full camera bit-depth range"</dd>
+</dl>
+</li>
+</ul>
+<a name="getFloatMinimum--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFloatMinimum</h4>
+<pre>default&nbsp;double&nbsp;getFloatMinimum()</pre>
+<div class="block">Returns the minimum as an actual pixel value, for floating point images.
+
+ <p>The default implementation reports no float range, so that implementations written
+ before the float range existed keep compiling.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>pixel value, or <code>Double.NaN</code> if no float range has been set</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/micromanager/display/ComponentIntensityRange.html#hasFloatRange--"><code>hasFloatRange()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="getFloatMaximum--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFloatMaximum</h4>
+<pre>default&nbsp;double&nbsp;getFloatMaximum()</pre>
+<div class="block">Returns the maximum as an actual pixel value, for floating point images.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>pixel value, or <code>Double.NaN</code> if no float range has been set</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/micromanager/display/ComponentIntensityRange.html#hasFloatRange--"><code>hasFloatRange()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="hasFloatRange--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hasFloatRange</h4>
+<pre>default&nbsp;boolean&nbsp;hasFloatRange()</pre>
+<div class="block">Returns whether a floating point range has been set.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if both bounds are set and the maximum is strictly above the minimum;
+     an empty or inverted range counts as unset, since it cannot be displayed</dd>
 </dl>
 </li>
 </ul>

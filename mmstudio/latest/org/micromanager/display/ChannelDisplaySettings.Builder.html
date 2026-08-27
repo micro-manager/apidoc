@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18,"i13":18,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -119,7 +119,7 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -174,48 +174,61 @@ var activeTableTab = "activeTableTab";
          <a href="../../../org/micromanager/display/ComponentDisplaySettings.html" title="interface in org.micromanager.display">ComponentDisplaySettings</a>&nbsp;settings)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
+<td class="colFirst"><code>default <a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#floatHistoRange-double-double-">floatHistoRange</a></span>(double&nbsp;min,
+               double&nbsp;max)</code>
+<div class="block">Sets the histogram axis range for floating point images, as pixel values.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>default <a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#floatHistoRangePinned-boolean-">floatHistoRangePinned</a></span>(boolean&nbsp;pinned)</code>
+<div class="block">Marks the float histogram axis as chosen by the user.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ComponentDisplaySettings.html" title="interface in org.micromanager.display">ComponentDisplaySettings</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#getComponentSettings-int-">getComponentSettings</a></span>(int&nbsp;component)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#getNumberOfComponents--">getNumberOfComponents</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#groupName-java.lang.String-">groupName</a></span>(java.lang.String&nbsp;groupName)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#hide--">hide</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#histoRangeBits-int-">histoRangeBits</a></span>(int&nbsp;bits)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#intensityScaling-org.micromanager.display.ChannelIntensityRanges-">intensityScaling</a></span>(<a href="../../../org/micromanager/display/ChannelIntensityRanges.html" title="interface in org.micromanager.display">ChannelIntensityRanges</a>&nbsp;ranges)</code>
 <div class="block">Sets the intensity scaling (min/max) for all components of this channel in one call.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#name-java.lang.String-">name</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#show--">show</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#uniformComponentScaling-boolean-">uniformComponentScaling</a></span>(boolean&nbsp;enable)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#useCameraHistoRange-boolean-">useCameraHistoRange</a></span>(boolean&nbsp;use)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html#visible-boolean-">visible</a></span>(boolean&nbsp;visible)</code>&nbsp;</td>
 </tr>
@@ -340,6 +353,49 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>useCameraHistoRange</h4>
 <pre><a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a>&nbsp;useCameraHistoRange(boolean&nbsp;use)</pre>
+</li>
+</ul>
+<a name="floatHistoRange-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>floatHistoRange</h4>
+<pre>default&nbsp;<a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a>&nbsp;floatHistoRange(double&nbsp;min,
+                                                       double&nbsp;max)</pre>
+<div class="block">Sets the histogram axis range for floating point images, as pixel values.
+
+ <p>Only meaningful for float images, whose axis is a real value range rather than
+ a bit depth. Pass <code>Double.NaN</code> for both to clear it.
+
+ <p>The default implementation ignores the values, so that builders written before
+ the float axis existed keep compiling; they simply carry no axis range.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>min</code> - low end of the axis</dd>
+<dd><code>max</code> - high end of the axis</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this builder</dd>
+</dl>
+</li>
+</ul>
+<a name="floatHistoRangePinned-boolean-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>floatHistoRangePinned</h4>
+<pre>default&nbsp;<a href="../../../org/micromanager/display/ChannelDisplaySettings.Builder.html" title="interface in org.micromanager.display">ChannelDisplaySettings.Builder</a>&nbsp;floatHistoRangePinned(boolean&nbsp;pinned)</pre>
+<div class="block">Marks the float histogram axis as chosen by the user.
+
+ <p>When set, the axis is left exactly as given instead of being widened to take in
+ each newly displayed image.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pinned</code> - true to stop the axis adapting to the data</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this builder</dd>
+</dl>
 </li>
 </ul>
 <a name="name-java.lang.String-">

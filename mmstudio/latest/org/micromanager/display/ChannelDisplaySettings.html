@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6};
+var methods = {"i0":17,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":18,"i7":18,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18,"i13":18,"i14":6,"i15":6,"i16":6};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -172,12 +172,24 @@ var activeTableTab = "activeTableTab";
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#getComponentSettings-int-">getComponentSettings</a></span>(int&nbsp;component)</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
+<td class="colFirst"><code>default double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#getFloatHistoRangeMaximum--">getFloatHistoRangeMaximum</a></span>()</code>
+<div class="block">High end of the histogram axis for floating point images.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>default double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#getFloatHistoRangeMinimum--">getFloatHistoRangeMinimum</a></span>()</code>
+<div class="block">Low end of the histogram axis for floating point images.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#getGroupName--">getGroupName</a></span>()</code>
 <div class="block">Name of the channelgroup this channel belongs to.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#getHistoRangeBits--">getHistoRangeBits</a></span>()</code>
 <div class="block">Range of this histogram displayed for this channel
@@ -185,27 +197,39 @@ var activeTableTab = "activeTableTab";
  the maximum value on the x-axis of the histogram.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#getName--">getName</a></span>()</code>
 <div class="block">Returns name of the channel that is displayed.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#getNumberOfComponents--">getNumberOfComponents</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#hasFloatHistoRange--">hasFloatHistoRange</a></span>()</code>
+<div class="block">Returns whether a float histogram axis range has been recorded.</div>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#isFloatHistoRangePinned--">isFloatHistoRangePinned</a></span>()</code>
+<div class="block">Returns whether the float histogram axis was chosen by the user.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#isUniformComponentScalingEnabled--">isUniformComponentScalingEnabled</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#isVisible--">isVisible</a></span>()</code>
 <div class="block">Indicates whether this is visible.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#useCameraRange--">useCameraRange</a></span>()</code>
 <div class="block">Returns whether the camera range is used as histogram range.</div>
@@ -277,6 +301,72 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>True when historangebits is equal to the maximum intensity coming from the camera</dd>
+</dl>
+</li>
+</ul>
+<a name="getFloatHistoRangeMinimum--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFloatHistoRangeMinimum</h4>
+<pre>default&nbsp;double&nbsp;getFloatHistoRangeMinimum()</pre>
+<div class="block">Low end of the histogram axis for floating point images.
+
+ <p>The default implementation reports no axis range, so that implementations written
+ before the float axis existed keep compiling.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>pixel value, or <code>Double.NaN</code> if not set</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#hasFloatHistoRange--"><code>hasFloatHistoRange()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="getFloatHistoRangeMaximum--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFloatHistoRangeMaximum</h4>
+<pre>default&nbsp;double&nbsp;getFloatHistoRangeMaximum()</pre>
+<div class="block">High end of the histogram axis for floating point images.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>pixel value, or <code>Double.NaN</code> if not set</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../org/micromanager/display/ChannelDisplaySettings.html#hasFloatHistoRange--"><code>hasFloatHistoRange()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="hasFloatHistoRange--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasFloatHistoRange</h4>
+<pre>default&nbsp;boolean&nbsp;hasFloatHistoRange()</pre>
+<div class="block">Returns whether a float histogram axis range has been recorded.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if both ends are set and the high end is strictly above the low end;
+     an empty or inverted range counts as unset, since it cannot be drawn</dd>
+</dl>
+</li>
+</ul>
+<a name="isFloatHistoRangePinned--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isFloatHistoRangePinned</h4>
+<pre>default&nbsp;boolean&nbsp;isFloatHistoRangePinned()</pre>
+<div class="block">Returns whether the float histogram axis was chosen by the user.
+
+ <p>A pinned axis is not widened to include newly displayed images.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if the axis should be left as-is</dd>
 </dl>
 </li>
 </ul>
