@@ -199,6 +199,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>CreateStringProperty</
 int&#160;</td><td class="memItemRight" valign="bottom"><b>SetPropertyLimits</b> (const char *name, double low, double high)</td></tr>
 <tr class="memdesc:a290df43da29adefac47088a932933904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define limits for properties with a continuous range of values. <br /></td></tr>
 <tr class="separator:a290df43da29adefac47088a932933904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71b4b728031042a01d76c9a7c3f9a79" id="r_ae71b4b728031042a01d76c9a7c3f9a79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_device_base.html#ae71b4b728031042a01d76c9a7c3f9a79">ClearPropertyLimits</a> (const char *name)</td></tr>
+<tr class="memdesc:ae71b4b728031042a01d76c9a7c3f9a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the limits of a property, so that any value is allowed again.  <br /></td></tr>
+<tr class="separator:ae71b4b728031042a01d76c9a7c3f9a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af204de0df188a20463209430445dd548" id="r_af204de0df188a20463209430445dd548"><td class="memItemLeft" align="right" valign="top"><a id="af204de0df188a20463209430445dd548" name="af204de0df188a20463209430445dd548"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>SetAllowedValues</b> (const char *name, std::vector&lt; std::string &gt; &amp;values)</td></tr>
 <tr class="memdesc:af204de0df188a20463209430445dd548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an entire array of allowed values. <br /></td></tr>
@@ -448,6 +451,39 @@ template&lt;class T_HUB &gt; </div>
 <p>Make sure the Parent ID has been assigned. </p>
 
 <p class="reference">References <a class="el" href="class_c_device_base.html#a2a767f0a1ca509848a78a10105fe8f7d">CDeviceBase&lt; T, U &gt;::GetParentHub()</a>, and <a class="el" href="class_c_device_base.html#a528a4cf2210cbcf17cffa03b266befb5">CDeviceBase&lt; T, U &gt;::LogMessage()</a>.</p>
+
+</div>
+</div>
+<a id="ae71b4b728031042a01d76c9a7c3f9a79" name="ae71b4b728031042a01d76c9a7c3f9a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71b4b728031042a01d76c9a7c3f9a79">&#9670;&#160;</a></span>ClearPropertyLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_c_device_base.html">CDeviceBase</a>&lt; T, U &gt;::ClearPropertyLimits </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove the limits of a property, so that any value is allowed again. </p>
+<p>Use this instead of calling <a class="el" href="class_c_device_base.html#a290df43da29adefac47088a932933904" title="Define limits for properties with a continuous range of values.">SetPropertyLimits()</a> with an empty range (e.g. 0, 0): the latter returns an error and logs a message, because an empty range is not a valid set of limits. </p>
+
+<p class="reference">References <a class="el" href="class_m_m_1_1_property.html#a57ee7a3da8a6075e9546a2228b3cd7b7">MM::Property::ClearLimits()</a>.</p>
 
 </div>
 </div>
