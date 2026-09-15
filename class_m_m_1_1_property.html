@@ -124,6 +124,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetData</b> (const ch
 <tr class="separator:aafb92de1b4f06753be3d74de0acb9fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bfa3bd2057bfc71428f2dc4009d3aab" id="r_a0bfa3bd2057bfc71428f2dc4009d3aab"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_property.html#a0bfa3bd2057bfc71428f2dc4009d3aab">GetUpperLimit</a> () const</td></tr>
 <tr class="separator:a0bfa3bd2057bfc71428f2dc4009d3aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57ee7a3da8a6075e9546a2228b3cd7b7" id="r_a57ee7a3da8a6075e9546a2228b3cd7b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_property.html#a57ee7a3da8a6075e9546a2228b3cd7b7">ClearLimits</a> ()</td></tr>
+<tr class="separator:a57ee7a3da8a6075e9546a2228b3cd7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa267d1e5e572778e9e618c1006d2ba50" id="r_aa267d1e5e572778e9e618c1006d2ba50"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_m_1_1_property.html#aa267d1e5e572778e9e618c1006d2ba50">SetLimits</a> (double lowerLimit, double upperLimit)</td></tr>
 <tr class="separator:aa267d1e5e572778e9e618c1006d2ba50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f44899b9a4dff0ebc02ec6622fe571f" id="r_a0f44899b9a4dff0ebc02ec6622fe571f"><td class="memItemLeft" align="right" valign="top"><a id="a0f44899b9a4dff0ebc02ec6622fe571f" name="a0f44899b9a4dff0ebc02ec6622fe571f"></a>
@@ -242,6 +244,35 @@ const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name_</b
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_m_m_1_1_property_base.html">MM::PropertyBase</a>.</p>
+
+</div>
+</div>
+<a id="a57ee7a3da8a6075e9546a2228b3cd7b7" name="a57ee7a3da8a6075e9546a2228b3cd7b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57ee7a3da8a6075e9546a2228b3cd7b7">&#9670;&#160;</a></span>ClearLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MM::Property::ClearLimits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes the limits, if any, so that any value is allowed again.</p>
+<p>Unlike SetLimits() with an empty range, this is not an error and is not logged as one. </p>
+
+<p class="reference">Referenced by <a class="el" href="class_c_device_base.html#ae71b4b728031042a01d76c9a7c3f9a79">CDeviceBase&lt; T, U &gt;::ClearPropertyLimits()</a>.</p>
 
 </div>
 </div>
