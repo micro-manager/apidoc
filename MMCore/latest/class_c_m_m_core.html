@@ -9835,7 +9835,10 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Forcefully unload a library. Experimental. Don't use. </p>
+<p>Unload a device adapter.</p>
+<p>We do not currently have support for unloading regular device adapters that are loaded from libraries (DLLs).</p>
+<p>Only mock device adapters can be unloaded.</p>
+<p>Any devices from the adapter will be unloaded first. Do not call this function when devices from other adapters (e.g. Utilities) may be depending on them. </p>
 
 </div>
 </div>
