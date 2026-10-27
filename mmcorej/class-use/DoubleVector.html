@@ -104,19 +104,19 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CMMCore.</span><code><span class="memberNameLink"><a href="../../mmcorej/CMMCore.html#getPixelSizeAffine--">getPixelSizeAffine</a></span>()</code>
-<div class="block">Returns the current Affine Transform to related camera pixels with stage movement..</div>
+<div class="block">Returns the current affine transform that relates camera pixels to stage movement.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CMMCore.</span><code><span class="memberNameLink"><a href="../../mmcorej/CMMCore.html#getPixelSizeAffine-boolean-">getPixelSizeAffine</a></span>(boolean&nbsp;cached)</code>
-<div class="block">Returns the current Affine Transform to related camera pixels with stage movement..</div>
+<div class="block">Returns the current affine transform that relates camera pixels to stage movement.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a></code></td>
 <td class="colLast"><span class="typeNameLabel">CMMCore.</span><code><span class="memberNameLink"><a href="../../mmcorej/CMMCore.html#getPixelSizeAffineByID-java.lang.String-">getPixelSizeAffineByID</a></span>(java.lang.String&nbsp;resolutionID)</code>
-<div class="block">Returns the Affine Transform to related camera pixels with stage movement for the requested pixel size group The raw affine transform without correction for binning and magnification will be returned.</div>
+<div class="block">Returns the affine transform that relates camera pixels to stage movement for the requested pixel size configuration.</div>
 </td>
 </tr>
 </tbody>
@@ -222,7 +222,7 @@
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">CMMCore.</span><code><span class="memberNameLink"><a href="../../mmcorej/CMMCore.html#loadStageSequence-java.lang.String-mmcorej.DoubleVector-">loadStageSequence</a></span>(java.lang.String&nbsp;stageLabel,
                  <a href="../../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a>&nbsp;positionSequence)</code>
-<div class="block">Transfer a sequence of events/states/whatever to the device This should only be called for device-properties that are sequenceable</div>
+<div class="block">Transfer a sequence of positions to the stage.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -235,7 +235,7 @@
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">CMMCore.</span><code><span class="memberNameLink"><a href="../../mmcorej/CMMCore.html#setPixelSizeAffine-java.lang.String-mmcorej.DoubleVector-">setPixelSizeAffine</a></span>(java.lang.String&nbsp;resolutionID,
                   <a href="../../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a>&nbsp;affine)</code>
-<div class="block">Sets the raw affine transform for the specific pixel size configuration The affine transform consists of the first two rows of a 3x3 matrix, the third row is alsways assumed to be 0.0 0.0 1.0.</div>
+<div class="block">Sets the raw affine transform for the specific pixel size configuration.</div>
 </td>
 </tr>
 </tbody>
