@@ -1184,7 +1184,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Defines a label for the specific state/</p>
+<p>Defines a label for the specific state.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">deviceLabel</td><td>the device label </td></tr>
@@ -1340,7 +1340,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Tries to communicate to a device through a given serial port Used to automate discovery of correct serial port Also configures the serial port correctly</p>
+<p>Tries to communicate to a device through a given serial port Used to automate discovery of correct serial port. Also configures the serial port correctly.</p>
 <p>For legacy reasons, an exception is not thrown if there is an error. Instead, MM::Unimplemented is returned if label is not a valid device.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2091,7 +2091,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a pre-defined error test with the given error code </p>
+<p>Returns a pre-defined error text with the given error code. </p>
 
 <p class="reference">Referenced by <a class="el" href="class_c_m_m_core.html#a9b40822a9c1ed521c3849e1bd6ceb685">fullFocus()</a>, <a class="el" href="class_c_m_m_core.html#a846679b6da47031b579b1ab135b530c6">getAutoFocusOffset()</a>, <a class="el" href="class_c_m_m_core.html#a6eb09e0de2c1747d897c688ca8578aa1">getBinning()</a>, <a class="el" href="class_c_m_m_core.html#a6f33bba7c5bff6a179365db945445a2a">getImage()</a>, <a class="el" href="class_c_m_m_core.html#a67443fda92cd892af30a12c8042b62a8">getLastImage()</a>, <a class="el" href="class_c_m_m_core.html#aaa5c2888ab2c10105308ad43a478ecd0">incrementalFocus()</a>, <a class="el" href="class_c_m_m_core.html#af9550ba37e219d0962d7c513c4ac994c">initializeCircularBuffer()</a>, <a class="el" href="class_c_m_m_core.html#a64eae3cd25017382a85441824ecf66a0">isMultiROIEnabled()</a>, <a class="el" href="class_c_m_m_core.html#aed3e17a53748193dc9029a2b363f17d3">isMultiROISupported()</a>, <a class="el" href="class_c_m_m_core.html#a7a73a53bcc6f173488cc2053212e3e7e">popNextImage()</a>, <a class="el" href="class_c_m_m_core.html#a2eddddbce05b0b5eefa56b9a17b934e9">snapImage()</a>, and <a class="el" href="class_c_m_m_core.html#a944b10b182a2afe7866eebc9eaf8aac6">stopSequenceAcquisition()</a>.</p>
 
@@ -2696,7 +2696,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Multi-Channel cameras will return the content of the first channel in this function</p>
 <p>Designed specifically for the SWIG wrapping for Java and scripting languages.</p>
 <p>Supported data types are byte (8 bits per pixel, 1 component), short (16 bits per pixel, 1 component), float (32 bits per pixel, 1 component, not supported by the UI yet), RGB_32 (8 bits per component, 4 components), RGB_64 (16 bits per component, 4 components, not supported by UI yet). <br  />
- RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>).</p>
+ RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA8888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>).</p>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the internal image buffer. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -2914,9 +2914,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a pointer to the pixels of the image that was last inserted into the circular buffer Also provides all metadata associated with that image</p>
+<p>Returns a pointer to the pixels of the image that was last inserted into the circular buffer. Also provides all metadata associated with that image.</p>
 <p>Supported data types are byte (8 bits per pixel, 1 component), short (16 bits per pixel, 1 component), float (32 bits per pixel, 1 component, not supported by the UI yet), RGB_32 (8 bits per component, 4 components), RGB_64 (16 bits per component, 4 components, not supported by UI yet). <br  />
- RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>). </p>
+ RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA8888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>). </p>
 
 </div>
 </div>
@@ -2979,8 +2979,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the product of all Magnifiers in the system or 1.0 when none is found This is used internally by getPixelSizeUm</p>
-<dl class="section return"><dt>Returns</dt><dd>products of all magnifier devices in the system or 1.0 when none is found </dd></dl>
+<p>Returns the product of all Magnifiers in the system or 1.0 when none is found. This is used internally by getPixelSizeUm.</p>
+<dl class="section return"><dt>Returns</dt><dd>product of all magnifier devices in the system or 1.0 when none is found </dd></dl>
 
 <p class="reference">References <a class="el" href="class_c_m_m_core.html#ad40a75410c5e42c0f821f8a56fd5e56f">getLoadedDevicesOfType()</a>.</p>
 
@@ -3192,9 +3192,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a pointer to the pixels of the image that was inserted n images ago Also provides all metadata associated with that image</p>
+<p>Returns a pointer to the pixels of the image that was inserted n images ago. Also provides all metadata associated with that image.</p>
 <p>Supported data types are byte (8 bits per pixel, 1 component), short (16 bits per pixel, 1 component), float (32 bits per pixel, 1 component, not supported by the UI yet), RGB_32 (8 bits per component, 4 components), RGB_64 (16 bits per component, 4 components, not supported by UI yet). <br  />
- RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>). </p>
+ RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA8888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>). </p>
 
 </div>
 </div>
@@ -3360,7 +3360,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the configuration object for a give pixel size preset. </p><dl class="section return"><dt>Returns</dt><dd>The configuration object </dd></dl>
+<p>Returns the configuration object for a given pixel size preset. </p><dl class="section return"><dt>Returns</dt><dd>The configuration object </dd></dl>
 
 </div>
 </div>
@@ -3542,7 +3542,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the optimal z step size in um There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration </p>
+<p>Returns the optimal z step size in um. There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration. </p>
 
 <p class="reference">References <a class="el" href="class_c_m_m_core.html#ac8c5a4eed5d5fcbb9872c1487bcc59b0">getPixelSizeOptimalZUm()</a>.</p>
 
@@ -3565,7 +3565,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the optimal z step size in um, optionally using cached pixel configuration There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration</p>
+<p>Returns the optimal z step size in um, optionally using cached pixel configuration. There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cached</td><td>Uses System state cache to find active pixel size config when true </td></tr>
@@ -4040,7 +4040,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns number ofimages available in the Circular Buffer </p>
+<p>Returns the number of images available in the circular buffer. </p>
 
 </div>
 </div>
@@ -4349,7 +4349,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the number of components (usually these depict colors) of the SLM For instance, an RGB projector will return 3, but a grey scale SLM returns 1</p>
+<p>Returns the number of components (usually these depict colors) of the SLM. For instance, an RGB projector will return 3, but a grey scale SLM returns 1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">deviceLabel</td><td>name of the SLM </td></tr>
@@ -5494,7 +5494,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if the current camera is acquiring the sequence Returns false when the sequence is done </p>
+<p>Check if the current camera is acquiring the sequence. Returns false when the sequence is done. </p>
 
 </div>
 </div>
@@ -5513,7 +5513,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if the specified camera is acquiring the sequence Returns false when the sequence is done </p>
+<p>Check if the specified camera is acquiring the sequence. Returns false when the sequence is done. </p>
 
 </div>
 </div>
@@ -5532,7 +5532,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Queries if the stage can be used in a linear sequence A linear sequence is defined by a stepsize and number of slices </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Queries if the stage can be used in a linear sequence. A linear sequence is defined by a stepsize and number of slices </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">label</td><td>the stage device label </td></tr>
   </table>
@@ -5582,7 +5582,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Queries whether this stage uses callbacks to signal position changes When false, use polling to stay updated about the positionf of the stage </p>
+<p>Queries whether this stage uses callbacks to signal position changes. When false, use polling to stay updated about the position of the stage. </p>
 
 </div>
 </div>
@@ -5625,7 +5625,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Queries whether this XYStage uses callbacks to signal position changes When false, use polling to stay updated about the positionf of the stage </p>
+<p>Queries whether this XYStage uses callbacks to signal position changes. When false, use polling to stay updated about the position of the stage. </p>
 
 </div>
 </div>
@@ -5789,7 +5789,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Transfer a sequence of events/states/whatever to the device This should only be called for device-properties that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Transfer a sequence of events/states/whatever to the device. This should only be called for device-properties that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">label</td><td>the device label </td></tr>
     <tr><td class="paramname">propName</td><td>the property name </td></tr>
@@ -6154,7 +6154,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Gets and removes the next image from the circular buffer.</p>
 <p>Supported data types are byte (8 bits per pixel, 1 component), short (16 bits per pixel, 1 component), float (32 bits per pixel, 1 component, not supported by the UI yet), RGB_32 (8 bits per component, 4 components), RGB_64 (16 bits per component, 4 components, not supported by UI yet). <br  />
- RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>).</p>
+ RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA8888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>).</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="class_c_m_m_error.html" title="Core error class. Exceptions thrown by the Core public API are of this type.">CMMError</a></td><td>if the circular buffer is empty </td></tr>
@@ -6217,7 +6217,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
       </table>
 </div><div class="memdoc">
 <p>Gets and removes the next image (and metadata) from the circular buffer</p>
-<p>channel has not been implemented and shoudl always be 0. slice has not been implement and should always be 0. </p>
+<p>channel has not been implemented and should always be 0. slice has not been implemented and should always be 0. </p>
 
 </div>
 </div>
@@ -6792,7 +6792,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Applies offset the one-shot focusing device. </p>
+<p>Applies an offset to the one-shot focusing device. </p>
 
 </div>
 </div>
@@ -6811,7 +6811,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>If this option is enabled Shutter automatically opens and closes when the image is acquired. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>If this option is enabled, the shutter automatically opens and closes when an image is acquired. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">state</td><td>true for enabled </td></tr>
   </table>
@@ -7779,7 +7779,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the opimal Z stepSize (in microns). There is no magic here, this number is provided by the person configuring the microscope, to be used by the person using the microscope.</p>
+<p>Sets the optimal Z step size (in microns). There is no magic here, this number is provided by the person configuring the microscope, to be used by the person using the microscope.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">resolutionID</td><td>The pixel size configuration (preset) name </td></tr>
@@ -8300,7 +8300,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the volume of fluid in the pump in uL. Note it does not withdraw upto this amount. It is merely to inform MM of the volume in a prefilled pump. </p>
+<p>Sets the volume of fluid in the pump in uL. Note it does not withdraw up to this amount. It is merely to inform MM of the volume in a prefilled pump. </p>
 
 </div>
 </div>
@@ -8754,7 +8754,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the current slm device. </p>
+<p>Sets the current SLM device. </p>
 
 </div>
 </div>
@@ -8783,7 +8783,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>For SLM devices with build-in light source (such as projectors) this will set the exposure time, but not (yet) start the illumination </p>
+<p>For SLM devices with built-in light source (such as projectors) this will set the exposure time, but not (yet) start the illumination. </p>
 
 </div>
 </div>
@@ -9236,7 +9236,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Acquires a single image with current settings. Snap is not allowed while the acquisition thread is run </p>
+<p>Acquires a single image with current settings.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_c_m_m_error.html" title="Core error class. Exceptions thrown by the Core public API are of this type.">CMMError</a></td><td>if the camera is running a sequence acquisition </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="class_c_m_m_core.html#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>, and <a class="el" href="class_c_m_m_core.html#af129c00bef65b23da86433fff8bf8825">waitForDevice()</a>.</p>
 
@@ -9282,7 +9288,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Starts an ongoing sequence of triggered exposures in a camera This should only be called for cameras where exposure time is sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Starts an ongoing sequence of triggered exposures in a camera. This should only be called for cameras where exposure time is sequenceable. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cameraLabel</td><td>the camera device label </td></tr>
   </table>
@@ -9316,7 +9322,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Starts an ongoing sequence of triggered events in a property of a device This should only be called for device-properties that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Starts an ongoing sequence of triggered events in a property of a device. This should only be called for device-properties that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">label</td><td>the device label </td></tr>
     <tr><td class="paramname">propName</td><td>the property name </td></tr>
@@ -9602,7 +9608,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stops an ongoing sequence of triggered exposures in a camera This should only be called for cameras where exposure time is sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Stops an ongoing sequence of triggered exposures in a camera. This should only be called for cameras where exposure time is sequenceable. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cameraLabel</td><td>the camera device label </td></tr>
   </table>
@@ -9636,7 +9642,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stops an ongoing sequence of triggered events in a property of a device This should only be called for device-properties that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Stops an ongoing sequence of triggered events in a property of a device. This should only be called for device-properties that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">label</td><td>the device label </td></tr>
     <tr><td class="paramname">propName</td><td>the property name </td></tr>
@@ -9755,7 +9761,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stops an ongoing sequence of triggered events in a stage This should only be called for stages that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Stops an ongoing sequence of triggered events in a stage. This should only be called for stages that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">label</td><td>the stage device label </td></tr>
   </table>
@@ -9779,7 +9785,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stops an ongoing sequence of triggered events in an XY stage This should only be called for stages that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Stops an ongoing sequence of triggered events in an XY stage. This should only be called for stages that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">label</td><td>the XY stage device label </td></tr>
   </table>
