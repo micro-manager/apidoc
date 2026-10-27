@@ -718,7 +718,7 @@ extends java.lang.Object</pre>
 <tr id="i91" class="rowColor">
 <td class="colFirst"><code><a href="../mmcorej/StrVector.html" title="class in mmcorej">StrVector</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getInstalledDevices-java.lang.String-">getInstalledDevices</a></span>(java.lang.String&nbsp;hubLabel)</code>
-<div class="block">Performs auto-detection and loading of child devices that are attached to a Hub device.</div>
+<div class="block">Detects the child devices attached to a Hub device and returns their names.</div>
 </td>
 </tr>
 <tr id="i92" class="altColor">
@@ -854,13 +854,13 @@ extends java.lang.Object</pre>
 <tr id="i115" class="rowColor">
 <td class="colFirst"><code><a href="../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getPixelSizeAffine--">getPixelSizeAffine</a></span>()</code>
-<div class="block">Returns the current Affine Transform to related camera pixels with stage movement..</div>
+<div class="block">Returns the current affine transform that relates camera pixels to stage movement.</div>
 </td>
 </tr>
 <tr id="i116" class="altColor">
 <td class="colFirst"><code><a href="../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getPixelSizeAffine-boolean-">getPixelSizeAffine</a></span>(boolean&nbsp;cached)</code>
-<div class="block">Returns the current Affine Transform to related camera pixels with stage movement..</div>
+<div class="block">Returns the current affine transform that relates camera pixels to stage movement.</div>
 </td>
 </tr>
 <tr id="i117" class="rowColor">
@@ -872,7 +872,7 @@ extends java.lang.Object</pre>
 <tr id="i118" class="altColor">
 <td class="colFirst"><code><a href="../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getPixelSizeAffineByID-java.lang.String-">getPixelSizeAffineByID</a></span>(java.lang.String&nbsp;resolutionID)</code>
-<div class="block">Returns the Affine Transform to related camera pixels with stage movement for the requested pixel size group The raw affine transform without correction for binning and magnification will be returned.</div>
+<div class="block">Returns the affine transform that relates camera pixels to stage movement for the requested pixel size configuration.</div>
 </td>
 </tr>
 <tr id="i119" class="rowColor">
@@ -926,13 +926,13 @@ extends java.lang.Object</pre>
 <tr id="i127" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getPixelSizeOptimalZUm-boolean-">getPixelSizeOptimalZUm</a></span>(boolean&nbsp;cached)</code>
-<div class="block">Returns the optimal z step size in um, optionally using cached pixel configuration There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration</div>
+<div class="block">Returns the optimal z step size in um for the given pixel size configuration.</div>
 </td>
 </tr>
 <tr id="i128" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getPixelSizeOptimalZUm-java.lang.String-">getPixelSizeOptimalZUm</a></span>(java.lang.String&nbsp;resolutionID)</code>
-<div class="block">Returns the optimal z step size in um, optionally using cached pixel configuration There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration</div>
+<div class="block">Returns the optimal z step size in um for the given pixel size configuration.</div>
 </td>
 </tr>
 <tr id="i129" class="rowColor">
@@ -950,7 +950,7 @@ extends java.lang.Object</pre>
 <tr id="i131" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getPixelSizeUmByID-java.lang.String-">getPixelSizeUmByID</a></span>(java.lang.String&nbsp;resolutionID)</code>
-<div class="block">Returns the pixel size in um for the requested pixel size group</div>
+<div class="block">Returns the pixel size in um for the requested pixel size configuration.</div>
 </td>
 </tr>
 <tr id="i132" class="altColor">
@@ -1205,7 +1205,7 @@ extends java.lang.Object</pre>
 <tr id="i173" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getVersionInfo--">getVersionInfo</a></span>()</code>
-<div class="block">Displays core version.</div>
+<div class="block">Returns the MMCore version as a string of the form "MMCore version X.Y.Z".</div>
 </td>
 </tr>
 <tr id="i174" class="altColor">
@@ -1497,7 +1497,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#loadStageSequence-java.lang.String-mmcorej.DoubleVector-">loadStageSequence</a></span>(java.lang.String&nbsp;stageLabel,
                  <a href="../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a>&nbsp;positionSequence)</code>
-<div class="block">Transfer a sequence of events/states/whatever to the device This should only be called for device-properties that are sequenceable</div>
+<div class="block">Transfer a sequence of positions to the stage.</div>
 </td>
 </tr>
 <tr id="i221" class="rowColor">
@@ -1509,7 +1509,7 @@ extends java.lang.Object</pre>
 <tr id="i222" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#loadSystemState-java.lang.String-">loadSystemState</a></span>(java.lang.String&nbsp;fileName)</code>
-<div class="block">Loads the system configuration from the text file conforming to the MM specific format.</div>
+<div class="block">Loads a system state file written by saveSystemState() and applies its property values.</div>
 </td>
 </tr>
 <tr id="i223" class="rowColor">
@@ -1598,7 +1598,7 @@ extends java.lang.Object</pre>
 <tr id="i237" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#pressurePumpRequiresCalibration-java.lang.String-">pressurePumpRequiresCalibration</a></span>(java.lang.String&nbsp;pumpLabel)</code>
-<div class="block">Returns boolean whether the pump is operational before calibration</div>
+<div class="block">Returns true if the pump must be calibrated (see pressurePumpCalibrate()) before use.</div>
 </td>
 </tr>
 <tr id="i238" class="altColor">
@@ -1884,7 +1884,7 @@ extends java.lang.Object</pre>
 <tr id="i283" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#setOriginX--">setOriginX</a></span>()</code>
-<div class="block">Zero the given XY stage's X coordinate at the current position.</div>
+<div class="block">Zero the current XY stage's X coordinate at the current position.</div>
 </td>
 </tr>
 <tr id="i284" class="altColor">
@@ -1908,7 +1908,7 @@ extends java.lang.Object</pre>
 <tr id="i287" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#setOriginY--">setOriginY</a></span>()</code>
-<div class="block">Zero the given XY stage's Y coordinate at the current position.</div>
+<div class="block">Zero the current XY stage's Y coordinate at the current position.</div>
 </td>
 </tr>
 <tr id="i288" class="altColor">
@@ -1928,7 +1928,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#setPixelSizeAffine-java.lang.String-mmcorej.DoubleVector-">setPixelSizeAffine</a></span>(java.lang.String&nbsp;resolutionID,
                   <a href="../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a>&nbsp;affine)</code>
-<div class="block">Sets the raw affine transform for the specific pixel size configuration The affine transform consists of the first two rows of a 3x3 matrix, the third row is alsways assumed to be 0.0 0.0 1.0.</div>
+<div class="block">Sets the raw affine transform for the specific pixel size configuration.</div>
 </td>
 </tr>
 <tr id="i291" class="rowColor">
@@ -2305,13 +2305,13 @@ extends java.lang.Object</pre>
 <tr id="i348" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#startStageSequence-java.lang.String-">startStageSequence</a></span>(java.lang.String&nbsp;stageLabel)</code>
-<div class="block">Starts an ongoing sequence of triggered events in a stage This should only be called for stages</div>
+<div class="block">Starts an ongoing sequence of triggered events in a stage.</div>
 </td>
 </tr>
 <tr id="i349" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#startXYStageSequence-java.lang.String-">startXYStageSequence</a></span>(java.lang.String&nbsp;xyStageLabel)</code>
-<div class="block">Starts an ongoing sequence of triggered events in an XY stage This should only be called for stages</div>
+<div class="block">Starts an ongoing sequence of triggered events in an XY stage.</div>
 </td>
 </tr>
 <tr id="i350" class="altColor">
@@ -2420,7 +2420,7 @@ extends java.lang.Object</pre>
 <tr id="i367" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#updateSystemStateCache--">updateSystemStateCache</a></span>()</code>
-<div class="block">Updates the state of the entire hardware.</div>
+<div class="block">Updates the system state cache by reading all property values from all devices.</div>
 </td>
 </tr>
 <tr id="i368" class="altColor">
@@ -2905,7 +2905,7 @@ extends java.lang.Object</pre>
 <h4>initializeAllDevices</h4>
 <pre>public&nbsp;void&nbsp;initializeAllDevices()
                           throws java.lang.Exception</pre>
-<div class="block">Calls Initialize() method for each loaded device. Parallel implemnetation should be faster</div>
+<div class="block">Calls Initialize() method for each loaded device.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -3004,7 +3004,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getVersionInfo</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getVersionInfo()</pre>
-<div class="block">Displays core version.</div>
+<div class="block">Returns the MMCore version as a string of the form "MMCore version X.Y.Z".</div>
 </li>
 </ul>
 <a name="getAPIVersionInfo--">
@@ -3145,7 +3145,7 @@ extends java.lang.Object</pre>
 <h4>loadSystemState</h4>
 <pre>public&nbsp;void&nbsp;loadSystemState(java.lang.String&nbsp;fileName)
                      throws java.lang.Exception</pre>
-<div class="block">Loads the system configuration from the text file conforming to the MM specific format. The configuration contains a list of commands to build the desired system state from read-write properties.</div>
+<div class="block">Loads a system state file written by saveSystemState() and applies its property values.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -4450,7 +4450,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>updateSystemStateCache</h4>
 <pre>public&nbsp;void&nbsp;updateSystemStateCache()</pre>
-<div class="block">Updates the state of the entire hardware.</div>
+<div class="block">Updates the system state cache by reading all property values from all devices.</div>
 </li>
 </ul>
 <a name="getPropertyFromCache-java.lang.String-java.lang.String-">
@@ -4798,7 +4798,7 @@ extends java.lang.Object</pre>
 <h4>getPixelSizeUmByID</h4>
 <pre>public&nbsp;double&nbsp;getPixelSizeUmByID(java.lang.String&nbsp;resolutionID)
                           throws java.lang.Exception</pre>
-<div class="block">Returns the pixel size in um for the requested pixel size group</div>
+<div class="block">Returns the pixel size in um for the requested pixel size configuration.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -4813,7 +4813,7 @@ extends java.lang.Object</pre>
 <h4>getPixelSizeAffine</h4>
 <pre>public&nbsp;<a href="../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a>&nbsp;getPixelSizeAffine()
                                 throws java.lang.Exception</pre>
-<div class="block">Returns the current Affine Transform to related camera pixels with stage movement.. This function returns the stored affine transform corrected for binning</div>
+<div class="block">Returns the current affine transform that relates camera pixels to stage movement. This function returns the stored affine transform corrected for binning and known magnification devices. Returns all zeros if no pixel size configuration matches the current state.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -4828,7 +4828,7 @@ extends java.lang.Object</pre>
 <h4>getPixelSizeAffine</h4>
 <pre>public&nbsp;<a href="../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a>&nbsp;getPixelSizeAffine(boolean&nbsp;cached)
                                 throws java.lang.Exception</pre>
-<div class="block">Returns the current Affine Transform to related camera pixels with stage movement.. This function returns the stored affine transform corrected for binning and known magnification devices</div>
+<div class="block">Returns the current affine transform that relates camera pixels to stage movement. This function returns the stored affine transform corrected for binning and known magnification devices. Returns all zeros if no pixel size configuration matches the current state.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -4843,7 +4843,7 @@ extends java.lang.Object</pre>
 <h4>getPixelSizeAffineByID</h4>
 <pre>public&nbsp;<a href="../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a>&nbsp;getPixelSizeAffineByID(java.lang.String&nbsp;resolutionID)
                                     throws java.lang.Exception</pre>
-<div class="block">Returns the Affine Transform to related camera pixels with stage movement for the requested pixel size group The raw affine transform without correction for binning and magnification will be returned.</div>
+<div class="block">Returns the affine transform that relates camera pixels to stage movement for the requested pixel size configuration. The raw affine transform without correction for binning and magnification will be returned.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -4991,7 +4991,7 @@ extends java.lang.Object</pre>
 <h4>getPixelSizeOptimalZUm</h4>
 <pre>public&nbsp;double&nbsp;getPixelSizeOptimalZUm(boolean&nbsp;cached)
                               throws java.lang.Exception</pre>
-<div class="block">Returns the optimal z step size in um, optionally using cached pixel configuration There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration</div>
+<div class="block">Returns the optimal z step size in um for the given pixel size configuration. There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -5006,7 +5006,7 @@ extends java.lang.Object</pre>
 <h4>getPixelSizeOptimalZUm</h4>
 <pre>public&nbsp;double&nbsp;getPixelSizeOptimalZUm(java.lang.String&nbsp;resolutionID)
                               throws java.lang.Exception</pre>
-<div class="block">Returns the optimal z step size in um, optionally using cached pixel configuration There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration</div>
+<div class="block">Returns the optimal z step size in um for the given pixel size configuration. There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -5052,7 +5052,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;void&nbsp;setPixelSizeAffine(java.lang.String&nbsp;resolutionID,
                                <a href="../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a>&nbsp;affine)
                         throws java.lang.Exception</pre>
-<div class="block">Sets the raw affine transform for the specific pixel size configuration The affine transform consists of the first two rows of a 3x3 matrix, the third row is alsways assumed to be 0.0 0.0 1.0. The transform should be valid for binning 1 and no magnification device (as given by the getMagnification() function). Order: row[0]col[0] row[0]c[1] row[0]c[2] row[1]c[0] row[1]c[1] row[1]c[2] The given vector has to have 6 doubles, or bad stuff will happen</div>
+<div class="block">Sets the raw affine transform for the specific pixel size configuration. The affine transform consists of the first two rows of a 3x3 matrix, the third row is always assumed to be 0.0 0.0 1.0. The transform should be valid for binning 1 and no magnification device (as given by the getMagnificationFactor() function). Order: row[0]col[0] row[0]col[1] row[0]col[2] row[1]col[0] row[1]col[1] row[1]col[2].</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -5900,7 +5900,7 @@ extends java.lang.Object</pre>
 <h4>getLastImage</h4>
 <pre>public&nbsp;java.lang.Object&nbsp;getLastImage()
                               throws java.lang.Exception</pre>
-<div class="block">Gets the last image from the circular buffer. Returns 0 if the buffer is empty.</div>
+<div class="block">Gets the last image from the circular buffer.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -5915,7 +5915,7 @@ extends java.lang.Object</pre>
 <h4>popNextImage</h4>
 <pre>public&nbsp;java.lang.Object&nbsp;popNextImage()
                               throws java.lang.Exception</pre>
-<div class="block">Gets and removes the next image from the circular buffer. Returns 0 if the buffer is empty.</div>
+<div class="block">Gets and removes the next image from the circular buffer.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -6680,7 +6680,7 @@ extends java.lang.Object</pre>
 <h4>startStageSequence</h4>
 <pre>public&nbsp;void&nbsp;startStageSequence(java.lang.String&nbsp;stageLabel)
                         throws java.lang.Exception</pre>
-<div class="block">Starts an ongoing sequence of triggered events in a stage This should only be called for stages</div>
+<div class="block">Starts an ongoing sequence of triggered events in a stage. This should only be called for stages that are sequenceable.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -6728,7 +6728,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;void&nbsp;loadStageSequence(java.lang.String&nbsp;stageLabel,
                               <a href="../mmcorej/DoubleVector.html" title="class in mmcorej">DoubleVector</a>&nbsp;positionSequence)
                        throws java.lang.Exception</pre>
-<div class="block">Transfer a sequence of events/states/whatever to the device This should only be called for device-properties that are sequenceable</div>
+<div class="block">Transfer a sequence of positions to the stage. This should only be called for stages that are sequenceable.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -6998,7 +6998,7 @@ extends java.lang.Object</pre>
 <h4>setOriginX</h4>
 <pre>public&nbsp;void&nbsp;setOriginX()
                 throws java.lang.Exception</pre>
-<div class="block">Zero the given XY stage's X coordinate at the current position.</div>
+<div class="block">Zero the current XY stage's X coordinate at the current position.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -7028,7 +7028,7 @@ extends java.lang.Object</pre>
 <h4>setOriginY</h4>
 <pre>public&nbsp;void&nbsp;setOriginY()
                 throws java.lang.Exception</pre>
-<div class="block">Zero the given XY stage's Y coordinate at the current position.</div>
+<div class="block">Zero the current XY stage's Y coordinate at the current position.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -7105,7 +7105,7 @@ extends java.lang.Object</pre>
 <h4>startXYStageSequence</h4>
 <pre>public&nbsp;void&nbsp;startXYStageSequence(java.lang.String&nbsp;xyStageLabel)
                           throws java.lang.Exception</pre>
-<div class="block">Starts an ongoing sequence of triggered events in an XY stage This should only be called for stages</div>
+<div class="block">Starts an ongoing sequence of triggered events in an XY stage. This should only be called for stages that are sequenceable.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -7761,7 +7761,7 @@ extends java.lang.Object</pre>
 <h4>pressurePumpRequiresCalibration</h4>
 <pre>public&nbsp;boolean&nbsp;pressurePumpRequiresCalibration(java.lang.String&nbsp;pumpLabel)
                                         throws java.lang.Exception</pre>
-<div class="block">Returns boolean whether the pump is operational before calibration</div>
+<div class="block">Returns true if the pump must be calibrated (see pressurePumpCalibrate()) before use.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -8073,7 +8073,7 @@ extends java.lang.Object</pre>
 <h4>getInstalledDevices</h4>
 <pre>public&nbsp;<a href="../mmcorej/StrVector.html" title="class in mmcorej">StrVector</a>&nbsp;getInstalledDevices(java.lang.String&nbsp;hubLabel)
                               throws java.lang.Exception</pre>
-<div class="block">Performs auto-detection and loading of child devices that are attached to a Hub device. For example, if a motorized microscope is represented by a Hub device, it is capable of discovering what specific child devices are currently attached. In that case this call might report that Z-stage, filter changer and objective turret are currently installed and return three device names in the string list.</div>
+<div class="block">Detects the child devices attached to a Hub device and returns their names. Load them with loadDevice(). For example, if a motorized microscope is represented by a Hub device, it is capable of discovering what specific child devices are currently attached. In that case this call might report that Z-stage, filter changer and objective turret are currently installed and return three device names in the string list.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>

@@ -2247,7 +2247,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getInstalledDevices-java.lang.String-">getInstalledDevices(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Performs auto-detection and loading of child devices that are attached to a Hub device.</div>
+<div class="block">Detects the child devices attached to a Hub device and returns their names.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/org/json/JSONArray.html#getInt-int-">getInt(int)</a></span> - Method in class mmcorej.org.json.<a href="mmcorej/org/json/JSONArray.html" title="class in mmcorej.org.json">JSONArray</a></dt>
 <dd>
@@ -2371,11 +2371,11 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPixelSizeAffine--">getPixelSizeAffine()</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Returns the current Affine Transform to related camera pixels with stage movement..</div>
+<div class="block">Returns the current affine transform that relates camera pixels to stage movement.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPixelSizeAffine-boolean-">getPixelSizeAffine(boolean)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Returns the current Affine Transform to related camera pixels with stage movement..</div>
+<div class="block">Returns the current affine transform that relates camera pixels to stage movement.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPixelSizeAffineAsString--">getPixelSizeAffineAsString()</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -2383,7 +2383,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPixelSizeAffineByID-java.lang.String-">getPixelSizeAffineByID(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Returns the Affine Transform to related camera pixels with stage movement for the requested pixel size group The raw affine transform without correction for binning and magnification will be returned.</div>
+<div class="block">Returns the affine transform that relates camera pixels to stage movement for the requested pixel size configuration.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPixelSizeConfigData-java.lang.String-">getPixelSizeConfigData(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -2419,11 +2419,11 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPixelSizeOptimalZUm-boolean-">getPixelSizeOptimalZUm(boolean)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Returns the optimal z step size in um, optionally using cached pixel configuration There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration</div>
+<div class="block">Returns the optimal z step size in um for the given pixel size configuration.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPixelSizeOptimalZUm-java.lang.String-">getPixelSizeOptimalZUm(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Returns the optimal z step size in um, optionally using cached pixel configuration There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration</div>
+<div class="block">Returns the optimal z step size in um for the given pixel size configuration.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPixelSizeUm--">getPixelSizeUm()</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -2435,7 +2435,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPixelSizeUmByID-java.lang.String-">getPixelSizeUmByID(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Returns the pixel size in um for the requested pixel size group</div>
+<div class="block">Returns the pixel size in um for the requested pixel size configuration.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getPosition-java.lang.String-">getPosition(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -2625,7 +2625,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getVersionInfo--">getVersionInfo()</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Displays core version.</div>
+<div class="block">Returns the MMCore version as a string of the form "MMCore version X.Y.Z".</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#getXPosition-java.lang.String-">getXPosition(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -3023,7 +3023,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#loadStageSequence-java.lang.String-mmcorej.DoubleVector-">loadStageSequence(String, DoubleVector)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Transfer a sequence of events/states/whatever to the device This should only be called for device-properties that are sequenceable</div>
+<div class="block">Transfer a sequence of positions to the stage.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#loadSystemConfiguration-java.lang.String-">loadSystemConfiguration(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -3031,7 +3031,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#loadSystemState-java.lang.String-">loadSystemState(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Loads the system configuration from the text file conforming to the MM specific format.</div>
+<div class="block">Loads a system state file written by saveSystemState() and applies its property values.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#loadXYStageSequence-java.lang.String-mmcorej.DoubleVector-mmcorej.DoubleVector-">loadXYStageSequence(String, DoubleVector, DoubleVector)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>&nbsp;</dd>
@@ -3690,7 +3690,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#pressurePumpRequiresCalibration-java.lang.String-">pressurePumpRequiresCalibration(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Returns boolean whether the pump is operational before calibration</div>
+<div class="block">Returns true if the pump must be calibrated (see pressurePumpCalibrate()) before use.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#pressurePumpStop-java.lang.String-">pressurePumpStop(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -4069,7 +4069,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setOriginX--">setOriginX()</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Zero the given XY stage's X coordinate at the current position.</div>
+<div class="block">Zero the current XY stage's X coordinate at the current position.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setOriginXY-java.lang.String-">setOriginXY(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -4085,7 +4085,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setOriginY--">setOriginY()</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Zero the given XY stage's Y coordinate at the current position.</div>
+<div class="block">Zero the current XY stage's Y coordinate at the current position.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setParentLabel-java.lang.String-java.lang.String-">setParentLabel(String, String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -4093,7 +4093,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setPixelSizeAffine-java.lang.String-mmcorej.DoubleVector-">setPixelSizeAffine(String, DoubleVector)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Sets the raw affine transform for the specific pixel size configuration The affine transform consists of the first two rows of a 3x3 matrix, the third row is alsways assumed to be 0.0 0.0 1.0.</div>
+<div class="block">Sets the raw affine transform for the specific pixel size configuration.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#setPixelSizeConfig-java.lang.String-">setPixelSizeConfig(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -4335,11 +4335,11 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#startStageSequence-java.lang.String-">startStageSequence(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Starts an ongoing sequence of triggered events in a stage This should only be called for stages</div>
+<div class="block">Starts an ongoing sequence of triggered events in a stage.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#startXYStageSequence-java.lang.String-">startXYStageSequence(String)</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Starts an ongoing sequence of triggered events in an XY stage This should only be called for stages</div>
+<div class="block">Starts an ongoing sequence of triggered events in an XY stage.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/DeviceType.html#StateDevice">StateDevice</a></span> - Static variable in class mmcorej.<a href="mmcorej/DeviceType.html" title="class in mmcorej">DeviceType</a></dt>
 <dd>&nbsp;</dd>
@@ -4780,7 +4780,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/CMMCore.html#updateSystemStateCache--">updateSystemStateCache()</a></span> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Updates the state of the entire hardware.</div>
+<div class="block">Updates the system state cache by reading all property values from all devices.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="mmcorej/PortType.html#USBPort">USBPort</a></span> - Static variable in class mmcorej.<a href="mmcorej/PortType.html" title="class in mmcorej">PortType</a></dt>
 <dd>&nbsp;</dd>
