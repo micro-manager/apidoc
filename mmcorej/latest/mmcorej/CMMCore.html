@@ -277,7 +277,7 @@ extends java.lang.Object</pre>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../mmcorej/DeviceDetectionStatus.html" title="class in mmcorej">DeviceDetectionStatus</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#detectDevice-java.lang.String-">detectDevice</a></span>(java.lang.String&nbsp;deviceLabel)</code>
-<div class="block">Tries to communicate to a device through a given serial port Used to automate discovery of correct serial port Also configures the serial port correctly</div>
+<div class="block">Tries to communicate to a device through a given serial port Used to automate discovery of correct serial port.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -491,7 +491,7 @@ extends java.lang.Object</pre>
 <tr id="i52" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getCoreErrorText-int-">getCoreErrorText</a></span>(int&nbsp;code)</code>
-<div class="block">Returns a pre-defined error test with the given error code</div>
+<div class="block">Returns a pre-defined error text with the given error code.</div>
 </td>
 </tr>
 <tr id="i53" class="rowColor">
@@ -742,7 +742,7 @@ extends java.lang.Object</pre>
 <tr id="i95" class="rowColor">
 <td class="colFirst"><code>java.lang.Object</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getLastImageMD-mmcorej.Metadata-">getLastImageMD</a></span>(<a href="../mmcorej/Metadata.html" title="class in mmcorej">Metadata</a>&nbsp;md)</code>
-<div class="block">Returns a pointer to the pixels of the image that was last inserted into the circular buffer Also provides all metadata associated with that image</div>
+<div class="block">Returns a pointer to the pixels of the image that was last inserted into the circular buffer.</div>
 </td>
 </tr>
 <tr id="i96" class="altColor">
@@ -772,7 +772,7 @@ extends java.lang.Object</pre>
 <tr id="i101" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getMagnificationFactor--">getMagnificationFactor</a></span>()</code>
-<div class="block">Returns the product of all Magnifiers in the system or 1.0 when none is found This is used internally by getPixelSizeUm</div>
+<div class="block">Returns the product of all Magnifiers in the system or 1.0 when none is found.</div>
 </td>
 </tr>
 <tr id="i102" class="altColor">
@@ -820,7 +820,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>java.lang.Object</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getNBeforeLastImageMD-long-mmcorej.Metadata-">getNBeforeLastImageMD</a></span>(long&nbsp;n,
                      <a href="../mmcorej/Metadata.html" title="class in mmcorej">Metadata</a>&nbsp;md)</code>
-<div class="block">Returns a pointer to the pixels of the image that was inserted n images ago Also provides all metadata associated with that image</div>
+<div class="block">Returns a pointer to the pixels of the image that was inserted n images ago.</div>
 </td>
 </tr>
 <tr id="i110" class="altColor">
@@ -878,7 +878,7 @@ extends java.lang.Object</pre>
 <tr id="i119" class="rowColor">
 <td class="colFirst"><code><a href="../mmcorej/Configuration.html" title="class in mmcorej">Configuration</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getPixelSizeConfigData-java.lang.String-">getPixelSizeConfigData</a></span>(java.lang.String&nbsp;configName)</code>
-<div class="block">Returns the configuration object for a give pixel size preset.</div>
+<div class="block">Returns the configuration object for a given pixel size preset.</div>
 </td>
 </tr>
 <tr id="i120" class="altColor">
@@ -920,7 +920,7 @@ extends java.lang.Object</pre>
 <tr id="i126" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getPixelSizeOptimalZUm--">getPixelSizeOptimalZUm</a></span>()</code>
-<div class="block">Returns the optimal z step size in um There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration</div>
+<div class="block">Returns the optimal z step size in um.</div>
 </td>
 </tr>
 <tr id="i127" class="rowColor">
@@ -1046,7 +1046,7 @@ extends java.lang.Object</pre>
 <tr id="i146" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getRemainingImageCount--">getRemainingImageCount</a></span>()</code>
-<div class="block">Returns number ofimages available in the Circular Buffer</div>
+<div class="block">Returns the number of images available in the circular buffer.</div>
 </td>
 </tr>
 <tr id="i147" class="rowColor">
@@ -1124,7 +1124,7 @@ extends java.lang.Object</pre>
 <tr id="i159" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#getSLMNumberOfComponents-java.lang.String-">getSLMNumberOfComponents</a></span>(java.lang.String&nbsp;slmLabel)</code>
-<div class="block">Returns the number of components (usually these depict colors) of the SLM For instance, an RGB projector will return 3, but a grey scale SLM returns 1</div>
+<div class="block">Returns the number of components (usually these depict colors) of the SLM.</div>
 </td>
 </tr>
 <tr id="i160" class="altColor">
@@ -1422,19 +1422,19 @@ extends java.lang.Object</pre>
 <tr id="i208" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#isSequenceRunning--">isSequenceRunning</a></span>()</code>
-<div class="block">Check if the current camera is acquiring the sequence Returns false when the sequence is done</div>
+<div class="block">Check if the current camera is acquiring the sequence.</div>
 </td>
 </tr>
 <tr id="i209" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#isSequenceRunning-java.lang.String-">isSequenceRunning</a></span>(java.lang.String&nbsp;cameraLabel)</code>
-<div class="block">Check if the specified camera is acquiring the sequence Returns false when the sequence is done</div>
+<div class="block">Check if the specified camera is acquiring the sequence.</div>
 </td>
 </tr>
 <tr id="i210" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#isStageLinearSequenceable-java.lang.String-">isStageLinearSequenceable</a></span>(java.lang.String&nbsp;stageLabel)</code>
-<div class="block">Queries if the stage can be used in a linear sequence A linear sequence is defined by a stepsize and number of slices</div>
+<div class="block">Queries if the stage can be used in a linear sequence.</div>
 </td>
 </tr>
 <tr id="i211" class="rowColor">
@@ -1446,7 +1446,7 @@ extends java.lang.Object</pre>
 <tr id="i212" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#isStageUsingCallbacks-java.lang.String-">isStageUsingCallbacks</a></span>(java.lang.String&nbsp;stageLabel)</code>
-<div class="block">Queries whether this stage uses callbacks to signal position changes When false, use polling to stay updated about the positionf of the stage</div>
+<div class="block">Queries whether this stage uses callbacks to signal position changes.</div>
 </td>
 </tr>
 <tr id="i213" class="rowColor">
@@ -1458,7 +1458,7 @@ extends java.lang.Object</pre>
 <tr id="i214" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#isXYStageUsingCallbacks-java.lang.String-">isXYStageUsingCallbacks</a></span>(java.lang.String&nbsp;xyStageLabel)</code>
-<div class="block">Queries whether this XYStage uses callbacks to signal position changes When false, use polling to stay updated about the positionf of the stage</div>
+<div class="block">Queries whether this XYStage uses callbacks to signal position changes.</div>
 </td>
 </tr>
 <tr id="i215" class="rowColor">
@@ -1724,13 +1724,13 @@ extends java.lang.Object</pre>
 <tr id="i257" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#setAutoFocusOffset-double-">setAutoFocusOffset</a></span>(double&nbsp;offset)</code>
-<div class="block">Applies offset the one-shot focusing device.</div>
+<div class="block">Applies an offset to the one-shot focusing device.</div>
 </td>
 </tr>
 <tr id="i258" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#setAutoShutter-boolean-">setAutoShutter</a></span>(boolean&nbsp;state)</code>
-<div class="block">If this option is enabled Shutter automatically opens and closes when the image is acquired.</div>
+<div class="block">If this option is enabled, the shutter automatically opens and closes when an image is acquired.</div>
 </td>
 </tr>
 <tr id="i259" class="rowColor">
@@ -1955,7 +1955,7 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#setPixelSizeOptimalZUm-java.lang.String-double-">setPixelSizeOptimalZUm</a></span>(java.lang.String&nbsp;resolutionID,
                       double&nbsp;optimalZ)</code>
-<div class="block">Sets the opimal Z stepSize (in microns).</div>
+<div class="block">Sets the optimal Z step size (in microns).</div>
 </td>
 </tr>
 <tr id="i295" class="rowColor">
@@ -2139,14 +2139,14 @@ extends java.lang.Object</pre>
 <tr id="i322" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#setSLMDevice-java.lang.String-">setSLMDevice</a></span>(java.lang.String&nbsp;slmLabel)</code>
-<div class="block">Sets the current slm device.</div>
+<div class="block">Sets the current SLM device.</div>
 </td>
 </tr>
 <tr id="i323" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#setSLMExposure-java.lang.String-double-">setSLMExposure</a></span>(java.lang.String&nbsp;slmLabel,
               double&nbsp;exposure_ms)</code>
-<div class="block">For SLM devices with build-in light source (such as projectors) this will set the exposure time, but not (yet) start the illumination</div>
+<div class="block">For SLM devices with built-in light source (such as projectors) this will set the exposure time, but not (yet) start the illumination.</div>
 </td>
 </tr>
 <tr id="i324" class="altColor">
@@ -2255,14 +2255,14 @@ extends java.lang.Object</pre>
 <tr id="i340" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#startExposureSequence-java.lang.String-">startExposureSequence</a></span>(java.lang.String&nbsp;cameraLabel)</code>
-<div class="block">Starts an ongoing sequence of triggered exposures in a camera This should only be called for cameras where exposure time is sequenceable</div>
+<div class="block">Starts an ongoing sequence of triggered exposures in a camera.</div>
 </td>
 </tr>
 <tr id="i341" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#startPropertySequence-java.lang.String-java.lang.String-">startPropertySequence</a></span>(java.lang.String&nbsp;label,
                      java.lang.String&nbsp;propName)</code>
-<div class="block">Starts an ongoing sequence of triggered events in a property of a device This should only be called for device-properties that are sequenceable</div>
+<div class="block">Starts an ongoing sequence of triggered events in a property of a device.</div>
 </td>
 </tr>
 <tr id="i342" class="altColor">
@@ -2329,14 +2329,14 @@ extends java.lang.Object</pre>
 <tr id="i352" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#stopExposureSequence-java.lang.String-">stopExposureSequence</a></span>(java.lang.String&nbsp;cameraLabel)</code>
-<div class="block">Stops an ongoing sequence of triggered exposures in a camera This should only be called for cameras where exposure time is sequenceable</div>
+<div class="block">Stops an ongoing sequence of triggered exposures in a camera.</div>
 </td>
 </tr>
 <tr id="i353" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#stopPropertySequence-java.lang.String-java.lang.String-">stopPropertySequence</a></span>(java.lang.String&nbsp;label,
                     java.lang.String&nbsp;propName)</code>
-<div class="block">Stops an ongoing sequence of triggered events in a property of a device This should only be called for device-properties that are sequenceable</div>
+<div class="block">Stops an ongoing sequence of triggered events in a property of a device.</div>
 </td>
 </tr>
 <tr id="i354" class="altColor">
@@ -2366,13 +2366,13 @@ extends java.lang.Object</pre>
 <tr id="i358" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#stopStageSequence-java.lang.String-">stopStageSequence</a></span>(java.lang.String&nbsp;stageLabel)</code>
-<div class="block">Stops an ongoing sequence of triggered events in a stage This should only be called for stages that are sequenceable</div>
+<div class="block">Stops an ongoing sequence of triggered events in a stage.</div>
 </td>
 </tr>
 <tr id="i359" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../mmcorej/CMMCore.html#stopXYStageSequence-java.lang.String-">stopXYStageSequence</a></span>(java.lang.String&nbsp;xyStageLabel)</code>
-<div class="block">Stops an ongoing sequence of triggered events in an XY stage This should only be called for stages that are sequenceable</div>
+<div class="block">Stops an ongoing sequence of triggered events in an XY stage.</div>
 </td>
 </tr>
 <tr id="i360" class="altColor">
@@ -2994,7 +2994,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getCoreErrorText</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getCoreErrorText(int&nbsp;code)</pre>
-<div class="block">Returns a pre-defined error test with the given error code</div>
+<div class="block">Returns a pre-defined error text with the given error code.</div>
 </li>
 </ul>
 <a name="getVersionInfo--">
@@ -3876,7 +3876,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;void&nbsp;startPropertySequence(java.lang.String&nbsp;label,
                                   java.lang.String&nbsp;propName)
                            throws java.lang.Exception</pre>
-<div class="block">Starts an ongoing sequence of triggered events in a property of a device This should only be called for device-properties that are sequenceable</div>
+<div class="block">Starts an ongoing sequence of triggered events in a property of a device. This should only be called for device-properties that are sequenceable</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -3892,7 +3892,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;void&nbsp;stopPropertySequence(java.lang.String&nbsp;label,
                                  java.lang.String&nbsp;propName)
                           throws java.lang.Exception</pre>
-<div class="block">Stops an ongoing sequence of triggered events in a property of a device This should only be called for device-properties that are sequenceable</div>
+<div class="block">Stops an ongoing sequence of triggered events in a property of a device. This should only be called for device-properties that are sequenceable</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -4392,7 +4392,7 @@ extends java.lang.Object</pre>
 <h4>setSLMDevice</h4>
 <pre>public&nbsp;void&nbsp;setSLMDevice(java.lang.String&nbsp;slmLabel)
                   throws java.lang.Exception</pre>
-<div class="block">Sets the current slm device.</div>
+<div class="block">Sets the current SLM device.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -4976,7 +4976,7 @@ extends java.lang.Object</pre>
 <h4>getPixelSizeOptimalZUm</h4>
 <pre>public&nbsp;double&nbsp;getPixelSizeOptimalZUm()
                               throws java.lang.Exception</pre>
-<div class="block">Returns the optimal z step size in um There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration</div>
+<div class="block">Returns the optimal z step size in um. There is no magic to this number, but lets the system configuration communicate to the end user what the optimal Z step size is for this pixel size configuration.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -5020,10 +5020,10 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getMagnificationFactor</h4>
 <pre>public&nbsp;double&nbsp;getMagnificationFactor()</pre>
-<div class="block">Returns the product of all Magnifiers in the system or 1.0 when none is found This is used internally by getPixelSizeUm</div>
+<div class="block">Returns the product of all Magnifiers in the system or 1.0 when none is found. This is used internally by getPixelSizeUm.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>products of all magnifier devices in the system or 1.0 when none is found</dd>
+<dd>product of all magnifier devices in the system or 1.0 when none is found</dd>
 </dl>
 </li>
 </ul>
@@ -5104,7 +5104,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;void&nbsp;setPixelSizeOptimalZUm(java.lang.String&nbsp;resolutionID,
                                    double&nbsp;optimalZ)
                             throws java.lang.Exception</pre>
-<div class="block">Sets the opimal Z stepSize (in microns). There is no magic here, this number is provided by the person configuring the microscope, to be used by the person using the microscope.</div>
+<div class="block">Sets the optimal Z step size (in microns). There is no magic here, this number is provided by the person configuring the microscope, to be used by the person using the microscope.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -5228,7 +5228,7 @@ extends java.lang.Object</pre>
 <h4>getPixelSizeConfigData</h4>
 <pre>public&nbsp;<a href="../mmcorej/Configuration.html" title="class in mmcorej">Configuration</a>&nbsp;getPixelSizeConfigData(java.lang.String&nbsp;configName)
                                      throws java.lang.Exception</pre>
-<div class="block">Returns the configuration object for a give pixel size preset.</div>
+<div class="block">Returns the configuration object for a given pixel size preset.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The configuration object</dd>
@@ -5552,7 +5552,7 @@ extends java.lang.Object</pre>
 <h4>snapImage</h4>
 <pre>public&nbsp;void&nbsp;snapImage()
                throws java.lang.Exception</pre>
-<div class="block">Acquires a single image with current settings. Snap is not allowed while the acquisition thread is run</div>
+<div class="block">Acquires a single image with current settings.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -5700,7 +5700,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>setAutoShutter</h4>
 <pre>public&nbsp;void&nbsp;setAutoShutter(boolean&nbsp;state)</pre>
-<div class="block">If this option is enabled Shutter automatically opens and closes when the image is acquired.</div>
+<div class="block">If this option is enabled, the shutter automatically opens and closes when an image is acquired.</div>
 </li>
 </ul>
 <a name="getAutoShutter--">
@@ -5874,7 +5874,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>isSequenceRunning</h4>
 <pre>public&nbsp;boolean&nbsp;isSequenceRunning()</pre>
-<div class="block">Check if the current camera is acquiring the sequence Returns false when the sequence is done</div>
+<div class="block">Check if the current camera is acquiring the sequence. Returns false when the sequence is done.</div>
 </li>
 </ul>
 <a name="isSequenceRunning-java.lang.String-">
@@ -5885,7 +5885,7 @@ extends java.lang.Object</pre>
 <h4>isSequenceRunning</h4>
 <pre>public&nbsp;boolean&nbsp;isSequenceRunning(java.lang.String&nbsp;cameraLabel)
                           throws java.lang.Exception</pre>
-<div class="block">Check if the specified camera is acquiring the sequence Returns false when the sequence is done</div>
+<div class="block">Check if the specified camera is acquiring the sequence. Returns false when the sequence is done.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -5962,7 +5962,7 @@ extends java.lang.Object</pre>
 <h4>getLastImageMD</h4>
 <pre>public&nbsp;java.lang.Object&nbsp;getLastImageMD(<a href="../mmcorej/Metadata.html" title="class in mmcorej">Metadata</a>&nbsp;md)
                                 throws java.lang.Exception</pre>
-<div class="block">Returns a pointer to the pixels of the image that was last inserted into the circular buffer Also provides all metadata associated with that image</div>
+<div class="block">Returns a pointer to the pixels of the image that was last inserted into the circular buffer. Also provides all metadata associated with that image.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -5978,7 +5978,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;java.lang.Object&nbsp;getNBeforeLastImageMD(long&nbsp;n,
                                               <a href="../mmcorej/Metadata.html" title="class in mmcorej">Metadata</a>&nbsp;md)
                                        throws java.lang.Exception</pre>
-<div class="block">Returns a pointer to the pixels of the image that was inserted n images ago Also provides all metadata associated with that image</div>
+<div class="block">Returns a pointer to the pixels of the image that was inserted n images ago. Also provides all metadata associated with that image.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -6007,7 +6007,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getRemainingImageCount</h4>
 <pre>public&nbsp;int&nbsp;getRemainingImageCount()</pre>
-<div class="block">Returns number ofimages available in the Circular Buffer</div>
+<div class="block">Returns the number of images available in the circular buffer.</div>
 </li>
 </ul>
 <a name="getBufferTotalCapacity--">
@@ -6120,7 +6120,7 @@ extends java.lang.Object</pre>
 <h4>startExposureSequence</h4>
 <pre>public&nbsp;void&nbsp;startExposureSequence(java.lang.String&nbsp;cameraLabel)
                            throws java.lang.Exception</pre>
-<div class="block">Starts an ongoing sequence of triggered exposures in a camera This should only be called for cameras where exposure time is sequenceable</div>
+<div class="block">Starts an ongoing sequence of triggered exposures in a camera. This should only be called for cameras where exposure time is sequenceable.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -6135,7 +6135,7 @@ extends java.lang.Object</pre>
 <h4>stopExposureSequence</h4>
 <pre>public&nbsp;void&nbsp;stopExposureSequence(java.lang.String&nbsp;cameraLabel)
                           throws java.lang.Exception</pre>
-<div class="block">Stops an ongoing sequence of triggered exposures in a camera This should only be called for cameras where exposure time is sequenceable</div>
+<div class="block">Stops an ongoing sequence of triggered exposures in a camera. This should only be called for cameras where exposure time is sequenceable.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -6291,7 +6291,7 @@ extends java.lang.Object</pre>
 <h4>setAutoFocusOffset</h4>
 <pre>public&nbsp;void&nbsp;setAutoFocusOffset(double&nbsp;offset)
                         throws java.lang.Exception</pre>
-<div class="block">Applies offset the one-shot focusing device.</div>
+<div class="block">Applies an offset to the one-shot focusing device.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -6631,7 +6631,7 @@ extends java.lang.Object</pre>
 <h4>isStageUsingCallbacks</h4>
 <pre>public&nbsp;boolean&nbsp;isStageUsingCallbacks(java.lang.String&nbsp;stageLabel)
                               throws java.lang.Exception</pre>
-<div class="block">Queries whether this stage uses callbacks to signal position changes When false, use polling to stay updated about the positionf of the stage</div>
+<div class="block">Queries whether this stage uses callbacks to signal position changes. When false, use polling to stay updated about the position of the stage.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -6663,7 +6663,7 @@ extends java.lang.Object</pre>
 <h4>isStageLinearSequenceable</h4>
 <pre>public&nbsp;boolean&nbsp;isStageLinearSequenceable(java.lang.String&nbsp;stageLabel)
                                   throws java.lang.Exception</pre>
-<div class="block">Queries if the stage can be used in a linear sequence A linear sequence is defined by a stepsize and number of slices</div>
+<div class="block">Queries if the stage can be used in a linear sequence. A linear sequence is defined by a stepsize and number of slices</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if the stage supports linear sequences</dd>
@@ -6695,7 +6695,7 @@ extends java.lang.Object</pre>
 <h4>stopStageSequence</h4>
 <pre>public&nbsp;void&nbsp;stopStageSequence(java.lang.String&nbsp;stageLabel)
                        throws java.lang.Exception</pre>
-<div class="block">Stops an ongoing sequence of triggered events in a stage This should only be called for stages that are sequenceable</div>
+<div class="block">Stops an ongoing sequence of triggered events in a stage. This should only be called for stages that are sequenceable</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -7075,7 +7075,7 @@ extends java.lang.Object</pre>
 <h4>isXYStageUsingCallbacks</h4>
 <pre>public&nbsp;boolean&nbsp;isXYStageUsingCallbacks(java.lang.String&nbsp;xyStageLabel)
                                 throws java.lang.Exception</pre>
-<div class="block">Queries whether this XYStage uses callbacks to signal position changes When false, use polling to stay updated about the positionf of the stage</div>
+<div class="block">Queries whether this XYStage uses callbacks to signal position changes. When false, use polling to stay updated about the position of the stage.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -7120,7 +7120,7 @@ extends java.lang.Object</pre>
 <h4>stopXYStageSequence</h4>
 <pre>public&nbsp;void&nbsp;stopXYStageSequence(java.lang.String&nbsp;xyStageLabel)
                          throws java.lang.Exception</pre>
-<div class="block">Stops an ongoing sequence of triggered events in an XY stage This should only be called for stages that are sequenceable</div>
+<div class="block">Stops an ongoing sequence of triggered events in an XY stage. This should only be called for stages that are sequenceable</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -7332,7 +7332,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;void&nbsp;setSLMExposure(java.lang.String&nbsp;slmLabel,
                            double&nbsp;exposure_ms)
                     throws java.lang.Exception</pre>
-<div class="block">For SLM devices with build-in light source (such as projectors) this will set the exposure time, but not (yet) start the illumination</div>
+<div class="block">For SLM devices with built-in light source (such as projectors) this will set the exposure time, but not (yet) start the illumination.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -7392,7 +7392,7 @@ extends java.lang.Object</pre>
 <h4>getSLMNumberOfComponents</h4>
 <pre>public&nbsp;long&nbsp;getSLMNumberOfComponents(java.lang.String&nbsp;slmLabel)
                               throws java.lang.Exception</pre>
-<div class="block">Returns the number of components (usually these depict colors) of the SLM For instance, an RGB projector will return 3, but a grey scale SLM returns 1</div>
+<div class="block">Returns the number of components (usually these depict colors) of the SLM. For instance, an RGB projector will return 3, but a grey scale SLM returns 1.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -7883,7 +7883,7 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;void&nbsp;setPumpVolume(java.lang.String&nbsp;pumpLabel,
                           double&nbsp;volume)
                    throws java.lang.Exception</pre>
-<div class="block">Sets the volume of fluid in the pump in uL. Note it does not withdraw upto this amount. It is merely to inform MM of the volume in a prefilled pump.</div>
+<div class="block">Sets the volume of fluid in the pump in uL. Note it does not withdraw up to this amount. It is merely to inform MM of the volume in a prefilled pump.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.lang.Exception</code></dd>
@@ -8031,7 +8031,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>detectDevice</h4>
 <pre>public&nbsp;<a href="../mmcorej/DeviceDetectionStatus.html" title="class in mmcorej">DeviceDetectionStatus</a>&nbsp;detectDevice(java.lang.String&nbsp;deviceLabel)</pre>
-<div class="block">Tries to communicate to a device through a given serial port Used to automate discovery of correct serial port Also configures the serial port correctly</div>
+<div class="block">Tries to communicate to a device through a given serial port Used to automate discovery of correct serial port. Also configures the serial port correctly.</div>
 </li>
 </ul>
 <a name="getParentLabel-java.lang.String-">
