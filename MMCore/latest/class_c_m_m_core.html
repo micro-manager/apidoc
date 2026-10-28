@@ -884,7 +884,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::addGalvoPolygonVertex </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>galvoLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1163,7 +1163,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::defineStateLabel </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>stateDeviceLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1175,7 +1175,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>&#160;</td>
+          <td class="paramname"><em>stateLabel</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1187,9 +1187,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Defines a label for the specific state.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>the device label </td></tr>
+    <tr><td class="paramname">stateDeviceLabel</td><td>the device label </td></tr>
     <tr><td class="paramname">state</td><td>the state to be labeled </td></tr>
-    <tr><td class="paramname">label</td><td>the label for the specified state </td></tr>
+    <tr><td class="paramname">stateLabel</td><td>the label for the specified state </td></tr>
   </table>
   </dd>
 </dl>
@@ -1297,7 +1297,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::deleteGalvoPolygons </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>galvoLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1335,16 +1335,16 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">MM::DeviceDetectionStatus CMMCore::detectDevice </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Tries to communicate to a device through a given serial port Used to automate discovery of correct serial port. Also configures the serial port correctly.</p>
-<p>For legacy reasons, an exception is not thrown if there is an error. Instead, MM::Unimplemented is returned if label is not a valid device.</p>
+<p>For legacy reasons, an exception is not thrown if there is an error. Instead, MM::Unimplemented is returned if deviceLabel is not a valid device.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the label of the device for which the serial port should be found </td></tr>
+    <tr><td class="paramname">deviceLabel</td><td>the label of the device for which the serial port should be found </td></tr>
   </table>
   </dd>
 </dl>
@@ -1416,7 +1416,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::displaySLMImage </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>slmLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1715,13 +1715,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">std::vector&lt; std::string &gt; CMMCore::getAvailableConfigs </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>group</em></td><td>)</td>
+          <td class="paramname"><em>configGroup</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Returns all defined configuration names in a given group</p>
-<p>For legacy reasons, an exception is not thrown if there is an error. Instead, an empty vector is returned if group is not a valid config group.</p>
+<p>For legacy reasons, an exception is not thrown if there is an error. Instead, an empty vector is returned if configGroup is not a valid config group.</p>
 <dl class="section return"><dt>Returns</dt><dd>an array of configuration names </dd></dl>
 
 </div>
@@ -1736,7 +1736,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">std::vector&lt; std::string &gt; CMMCore::getAvailableDeviceDescriptions </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>moduleName</em></td><td>)</td>
+          <td class="paramname"><em>library</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1755,7 +1755,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">std::vector&lt; std::string &gt; CMMCore::getAvailableDevices </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>moduleName</em></td><td>)</td>
+          <td class="paramname"><em>library</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1774,7 +1774,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">std::vector&lt; long &gt; CMMCore::getAvailableDeviceTypes </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>moduleName</em></td><td>)</td>
+          <td class="paramname"><em>library</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1987,7 +1987,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname"><a class="el" href="class_configuration.html">Configuration</a> CMMCore::getConfigData </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>groupName</em>, </td>
+          <td class="paramname"><em>configGroup</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2539,7 +2539,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">std::string CMMCore::getGalvoChannel </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>galvoLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2576,19 +2576,19 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::getGalvoPosition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>galvoLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramname"><em>x_stage</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramname"><em>y_stage</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2611,7 +2611,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getGalvoXMinimum </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>galvoLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2630,7 +2630,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getGalvoXRange </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>galvoLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2649,7 +2649,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getGalvoYMinimum </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>galvoLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2668,7 +2668,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getGalvoYRange </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>galvoLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2719,17 +2719,17 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void * CMMCore::getImage </td>
           <td>(</td>
           <td class="paramtype">unsigned&#160;</td>
-          <td class="paramname"><em>channelNr</em></td><td>)</td>
+          <td class="paramname"><em>numChannel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the internal image buffer for a given Camera Channel</p>
 <p>Use to get the image acquired by snapImage</p>
-<p>Single channel cameras will return the content of their image buffer irrespective of the channelNr argument Designed specifically for the SWIG wrapping for Java and scripting languages.</p>
+<p>Single channel cameras will return the content of their image buffer irrespective of the numChannel argument. Designed specifically for the SWIG wrapping for Java and scripting languages.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">channelNr</td><td>Channel number for which the image buffer is requested </td></tr>
+    <tr><td class="paramname">numChannel</td><td>Channel number for which the image buffer is requested </td></tr>
   </table>
   </dd>
 </dl>
@@ -2839,7 +2839,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">std::vector&lt; std::string &gt; CMMCore::getInstalledDevices </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>hubDeviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>hubLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2848,7 +2848,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Currently, this method can only be called once, right after loading the hub device. Doing otherwise results in undefined behavior. This function was intended for use during initial configuration, not routine loading of devices. These restrictions may be relaxed in the future if possible.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hubDeviceLabel</td><td>the label for the device of type Hub </td></tr>
+    <tr><td class="paramname">hubLabel</td><td>the label for the device of type Hub </td></tr>
   </table>
   </dd>
 </dl>
@@ -3244,13 +3244,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">long CMMCore::getNumberOfStates </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>stateDeviceLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the total number of available positions (states).</p>
-<p>For legacy reasons, an exception is not thrown on error. Instead, -1 is returned if deviceLabel is not a valid state device. </p>
+<p>For legacy reasons, an exception is not thrown on error. Instead, -1 is returned if stateDeviceLabel is not a valid state device. </p>
 
 </div>
 </div>
@@ -3264,7 +3264,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">std::string CMMCore::getParentLabel </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>peripheralLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3701,7 +3701,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getPosition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>stageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3709,7 +3709,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Returns the current position of the stage in microns. </p><dl class="section return"><dt>Returns</dt><dd>the position in microns </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the single-axis drive device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the single-axis drive device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -3801,7 +3801,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">std::string CMMCore::getPropertyFromCache </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>deviceLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3820,7 +3820,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <dl class="section return"><dt>Returns</dt><dd>the property value </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the device label </td></tr>
+    <tr><td class="paramname">deviceLabel</td><td>the device label </td></tr>
     <tr><td class="paramname">propName</td><td>the property name </td></tr>
   </table>
   </dd>
@@ -3960,7 +3960,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getPumpFlowrate </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumpLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3979,7 +3979,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getPumpMaxVolume </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumpLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3998,7 +3998,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getPumpPressureKPa </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumplabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4017,7 +4017,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getPumpVolume </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumpLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4257,7 +4257,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">unsigned CMMCore::getSLMBytesPerPixel </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>slmLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4265,7 +4265,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Returns the number of bytes per SLM pixel</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>name of the SLM </td></tr>
+    <tr><td class="paramname">slmLabel</td><td>name of the SLM </td></tr>
   </table>
   </dd>
 </dl>
@@ -4300,7 +4300,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getSLMExposure </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>slmLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4319,7 +4319,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">unsigned CMMCore::getSLMHeight </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>slmLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4327,7 +4327,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Returns the height (in "pixels") of the SLM</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>name of the SLM </td></tr>
+    <tr><td class="paramname">slmLabel</td><td>name of the SLM </td></tr>
   </table>
   </dd>
 </dl>
@@ -4344,7 +4344,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">unsigned CMMCore::getSLMNumberOfComponents </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>slmLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4352,7 +4352,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Returns the number of components (usually these depict colors) of the SLM. For instance, an RGB projector will return 3, but a grey scale SLM returns 1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>name of the SLM </td></tr>
+    <tr><td class="paramname">slmLabel</td><td>name of the SLM </td></tr>
   </table>
   </dd>
 </dl>
@@ -4369,7 +4369,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">long CMMCore::getSLMSequenceMaxLength </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>slmLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4377,7 +4377,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>For SLMs that support sequences, returns the maximum length of the sequence that can be uploaded to the device</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>name of the SLM </td></tr>
+    <tr><td class="paramname">slmLabel</td><td>name of the SLM </td></tr>
   </table>
   </dd>
 </dl>
@@ -4394,7 +4394,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">unsigned CMMCore::getSLMWidth </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>slmLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4402,7 +4402,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Returns the width (in "pixels") of the SLM</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>name of the SLM </td></tr>
+    <tr><td class="paramname">slmLabel</td><td>name of the SLM </td></tr>
   </table>
   </dd>
 </dl>
@@ -4419,14 +4419,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">long CMMCore::getStageSequenceMaxLength </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>stageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Gets the maximum length of a stage's position sequence. This should only be called for stages that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -4444,7 +4444,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">long CMMCore::getState </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>stateDeviceLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4453,7 +4453,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <dl class="section return"><dt>Returns</dt><dd>the current state </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>the device label </td></tr>
+    <tr><td class="paramname">stateDeviceLabel</td><td>the device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -4470,7 +4470,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">long CMMCore::getStateFromLabel </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>stateDeviceLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4489,7 +4489,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <dl class="section return"><dt>Returns</dt><dd>the state (an integer) </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>the device label </td></tr>
+    <tr><td class="paramname">stateDeviceLabel</td><td>the device label </td></tr>
     <tr><td class="paramname">stateLabel</td><td>the label for which the state is being queried </td></tr>
   </table>
   </dd>
@@ -4507,7 +4507,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">std::string CMMCore::getStateLabel </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>stateDeviceLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4516,7 +4516,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <dl class="section return"><dt>Returns</dt><dd>the current state's label </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>the device label </td></tr>
+    <tr><td class="paramname">stateDeviceLabel</td><td>the device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -4533,7 +4533,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">std::vector&lt; std::string &gt; CMMCore::getStateLabels </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>stateDeviceLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4542,7 +4542,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <dl class="section return"><dt>Returns</dt><dd>an array of state labels </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>the device label </td></tr>
+    <tr><td class="paramname">stateDeviceLabel</td><td>the device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -4677,7 +4677,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getXPosition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4685,7 +4685,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Obtains the current position of the X axis of the XY stage in microns. </p><dl class="section return"><dt>Returns</dt><dd>the x position </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -4702,19 +4702,19 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::getXYPosition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>xyStageLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramname"><em>x_stage</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramname"><em>y_stage</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4725,9 +4725,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Obtains the current position of the XY stage in microns. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
-    <tr><td class="paramname">x</td><td>a return parameter yielding the X position in microns </td></tr>
-    <tr><td class="paramname">y</td><td>a return parameter yielding the Y position in microns </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">x_stage</td><td>a return parameter yielding the X position in microns </td></tr>
+    <tr><td class="paramname">y_stage</td><td>a return parameter yielding the Y position in microns </td></tr>
   </table>
   </dd>
 </dl>
@@ -4744,13 +4744,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::getXYPosition </td>
           <td>(</td>
           <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramname"><em>x_stage</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramname"><em>y_stage</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4761,8 +4761,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Obtains the current position of the XY stage in microns. Uses the current XY stage device. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>a return parameter yielding the X position in microns </td></tr>
-    <tr><td class="paramname">y</td><td>a return parameter yielding the Y position in microns </td></tr>
+    <tr><td class="paramname">x_stage</td><td>a return parameter yielding the X position in microns </td></tr>
+    <tr><td class="paramname">y_stage</td><td>a return parameter yielding the Y position in microns </td></tr>
   </table>
   </dd>
 </dl>
@@ -4799,14 +4799,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">long CMMCore::getXYStageSequenceMaxLength </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Gets the maximum length of an XY stage's position sequence. This should only be called for XY stages that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the XY stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the XY stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -4846,7 +4846,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">double CMMCore::getYPosition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4854,7 +4854,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Obtains the current position of the Y axis of the XY stage in microns. </p><dl class="section return"><dt>Returns</dt><dd>the y position </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -4960,7 +4960,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::home </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyOrZStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4969,7 +4969,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Not all stages support this operation. The user should be warned before calling this method, as it can cause large stage movements, potentially resulting in collision (e.g. with an expensive objective lens).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label (either XY or focus/Z stage) </td></tr>
+    <tr><td class="paramname">xyOrZStageLabel</td><td>the stage device label (either XY or focus/Z stage) </td></tr>
   </table>
   </dd>
 </dl>
@@ -5078,7 +5078,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::invertPumpDirection </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>pumpLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -5471,7 +5471,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">bool CMMCore::isPumpDirectionInverted </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumpLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -5508,7 +5508,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">bool CMMCore::isSequenceRunning </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>cameraLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -5527,14 +5527,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">bool CMMCore::isStageLinearSequenceable </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>stageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Queries if the stage can be used in a linear sequence. A linear sequence is defined by a stepsize and number of slices </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -5552,14 +5552,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">bool CMMCore::isStageSequenceable </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>stageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Queries stage if it can be used in a sequence </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -5577,7 +5577,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">bool CMMCore::isStageUsingCallbacks </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>stageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -5596,14 +5596,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">bool CMMCore::isXYStageSequenceable </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Queries XY stage if it can be used in a sequence </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the XY stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the XY stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -5620,7 +5620,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">bool CMMCore::isXYStageUsingCallbacks </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -5687,7 +5687,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
-          <td class="paramname"><em>exposureTime_ms</em>&#160;</td>
+          <td class="paramname"><em>exposureSequence_ms</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -5699,7 +5699,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Transfer a sequence of exposure times to the camera. This should only be called for cameras where exposure time is sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cameraLabel</td><td>the camera device label </td></tr>
-    <tr><td class="paramname">exposureTime_ms</td><td>sequence of exposure times the camera will use during a sequence acquisition </td></tr>
+    <tr><td class="paramname">exposureSequence_ms</td><td>sequence of exposure times the camera will use during a sequence acquisition </td></tr>
   </table>
   </dd>
 </dl>
@@ -5716,7 +5716,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::loadGalvoPolygons </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>galvoLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -5810,7 +5810,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::loadSLMSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>slmLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -5828,7 +5828,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Load a sequence of images into the SLM</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>name of the SLM </td></tr>
+    <tr><td class="paramname">slmLabel</td><td>name of the SLM </td></tr>
     <tr><td class="paramname">imageSequence</td><td>pointers to the images to be used in the sequence </td></tr>
   </table>
   </dd>
@@ -5846,7 +5846,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::loadStageSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>stageLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -5863,7 +5863,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Transfer a sequence of positions to the stage. This should only be called for stages that are sequenceable. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
     <tr><td class="paramname">positionSequence</td><td>a sequence of positions that the stage will execute in response to external triggers </td></tr>
   </table>
   </dd>
@@ -5925,7 +5925,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::loadXYStageSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>xyStageLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -5948,7 +5948,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Transfer a sequence of stage positions to the xy stage. xSequence and ySequence must have the same length. This should only be called for XY stages that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the XY stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the XY stage device label </td></tr>
     <tr><td class="paramname">xSequence</td><td>the sequence of x positions that the stage will execute in response to external triggers </td></tr>
     <tr><td class="paramname">ySequence</td><td>the sequence of y positions that the stage will execute in response to external triggers </td></tr>
   </table>
@@ -6107,7 +6107,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::pointGalvoAndFire </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>galvoLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6231,7 +6231,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">MMCORE_DEPRECATED void CMMCore::prepareSequenceAcquisition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>cameraLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -6251,7 +6251,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::pressurePumpCalibrate </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumpLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -6270,7 +6270,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">bool CMMCore::pressurePumpRequiresCalibration </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumpLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -6289,7 +6289,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::pressurePumpStop </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumpLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -6308,7 +6308,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::pumpDispenseDurationSeconds </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>pumpLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6337,7 +6337,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::pumpDispenseVolumeUl </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>pumpLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6366,7 +6366,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::pumpStart </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumpLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -6544,7 +6544,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::runGalvoPolygons </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>galvoLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -6563,7 +6563,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::runGalvoSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>galvoLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -6624,7 +6624,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setAdapterOrigin </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>stageLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6643,7 +6643,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>The current position of the stage becomes Z = newZUm. Only some stages support this functionality; it is recommended that <a class="el" href="class_c_m_m_core.html#a3da048c5cd7ca7cf41c9d8a6fff9f1c8">setOrigin()</a> be used instead where available.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
     <tr><td class="paramname">newZUm</td><td>the new coordinate to assign to the current Z position </td></tr>
   </table>
   </dd>
@@ -6687,7 +6687,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setAdapterOriginXY </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>xyStageLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6712,7 +6712,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>The current position of the stage becomes (newXUm, newYUm). It is recommended that <a class="el" href="class_c_m_m_core.html#a697a7951ff6b152b69f0105961753981">setOriginXY()</a> be used instead where available.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the XY stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the XY stage device label </td></tr>
     <tr><td class="paramname">newXUm</td><td>the new coordinate to assign to the current X position </td></tr>
     <tr><td class="paramname">newYUm</td><td>the new coordinate to assign to the current Y position </td></tr>
   </table>
@@ -6768,7 +6768,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setAutoFocusDevice </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>autofocusLabel</em></td><td>)</td>
+          <td class="paramname"><em>focusLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -6913,7 +6913,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setChannelGroup </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>chGroup</em></td><td>)</td>
+          <td class="paramname"><em>channelGroup</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -7097,7 +7097,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setExposure </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>cameraLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -7114,7 +7114,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Sets the exposure setting of the specified camera in milliseconds. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the camera device label </td></tr>
+    <tr><td class="paramname">cameraLabel</td><td>the camera device label </td></tr>
     <tr><td class="paramname">dExp</td><td>the exposure in milliseconds </td></tr>
   </table>
   </dd>
@@ -7132,14 +7132,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setExposure </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dExp</em></td><td>)</td>
+          <td class="paramname"><em>exp</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Sets the exposure setting of the current camera in milliseconds. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dExp</td><td>the exposure in milliseconds </td></tr>
+    <tr><td class="paramname">exp</td><td>the exposure in milliseconds </td></tr>
   </table>
   </dd>
 </dl>
@@ -7232,7 +7232,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setGalvoIlluminationState </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>galvoLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -7261,7 +7261,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setGalvoPolygonRepetitions </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>galvoLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -7290,7 +7290,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setGalvoPosition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>galvoLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -7417,7 +7417,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setOrigin </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>stageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -7426,7 +7426,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>The current position becomes the new origin (Z = 0). Not to be confused with <a class="el" href="class_c_m_m_core.html#a5f488bc08579c3f83d03bc73080ca211">setAdapterOrigin()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -7466,7 +7466,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setOriginX </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -7475,7 +7475,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>The current position becomes the new X = 0.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the xy stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the xy stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -7515,7 +7515,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setOriginXY </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -7524,7 +7524,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>The current position becomes the new origin. Not to be confused with <a class="el" href="class_c_m_m_core.html#aba1f6c26de606634d6c9256eebb2481e">setAdapterOriginXY()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -7564,7 +7564,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setOriginY </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -7573,7 +7573,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>The current position becomes the new Y = 0.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the xy stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the xy stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -7590,13 +7590,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setParentLabel </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>deviceLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>parentLabel</em>&#160;</td>
+          <td class="paramname"><em>parentHubLabel</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7694,7 +7694,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dxdz</em>&#160;</td>
+          <td class="paramname"><em>dXdZ</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7709,7 +7709,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">resolutionID</td><td>The pixel size configuration (preset) name </td></tr>
-    <tr><td class="paramname">dxdz</td><td>Angle of the Z-stage axis with the camera axis (dimensionless) </td></tr>
+    <tr><td class="paramname">dXdZ</td><td>Angle of the Z-stage axis with the camera axis (dimensionless) </td></tr>
   </table>
   </dd>
 </dl>
@@ -7732,7 +7732,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dydz</em>&#160;</td>
+          <td class="paramname"><em>dYdZ</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7747,7 +7747,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">resolutionID</td><td>The pixel size configuration (preset) name </td></tr>
-    <tr><td class="paramname">dydz</td><td>Angle of the Z-stage axis with the camera axis (dimensionless) </td></tr>
+    <tr><td class="paramname">dYdZ</td><td>Angle of the Z-stage axis with the camera axis (dimensionless) </td></tr>
   </table>
   </dd>
 </dl>
@@ -7829,7 +7829,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setPosition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>stageLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -7846,7 +7846,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Sets the position of the stage in microns. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
     <tr><td class="paramname">position</td><td>the desired stage position, in microns </td></tr>
   </table>
   </dd>
@@ -8198,13 +8198,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setPumpFlowrate </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>pumpLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>UlperSec</em>&#160;</td>
+          <td class="paramname"><em>volume</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -8227,13 +8227,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setPumpMaxVolume </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>pumpLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>volUl</em>&#160;</td>
+          <td class="paramname"><em>volume</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -8256,13 +8256,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setPumpPressureKPa </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>pumplabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>pressurekPa</em>&#160;</td>
+          <td class="paramname"><em>pressure</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -8285,13 +8285,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setPumpVolume </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>pumpLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>volUl</em>&#160;</td>
+          <td class="paramname"><em>volume</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -8314,7 +8314,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setRelativePosition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>stageLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8331,7 +8331,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Sets the relative position of the stage in microns. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the single-axis drive device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the single-axis drive device label </td></tr>
     <tr><td class="paramname">d</td><td>the amount to move the stage, in microns (positive or negative) </td></tr>
   </table>
   </dd>
@@ -8373,7 +8373,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setRelativeXYPosition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>xyStageLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8396,7 +8396,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Sets the relative position of the XY stage in microns. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the xy stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the xy stage device label </td></tr>
     <tr><td class="paramname">dx</td><td>the distance to move in X (positive or negative) </td></tr>
     <tr><td class="paramname">dy</td><td>the distance to move in Y (positive or negative) </td></tr>
   </table>
@@ -8768,7 +8768,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setSLMExposure </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>slmLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8797,7 +8797,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setSLMImage </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>slmLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8826,7 +8826,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setSLMImage </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>slmLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8855,7 +8855,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setSLMPixelsTo </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>slmLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8884,7 +8884,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setSLMPixelsTo </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>slmLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8925,7 +8925,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setStageLinearSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>stageLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8948,7 +8948,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Loads a linear sequence (defined by step size and number of steps) into the stage. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
     <tr><td class="paramname">dZ_um</td><td>step size between slices in microns </td></tr>
     <tr><td class="paramname">nSlices</td><td>number of slices in the sequence </td></tr>
   </table>
@@ -8967,7 +8967,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setState </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>stateDeviceLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8985,7 +8985,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Sets the state (position) on the specific device. The command will fail if the device does not support states.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>the device label </td></tr>
+    <tr><td class="paramname">stateDeviceLabel</td><td>the device label </td></tr>
     <tr><td class="paramname">state</td><td>the new state </td></tr>
   </table>
   </dd>
@@ -9003,7 +9003,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setStateLabel </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em>, </td>
+          <td class="paramname"><em>stateDeviceLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -9021,7 +9021,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Sets device state using the previously assigned label (string).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>the device label </td></tr>
+    <tr><td class="paramname">stateDeviceLabel</td><td>the device label </td></tr>
     <tr><td class="paramname">stateLabel</td><td>the state label </td></tr>
   </table>
   </dd>
@@ -9112,7 +9112,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setXYPosition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>xyStageLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -9135,7 +9135,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 </div><div class="memdoc">
 <p>Sets the position of the XY stage in microns. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the XY stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the XY stage device label </td></tr>
     <tr><td class="paramname">x</td><td>the X axis position in microns </td></tr>
     <tr><td class="paramname">y</td><td>the Y axis position in microns </td></tr>
   </table>
@@ -9189,7 +9189,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::setXYStageDevice </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>xyDeviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -9393,7 +9393,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::startSequenceAcquisition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>cameraLabel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -9423,7 +9423,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Starts streaming camera sequence acquisition for a specified camera. This command does not block the calling thread for the duration of the acquisition. The difference between this method and the one with the same name but operating on the "default" camera is that it does not automatically initialize the circular buffer.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>Label of the camera device. </td></tr>
+    <tr><td class="paramname">cameraLabel</td><td>Label of the camera device. </td></tr>
     <tr><td class="paramname">numImages</td><td>Number of images requested from the camera. </td></tr>
     <tr><td class="paramname">unused</td><td>Has no effect. Pass 0.0. See the default-camera overload for details. </td></tr>
     <tr><td class="paramname">stopOnOverflow</td><td>Whether the camera stops acquiring when the circular buffer is full. If false, frames may be skipped. </td></tr>
@@ -9486,7 +9486,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::startSLMSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>slmLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -9494,7 +9494,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Starts the sequence previously uploaded to the SLM</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>name of the SLM </td></tr>
+    <tr><td class="paramname">slmLabel</td><td>name of the SLM </td></tr>
   </table>
   </dd>
 </dl>
@@ -9511,14 +9511,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::startStageSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>stageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Starts an ongoing sequence of triggered events in a stage. This should only be called for stages that are sequenceable. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -9535,14 +9535,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::startXYStageSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Starts an ongoing sequence of triggered events in an XY stage. This should only be called for stages that are sequenceable. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the XY stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the XY stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -9577,7 +9577,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::stop </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyOrZStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -9586,7 +9586,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Not all stages support this operation; check before use.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label (either XY or focus/Z stage) </td></tr>
+    <tr><td class="paramname">xyOrZStageLabel</td><td>the stage device label (either XY or focus/Z stage) </td></tr>
   </table>
   </dd>
 </dl>
@@ -9707,14 +9707,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::stopSequenceAcquisition </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>cameraLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Stops streaming camera sequence acquisition for a specified camera. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>The camera name </td></tr>
+    <tr><td class="paramname">cameraLabel</td><td>The camera name </td></tr>
   </table>
   </dd>
 </dl>
@@ -9731,7 +9731,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::stopSLMSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>slmLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -9739,7 +9739,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
 <p>Stops the SLM sequence if previously started</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceLabel</td><td>name of the SLM </td></tr>
+    <tr><td class="paramname">slmLabel</td><td>name of the SLM </td></tr>
   </table>
   </dd>
 </dl>
@@ -9756,14 +9756,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::stopStageSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>stageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Stops an ongoing sequence of triggered events in a stage. This should only be called for stages that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the stage device label </td></tr>
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -9780,14 +9780,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::stopXYStageSequence </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>xyStageLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Stops an ongoing sequence of triggered events in an XY stage. This should only be called for stages that are sequenceable </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the XY stage device label </td></tr>
+    <tr><td class="paramname">xyStageLabel</td><td>the XY stage device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -9804,13 +9804,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">bool CMMCore::supportsDeviceDetection </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em></td><td>)</td>
+          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Return whether or not the device supports automatic device detection (i.e. whether or not <a class="el" href="class_c_m_m_core.html#acd1a6a010b53b940db885987ffb11468">detectDevice()</a> may be safely called).</p>
-<p>For legacy reasons, an exception is not thrown if there is an error. Instead, false is returned if label is not a valid device. </p>
+<p>For legacy reasons, an exception is not thrown if there is an error. Instead, false is returned if deviceLabel is not a valid device. </p>
 
 </div>
 </div>
@@ -10008,7 +10008,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::volumetricPumpHome </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumpLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -10027,7 +10027,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>mmcore::internal::Co
           <td class="memname">void CMMCore::volumetricPumpStop </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>deviceLabel</em></td><td>)</td>
+          <td class="paramname"><em>pumpLabel</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
