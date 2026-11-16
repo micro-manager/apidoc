@@ -1699,9 +1699,13 @@ and control characters are replaced with "%hh".</div>
 <dt><a href="mmcorej/MMCoreJ.html#get_STOPBITS_2()" class="member-name-link">get_STOPBITS_2()</a> - Static method in class mmcorej.<a href="mmcorej/MMCoreJ.html" title="class in mmcorej">MMCoreJ</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="mmcorej/CMMCore.html#getAllowedBinningValues()" class="member-name-link">getAllowedBinningValues()</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the binning values supported by the current camera.</div>
+</dd>
 <dt><a href="mmcorej/CMMCore.html#getAllowedBinningValues(java.lang.String)" class="member-name-link">getAllowedBinningValues(String)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the binning values supported by the given camera.</div>
+</dd>
 <dt><a href="mmcorej/CMMCore.html#getAllowedPropertyValues(java.lang.String,java.lang.String)" class="member-name-link">getAllowedPropertyValues(String, String)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
 <div class="block">Returns all valid values for the specified property.</div>
@@ -1864,11 +1868,11 @@ and control characters are replaced with "%hh".</div>
 </dd>
 <dt><a href="mmcorej/CMMCore.html#getCurrentPixelSizeConfig()" class="member-name-link">getCurrentPixelSizeConfig()</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Get the current pixel configuration name</div>
+<div class="block">Get the current pixel configuration name.</div>
 </dd>
 <dt><a href="mmcorej/CMMCore.html#getCurrentPixelSizeConfig(boolean)" class="member-name-link">getCurrentPixelSizeConfig(boolean)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Get the current pixel configuration name</div>
+<div class="block">Get the current pixel configuration name.</div>
 </dd>
 <dt><a href="mmcorej/MetadataTag.html#GetDevice()" class="member-name-link">GetDevice()</a> - Method in class mmcorej.<a href="mmcorej/MetadataTag.html" title="class in mmcorej">MetadataTag</a></dt>
 <dd>&nbsp;</dd>
@@ -2188,7 +2192,7 @@ and control characters are replaced with "%hh".</div>
 </dd>
 <dt><a href="mmcorej/CMMCore.html#getImageBufferSize()" class="member-name-link">getImageBufferSize()</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Returns the size of the internal image buffer.</div>
+<div class="block">Returns the size of the current camera's image buffer.</div>
 </dd>
 <dt><a href="mmcorej/CMMCore.html#getImageHeight()" class="member-name-link">getImageHeight()</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -2205,7 +2209,9 @@ and control characters are replaced with "%hh".</div>
 <dt><a href="mmcorej/CMMCore.html#getIncludeSystemStateCache()" class="member-name-link">getIncludeSystemStateCache()</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="mmcorej/CMMCore.html#getInstalledDeviceDescription(java.lang.String,java.lang.String)" class="member-name-link">getInstalledDeviceDescription(String, String)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the description of a peripheral device attached to a hub.</div>
+</dd>
 <dt><a href="mmcorej/CMMCore.html#getInstalledDevices(java.lang.String)" class="member-name-link">getInstalledDevices(String)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
 <div class="block">Detects the child devices attached to a Hub device and returns their names.</div>
@@ -2265,7 +2271,9 @@ and control characters are replaced with "%hh".</div>
 <div class="block">Returns an array of labels for currently loaded devices of specific type.</div>
 </dd>
 <dt><a href="mmcorej/CMMCore.html#getLoadedPeripheralDevices(java.lang.String)" class="member-name-link">getLoadedPeripheralDevices(String)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the labels of the loaded devices whose parent is the given hub.</div>
+</dd>
 <dt><a href="mmcorej/org/json/JSONArray.html#getLong(int)" class="member-name-link">getLong(int)</a> - Method in class mmcorej.org.json.<a href="mmcorej/org/json/JSONArray.html" title="class in mmcorej.org.json">JSONArray</a></dt>
 <dd>
 <div class="block">Get the long value associated with an index.</div>
@@ -3967,7 +3975,9 @@ parallel JSONArray of strings to provides the names of the elements.</div>
 <dt><a href="mmcorej/CMMCore.html#setGalvoPosition(java.lang.String,double,double)" class="member-name-link">setGalvoPosition(String, double, double)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="mmcorej/CMMCore.html#setGalvoSpotInterval(java.lang.String,double)" class="member-name-link">setGalvoSpotInterval(String, double)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sets how long the galvo illuminates each spot.</div>
+</dd>
 <dt><a href="mmcorej/CMMCore.html#setImageProcessorDevice(java.lang.String)" class="member-name-link">setImageProcessorDevice(String)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
 <div class="block">Sets the current image processor device.</div>
@@ -4038,7 +4048,7 @@ parallel JSONArray of strings to provides the names of the elements.</div>
 </dd>
 <dt><a href="mmcorej/CMMCore.html#setPixelSizeUm(java.lang.String,double)" class="member-name-link">setPixelSizeUm(String, double)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
-<div class="block">Sets pixel size in microns for the specified resolution sensing configuration preset.</div>
+<div class="block">Sets the pixel size in microns for the specified pixel size configuration.</div>
 </dd>
 <dt><a href="mmcorej/CMMCore.html#setPosition(double)" class="member-name-link">setPosition(double)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
@@ -4734,7 +4744,9 @@ convert plus to space.</div>
 <div class="block">Homes the pump</div>
 </dd>
 <dt><a href="mmcorej/CMMCore.html#volumetricPumpRequiresHoming(java.lang.String)" class="member-name-link">volumetricPumpRequiresHoming(String)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns true if the pump must be homed (see volumetricPumpHome()) before use.</div>
+</dd>
 <dt><a href="mmcorej/CMMCore.html#volumetricPumpStop(java.lang.String)" class="member-name-link">volumetricPumpStop(String)</a> - Method in class mmcorej.<a href="mmcorej/CMMCore.html" title="class in mmcorej">CMMCore</a></dt>
 <dd>
 <div class="block">Stops the volumetric pump</div>
