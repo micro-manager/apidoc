@@ -702,7 +702,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates an empty configuration group. </p>
+<p>Creates an empty configuration group.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupName</td><td>the name of the new configuration group </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>.</p>
 
@@ -828,7 +834,14 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Deletes a configuration from a group. The command will fail if the configuration was not previously defined. </p>
+<p>Deletes a configuration from a group. The command will fail if the configuration was not previously defined.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupName</td><td>the configuration group name </td></tr>
+    <tr><td class="paramname">configName</td><td>the configuration (preset) name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>.</p>
 
@@ -864,7 +877,16 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Deletes a property from a configuration in the specified group. The command will fail if the configuration was not previously defined. </p>
+<p>Deletes a property from a configuration in the specified group. The command will fail if the configuration was not previously defined.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupName</td><td>the configuration group name </td></tr>
+    <tr><td class="paramname">configName</td><td>the configuration (preset) name </td></tr>
+    <tr><td class="paramname">deviceLabel</td><td>the device label of the setting to delete </td></tr>
+    <tr><td class="paramname">propName</td><td>the property name of the setting to delete </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>.</p>
 
@@ -884,7 +906,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Deletes an entire configuration group. </p>
+<p>Deletes an entire configuration group.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupName</td><td>the configuration group name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#a16fb29a0e7b3b877879a97f7625f7089">getChannelGroup()</a>, <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>, <a class="el" href="#a3c6c10e02821d56acc5b556bb6ef3f5e">isGroupDefined()</a>, and <a class="el" href="#a2faf117d0b609f01e2f2a4b8101e5f00">setChannelGroup()</a>.</p>
 
@@ -1056,7 +1084,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Enables or disables the operation of the continuous focusing hardware device. </p>
+<p>Enables or disables the operation of the continuous focusing hardware device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>true to enable continuous focus, false to disable it </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>, and <a class="el" href="#a9b51e3f44c47c11673cb0ffaff67c255">getDeviceName()</a>.</p>
 
@@ -1385,8 +1419,14 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns all defined configuration names in a given group</p>
+<p>Returns all defined configuration names in a given group.</p>
 <p>For legacy reasons, an exception is not thrown if there is an error. Instead, an empty vector is returned if configGroup is not a valid config group.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configGroup</td><td>the configuration group name </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>an array of configuration names </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="#a626202a14df315f17345999de22615b4">defineStateLabel()</a>, and <a class="el" href="#aaa2e31a9fddef2bc511947c1e2608f31">saveSystemConfiguration()</a>.</p>
@@ -1407,7 +1447,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get descriptions for available devices from the specified library. </p>
+<p>Get descriptions for available devices from the specified library.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">library</td><td>the device adapter (library) name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1425,7 +1471,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get available devices from the specified device library. </p>
+<p>Get available devices from the specified device library.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">library</td><td>the device adapter (library) name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1443,7 +1495,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get type information for available devices from the specified library. </p>
+<p>Get type information for available devices from the specified library.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">library</td><td>the device adapter (library) name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1583,7 +1641,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the name of the requested channel as known by the default camera </p>
+<p>Returns the name of the requested channel as known by the default camera.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channelNr</td><td>the channel index </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1664,6 +1728,13 @@ Initialization and setup.</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the configuration object for a given group and name.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configGroup</td><td>the configuration group name </td></tr>
+    <tr><td class="paramname">configName</td><td>the configuration (preset) name </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>The configuration object </dd></dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>.</p>
@@ -1686,7 +1757,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the partial state of the system, only for the devices included in the specified group. It will create a union of all devices referenced in a group. </p>
+<p>Returns the partial state of the system, only for the devices included in the specified group. It will create a union of all devices referenced in a group.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>the configuration group name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#abe167136415ba066e99c874dfaa7aebf">getConfigGroupState()</a>.</p>
 
@@ -1708,7 +1785,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the partial state of the system cache, only for the devices included in the specified group. It will create a union of all devices referenced in a group. </p>
+<p>Returns the partial state of the system cache, only for the devices included in the specified group. It will create a union of all devices referenced in a group.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>the configuration group name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#abe167136415ba066e99c874dfaa7aebf">getConfigGroupState()</a>.</p>
 
@@ -1732,7 +1815,14 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a partial state of the system, only for devices included in the specified configuration. </p>
+<p>Returns a partial state of the system, only for devices included in the specified configuration.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">group</td><td>the configuration group name </td></tr>
+    <tr><td class="paramname">config</td><td>the configuration (preset) name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="class_configuration.html#ae5f3c4dff5874ea05ea19ac2ecdf9c96">Configuration::addSetting()</a>, <a class="el" href="#ac55630358d22720aa3bd281975dba0a3">getConfigData()</a>, <a class="el" href="struct_property_setting.html#ad2e3aea44f3201d3f4e8b8ddf2588ed6">PropertySetting::getDeviceLabel()</a>, <a class="el" href="#a3b59427f25c1907d5a02fb17caba5cfb">getProperty()</a>, <a class="el" href="struct_property_setting.html#af48876edd7c92cc317a6eda656313489">PropertySetting::getPropertyName()</a>, <a class="el" href="class_configuration.html#acad6344600867d055570811bd574d718">Configuration::getSetting()</a>, and <a class="el" href="class_configuration.html#a64836e801252a70e1625e470dbc62b74">Configuration::size()</a>.</p>
 
@@ -1752,7 +1842,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns a pre-defined error text with the given error code. </p>
+<p>Returns a pre-defined error text with the given error code.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">code</td><td>the MMCore error code </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="#a5ae5977982cffd1ea0c5cf6378192238">defineConfigGroup()</a>, <a class="el" href="#a36f950370b94840b9ca33504cbfc5461">deleteConfig()</a>, <a class="el" href="#a5f0b887f0b24a68e1380268275f43942">deleteConfig()</a>, <a class="el" href="#a9edd2962823e1ba27da52f4795deb05f">deleteConfigGroup()</a>, <a class="el" href="#aafcb6430db8cd9fcf2e02cf8faf6ba8a">deletePixelSizeConfig()</a>, <a class="el" href="#ace60c0f78204ff6031731ce68f054246">enableContinuousFocus()</a>, <a class="el" href="#a9b40822a9c1ed521c3849e1bd6ceb685">fullFocus()</a>, <a class="el" href="#a0e4a9accee84baea077d4a0123cfbdd5">getAllowedBinningValues()</a>, <a class="el" href="#a846679b6da47031b579b1ab135b530c6">getAutoFocusOffset()</a>, <a class="el" href="#a6eb09e0de2c1747d897c688ca8578aa1">getBinning()</a>, <a class="el" href="#ac55630358d22720aa3bd281975dba0a3">getConfigData()</a>, <a class="el" href="#a6f33bba7c5bff6a179365db945445a2a">getImage()</a>, <a class="el" href="#a8809e83e3744b8664d6aa2d4469c64f2">getImage()</a>, <a class="el" href="#a67443fda92cd892af30a12c8042b62a8">getLastImage()</a>, <a class="el" href="#aedac69351d8b8b3f2d9ba5aff4994a27">getLastImageMD()</a>, <a class="el" href="#a398efe8a14427eb29a63459000a7da36">getMultiROI()</a>, <a class="el" href="#a5b3355857b2b25a2a867e5d1dfe9b163">getNBeforeLastImageMD()</a>, <a class="el" href="#ae63f3dbf58867e288b2b7596bfbd428d">getPixelSizeAffineByID()</a>, <a class="el" href="#ac2f2cac1d79222697fe7cad2352a88e5">getPixelSizeConfigData()</a>, <a class="el" href="#a8504dc6c3c7df89652fed5275965851a">getPixelSizedxdz()</a>, <a class="el" href="#ab814086eb534569ae7d8b0fd522bc2b5">getPixelSizedydz()</a>, <a class="el" href="#ac576f03832050e9e04838287a9d90ccc">getPixelSizeOptimalZUm()</a>, <a class="el" href="#a31e948d1e4140fdf5feb8f2269873c0c">getPixelSizeUmByID()</a>, <a class="el" href="#aaa5c2888ab2c10105308ad43a478ecd0">incrementalFocus()</a>, <a class="el" href="#af9550ba37e219d0962d7c513c4ac994c">initializeCircularBuffer()</a>, <a class="el" href="#a64eae3cd25017382a85441824ecf66a0">isMultiROIEnabled()</a>, <a class="el" href="#aed3e17a53748193dc9029a2b363f17d3">isMultiROISupported()</a>, <a class="el" href="#a683d71c084b3db9dd630b4e5f0e3e5c8">loadSystemState()</a>, <a class="el" href="#a7a73a53bcc6f173488cc2053212e3e7e">popNextImage()</a>, <a class="el" href="#a2811db1e73f99916800e8ef5d9a94757">popNextImageMD()</a>, <a class="el" href="#a0cb63dabd405a464b01f03d7147fa1e6">prepareSequenceAcquisition()</a>, <a class="el" href="#aa1d836180f83255c4a7e6990d85937ed">renameConfig()</a>, <a class="el" href="#a3e734302dddd03976d0c98e8184e5e5f">renameConfigGroup()</a>, <a class="el" href="#aee10f21db496657fcac4e1173c49ef2e">renamePixelSizeConfig()</a>, <a class="el" href="#aaa2e31a9fddef2bc511947c1e2608f31">saveSystemConfiguration()</a>, <a class="el" href="#ad472a30ccda04e89050390e47a4caf9b">saveSystemState()</a>, <a class="el" href="#a09811ea810fe613b999b7580116423a2">setAutoFocusOffset()</a>, <a class="el" href="#aa646df7023d5263d49f67000fa09e5f6">setBinning()</a>, <a class="el" href="#ab6515f41c9b15906e00172df371eea45">setCircularBufferMemoryFootprint()</a>, <a class="el" href="#a22516ae4b86ca549e2e228464e56e644">setExposure()</a>, <a class="el" href="#a9d158d73871432f4c00b8f17f35337ae">setMultiROI()</a>, <a class="el" href="#a62cc0240d61645cc8487747de63f0ae6">setPixelSizeAffine()</a>, <a class="el" href="#aa6a8b2b7b0448d152fcbfd65650b4537">setPixelSizeConfig()</a>, <a class="el" href="#a2b592c1b96887dccd661de9a48eabd27">setPixelSizedxdz()</a>, <a class="el" href="#a4c31f5d0b8dddd28aef6f579ad9ac8e6">setPixelSizedydz()</a>, <a class="el" href="#a1e308eee4eb170b4095f25cccd6a225c">setPixelSizeOptimalZUm()</a>, <a class="el" href="#ae5199c834b0d76c9182502600a16301f">setPixelSizeUm()</a>, <a class="el" href="#ac8f89c00613d83a7b80f00d238e7bad2">setROI()</a>, <a class="el" href="#ae138bbe9d5589b6bda6c5b965a43925f">setROI()</a>, <a class="el" href="#a2eddddbce05b0b5eefa56b9a17b934e9">snapImage()</a>, <a class="el" href="#aecd12f057cff287d2466433458058c3d">startContinuousSequenceAcquisition()</a>, <a class="el" href="#ab50289a2dfd41a2024c9efeb32046120">startSequenceAcquisition()</a>, <a class="el" href="#af71af4e7bdc4b853d28712121db5622d">startSequenceAcquisition()</a>, and <a class="el" href="#a944b10b182a2afe7866eebc9eaf8aac6">stopSequenceAcquisition()</a>.</p>
 
@@ -1773,6 +1869,12 @@ Initialization and setup.</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the current configuration for a given group. An empty string is a valid return value, since the system state will not always correspond to any of the defined configurations. Also, in general it is possible that the system state fits multiple configurations. This method will return only the first matching configuration, if any.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupName</td><td>the configuration group name </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>The current configuration preset's name </dd></dl>
 
 <p class="reference">References <a class="el" href="#abe167136415ba066e99c874dfaa7aebf">getConfigGroupState()</a>, and <a class="el" href="class_configuration.html#a90504de4a87d79270b4baeb80445d6d6">Configuration::isConfigurationIncluded()</a>.</p>
@@ -1794,6 +1896,12 @@ Initialization and setup.</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the configuration for a given group based on the data in the cache. An empty string is a valid return value, since the system state will not always correspond to any of the defined configurations. Also, in general it is possible that the system state fits multiple configurations. This method will return only the first matching configuration, if any.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupName</td><td>the configuration group name </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>The cache's current configuration preset name </dd></dl>
 
 <p class="reference">References <a class="el" href="#abe167136415ba066e99c874dfaa7aebf">getConfigGroupState()</a>, and <a class="el" href="class_configuration.html#a90504de4a87d79270b4baeb80445d6d6">Configuration::isConfigurationIncluded()</a>.</p>
@@ -1944,7 +2052,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns description text for a given device label. "Description" is determined by the library and is immutable. </p>
+<p>Returns description text for a given device label. "Description" is determined by the library and is immutable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1986,7 +2100,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns device library (aka module, device adapter) name. </p>
+<p>Returns device library (aka module, device adapter) name.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2004,7 +2124,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns device name for a given device label. "Name" is determined by the library and is immutable, while "label" is user assigned and represents a high-level handle to a device. </p>
+<p>Returns device name for a given device label. "Name" is determined by the library and is immutable, while "label" is user assigned and represents a high-level handle to a device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="#ace60c0f78204ff6031731ce68f054246">enableContinuousFocus()</a>, <a class="el" href="#a9b40822a9c1ed521c3849e1bd6ceb685">fullFocus()</a>, <a class="el" href="#a846679b6da47031b579b1ab135b530c6">getAutoFocusOffset()</a>, <a class="el" href="#aaa5c2888ab2c10105308ad43a478ecd0">incrementalFocus()</a>, <a class="el" href="#af9550ba37e219d0962d7c513c4ac994c">initializeCircularBuffer()</a>, <a class="el" href="#add90ae98d63196952d3e6507f8b019fb">isContinuousFocusEnabled()</a>, <a class="el" href="#a09811ea810fe613b999b7580116423a2">setAutoFocusOffset()</a>, <a class="el" href="#aecd12f057cff287d2466433458058c3d">startContinuousSequenceAcquisition()</a>, <a class="el" href="#ab50289a2dfd41a2024c9efeb32046120">startSequenceAcquisition()</a>, <a class="el" href="#af71af4e7bdc4b853d28712121db5622d">startSequenceAcquisition()</a>, and <a class="el" href="#a944b10b182a2afe7866eebc9eaf8aac6">stopSequenceAcquisition()</a>.</p>
 
@@ -2073,7 +2199,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns device type. </p>
+<p>Returns device type.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2182,7 +2314,13 @@ Initialization and setup.</h2></td></tr>
 <p>Get the focus direction of a stage. </p>
 <p>Returns +1 if increasing position brings objective closer to sample, -1 if increasing position moves objective away from sample, or 0 if unknown. (Make sure to check for zero!)</p>
 <p>The returned value is determined by the most recent call to <a class="el" href="#a9281bb0b1d0702417692221e7416dd56" title="Set the focus direction of a stage.">setFocusDirection()</a> for the stage, or defaults to what the stage device adapter declares (often 0, for unknown).</p>
-<p>An exception is thrown if the direction has not been set and the device encounters an error when determining the default direction. </p>
+<p>An exception is thrown if the direction has not been set and the device encounters an error when determining the default direction.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stageLabel</td><td>the focus stage device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="#aaa2e31a9fddef2bc511947c1e2608f31">saveSystemConfiguration()</a>.</p>
 
@@ -2634,7 +2772,13 @@ Initialization and setup.</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns a pointer to the pixels of the image that was last inserted into the circular buffer. Also provides all metadata associated with that image.</p>
 <p>Supported data types are byte (8 bits per pixel, 1 component), short (16 bits per pixel, 1 component), float (32 bits per pixel, 1 component, not supported by the UI yet), RGB_32 (8 bits per component, 4 components), RGB_64 (16 bits per component, 4 components, not supported by UI yet). <br  />
- RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA8888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>). </p>
+ RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA8888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">md</td><td>receives the metadata of the image </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#aedac69351d8b8b3f2d9ba5aff4994a27">getLastImageMD()</a>.</p>
 
@@ -2969,7 +3113,14 @@ Initialization and setup.</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns a pointer to the pixels of the image that was inserted n images ago. Also provides all metadata associated with that image.</p>
 <p>Supported data types are byte (8 bits per pixel, 1 component), short (16 bits per pixel, 1 component), float (32 bits per pixel, 1 component, not supported by the UI yet), RGB_32 (8 bits per component, 4 components), RGB_64 (16 bits per component, 4 components, not supported by UI yet). <br  />
- RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA8888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>). </p>
+ RGB buffers are expected to be in big endian ARGB format (ARGB8888), which means that on little endian the format is BGRA8888 (see: <a href="https://en.wikipedia.org/wiki/RGBA_color_model">https://en.wikipedia.org/wiki/RGBA_color_model</a>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>how many images before the last one (0 for the last image) </td></tr>
+    <tr><td class="paramname">md</td><td>receives the metadata of the image </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>.</p>
 
@@ -3026,7 +3177,13 @@ Initialization and setup.</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns the total number of available positions (states).</p>
-<p>For legacy reasons, an exception is not thrown on error. Instead, -1 is returned if stateDeviceLabel is not a valid state device. </p>
+<p>For legacy reasons, an exception is not thrown on error. Instead, -1 is returned if stateDeviceLabel is not a valid state device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stateDeviceLabel</td><td>the state device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3044,7 +3201,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns parent device. </p>
+<p>Returns parent device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">peripheralLabel</td><td>the peripheral device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3633,7 +3796,14 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the property lower limit value, if the property has limits - 0 otherwise. </p>
+<p>Returns the property lower limit value, if the property has limits - 0 otherwise.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+    <tr><td class="paramname">propName</td><td>the property name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3683,7 +3853,14 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the intrinsic property type. </p>
+<p>Returns the intrinsic property type.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+    <tr><td class="paramname">propName</td><td>the property name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3705,7 +3882,14 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the property upper limit value, if the property has limits - 0 otherwise. </p>
+<p>Returns the property upper limit value, if the property has limits - 0 otherwise.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+    <tr><td class="paramname">propName</td><td>the property name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -4648,7 +4832,14 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Checks if device has a property with a specified name. The exception will be thrown in case device label is not defined. </p>
+<p>Checks if device has a property with a specified name. The exception will be thrown in case device label is not defined.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
+    <tr><td class="paramname">propName</td><td>the property name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -4787,12 +4978,6 @@ Initialization and setup.</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">label</td><td>the device to initialize </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -4862,6 +5047,13 @@ Initialization and setup.</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Checks if the configuration already exists within a group.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupName</td><td>the configuration group name </td></tr>
+    <tr><td class="paramname">configName</td><td>the configuration (preset) name </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the configuration is already defined </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="#aaf67497dc702ee3029780d91c47116e3">reset()</a>.</p>
@@ -4882,7 +5074,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if a stage has continuous focusing capability (positions can be set while continuous focus runs). </p>
+<p>Check if a stage has continuous focusing capability (positions can be set while continuous focus runs).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -5005,6 +5203,12 @@ Initialization and setup.</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Checks if the group already exists.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupName</td><td>the configuration group name </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the group is already defined </dd></dl>
 
 <p class="reference">Referenced by <a class="el" href="#a9edd2962823e1ba27da52f4795deb05f">deleteConfigGroup()</a>, and <a class="el" href="#a3e734302dddd03976d0c98e8184e5e5f">renameConfigGroup()</a>.</p>
@@ -5222,7 +5426,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if the specified camera is acquiring the sequence. Returns false when the sequence is done. </p>
+<p>Check if the specified camera is acquiring the sequence. Returns false when the sequence is done.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cameraLabel</td><td>the camera device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -5288,7 +5498,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Queries whether this stage uses callbacks to signal position changes. When false, use polling to stay updated about the position of the stage. </p>
+<p>Queries whether this stage uses callbacks to signal position changes. When false, use polling to stay updated about the position of the stage.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stageLabel</td><td>the stage device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -5329,7 +5545,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Queries whether this XYStage uses callbacks to signal position changes. When false, use polling to stay updated about the position of the stage. </p>
+<p>Queries whether this XYStage uses callbacks to signal position changes. When false, use polling to stay updated about the position of the stage.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xyStageLabel</td><td>the XY stage device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -5443,7 +5665,14 @@ Initialization and setup.</h2></td></tr>
 <p>Testing only: load a mock device adapter. </p>
 <p>This function is designed for unit testing of MMCore itself, and its interface is subject to change. It is also not designed for language bindings (Java, Python) in mind (at least for now).</p>
 <p>Do not use this in production code.</p>
-<p>The caller is responsible for keeping <code class="param">implementation</code> valid until this Core is destroyed (or until unloadLibrary(name) is called, but that is not recommended.) </p>
+<p>The caller is responsible for keeping <code class="param">implementation</code> valid until this Core is destroyed (or until unloadLibrary(name) is called, but that is not recommended.)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name to register the mock adapter under </td></tr>
+    <tr><td class="paramname">implementation</td><td>the mock adapter </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -5559,7 +5788,13 @@ Initialization and setup.</h2></td></tr>
 <p>Loads the system configuration from the text file conforming to the MM specific format. The configuration contains a list of commands to build the desired system state: devices, labels, properties, and configurations.</p>
 <p>Format specification: Each line consists of a number of string fields separated by "," (comma) characters. Lines beginning with "#" are ignored (can be used for comments). Each line in the file will be parsed by the system and as a result a corresponding command will be immediately executed. The first field in the line always specifies the command from the following set of values: Device - executes <a class="el" href="#a43cb784fa023dcb12b8310227d23801f">loadDevice()</a> Label - executes <a class="el" href="#a626202a14df315f17345999de22615b4">defineStateLabel()</a> command Property - executes <a class="el" href="#ac27e53a8e62bf3cc34bc6bbcef9c34ae">setProperty()</a> <a class="el" href="class_configuration.html">Configuration</a> - ignored for backward compatibility</p>
 <p>The remaining fields in the line will be used for corresponding command parameters. The number of parameters depends on the actual command used.</p>
-<p>This function is not thread-safe. </p>
+<p>This function is not thread-safe.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>path of the file to read </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="class_c_m_m_error.html#ad967a1e46abea6c73b5bfbf237dc140c">CMMError::getFullMsg()</a>, and <a class="el" href="#a806a24df0cbcf9ffe04bd2a16ceb6493">unloadAllDevices()</a>.</p>
 
@@ -5580,7 +5815,13 @@ Initialization and setup.</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Loads a system state file written by <a class="el" href="#ad472a30ccda04e89050390e47a4caf9b">saveSystemState()</a> and applies its property values.</p>
-<p>Format specification: the same as in <a class="el" href="#a2af159aa70c611fcabd0367b28b1579c">loadSystemConfiguration()</a> command </p>
+<p>Format specification: the same as in <a class="el" href="#a2af159aa70c611fcabd0367b28b1579c">loadSystemConfiguration()</a> command</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>path of the file to read </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>, and <a class="el" href="#ac27e53a8e62bf3cc34bc6bbcef9c34ae">setProperty()</a>.</p>
 
@@ -5640,7 +5881,14 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Record text message in the log file at the specified level. </p>
+<p>Record text message in the log file at the specified level.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>the message to log </td></tr>
+    <tr><td class="paramname">level</td><td>the log level </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -5667,7 +5915,15 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Record text message in the log file at the specified level, with a caller-specified logger name as the component label. </p>
+<p>Record text message in the log file at the specified level, with a caller-specified logger name as the component label.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>the message to log </td></tr>
+    <tr><td class="paramname">level</td><td>the log level </td></tr>
+    <tr><td class="paramname">loggerName</td><td>the component label to log under </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -5835,7 +6091,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Gets and removes the next image (and metadata) from the circular buffer </p>
+<p>Gets and removes the next image (and metadata) from the circular buffer</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">md</td><td>receives the metadata of the image </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#a2811db1e73f99916800e8ef5d9a94757">popNextImageMD()</a>.</p>
 
@@ -5865,7 +6127,15 @@ Initialization and setup.</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Gets and removes the next image (and metadata) from the circular buffer</p>
-<p>channel has not been implemented and should always be 0. slice has not been implemented and should always be 0. </p>
+<p>channel has not been implemented and should always be 0. slice has not been implemented and should always be 0.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>not implemented; must be 0 </td></tr>
+    <tr><td class="paramname">slice</td><td>not implemented; must be 0 </td></tr>
+    <tr><td class="paramname">md</td><td>receives the metadata of the image </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>.</p>
 
@@ -5888,6 +6158,12 @@ Initialization and setup.</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Deprecated and only checks that the camera is not running a sequence acquisition.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cameraLabel</td><td>the camera device label </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated</a></b></dt><dd></dd></dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>.</p>
@@ -6090,7 +6366,13 @@ Initialization and setup.</h2></td></tr>
 <p>MMCore will send notifications on internal events using this interface.</p>
 <p>Pass nullptr to unregister.</p>
 <p>The caller is responsible for ensuring that the object pointed to by <code class="param">cb</code> remains valid until it is unregistered.</p>
-<p>Must not be called from within a callback handler. </p>
+<p>Must not be called from within a callback handler.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>the callback object, or nullptr to unregister </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="#a2a717d7194fccfdf4cec893f24a3a087">~CMMCore()</a>.</p>
 
@@ -6119,7 +6401,15 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Renames a configuration within a specified group. The command will fail if the configuration was not previously defined. </p>
+<p>Renames a configuration within a specified group. The command will fail if the configuration was not previously defined.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">groupName</td><td>the configuration group name </td></tr>
+    <tr><td class="paramname">oldConfigName</td><td>the current configuration (preset) name </td></tr>
+    <tr><td class="paramname">newConfigName</td><td>the new name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>.</p>
 
@@ -6143,7 +6433,14 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Renames a configuration group. </p>
+<p>Renames a configuration group.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">oldGroupName</td><td>the current configuration group name </td></tr>
+    <tr><td class="paramname">newGroupName</td><td>the new name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#a16fb29a0e7b3b877879a97f7625f7089">getChannelGroup()</a>, <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>, <a class="el" href="#a3c6c10e02821d56acc5b556bb6ef3f5e">isGroupDefined()</a>, and <a class="el" href="#a2faf117d0b609f01e2f2a4b8101e5f00">setChannelGroup()</a>.</p>
 
@@ -6264,7 +6561,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Saves the current system configuration to a text file of the MM specific format. The configuration file records only the information essential to the hardware setup: devices, labels, pre-initialization properties, and configurations. The file format is the same as for the system state. </p>
+<p>Saves the current system configuration to a text file of the MM specific format. The configuration file records only the information essential to the hardware setup: devices, labels, pre-initialization properties, and configurations. The file format is the same as for the system state.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>path of the file to write </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#a469653c4e9ecdffa3787ddee8a0c49a2">getAvailableConfigGroups()</a>, <a class="el" href="#a4c4c6c64953ea3cde7057fae158a6ffc">getAvailableConfigs()</a>, <a class="el" href="#a7066a98b909a95daf8c50898010ae6c5">getAvailablePixelSizeConfigs()</a>, <a class="el" href="#ac55630358d22720aa3bd281975dba0a3">getConfigData()</a>, <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>, <a class="el" href="struct_property_setting.html#ad2e3aea44f3201d3f4e8b8ddf2588ed6">PropertySetting::getDeviceLabel()</a>, <a class="el" href="#a80e5734da23db81d24b2c8f13230fd5d">getFocusDirection()</a>, <a class="el" href="#ae63f3dbf58867e288b2b7596bfbd428d">getPixelSizeAffineByID()</a>, <a class="el" href="#ac2f2cac1d79222697fe7cad2352a88e5">getPixelSizeConfigData()</a>, <a class="el" href="#a22aeb337a4e20968a3cbfe03540096d9">getPixelSizedxdz()</a>, <a class="el" href="#aa5b318d350c3be714a4e6d08a7766fe9">getPixelSizedydz()</a>, <a class="el" href="#ac8c5a4eed5d5fcbb9872c1487bcc59b0">getPixelSizeOptimalZUm()</a>, <a class="el" href="#a31e948d1e4140fdf5feb8f2269873c0c">getPixelSizeUmByID()</a>, <a class="el" href="struct_property_setting.html#af48876edd7c92cc317a6eda656313489">PropertySetting::getPropertyName()</a>, <a class="el" href="struct_property_setting.html#a8c27963c2f0e6e1920714258a3ee7ad2">PropertySetting::getPropertyValue()</a>, <a class="el" href="class_configuration.html#acad6344600867d055570811bd574d718">Configuration::getSetting()</a>, <a class="el" href="#a58fb93d6f59e571e5e46792ef1de7917">getSystemState()</a>, and <a class="el" href="class_configuration.html#a64836e801252a70e1625e470dbc62b74">Configuration::size()</a>.</p>
 
@@ -6284,7 +6587,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Saves the current system state to a text file of the MM specific format. The file records only read-write properties. The file format is directly readable by the complementary <a class="el" href="#a683d71c084b3db9dd630b4e5f0e3e5c8">loadSystemState()</a> command. </p>
+<p>Saves the current system state to a text file of the MM specific format. The file records only read-write properties. The file format is directly readable by the complementary <a class="el" href="#a683d71c084b3db9dd630b4e5f0e3e5c8">loadSystemState()</a> command.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>path of the file to write </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>, <a class="el" href="struct_property_setting.html#ad2e3aea44f3201d3f4e8b8ddf2588ed6">PropertySetting::getDeviceLabel()</a>, <a class="el" href="struct_property_setting.html#af48876edd7c92cc317a6eda656313489">PropertySetting::getPropertyName()</a>, <a class="el" href="struct_property_setting.html#a8c27963c2f0e6e1920714258a3ee7ad2">PropertySetting::getPropertyValue()</a>, <a class="el" href="class_configuration.html#acad6344600867d055570811bd574d718">Configuration::getSetting()</a>, <a class="el" href="#a58fb93d6f59e571e5e46792ef1de7917">getSystemState()</a>, <a class="el" href="#abaac8e1eb67074bb82cb3d903a532cc5">isPropertyReadOnly()</a>, and <a class="el" href="class_configuration.html#a64836e801252a70e1625e470dbc62b74">Configuration::size()</a>.</p>
 
@@ -6433,7 +6742,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the current auto-focus device. </p>
+<p>Sets the current auto-focus device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">focusLabel</td><td>the autofocus device label, or an empty string for none </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#a0454bc814cf6fa1bbb39921573d28f97">getAutoFocusDevice()</a>.</p>
 
@@ -6453,7 +6768,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Applies an offset to the one-shot focusing device. </p>
+<p>Applies an offset to the one-shot focusing device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offset</td><td>the offset, in the autofocus device's units </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ae0dd594b562a6ad231d5b30c22b065a2">getCoreErrorText()</a>, and <a class="el" href="#a9b51e3f44c47c11673cb0ffaff67c255">getDeviceName()</a>.</p>
 
@@ -6576,7 +6897,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Specifies the group determining the channel selection. </p>
+<p>Specifies the group determining the channel selection.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channelGroup</td><td>the configuration group name, or an empty string for none </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">Referenced by <a class="el" href="#a9edd2962823e1ba27da52f4795deb05f">deleteConfigGroup()</a>, <a class="el" href="#a3e734302dddd03976d0c98e8184e5e5f">renameConfigGroup()</a>, and <a class="el" href="#a806a24df0cbcf9ffe04bd2a16ceb6493">unloadAllDevices()</a>.</p>
 
@@ -6826,7 +7153,14 @@ Initialization and setup.</h2></td></tr>
 <p>Set the focus direction of a stage. </p>
 <p>The sign should be +1 (or any positive value), zero, or -1 (or any negative value), and is interpreted in the same way as the return value of <a class="el" href="#a80e5734da23db81d24b2c8f13230fd5d" title="Get the focus direction of a stage.">getFocusDirection()</a>.</p>
 <p>Once this method is called, <a class="el" href="#a80e5734da23db81d24b2c8f13230fd5d" title="Get the focus direction of a stage.">getFocusDirection()</a> for the stage will always return the set value.</p>
-<p>For legacy reasons, an exception is not thrown if there is an error. Instead, nothing is done if stageLabel is not a valid focus stage. </p>
+<p>For legacy reasons, an exception is not thrown if there is an error. Instead, nothing is done if stageLabel is not a valid focus stage.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stageLabel</td><td>the focus stage device label </td></tr>
+    <tr><td class="paramname">sign</td><td>the focus direction: positive, negative, or 0 for unknown </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -6844,7 +7178,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the current galvo device. </p>
+<p>Sets the current galvo device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">galvoLabel</td><td>the galvo device label, or an empty string for none </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#ad69db1b46e81a7b1ac493e0a69436401">getGalvoDevice()</a>.</p>
 
@@ -6987,7 +7327,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the current image processor device. </p>
+<p>Sets the current image processor device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">procLabel</td><td>the image processor device label, or an empty string for none </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#a8109bfedf6b2ecae73e623d0ac1f7d25">getImageProcessorDevice()</a>.</p>
 
@@ -7246,7 +7592,14 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets parent device label </p>
+<p>Sets parent device label</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceLabel</td><td>the peripheral device label </td></tr>
+    <tr><td class="paramname">parentHubLabel</td><td>the hub device label, or an empty string for no parent </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -7570,7 +7923,13 @@ Initialization and setup.</h2></td></tr>
 </div><div class="memdoc">
 <p>Set the log level for the primary log file.</p>
 <p>Messages below this level will not be recorded in the primary log file.</p>
-<p>It is not recommended to mix use of this function with <a class="el" href="#a0abdf7dc7b491c28b8d881f7c7a0ddf4">enableDebugLog()</a> and <a class="el" href="#a31ea648214f662a8573e8db4d6501a98">debugLogEnabled()</a>. </p>
+<p>It is not recommended to mix use of this function with <a class="el" href="#a0abdf7dc7b491c28b8d881f7c7a0ddf4">enableDebugLog()</a> and <a class="el" href="#a31ea648214f662a8573e8db4d6501a98">debugLogEnabled()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>the lowest level of messages to record </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -8286,7 +8645,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the current SLM device. </p>
+<p>Sets the current SLM device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slmLabel</td><td>the SLM device label, or an empty string for none </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#a20eb04aadc8fdee91fc52a7115bb30a3">getSLMDevice()</a>.</p>
 
@@ -8559,7 +8924,13 @@ Initialization and setup.</h2></td></tr>
 </div><div class="memdoc">
 <p>Set the stderr log level.</p>
 <p>Messages below this level will not be displayed on stderr.</p>
-<p>It is not recommended to mix use of this function with <a class="el" href="#a0abdf7dc7b491c28b8d881f7c7a0ddf4">enableDebugLog()</a> and <a class="el" href="#a31ea648214f662a8573e8db4d6501a98">debugLogEnabled()</a>. </p>
+<p>It is not recommended to mix use of this function with <a class="el" href="#a0abdf7dc7b491c28b8d881f7c7a0ddf4">enableDebugLog()</a> and <a class="el" href="#a31ea648214f662a8573e8db4d6501a98">debugLogEnabled()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>the lowest level of messages to display </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -8693,7 +9064,13 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the current XY device. </p>
+<p>Sets the current XY device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xyStageLabel</td><td>the XY stage device label, or an empty string for none </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#a6e4e67f416ed685bad044dd48e2dcc09">getXYStageDevice()</a>.</p>
 
@@ -9263,7 +9640,13 @@ Initialization and setup.</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Return whether or not the device supports automatic device detection (i.e. whether or not <a class="el" href="#acd1a6a010b53b940db885987ffb11468">detectDevice()</a> may be safely called).</p>
-<p>For legacy reasons, an exception is not thrown if there is an error. Instead, false is returned if deviceLabel is not a valid device. </p>
+<p>For legacy reasons, an exception is not thrown if there is an error. Instead, false is returned if deviceLabel is not a valid device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceLabel</td><td>the device label </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -9324,10 +9707,10 @@ Initialization and setup.</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Unloads the device from the core and adjusts all configuration data. </p>
+<p>Unloads the device from the core and adjusts all configuration data.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">label</td><td>the name of the device to unload </td></tr>
+    <tr><td class="paramname">label</td><td>the device label </td></tr>
   </table>
   </dd>
 </dl>
@@ -9355,7 +9738,13 @@ Initialization and setup.</h2></td></tr>
 <p>Unload a device adapter.</p>
 <p>We do not currently have support for unloading regular device adapters that are loaded from libraries (DLLs).</p>
 <p>Only mock device adapters can be unloaded.</p>
-<p>Any devices from the adapter will be unloaded first. Do not call this function when devices from other adapters (e.g. Utilities) may be depending on them. </p>
+<p>Any devices from the adapter will be unloaded first. Do not call this function when devices from other adapters (e.g. Utilities) may be depending on them.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">moduleName</td><td>the device adapter (library) name </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="reference">References <a class="el" href="#a2e61ae8c8c769eb1f29c35a8a73f1dea">unloadDevice()</a>.</p>
 
