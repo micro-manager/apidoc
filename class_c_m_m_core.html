@@ -418,9 +418,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:add00f6a64b880521321077d97520c577" id="r_add00f6a64b880521321077d97520c577"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add00f6a64b880521321077d97520c577">getInstalledDevices</a> (const char *hubLabel) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
 <tr class="memitem:a77ec4efd59db5e2f917685ef9c0f2881" id="r_a77ec4efd59db5e2f917685ef9c0f2881"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77ec4efd59db5e2f917685ef9c0f2881">getInstalledDeviceDescription</a> (const char *hubLabel, const char *peripheralLabel) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
 <tr class="memitem:a7a5e955dadfa07e2d4d0e6aa13be8a6a" id="r_a7a5e955dadfa07e2d4d0e6aa13be8a6a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a5e955dadfa07e2d4d0e6aa13be8a6a">getLoadedPeripheralDevices</a> (const char *hubLabel) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
-<tr id="pub-methods-19" class="groupHeader"><td colspan="2"><div class="groupHeader">Testing</div></td></tr>
-<tr class="memitem:a900c5d613cfd9d8e6456e5a168effaec" id="r_a900c5d613cfd9d8e6456e5a168effaec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a900c5d613cfd9d8e6456e5a168effaec">loadMockDeviceAdapter</a> (const char *name, <a class="el" href="struct_mock_device_adapter.html">MockDeviceAdapter</a> *implementation) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
-<tr class="memdesc:a900c5d613cfd9d8e6456e5a168effaec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Testing only: load a mock device adapter.  <br /></td></tr>
+<tr id="pub-methods-19" class="groupHeader"><td colspan="2"><div class="groupHeader">Client device adapters (experimental)</div></td></tr>
+<tr class="memitem:a0f57819e83a123a2abfdaaf2e30637e4" id="r_a0f57819e83a123a2abfdaaf2e30637e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f57819e83a123a2abfdaaf2e30637e4">loadClientDeviceAdapter</a> (const char *name, std::shared_ptr&lt; <a class="el" href="struct_client_device_adapter.html">ClientDeviceAdapter</a> &gt; adapter) MMCORE_LEGACY_THROW(<a class="el" href="class_c_m_m_error.html">CMMError</a>)</td></tr>
+<tr class="memdesc:a0f57819e83a123a2abfdaaf2e30637e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Experimental: load a device adapter implemented by the client.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -5555,6 +5555,45 @@ Initialization and setup.</h2></td></tr>
 
 </div>
 </div>
+<a id="a0f57819e83a123a2abfdaaf2e30637e4" name="a0f57819e83a123a2abfdaaf2e30637e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f57819e83a123a2abfdaaf2e30637e4">&#9670;&#160;</a></span>loadClientDeviceAdapter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMMCore::loadClientDeviceAdapter </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="struct_client_device_adapter.html">ClientDeviceAdapter</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>adapter</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Experimental: load a device adapter implemented by the client. </p>
+<p>The adapter becomes available under <code class="param">name</code>, as if it were a device adapter library, and its devices can be loaded with <a class="el" href="#a43cb784fa023dcb12b8310227d23801f">loadDevice()</a>. See <a class="el" href="struct_client_device_adapter.html" title="Experimental: interface for a device adapter implemented by the client of MMCore.">ClientDeviceAdapter</a> for the requirements on the implementation.</p>
+<p>This function is experimental and subject to change. It is a C++ API and is not designed to be exposed as-is in language bindings.</p>
+<p>The Core keeps a reference to <code class="param">adapter</code> until the adapter has been unloaded (by <a class="el" href="#af3614e7c582bea7ef85f9271da84f1ed">unloadLibrary()</a> or destruction of the Core) and all of its devices have been deleted. The reference may be released on whichever thread performs the unloading or destruction.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name to register the adapter under </td></tr>
+    <tr><td class="paramname">adapter</td><td>the adapter implementation</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_c_m_m_error.html" title="Core error class. Exceptions thrown by the Core public API are of this type.">CMMError</a></td><td>if <code class="param">name</code> is null or empty, <code class="param">adapter</code> is null, or an adapter named <code class="param">name</code> is already loaded. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a43cb784fa023dcb12b8310227d23801f" name="a43cb784fa023dcb12b8310227d23801f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a43cb784fa023dcb12b8310227d23801f">&#9670;&#160;</a></span>loadDevice()</h2>
 
@@ -5637,39 +5676,6 @@ Initialization and setup.</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">galvoLabel</td><td>the galvo device label </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a900c5d613cfd9d8e6456e5a168effaec" name="a900c5d613cfd9d8e6456e5a168effaec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a900c5d613cfd9d8e6456e5a168effaec">&#9670;&#160;</a></span>loadMockDeviceAdapter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void CMMCore::loadMockDeviceAdapter </td>
-          <td>(</td>
-          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_mock_device_adapter.html">MockDeviceAdapter</a> *</td>          <td class="paramname"><span class="paramname"><em>implementation</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Testing only: load a mock device adapter. </p>
-<p>This function is designed for unit testing of MMCore itself, and its interface is subject to change. It is also not designed for language bindings (Java, Python) in mind (at least for now).</p>
-<p>Do not use this in production code.</p>
-<p>The caller is responsible for keeping <code class="param">implementation</code> valid until this Core is destroyed (or until unloadLibrary(name) is called, but that is not recommended.)</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>the name to register the mock adapter under </td></tr>
-    <tr><td class="paramname">implementation</td><td>the mock adapter </td></tr>
   </table>
   </dd>
 </dl>
@@ -9737,7 +9743,7 @@ Initialization and setup.</h2></td></tr>
 </div><div class="memdoc">
 <p>Unload a device adapter.</p>
 <p>We do not currently have support for unloading regular device adapters that are loaded from libraries (DLLs).</p>
-<p>Only mock device adapters can be unloaded.</p>
+<p>Only adapters loaded with <a class="el" href="#a0f57819e83a123a2abfdaaf2e30637e4" title="Experimental: load a device adapter implemented by the client.">loadClientDeviceAdapter()</a> can be unloaded.</p>
 <p>Any devices from the adapter will be unloaded first. Do not call this function when devices from other adapters (e.g. Utilities) may be depending on them.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
